@@ -9,6 +9,12 @@
 
 ---
 
+## 致谢 / Credits
+
+- **曲目别名数据取自 [clansty](https://github.com/clansty) 的 SongSearch mod** —— 该项目内置的曲库中维护了每首歌的社区别名，本项目仅提取别名字段、转换为纯文本格式并按曲名对应到游戏曲目。**感谢作者与社区贡献者。** 详见 [NOTICE](NOTICE)。
+- [MelonLoader](https://melonwiki.xyz/) —— mod 加载器
+- [Harmony](https://github.com/pardeike/Harmony) —— 运行时补丁
+
 ## 功能
 
 - **曲目表实时来自游戏**（不是写死的清单）：换版本、热导入自制谱都会自动跟上，网页自己刷新
@@ -90,11 +96,6 @@ dotnet build src/SongRequestMod.csproj -c Release -p:GameDir="<你的游戏 Pack
 
 产物在 `bin/Release/SongRequestMod.dll`。开发笔记（踩过的坑、为什么这么做）见 [`docs/DEVELOPMENT.md`](docs/DEVELOPMENT.md)。
 
-## 致谢 / Credits
-
-- **曲目别名数据取自 [clansty](https://github.com/clansty) 的 SongSearch mod** —— 该项目内置的曲库中维护了每首歌的社区别名，本项目仅提取别名字段、转换为纯文本格式并按曲名对应到游戏曲目。**感谢作者与社区贡献者。** 详见 [NOTICE](NOTICE)。
-- [MelonLoader](https://melonwiki.xyz/) —— mod 加载器
-- [Harmony](https://github.com/pardeike/Harmony) —— 运行时补丁
 
 ## 许可
 
