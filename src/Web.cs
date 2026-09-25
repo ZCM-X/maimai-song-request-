@@ -134,8 +134,9 @@ namespace SongRequestMod
 
             if (path == "/api/songs")
             {
-                // ?refresh=1 强制重读游戏曲目表; 平时走缓存(曲目数/类型变了会自动重建)
-                ReplyJson(ctx, SongTable.Json(Query(ctx.Request.Url.Query, "refresh") == "1"));
+                // ?refresh=1 强制重读游戏曲目表(连数据源快照也丢掉重探); 平时走缓存(曲目数/类型变了会自动重建)
+                ReplyJson(ctx, Query(ctx.Request.Url.Query, "refresh") == "1"
+                    ? SongTable.JsonFresh() : SongTable.Json(false));
                 return;
             }
             if (path == "/api/nowplaying")

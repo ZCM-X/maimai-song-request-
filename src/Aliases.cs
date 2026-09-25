@@ -27,7 +27,10 @@ namespace SongRequestMod
         private static DateTime _stamp;
         private static string _loadedPath;
         private static int _aliasCount;
+        private static int _songCount;
         private static bool _usedEmbedded;
+        /// <summary>成功解析过至少一次(磁盘或内嵌)。首次读取必须解析, 不然计数永远是 0</summary>
+        private static bool _parsed;
 
         internal static string FilePath
         {
@@ -55,18 +58,27 @@ namespace SongRequestMod
             }
         }
 
+        /// <summary>别名条数。首次读取会无条件解析一次 —— 计数跟曲库没有任何关系
+        /// (曲库为空时 Build() 根本不会调 For(), 老代码因此永远显示 0 条)</summary>
         internal static int Count
         {
-            get { return _aliasCount; }
+            get { Ensure(); return _aliasCount; }
         }
 
+        /// <summary>有别名可用的曲目数(按 id 索引的 + 按曲名索引的)</summary>
         internal static int SongCount
         {
-            get { return _byTitle.Count + _byId.Count; }
+            get { Ensure(); return _songCount; }
         }
 
-        /// <summary>文件没变就不重读</summary>
-        private static void Ensure()
+        /// <summary>启动后主动解析一次(Mod.OnLateInitializeMelon 里调), 让 /api/status 一开始就有真数字</summary>
+        internal static void Preload()
+        {
+            Ensure();
+        }
+
+        /// <summary>文件没变就不重读; 第一次读无条件解析</summary>
+        internal static void Ensure()
         {
             try
             {
@@ -88,7 +100,7 @@ namespace SongRequestMod
                     return;
                 }
                 DateTime t = File.GetLastWriteTimeUtc(p);
-                if (_loadedPath == p && t == _stamp)
+                if (_parsed && _loadedPath == p && t == _stamp)
                 {
                     return;
                 }
@@ -108,6 +120,7 @@ namespace SongRequestMod
             _byTitle.Clear();
             _byId.Clear();
             _aliasCount = 0;
+            _songCount = 0;
             int songs = 0;
             foreach (string raw in lines)
             {
@@ -155,6 +168,8 @@ namespace SongRequestMod
                 _aliasCount += list.Count;
                 songs++;
             }
+            _songCount = _byTitle.Count + _byId.Count;
+            _parsed = true;
             ModLog.Info("[SongRequest] 别名库已解析: " + songs + " 首 / " + _aliasCount + " 条");
         }
 

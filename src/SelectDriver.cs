@@ -116,6 +116,7 @@ namespace SongRequestMod
             sb.Append(",\"armed\":").Append(_autoTestId > 0 ? _autoTestId.ToString() : "0");
             sb.Append(",\"lastJump\":\"").Append(SongTable.Escape(LastJumpResult)).Append('"');
             sb.Append(",\"lastJumpAt\":\"").Append(SongTable.Escape(LastJumpAt)).Append('"');
+            sb.Append(",\"songTable\":").Append(SongTable.DiagJson());
             sb.Append('}');
             return sb.ToString();
         }
@@ -168,6 +169,26 @@ namespace SongRequestMod
 
         private static float _findCooldown;
         private static object _lastMonitor;
+
+        /// <summary>
+        /// 选曲列表快照(给 SongTable 当数据源①用): 游戏自己建好的可点歌曲表,
+        /// 每条里有 msDetailData.musicId 和 musicSelectData[STD/DX].MusicData(真 MusicData 对象)。
+        /// 没进过选曲界面(或已释放)时返回 null —— 调用方要能优雅跳过。
+        /// </summary>
+        internal static List<ReadOnlyCollection<MusicSelectProcess.CombineMusicSelectData>> SelectList
+        {
+            get
+            {
+                try
+                {
+                    return InSelect ? _process.CombineMusicDataList : null;
+                }
+                catch
+                {
+                    return null;
+                }
+            }
+        }
 
         /// <summary>
         /// 兜底: 万一时序上没接到 OnStart(或以后游戏改了方法名), 就从场景里活的
@@ -330,10 +351,13 @@ namespace SongRequestMod
                     return map;
                 }
                 var list = _process.CombineMusicDataList;
-                int scoreType = (int)_process.ScoreType;
                 for (int cat = 0; cat < list.Count; cat++)
                 {
                     var page = list[cat];
+                    if (page == null)
+                    {
+                        continue;
+                    }
                     for (int i = 0; i < page.Count; i++)
                     {
                         var c = page[i];
@@ -341,33 +365,35 @@ namespace SongRequestMod
                         {
                             continue;
                         }
-                        int id = c.msDetailData.musicId;
-                        if (id <= 0 || map.ContainsKey(id))
+                        int detailId = c.msDetailData.musicId;
+                        // STD / DX 两个槽都要读: 只读当前 ScoreType 那一个槽的话, 另一边的曲子拿不到真值
+                        for (int s = 0; s < c.musicSelectData.Count; s++)
                         {
-                            continue;
-                        }
-                        if (scoreType < 0 || scoreType >= c.musicSelectData.Count)
-                        {
-                            continue;
-                        }
-                        object msd = c.musicSelectData[scoreType];
-                        if (msd == null)
-                        {
-                            continue;
-                        }
-                        if (_fExistsScore == null)
-                        {
-                            _fExistsScore = msd.GetType().GetField("isExistsScore",
-                                BindingFlags.Public | BindingFlags.NonPublic | BindingFlags.Instance);
-                        }
-                        if (_fExistsScore == null)
-                        {
-                            continue;
-                        }
-                        bool[] arr = _fExistsScore.GetValue(msd) as bool[];
-                        if (arr != null)
-                        {
-                            map[id] = arr;
+                            var msd = c.musicSelectData[s];
+                            if (msd == null)
+                            {
+                                continue;
+                            }
+                            bool[] arr = ExistsScore(msd);
+                            if (arr == null)
+                            {
+                                continue;
+                            }
+                            int id = detailId;
+                            try
+                            {
+                                if (msd.MusicData != null && msd.MusicData.GetID() > 0)
+                                {
+                                    id = msd.MusicData.GetID();
+                                }
+                            }
+                            catch
+                            {
+                            }
+                            if (id > 0)
+                            {
+                                map[id] = arr;
+                            }
                         }
                     }
                 }
@@ -377,6 +403,52 @@ namespace SongRequestMod
                 ModLog.Info("[SongRequest] 读可玩谱面表失败: " + e.Message);
             }
             return map;
+        }
+
+        /// <summary>
+        /// 取 MusicSelectData.isExistsScore —— 这档谱到底存不存在(游戏自己的真值)。
+        /// 注意: 这个字段在 1.70 是 List&lt;bool&gt;, 老代码写的是 `as bool[]` → 永远是 null,
+        /// 于是"游戏真值"这条路一直静默失效、白读一遍。这里 bool[] / List&lt;bool&gt; / IList 都认。
+        /// </summary>
+        private static bool[] ExistsScore(MusicSelectProcess.MusicSelectData msd)
+        {
+            try
+            {
+                if (_fExistsScore == null)
+                {
+                    _fExistsScore = msd.GetType().GetField("isExistsScore",
+                        BindingFlags.Public | BindingFlags.NonPublic | BindingFlags.Instance);
+                }
+                if (_fExistsScore == null)
+                {
+                    return null;
+                }
+                object raw = _fExistsScore.GetValue(msd);
+                var arr = raw as bool[];
+                if (arr != null)
+                {
+                    return arr;
+                }
+                var list = raw as List<bool>;
+                if (list != null)
+                {
+                    return list.ToArray();
+                }
+                var any = raw as IList;
+                if (any != null && any.Count > 0)
+                {
+                    bool[] r = new bool[any.Count];
+                    for (int i = 0; i < any.Count; i++)
+                    {
+                        r[i] = Convert.ToBoolean(any[i]);
+                    }
+                    return r;
+                }
+            }
+            catch
+            {
+            }
+            return null;
         }
 
         private static FieldInfo _fExistsScore;

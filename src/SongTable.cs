@@ -26,9 +26,11 @@ namespace SongRequestMod
         private static readonly Dictionary<int, Manager.MaiStudio.MusicData> _byId =
             new Dictionary<int, Manager.MaiStudio.MusicData>();
 
-        private static FieldInfo _fMusics;
         private static string _json;
         private static int _jsonCount = -1;
+        /// <summary>上次 Build 时的"原始条目数"。判断曲目表有没有变要跟它比, 不能跟 _jsonCount 比 ——
+        /// _jsonCount 已经滤掉游戏禁用曲目, 两者不相等时会导致每 2 秒白重建一次。</summary>
+        private static int _builtSnapCount = -1;
         /// <summary>曲目表版本号: 每重建一次 +1, 网页靠它知道要不要重新拉列表</summary>
         internal static int Rev;
         private static float _timer;
@@ -49,7 +51,7 @@ namespace SongRequestMod
             _wasInSelect = SelectDriver.InSelect;
             // 别名文件被改过(改了 aliases.txt)也要重出, 不然别名要等曲库变化才生效
             bool aliasChanged = Aliases.StampChanged();
-            if (_json == null || n != _jsonCount || enteredSelect || aliasChanged)
+            if (_json == null || n != _builtSnapCount || enteredSelect || aliasChanged)
             {
                 Json(true);
             }
@@ -100,109 +102,815 @@ namespace SongRequestMod
             return (d >= 0 && d < DiffNames.Length) ? DiffNames[d] : "?";
         }
 
-        private static FieldInfo MusicsField
+        // ── 曲目表数据源: 多路尝试 + 取条目最多的那一路 ─────────────────────────
+        // 老实现写死 "先反射 DataManager._musics, 拿不到才退 GetMusics()", 而 Each() 只认
+        // IEnumerable<KeyValuePair<int,MusicData>> 这一种形状, 别的情况一律静默 continue ——
+        // 别人机器上只要字段名 / 包装类型 / 条目形状有一处不一样, 就变成 "0 首"(页面 曲库总量 0000),
+        // 而且是无声的, 连日志都没有。现在改成:
+        //   ① 选曲列表 SelectDriver 抓到的 CombineMusicDataList(游戏自己建好的可点歌曲表,
+        //      完全绕开 DataManager 的字段/API; 离开选曲界面后用最后一次成功的快照兜住)
+        //   ② 公开 API GetMusics()
+        //   ③ 反射 DataManager 所有"像曲目表"的实例字段(不写死 _musics 这个名字)
+        //   ④ 裸 MusicData 序列用 musicData.GetID() 当 key(老实现会整路跳过)
+        //      字典类只要 "Key/Value 属性"、"嵌套可枚举"、"Values 属性" 都认
+        // 每路都记条目数/形状/异常, 取条目最多的那一路(并列取靠前的 -> 选曲列表优先),
+        // 明细给 /api/selfcheck。
+
+        private const int MaxProbeItems = 100000;    // 单路条目上限, 防病态枚举把游戏卡住
+        private const int MaxProbeSources = 48;      // 最多探几路字段
+        private const int SnapTtlMs = 800;           // 快照缓存: 同一秒内的多次读取只探一次
+
+        private static readonly object _snapLock = new object();
+        private static readonly HashSet<int> _dedupe = new HashSet<int>();
+        private static List<KeyValuePair<int, Manager.MaiStudio.MusicData>> _snap;
+        private static int _snapMs;
+        private static int _snapRaw;
+        private static string _snapSource = "(还没探测)";
+        private static string _probeReport = "[]";
+        private static string _lastLoggedSource = "";
+        private static bool _fallbackWarned;
+        private static bool _zeroWarned;
+
+        // ── 数据源①: 选曲列表(SelectDriver 抓到的 MusicSelectProcess.CombineMusicDataList) ──
+        // 离开选曲界面时游戏会把 CombineMusicDataList 释放掉, 但我们不能因此把曲库掉回 0 首,
+        // 所以最后一次成功的结果缓在这里, 直到下次进选曲界面刷新。
+        private static List<KeyValuePair<int, Manager.MaiStudio.MusicData>> _selectCache;
+        private static string _selectCacheAt = "";
+        private static int _selectCacheItems;
+        private static int _selectCacheCats;
+        private static bool _selectLive;
+
+        /// <summary>一路数据源的探测结果</summary>
+        private sealed class Probe
         {
-            get
-            {
-                if (_fMusics == null)
-                {
-                    _fMusics = AccessTools.Field(typeof(Manager.DataManager), "_musics");
-                    if (_fMusics == null)
-                    {
-                        MelonLogger.Warning("[SongRequest] 找不到 DataManager._musics, 退回 GetMusics()"
-                            + "(可能只有被过滤后的曲目)");
-                    }
-                }
-                return _fMusics;
-            }
+            public string Name = "";
+            public string Shape = "";
+            public string Error = "";
+            /// <summary>这一路"现在根本不可用"(例如没进过选曲界面) —— 不算失败, 不报 Warning</summary>
+            public bool Skipped;
+            public int Count;
+            public readonly List<KeyValuePair<int, Manager.MaiStudio.MusicData>> Items =
+                new List<KeyValuePair<int, Manager.MaiStudio.MusicData>>();
         }
 
-        /// <summary>本地全量表(绕开别的 mod 的过滤钩子)</summary>
-        private static object RawTable()
+        /// <summary>真正的错误走 MelonLogger.Warning, 但日志本身不能把探测流程带崩</summary>
+        private static void Warn(string msg)
         {
             try
             {
-                var dm = Singleton<Manager.DataManager>.Instance;
-                if (dm == null)
-                {
-                    return null;
-                }
-                FieldInfo f = MusicsField;
-                if (f != null)
-                {
-                    object v = f.GetValue(dm);
-                    if (v != null)
-                    {
-                        return v;
-                    }
-                }
-                return dm.GetMusics();
+                MelonLogger.Warning(msg);
             }
-            catch (Exception e)
+            catch
             {
-                ModLog.Info("[SongRequest] 读曲目表失败: " + e.Message);
-                return null;
             }
         }
 
-        /// <summary>遍历本地全量表: (id, MusicData)</summary>
-        private static IEnumerable<KeyValuePair<int, Manager.MaiStudio.MusicData>> Each()
+        /// <summary>当前曲目表快照(去重后、按 id 升序)。fresh=true 强制重探。</summary>
+        private static List<KeyValuePair<int, Manager.MaiStudio.MusicData>> Snapshot(bool fresh)
         {
-            object table = RawTable();
+            lock (_snapLock)
+            {
+                int now = Environment.TickCount;
+                if (fresh || _snap == null || unchecked(now - _snapMs) >= SnapTtlMs)
+                {
+                    ProbeAll();
+                    _snapMs = now;
+                }
+                return _snap;
+            }
+        }
+
+        /// <summary>
+        /// 探所有数据源, 取条目最多的那一路(并列时靠前的赢 -> 选曲列表 > GetMusics() > 反射字段)。
+        /// 调用方必须持有 _snapLock。
+        /// </summary>
+        private static void ProbeAll()
+        {
+            List<Probe> probes = new List<Probe>();
+
+            // ① 选曲列表: 完全绕开 DataManager 的字段/API, 只要进过选曲界面就有
+            Probe sel = new Probe();
+            sel.Name = "select:CombineMusicDataList";
+            probes.Add(sel);
+            try
+            {
+                FillFromSelectList(sel);
+            }
+            catch (Exception e)
+            {
+                sel.Error = e.GetType().Name + ": " + e.Message;
+            }
+
+            Manager.DataManager dm = null;
+            try
+            {
+                dm = Singleton<Manager.DataManager>.Instance;
+            }
+            catch (Exception e)
+            {
+                Warn("[SongRequest] 取 DataManager 实例失败: " + e.Message);
+            }
+            if (dm == null)
+            {
+                Probe p0 = new Probe();
+                p0.Name = "Singleton<DataManager>.Instance";
+                p0.Error = "实例为 null(游戏数据还没初始化完?)";
+                probes.Add(p0);
+            }
+            else
+            {
+                // ② 公开 API
+                Probe api = new Probe();
+                api.Name = "api:GetMusics()";
+                try
+                {
+                    Fill(api, dm.GetMusics());
+                }
+                catch (Exception e)
+                {
+                    api.Error = e.GetType().Name + ": " + e.Message;
+                }
+                probes.Add(api);
+                // ③ 反射 DataManager 的所有实例字段(以前只认 _musics 一个名字)
+                foreach (FieldInfo f in MusicTableFields())
+                {
+                    Probe p = new Probe();
+                    p.Name = "field:" + f.Name;
+                    try
+                    {
+                        Fill(p, f.GetValue(dm));
+                    }
+                    catch (Exception e)
+                    {
+                        p.Error = e.GetType().Name + ": " + e.Message;
+                    }
+                    probes.Add(p);
+                }
+            }
+
+            Probe best = null;
+            for (int i = 0; i < probes.Count; i++)
+            {
+                Probe p = probes[i];
+                if (p.Count <= 0)
+                {
+                    continue;
+                }
+                if (best == null || p.Count > best.Count)
+                {
+                    best = p;      // 并列时靠前的赢
+                }
+            }
+
+            _snap = best != null ? best.Items
+                : new List<KeyValuePair<int, Manager.MaiStudio.MusicData>>();
+            _snapRaw = best != null ? best.Count : 0;
+            if (best != null)
+            {
+                _snapSource = best.Name + " [" + best.Shape + "]";
+            }
+            else
+            {
+                _snapSource = "(所有数据源都是 0 条)";
+            }
+            // 诊断串先算好: 下面那几个日志万一抛异常, 也不能把 /api/selfcheck 的关键信息丢了
+            _probeReport = ProbeReportJson(probes, best);
+            if (best != null)
+            {
+                if (probes.Count > 0 && !ReferenceEquals(best, probes[0]) && probes[0].Count <= 0
+                    && !probes[0].Skipped && !_fallbackWarned)
+                {
+                    _fallbackWarned = true;
+                    Warn("[SongRequest] 主数据源 " + probes[0].Name + " 读到 0 条"
+                        + (probes[0].Error.Length > 0 ? " (" + probes[0].Error + ")" : "")
+                        + ", 已自动改用 " + best.Name + "(" + best.Count + " 条)。明细: /api/selfcheck");
+                }
+            }
+            else if (!_zeroWarned)
+            {
+                _zeroWarned = true;
+                Warn("[SongRequest] 所有曲目数据源都读到 0 条 —— 点歌台会显示 0 首。"
+                    + "各数据源明细见 /api/selfcheck 的 songTable.tried");
+            }
+            if (_lastLoggedSource != _snapSource)
+            {
+                _lastLoggedSource = _snapSource;
+                ModLog.Info("[SongRequest] 曲目表来源: " + _snapSource + " / " + _snapRaw + " 条");
+            }
+        }
+
+        /// <summary>把一路候选对象里的曲目条目抽出来(形状自适应)</summary>
+        private static void Fill(Probe p, object table)
+        {
+            _dedupe.Clear();
             if (table == null)
             {
-                yield break;
+                p.Shape = "null";
+                return;
+            }
+            string shape = "";
+            try
+            {
+                Extract(table, p.Items, ref shape, 0);
+            }
+            catch (Exception e)
+            {
+                p.Error = "枚举异常 " + e.GetType().Name + ": " + e.Message;
+            }
+            p.Shape = shape.Length > 0 ? shape : table.GetType().Name;
+            p.Count = p.Items.Count;
+        }
+
+        /// <summary>数据源①: 读 SelectDriver 抓到的选曲列表, 然后交给 FillSelectList。</summary>
+        private static void FillFromSelectList(Probe p)
+        {
+            object live = null;
+            try
+            {
+                live = SelectDriver.SelectList;      // 没进过选曲界面 -> null
+            }
+            catch
+            {
+            }
+            FillSelectList(p, live);
+        }
+
+        /// <summary>
+        /// 选曲列表 -> 曲目表。list = MusicSelectProcess.CombineMusicDataList
+        /// (List&lt;ReadOnlyCollection&lt;CombineMusicSelectData&gt;&gt;; null = 现在没在选曲界面)。
+        ///
+        /// 每条 CombineMusicSelectData = 分类里的一格:
+        ///   msDetailData.musicId          这一格是哪个 id
+        ///   musicSelectData[STD/DX]       两个槽, 每槽 .MusicData 就是游戏的 MusicData 对象(曲名/艺术家/
+        ///                                 BPM/谱面/版本都能直接用), .isExistsScore 是"这档能不能玩"的真值
+        /// 同一首会出现在多个分类(本机 13 分类 2611 项 -> 1677 首), 所以按 MusicData.GetID() 精确去重;
+        /// STD 和 DX 各有一条 id 的是**两首不同的条目**(本机 1677 个 id 里 1090 个 >=10000),
+        /// 所以只合并"同 id 重复", 不做 x/x+10000 合并 —— 合并会把 DX 曲目从曲库里删掉。
+        /// 离开选曲界面后 CombineMusicDataList 会被游戏释放 -> 用最后一次成功的快照兜住。
+        /// </summary>
+        private static void FillSelectList(Probe p, object list)
+        {
+            _dedupe.Clear();
+            var cats = list
+                as List<System.Collections.ObjectModel.ReadOnlyCollection<
+                    Process.MusicSelectProcess.CombineMusicSelectData>>;
+            int catCount = 0;
+            int itemCount = 0;
+            _selectLive = cats != null && cats.Count > 0;
+            if (_selectLive)
+            {
+                catCount = cats.Count;
+                for (int c = 0; c < catCount && p.Items.Count < MaxProbeItems; c++)
+                {
+                    var page = cats[c];
+                    if (page == null)
+                    {
+                        continue;
+                    }
+                    for (int i = 0; i < page.Count && p.Items.Count < MaxProbeItems; i++)
+                    {
+                        var item = page[i];
+                        if (item == null)
+                        {
+                            continue;
+                        }
+                        itemCount++;
+                        int detailId = 0;
+                        try
+                        {
+                            if (item.msDetailData != null)
+                            {
+                                detailId = item.msDetailData.musicId;
+                            }
+                        }
+                        catch
+                        {
+                        }
+                        var slots = item.musicSelectData;
+                        if (slots == null)
+                        {
+                            continue;
+                        }
+                        for (int s = 0; s < slots.Count; s++)
+                        {
+                            var slot = slots[s];
+                            if (slot == null)
+                            {
+                                continue;
+                            }
+                            var md = slot.MusicData;      // Process.MusicSelectProcess.MusicSelectData.MusicData
+                            if (md == null)
+                            {
+                                continue;
+                            }
+                            int id = IdOf(md);
+                            if (id <= 0)
+                            {
+                                id = detailId;
+                            }
+                            AddId(id, md, p.Items);
+                        }
+                    }
+                }
+            }
+            if (p.Items.Count > 0)
+            {
+                // 缓存活的结果: 等下离开选曲界面时 CombineMusicDataList 会被释放
+                _selectCache = new List<KeyValuePair<int, Manager.MaiStudio.MusicData>>(p.Items);
+                _selectCacheAt = DateTime.Now.ToString("HH:mm:ss");
+                _selectCacheCats = catCount;
+                _selectCacheItems = itemCount;
+                p.Shape = "选曲列表 " + catCount + " 分类/" + itemCount + " 项 去重后";
+            }
+            else if (_selectCache != null)
+            {
+                // 没在选曲界面(或列表里没有 MusicData): 用最后一份快照, 别让曲库掉回 0 首
+                p.Items.AddRange(_selectCache);
+                p.Shape = "选曲列表缓存(" + _selectCacheCats + " 分类/" + _selectCacheItems + " 项, "
+                    + _selectCacheAt + " 抓的; 现在没在选曲界面)";
+            }
+            else
+            {
+                p.Skipped = true;
+                p.Shape = cats == null ? "选曲列表不可用(还没进过选曲界面)" : "选曲列表里没有 MusicData";
+            }
+            p.Count = p.Items.Count;
+        }
+
+        /// <summary>
+        /// 从任意"像曲目表"的对象里抽 (id, MusicData)。认这些形状:
+        ///   IEnumerable&lt;KeyValuePair&lt;int,MusicData&gt;&gt;  (Dictionary / Safe.ReadonlySortedDictionary 之类)
+        ///   非泛型 IEnumerable 里的 KVP / 裸 MusicData(用 GetID() 当 key) / 带 Key+Value 属性的项
+        ///   嵌套可枚举(如 SortedDictionary&lt;int,List&lt;MusicData&gt;&gt;), 以及只暴露 Values 属性的包装
+        /// 单个 item 认不出来只跳过它, 不会把整路丢掉; 枚举中途出异常也保住已收到的条目。
+        /// </summary>
+        private static void Extract(object table,
+            List<KeyValuePair<int, Manager.MaiStudio.MusicData>> sink, ref string shape, int depth)
+        {
+            if (table == null || sink.Count >= MaxProbeItems || depth > 3)
+            {
+                return;
             }
             var typed = table as IEnumerable<KeyValuePair<int, Manager.MaiStudio.MusicData>>;
             if (typed != null)
             {
+                shape = Shape(shape, "kvp<int,MusicData>");
                 foreach (var kv in typed)
                 {
-                    yield return kv;
+                    if (sink.Count >= MaxProbeItems)
+                    {
+                        break;
+                    }
+                    AddId(kv.Key, kv.Value, sink);
                 }
-                yield break;
+                return;
             }
             var loose = table as IEnumerable;
             if (loose == null)
             {
-                yield break;
+                // 有包装类自己不实现 IEnumerable, 只暴露 Values
+                PropertyInfo pv = table.GetType().GetProperty("Values");
+                if (pv != null && pv.GetIndexParameters().Length == 0)
+                {
+                    object inner = null;
+                    try
+                    {
+                        inner = pv.GetValue(table, null);
+                    }
+                    catch
+                    {
+                    }
+                    if (inner != null && !ReferenceEquals(inner, table))
+                    {
+                        shape = Shape(shape, "values属性");
+                        Extract(inner, sink, ref shape, depth + 1);
+                        return;
+                    }
+                }
+                shape = Shape(shape, "不认:" + table.GetType().Name);
+                return;
             }
-            foreach (object item in loose)
+            shape = Shape(shape, "loose");
+            IEnumerator e = loose.GetEnumerator();
+            try
             {
-                if (item == null)
+                while (sink.Count < MaxProbeItems)
                 {
-                    continue;
+                    object item;
+                    try
+                    {
+                        if (!e.MoveNext())
+                        {
+                            break;
+                        }
+                        item = e.Current;
+                    }
+                    catch (Exception ex)
+                    {
+                        // 别的 mod 并发改表把枚举搞炸 -> 已收到的条目照用, 别整路归零
+                        shape = Shape(shape, "枚举中断:" + ex.GetType().Name);
+                        break;
+                    }
+                    if (item == null)
+                    {
+                        continue;
+                    }
+                    if (item is KeyValuePair<int, Manager.MaiStudio.MusicData>)
+                    {
+                        var kv = (KeyValuePair<int, Manager.MaiStudio.MusicData>)item;
+                        AddId(kv.Key, kv.Value, sink);
+                        shape = Shape(shape, "kvp");
+                        continue;
+                    }
+                    var md = item as Manager.MaiStudio.MusicData;
+                    if (md != null)
+                    {
+                        AddId(IdOf(md), md, sink);      // 裸 MusicData 序列: 用 GetID() 当 key
+                        shape = Shape(shape, "裸MusicData");
+                        continue;
+                    }
+                    if (AddByProperties(item, sink))
+                    {
+                        shape = Shape(shape, "key-value属性");
+                        continue;
+                    }
+                    // 键值对但 Value 本身是个列表(DataManager._musicsByAddVersion 就是
+                    // SortedDictionary<int, List<MusicData>>, key 是版本号不是曲目 id)
+                    // -> 摊平进去, id 一律用 MusicData 自己的 GetID()
+                    if (AddByNestedValue(item, sink, ref shape, depth))
+                    {
+                        continue;
+                    }
+                    var nested = item as IEnumerable;
+                    if (nested != null && !(item is string))
+                    {
+                        shape = Shape(shape, "嵌套");
+                        Extract(nested, sink, ref shape, depth + 1);
+                        continue;
+                    }
+                    shape = Shape(shape, "跳过:" + item.GetType().Name);
                 }
-                System.Type t = item.GetType();
-                PropertyInfo pk = t.GetProperty("Key");
-                PropertyInfo pv = t.GetProperty("Value");
-                if (pk == null || pv == null)
+            }
+            finally
+            {
+                var d = e as IDisposable;
+                if (d != null)
                 {
-                    continue;
+                    try
+                    {
+                        d.Dispose();
+                    }
+                    catch
+                    {
+                    }
                 }
-                object k = pk.GetValue(item, null);
-                object v = pv.GetValue(item, null);
-                if (k is int && v is Manager.MaiStudio.MusicData)
+            }
+        }
+
+        /// <summary>Key/Value 属性形状(自定义 KVP 结构 / DictionaryEntry / 老式字典条目)</summary>
+        private static bool AddByProperties(object item,
+            List<KeyValuePair<int, Manager.MaiStudio.MusicData>> sink)
+        {
+            System.Type t = item.GetType();
+            PropertyInfo pk = t.GetProperty("Key");
+            PropertyInfo pv = t.GetProperty("Value");
+            if (pk == null || pv == null
+                || pk.GetIndexParameters().Length > 0 || pv.GetIndexParameters().Length > 0)
+            {
+                return false;
+            }
+            object k, v;
+            try
+            {
+                k = pk.GetValue(item, null);
+                v = pv.GetValue(item, null);
+            }
+            catch
+            {
+                return false;
+            }
+            var md = v as Manager.MaiStudio.MusicData;
+            if (md == null)
+            {
+                return false;
+            }
+            int id = 0;
+            try
+            {
+                id = Convert.ToInt32(k);      // key 可能是 long/uint/枚举, 一律 Convert
+            }
+            catch
+            {
+                id = 0;
+            }
+            AddId(id, md, sink);
+            return true;
+        }
+
+        /// <summary>
+        /// 条目是 "键值对 + Value 是可枚举"(如 KeyValuePair&lt;int, List&lt;MusicData&gt;&gt;) 时摊平进去。
+        /// DataManager._musicsByAddVersion 就是这个形状, 而它的 key 是版本号不是曲目 id,
+        /// 所以里面的 MusicData 一律用 GetID() 拿 id。
+        /// </summary>
+        private static bool AddByNestedValue(object item,
+            List<KeyValuePair<int, Manager.MaiStudio.MusicData>> sink, ref string shape, int depth)
+        {
+            PropertyInfo pv = item.GetType().GetProperty("Value");
+            if (pv == null || pv.GetIndexParameters().Length > 0)
+            {
+                return false;
+            }
+            object v;
+            try
+            {
+                v = pv.GetValue(item, null);
+            }
+            catch
+            {
+                return false;
+            }
+            if (v == null || v is Manager.MaiStudio.MusicData || v is string)
+            {
+                return false;
+            }
+            var inner = v as IEnumerable;
+            if (inner == null)
+            {
+                return false;
+            }
+            shape = Shape(shape, "键值+嵌套");
+            Extract(inner, sink, ref shape, depth + 1);
+            return true;
+        }
+
+        private static void AddId(int id, Manager.MaiStudio.MusicData md,
+            List<KeyValuePair<int, Manager.MaiStudio.MusicData>> sink)
+        {
+            if (md == null)
+            {
+                return;
+            }
+            if (id <= 0)
+            {
+                id = IdOf(md);      // key 缺失/不是整数 -> 用 MusicData 自己的 id
+            }
+            if (id <= 0)
+            {
+                return;
+            }
+            if (!_dedupe.Add(id))
+            {
+                return;             // 多路/嵌套列表里同一首会出现多次, 只算一条
+            }
+            sink.Add(new KeyValuePair<int, Manager.MaiStudio.MusicData>(id, md));
+        }
+
+        private static int IdOf(Manager.MaiStudio.MusicData md)
+        {
+            try
+            {
+                return md.GetID();
+            }
+            catch
+            {
+                return 0;
+            }
+        }
+
+        private static string Shape(string cur, string add)
+        {
+            if (cur.Length == 0)
+            {
+                return add;
+            }
+            if (cur.IndexOf(add, StringComparison.Ordinal) >= 0)
+            {
+                return cur;
+            }
+            return cur.Length < 90 ? cur + "+" + add : cur;
+        }
+
+        /// <summary>DataManager 上所有"像曲目表"的实例字段(_musics 排最前)</summary>
+        private static List<FieldInfo> MusicTableFields()
+        {
+            List<FieldInfo> hits = new List<FieldInfo>();
+            try
+            {
+                FieldInfo[] all = typeof(Manager.DataManager).GetFields(
+                    BindingFlags.Instance | BindingFlags.Public | BindingFlags.NonPublic);
+                foreach (FieldInfo f in all)
                 {
-                    yield return new KeyValuePair<int, Manager.MaiStudio.MusicData>((int)k,
-                        (Manager.MaiStudio.MusicData)v);
+                    if (f.IsStatic || !LooksLikeMusicTable(f))
+                    {
+                        continue;
+                    }
+                    if (hits.Count >= MaxProbeSources)
+                    {
+                        break;
+                    }
+                    hits.Add(f);
                 }
+                // _musics 排最前(常规机器上就是它, 省得每次都多枚举几路)
+                hits.Sort(delegate (FieldInfo a, FieldInfo b)
+                {
+                    return Rank(a).CompareTo(Rank(b));
+                });
+            }
+            catch (Exception e)
+            {
+                MelonLogger.Warning("[SongRequest] 枚举 DataManager 字段失败: " + e.Message);
+            }
+            return hits;
+        }
+
+        private static int Rank(FieldInfo f)
+        {
+            if (f.Name == "_musics")
+            {
+                return 0;
+            }
+            return DirectMusicValue(f.FieldType) ? 1 : 2;
+        }
+
+        private static bool DirectMusicValue(System.Type t)
+        {
+            if (t == null || !t.IsGenericType)
+            {
+                return false;
+            }
+            foreach (System.Type a in t.GetGenericArguments())
+            {
+                if (a == typeof(Manager.MaiStudio.MusicData))
+                {
+                    return true;
+                }
+            }
+            return false;
+        }
+
+        /// <summary>只看字段类型就知道要不要试 —— 避免把 DataManager 上几十张别的表都枚举一遍</summary>
+        private static bool LooksLikeMusicTable(FieldInfo f)
+        {
+            System.Type t = f.FieldType;
+            if (t == null)
+            {
+                return false;
+            }
+            if (t == typeof(Manager.MaiStudio.MusicData))
+            {
+                return true;
+            }
+            if (t.IsGenericType)
+            {
+                foreach (System.Type a in t.GetGenericArguments())
+                {
+                    if (a == typeof(Manager.MaiStudio.MusicData)
+                        || a == typeof(List<Manager.MaiStudio.MusicData>))
+                    {
+                        return true;
+                    }
+                    if (a.IsGenericType)
+                    {
+                        foreach (System.Type b in a.GetGenericArguments())
+                        {
+                            if (b == typeof(Manager.MaiStudio.MusicData))
+                            {
+                                return true;
+                            }
+                        }
+                    }
+                }
+                return false;
+            }
+            if (!typeof(IEnumerable).IsAssignableFrom(t))
+            {
+                return false;
+            }
+            return t.Name.IndexOf("MusicData", StringComparison.OrdinalIgnoreCase) >= 0;
+        }
+
+        private static string ProbeReportJson(List<Probe> probes, Probe best)
+        {
+            StringBuilder sb = new StringBuilder(256);
+            sb.Append('[');
+            for (int i = 0; i < probes.Count; i++)
+            {
+                Probe p = probes[i];
+                if (i > 0)
+                {
+                    sb.Append(',');
+                }
+                sb.Append("{\"name\":\"").Append(Escape(p.Name)).Append('"');
+                sb.Append(",\"count\":").Append(p.Count);
+                sb.Append(",\"shape\":\"").Append(Escape(p.Shape)).Append('"');
+                sb.Append(",\"error\":\"").Append(Escape(p.Error)).Append('"');
+                sb.Append(",\"picked\":").Append(ReferenceEquals(p, best) ? "true" : "false");
+                sb.Append('}');
+            }
+            sb.Append(']');
+            return sb.ToString();
+        }
+
+        /// <summary>遍历曲目表: (id, MusicData)</summary>
+        private static IEnumerable<KeyValuePair<int, Manager.MaiStudio.MusicData>> Each()
+        {
+            var snap = Snapshot(false);
+            for (int i = 0; i < snap.Count; i++)
+            {
+                yield return snap[i];
             }
         }
 
         internal static int RawCount()
         {
-            int n = 0;
-            foreach (var kv in Each())
-            {
-                n++;
-            }
-            return n;
+            return Snapshot(false).Count;
         }
 
         internal static int Count
         {
             get { return _jsonCount > 0 ? _jsonCount : RawCount(); }
+        }
+
+        /// <summary>自检用: 曲目表数据源明细(/api/selfcheck 里的 songTable 段)</summary>
+        internal static string DiagJson()
+        {
+            try
+            {
+                lock (_snapLock)
+                {
+                    if (_snap == null)
+                    {
+                        ProbeAll();
+                        _snapMs = Environment.TickCount;
+                    }
+                    StringBuilder sb = new StringBuilder(512);
+                    sb.Append("{\"source\":\"").Append(Escape(_snapSource)).Append('"');
+                    sb.Append(",\"entries\":").Append(_snapRaw);
+                    sb.Append(",\"songs\":").Append(_jsonCount);
+                    sb.Append(",\"rev\":").Append(Rev);
+                    sb.Append(",\"byId\":").Append(_byId.Count);
+                    sb.Append(",\"retryFails\":").Append(_retryFails);
+                    sb.Append(",\"selectList\":{\"live\":").Append(_selectLive ? "true" : "false")
+                        .Append(",\"cached\":").Append(_selectCache != null ? "true" : "false")
+                        .Append(",\"cats\":").Append(_selectCacheCats)
+                        .Append(",\"items\":").Append(_selectCacheItems)
+                        .Append(",\"at\":\"").Append(Escape(_selectCacheAt)).Append("\"}");
+                    sb.Append(",\"disableFilter\":\"").Append(_disableFilterOff
+                        ? "off(整库被判禁用, 已自动关闭)" : "on").Append('"');
+                    sb.Append(",\"tried\":").Append(_probeReport);
+                    sb.Append(",\"alias\":{\"count\":").Append(Aliases.Count)
+                        .Append(",\"songs\":").Append(Aliases.SongCount).Append('}');
+                    sb.Append('}');
+                    return sb.ToString();
+                }
+            }
+            catch (Exception e)
+            {
+                return "{\"source\":\"诊断失败\",\"error\":\"" + Escape(e.Message) + "\"}";
+            }
+        }
+
+        private static int _retryMs;
+        private static bool _everRetried;
+        private static int _retryFails;
+        private const int RetryIntervalMs = 5000;
+        private const int RetryMaxFails = 3;
+
+        /// <summary>
+        /// 表是空的时候补一次重建 —— 但要有节流: 老代码这里是无条件 Json(true),
+        /// 表一直空(别人机器上反射读不到)时, 网页每轮询一次 Now Playing 就整表重建一次,
+        /// rev 疯涨(报告里那个 382)+ 白耗 CPU。现在: 距上次重试 >=5 秒才试一次,
+        /// 连续 3 次仍旧 0 首就彻底放弃并打一条 Warning(明细去 /api/selfcheck 看)。
+        /// </summary>
+        private static void EnsureTable()
+        {
+            if (_byId.Count > 0)
+            {
+                _retryFails = 0;
+                return;
+            }
+            if (_retryFails >= RetryMaxFails)
+            {
+                return;
+            }
+            int now = Environment.TickCount;
+            if (_everRetried && unchecked(now - _retryMs) < RetryIntervalMs)
+            {
+                return;
+            }
+            _everRetried = true;
+            _retryMs = now;
+            Json(true);
+            if (_byId.Count > 0)
+            {
+                _retryFails = 0;
+                ModLog.Info("[SongRequest] 曲目表重建成功: " + _byId.Count + " 首 (来源 " + _snapSource + ")");
+                return;
+            }
+            _retryFails++;
+            Warn("[SongRequest] 曲目表重建后仍是 0 首(第 " + _retryFails + "/"
+                + RetryMaxFails + " 次, 数据源: " + _snapSource + ")"
+                + (_retryFails >= RetryMaxFails ? " —— 停止自动重试, 明细见 /api/selfcheck" : ""));
         }
 
         internal static Manager.MaiStudio.MusicData GetMusic(int id)
@@ -211,7 +919,7 @@ namespace SongRequestMod
             {
                 if (_byId.Count == 0)
                 {
-                    Json(true);
+                    EnsureTable();
                 }
                 Manager.MaiStudio.MusicData md;
                 if (_byId.TryGetValue(id, out md))
@@ -360,7 +1068,7 @@ namespace SongRequestMod
             foreach (var kv in Each())
             {
                 var md = kv.Value;
-                if (md == null || md.IsDisable())
+                if (md == null || (!_disableFilterOff && IsDisabled(md)))
                 {
                     continue;
                 }
@@ -411,6 +1119,16 @@ namespace SongRequestMod
             return _json;
         }
 
+        /// <summary>丢掉数据源快照缓存后重出(网页 /api/songs?refresh=1 用)</summary>
+        internal static string JsonFresh()
+        {
+            lock (_snapLock)
+            {
+                _snap = null;
+            }
+            return Json(true);
+        }
+
         private static string Build()
         {
             StringBuilder sb = new StringBuilder(1 << 21);
@@ -419,26 +1137,32 @@ namespace SongRequestMod
             try
             {
                 _byId.Clear();
-                bool first = true;
-                foreach (var kv in Each())
+                var snap = Snapshot(false);
+                int raw = 0;
+                for (int i = 0; i < snap.Count; i++)
                 {
-                    Manager.MaiStudio.MusicData md = kv.Value;
+                    Manager.MaiStudio.MusicData md = snap[i].Value;
                     if (md == null)
                     {
                         continue;
                     }
+                    raw++;
                     _byId[md.GetID()] = md;
-                    if (md.IsDisable())
+                }
+                n = AppendAll(sb, snap, !_disableFilterOff);
+                if (n == 0 && raw > 0 && !_disableFilterOff)
+                {
+                    // 保险: 整库都被 disable 过滤清空了 —— 宁可多显示几首被禁用的歌, 也不能给用户 0 首
+                    _disableFilterOff = true;
+                    if (!_disableFilterWarned)
                     {
-                        continue;   // 游戏里禁用的曲目不进点歌台
+                        _disableFilterWarned = true;
+                        Warn("[SongRequest] 检测到整库被 disable 过滤清空(" + raw
+                            + " 首全部被判为禁用), 已自动关闭 disable 过滤 —— 这几首会照常显示");
                     }
-                    if (!first)
-                    {
-                        sb.Append(',');
-                    }
-                    first = false;
-                    AppendMusic(sb, md);
-                    n++;
+                    sb = new StringBuilder(1 << 21);
+                    sb.Append('[');
+                    n = AppendAll(sb, snap, false);
                 }
             }
             catch (Exception e)
@@ -447,13 +1171,123 @@ namespace SongRequestMod
             }
             sb.Append(']');
             _jsonCount = n;
+            // 记下这次用的原始条目数: Tick 靠它判断曲目表有没有变(不能跟 _jsonCount 比, 那个已滤掉禁用曲目)
+            _builtSnapCount = _snapRaw;
             Rev++;
             // 曲库变了 -> 曲绘缓存也作废(热导入换过封面的曲子不会继续给旧图)
             Jackets.ClearCache();
             _types = null;
-            ModLog.Info("[SongRequest] 曲目表已导出: " + n + " 首 (rev " + Rev + ")");
+            ModLog.Info("[SongRequest] 曲目表已导出: " + n + " 首 (rev " + Rev
+                + (_disableFilterOff ? ", disable 过滤已关闭" : "") + ")");
             return sb.ToString();
         }
+
+        /// <summary>按有没有开 disable 过滤渲染 JSON 数组体, 返回写进去的条数</summary>
+        private static int AppendAll(StringBuilder sb, List<KeyValuePair<int, Manager.MaiStudio.MusicData>> snap,
+            bool useDisableFilter)
+        {
+            int n = 0;
+            bool first = true;
+            for (int i = 0; i < snap.Count; i++)
+            {
+                Manager.MaiStudio.MusicData md = snap[i].Value;
+                if (md == null)
+                {
+                    continue;
+                }
+                if (useDisableFilter && IsDisabled(md))
+                {
+                    continue;   // 游戏里禁用的曲目不进点歌台
+                }
+                if (!first)
+                {
+                    sb.Append(',');
+                }
+                first = false;
+                AppendMusic(sb, md);
+                n++;
+            }
+            return n;
+        }
+
+        private static FieldInfo _fDisable;
+        private static bool _disableFieldProbed;
+        private static bool _disableFilterOff;
+        private static bool _disableFilterWarned;
+
+        /// <summary>
+        /// 这首曲子算不算"游戏里禁用"。
+        /// 老代码只看 MusicData.IsDisable() —— 在别的版本/别的私服数据上它可能把**整库**判成禁用
+        /// (那台机器上曲库就是被这一条清成 0 首的)。现在: IsDisable() 为真 **且** 直接读到的
+        /// disable 字段也为真 才跳过; 字段读不到(或取值失败)就退回只看 IsDisable()。
+        /// </summary>
+        private static bool IsDisabled(Manager.MaiStudio.MusicData md)
+        {
+            if (md == null)
+            {
+                return true;
+            }
+            bool byMethod;
+            try
+            {
+                byMethod = md.IsDisable();
+            }
+            catch
+            {
+                return false;      // 连判定都炸了 -> 当没禁用(宁可多显示, 不能少给)
+            }
+            if (!byMethod)
+            {
+                return false;
+            }
+            bool? raw = RawDisable(md);
+            return !raw.HasValue || raw.Value;
+        }
+
+        /// <summary>直接读 disable 字段(不同版本可能是字段 / 自动属性 / 只读属性), 读不到返回 null</summary>
+        private static bool? RawDisable(Manager.MaiStudio.MusicData md)
+        {
+            try
+            {
+                if (!_disableFieldProbed)
+                {
+                    _disableFieldProbed = true;
+                    System.Type t = md.GetType();
+                    _fDisable = t.GetField("disable",
+                        BindingFlags.Instance | BindingFlags.Public | BindingFlags.NonPublic);
+                    if (_fDisable == null)
+                    {
+                        _fDisable = t.GetField("<disable>k__BackingField",
+                            BindingFlags.Instance | BindingFlags.Public | BindingFlags.NonPublic);
+                    }
+                    if (_fDisable == null)
+                    {
+                        PropertyInfo pv = t.GetProperty("disable",
+                            BindingFlags.Instance | BindingFlags.Public | BindingFlags.NonPublic);
+                        if (pv != null && pv.GetIndexParameters().Length == 0 && pv.CanRead)
+                        {
+                            _fDisableProp = pv;
+                        }
+                    }
+                    ModLog.Info("[SongRequest] disable 判定: "
+                        + (_fDisable != null ? ("字段 " + _fDisable.Name)
+                            : (_fDisableProp != null ? "属性 disable" : "读不到, 只看 IsDisable()")));
+                }
+                object v = _fDisable != null ? _fDisable.GetValue(md)
+                    : (_fDisableProp != null ? _fDisableProp.GetValue(md, null) : null);
+                if (v is bool)
+                {
+                    return (bool)v;
+                }
+                return v == null ? (bool?)null : Convert.ToBoolean(v);
+            }
+            catch
+            {
+                return null;
+            }
+        }
+
+        private static PropertyInfo _fDisableProp;
 
         private static void AppendMusic(StringBuilder sb, Manager.MaiStudio.MusicData md)
         {
