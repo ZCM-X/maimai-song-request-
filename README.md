@@ -28,15 +28,17 @@
 
 ## 安装
 
+**将 dll 放置在游戏的 mods 文件夹，游戏加载完成后浏览器打开本地 IP 加 8790 端口即可点歌，例 `127.0.0.1:8790`。**
+
 1. 装好 [MelonLoader](https://melonwiki.xyz/) 0.6.x（游戏为 Mono，不是 Il2Cpp）
-2. 把 `SongRequestMod.dll` 丢进 `<游戏目录>\Mods\`
-3. 重启游戏，日志里会出现一行地址：
+2. 把 `SongRequestMod.dll` 放进 `<游戏目录>\Mods\`
+3. 重启游戏，日志里会打出地址：
 
 ```
 [SongRequest] v1.0.0.0  本机: http://127.0.0.1:8790/    手机(同网): http://192.168.x.x:8790/
 ```
 
-4. 浏览器打开那个地址即可（**页面/浮层/别名库全部内嵌在 dll 里，只需这一个文件**；首次启动会生成 `SongRequestMod.toml` 配置）
+4. 浏览器打开那个地址（**页面 / OBS 浮层 / 别名库全部内嵌在 dll 里，只需这一个文件**；首次启动会生成 `SongRequestMod.toml`）
 
 ## 使用
 
