@@ -1,0 +1,130 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>SongRequestMod · 游玩状态浮层</title>
+<!--
+  给 OBS「浏览器源」用的透明浮层: 只显示 曲名/难度/Combo/分数/判定。
+  数据来自 GET /api/nowplaying (500ms 轮询)。
+  背景默认透明, 直接加到 OBS 里即可; body 背景可自己改。
+-->
+<style>
+  :root{ --pink:#ff5ca0; --cyan:#39d7ff; --gold:#ffb428; }
+  *{ box-sizing:border-box; }
+  html,body{ margin:0; padding:0; background:transparent; }
+  body{ font:14px/1.45 system-ui,"Segoe UI","Microsoft YaHei",sans-serif; color:#fff;
+        text-shadow:0 2px 6px rgba(0,0,0,.75); padding:8px; }
+  #wrap{ width:360px; }
+  #wrap.hide{ display:none; }
+  #song{ font-size:20px; font-weight:700; }
+  #artist{ font-size:13px; opacity:.85; }
+  #diff{ display:inline-block; margin-left:8px; padding:1px 8px; border-radius:6px;
+         font-size:12px; font-weight:700; background:var(--pink); }
+  #row{ display:flex; align-items:flex-end; gap:16px; margin-top:6px; }
+  #comboBox{ line-height:1; }
+  #combo{ font-size:46px; font-weight:800; font-variant-numeric:tabular-nums; }
+  #comboLbl{ font-size:12px; opacity:.8; letter-spacing:.14em; }
+  #right{ flex:1; }
+  #score{ font-size:26px; font-weight:700; font-variant-numeric:tabular-nums; color:var(--gold); }
+  #scoreLbl{ font-size:11px; opacity:.75; letter-spacing:.12em; }
+  #judge{ display:grid; grid-template-columns:1fr 1fr; gap:0 10px; margin-top:4px; font-size:12px; }
+  #judge div{ display:flex; justify-content:space-between; }
+  .cp{ color:var(--gold); } .pf{ color:var(--cyan); } .gr{ color:#7dffb0; } .gd{ color:#ffe98a; } .ms{ color:#ff8080; }
+  #lifeWrap{ margin-top:6px; height:6px; background:rgba(255,255,255,.18); border-radius:3px; overflow:hidden; }
+  #life{ height:100%; width:100%; background:linear-gradient(90deg,var(--cyan),var(--pink)); transition:width .2s; }
+  #idle{ opacity:.75; font-size:15px; }
+  #err{ display:none; margin-top:6px; font-size:12px; color:#ff9a9a; }
+</style>
+</head>
+<body>
+<div id="wrap">
+  <div id="idle">未在游玩</div>
+  <div id="play" style="display:none">
+    <div><span id="song"></span><span id="diff"></span></div>
+    <div id="artist"></div>
+    <div id="row">
+      <div id="comboBox"><div id="combo">0</div><div id="comboLbl">COMBO</div></div>
+      <div id="right">
+        <div id="score">--</div>
+        <div id="scoreLbl">ACHIEVEMENT %</div>
+        <div id="judge">
+          <div class="cp"><span>CP</span><span id="jCP">0</span></div>
+          <div class="pf"><span>PERFECT</span><span id="jPF">0</span></div>
+          <div class="gr"><span>GREAT</span><span id="jGR">0</span></div>
+          <div class="gd"><span>GOOD</span><span id="jGD">0</span></div>
+          <div class="ms"><span>MISS</span><span id="jMS">0</span></div>
+          <div><span style="opacity:.7">MAX</span><span id="jMX" style="opacity:.7">0</span></div>
+        </div>
+        <div id="lifeWrap"><div id="life"></div></div>
+      </div>
+    </div>
+  </div>
+  <div id="err"></div>
+</div>
+<script>
+(function(){
+  var $ = function(id){ return document.getElementById(id); };
+  var lastSig = '';
+  var errShown = false;
+
+  function showErr(msg){
+    $('err').textContent = '读不到游戏状态: ' + msg;
+    $('err').style.display = 'block';
+  }
+
+  function render(d){
+    var playing = d && (d.state === 'playing' || d.state === 'result');
+    if (!playing || !d.id){
+      $('idle').style.display = 'block';
+      $('play').style.display = 'none';
+      $('idle').textContent = (d && d.state === 'select') ? '选曲中: ' + (d.name || '') : '未在游玩';
+      return;
+    }
+    $('idle').style.display = 'none';
+    $('play').style.display = 'block';
+
+    var j = d.judge || {};
+    var sig = [d.id, d.diffType, d.combo, d.maxCombo, d.score, d.life,
+               j.criticalPerfect, j.perfect, j.great, j.good, j.miss].join('|');
+    if (sig === lastSig){ return; }
+    lastSig = sig;
+
+    $('song').textContent = d.name || ('music ' + d.id);
+    $('artist').textContent = d.artist || '';
+    $('diff').textContent = (d.difficulty || '') + (d.levelStr ? ' ' + d.levelStr : '');
+    $('combo').textContent = d.combo || 0;
+    $('jMX').textContent = d.maxCombo || 0;
+    var sc = Number(d.score || 0);
+    $('score').textContent = sc > 0 ? sc.toFixed(4) + '%' : '--';
+    $('jCP').textContent = j.criticalPerfect || 0;
+    $('jPF').textContent = j.perfect || 0;
+    $('jGR').textContent = j.great || 0;
+    $('jGD').textContent = j.good || 0;
+    $('jMS').textContent = j.miss || 0;
+    var life = Number(d.life || 0), start = Number(d.startLife || 100) || 100;
+    var pct = Math.max(0, Math.min(100, life / start * 100));
+    $('life').style.width = pct + '%';
+  }
+
+  function poll(){
+    fetch('/api/nowplaying', { cache:'no-store' })
+      .then(function(r){ if (!r.ok) throw new Error('HTTP ' + r.status); return r.json(); })
+      .then(function(d){
+        if (errShown){ $('err').style.display='none'; errShown=false; }
+        render(d);
+      })
+      .catch(function(e){
+        if (!errShown){ errShown = true; showErr(e.message); }
+      });
+  }
+
+  var theme = new URLSearchParams(location.search);
+  if (theme.get('bg') === '1'){ document.body.style.background = '#0e1120'; }
+
+  poll();
+  setInterval(poll, 500);
+})();
+</script>
+</body>
+</html>
