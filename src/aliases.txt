@@ -1,1082 +1,1408 @@
-# 点歌台别名库 —— 制表符分隔: 曲名(或曲目id) <Tab> 别名 <Tab> 别名 ...
-# 你可以直接改这个文件, 保存后刷新网页即生效(不用重启游戏)。# 开头是注释。
-# 例子:  15001<Tab>咬<Tab>甘噛      /   独サカリ<Tab>咬
-囲い無き世は一期の月影	月影	妹红玉足
-Define	定义
-The 90's Decision	90s	90秒
-にゃーにゃー冒険譚	nyanya冒险谭	冒险谭	妖精冒险谭	找猫	喵喵冒险谭
-レッツゴー!陰陽師	let'go!阴阳师	Let'go!阴阳师	Let's go! Onmyoji	Onmyoji	朱元璋	挑眉	超级蓝绿	不要笑挑战	林正英	老公	老登挑眉	仪式魔法	恶灵退散！恶灵退散！恶灵退散！	憋笑	憋笑挑战	阴阳师
-赤心性：カマトト荒療治	赤心性
-東方スイーツ！～鬼畜姉妹と受難メイド～	鬼畜姐妹	咲夜哭哭	东方受难
-タケモトピアノCMソング	0120370009	0800	cm	CM	机厅老板快乐歌	原谅你了小鬼	竹本钢琴	超级变变变	猫和老鼠开头	广告	广告歌	卖钢琴	电话号码	钢琴广告
-City Escape: Act1	act1	索1	刺猬头跑酷
-結ンデ開イテ羅刹ト骸	八爷	分分合合的罗刹与骨骸	结骸	罗刹	罗刹骨骸	连起来又分开，罗刹与骨骸
-Dreampainter	🎩	sta金曲	梦境绘画者
-幾四音-Ixion-	IKUSHION -Ixion-	Ixion	急死银	第四爱	几四音
-Dive into The Sky ～initialized～	dive	潜入天空	风神少女
-おくすり飲んで寝よう	Okusuri nonde neyo
-てらてら	TeraTera
-Bad Apple!! feat.nomico (REDALiCE Remix)	🍎	Bad Apple Redalice	Bad Apple Redalice Remix	dx坏苹果	坏苹果remix	红苹果
-分解収束テイル	分解收束
-LANCE	兰斯	兰瑟	懒死	烂死	缆车	蓝枪
-銀のめぐり	古明地觉	银	银的循环	银的轮回
-MilK	牛奶	白色液体
-デッドマンズバラッド	bpm300	BPM300	deadman's ballad	散华礼弥	死人的歌谣	死人的叙事诗	亡者情歌	恋尸癖	僵尸	僵尸初音	僵尸妹	僵尸娘	东雪莲姐妹	呜哇呜哇	还是pvp大佬
-Falsum Atlantis.	fa	falsum	江江,我是刹那	皇城刹那	刹那	亚特兰蒂斯
-Beat Of Mind	bom	nmb的mai	心跳	打脑阔	你麻痹的mai	你妈逼	红鼻子男	给你脑袋来一拳
-幾望の月	Kibou no Tsuki	望月	几把之月	几望	几望月	几望的月	几望之月	鸡王之约
-ココロスキャンのうた	migo	音声感情测定器	画苍浅炉管	三千	小人捂唧唧	少林捂裆功	心灵扫描歌	白色小人	白色小人摸几把	武当派	明天	明天捂唧唧	裸男	憋尿小人	捂裆歌	捂裆男	捂裆派	长梦不醒	飞行家
-ツムギボシ	13.9	14.1→14.0→13.9	55	fes+主题曲	我直接踢了	我的西他吉他给我记下的那一孤独，那个不起，你们看着你，记得你那个。	三小只坐一起	紫那一得，累噶一路	祝代主题曲	星光点点	麦当劳1+1	纺星
-Windy Hill -Zone 1	索4	索尼克失落的世界	小追星	追星上位	疯狂小糖
-エナドリおいしいソング	drink with me	易拉罐	能量饮料	能量饮料歌	能量饮料真好喝	斐济杯	东鹏特饮	红牛
-バレリーコ	Ballerico	Balleriko	Ballerina Girl	照镜子	芭蕾	芭蕾舞者
-ぽっぴっぽー	advent	popipo	菜蔬汁	波比波	波比波比	哈基米	蔬菜歌	蔬菜汁
-come again	cum again	再来	再来一遍	再冲一次	舞立方踩在脚下
-Live & Learn	sa2	索尼克大冒险2	开心超人
-Still	七对奈子	仍然
-Space Harrier Main Theme [Reborn]	太空	太空蛤蜊	太空哈利	太空哈姆
-my flow	bolobinelebowigi	我的流	我流
-失敗作少女	Failure Girl	我	我肯定	失败作	失败作小子	失败作少女	失败作老子	失败做少女	成功作少妇	成功作老子	成功当男娘	老娘就是	她	张玉则
-Sun Dance	sd	太阳舞	日跳舞	日舞	孙舞	阳舞
-おこちゃま戦争	Okochama Sensou	Okocyama Sensou	孩子气	孩子气的战争	孩子气战争	战争	陈泽与王志宇
-宿題が終わらないっ！	-connect-少女与触手编织出的爱	-Connect-少女与触手编织出的爱	作业写不完了	作业还没做完	宿题	宿题终	触手	触手！玉足！幼女！	不写作业	不写作业会被触手草	吱吱
-悪戯	11333	Itazura	恶习	恶戏
-『んっあっあっ。』	「んっあっあっ。」	初音鬼叫	举手	嗯啊啊	德川三段突	顶级烟嗓
-Stardust Memories	🌍	🌏	星尘回忆	星尘记忆	地球
-ネガティブ進化論	👎	👎🏻	negative	消极进化论	弟中之弟	弟中之弟进化论	比倒拇指的女孩	达尔文	进化论
-QZKago Requiem	《tpz重磅14.9》	🍆	🍆💳🐶	15+	gdp2	qz	qzingo	qzk	qzkago	安魂曲	茄	茄子	茄子猫	茄子卡狗	甘茄子	牛奶2	牛奶大战	群主库	巧克力vs香子兰	巧克力干翻了香子兰	巧克力大战香子兰	巧克力艹翻了香草	合成大舞神	四杀	小丑牛奶	全家	大臣vs左大臣	大臣左大臣互殴	大臣大战左大臣	大臣和左大臣	毒牛奶	毒奶	毒奶粉	猫打架	猫中毒	猫猫打架	白咲琉璃	平胸猫大战巨乳猫	玲芽之旅	假奶害猫	儿简送2	噎死那个羊	坏牛奶	凯尔希vs嵯峨	凯尔希打嵯峨	凯尔希大战嵯峨	垃圾箱镇魂曲	对立大战光光	铃芽之旅	铃芽户缔	镇魂曲	黑猫打白猫
-サンバディ！	somebody	桑巴迪	光吉猛修开跑车	光吉猛修开车	本命盘
-モンダイナイトリッパー！	Mondainai Tripper	tripper	Tripper	モンダイナイトリッパー	一群死兔子	指南针	萌呆奶	没问题	没问题！Tripper！	没问题tripper	没问题Tripper	没问题旅行家	名取纱那	旅行者	兔兔
-ユメヒバナ	梦火花	梦之火花	掉毛小哥哥
-Final Step!	fs	FS	最后一步
-ファンタジーゾーン OPA-OPA! -GMT remix-	opa	幻想空间	申日月	🈸🌞🌝
-キミノヨゾラ哨戒班	哨戒班	橙哨戒班	你的夜空哨戒班	标准哨戒班	烧鸡班
-采配の刻 Power of order	采配之刻
-ベースラインやってる？笑	baseline	bassbook	bassline	Bassline Yatteru	Can I friend you on Bassbook	Can I friend you on Bassbook? lol	lol	nanahira	学妹恰个v	什么什么笑	女痴汉	女流氓	笑	痴女nanahira	舞时	妹妹v50	妹妹恰个v	变态萝莉	颜文字
-チルノのパーフェクトさんすう教室　⑨周年バージョン	9	⑨	99	9周年	9周年教室	9周年算数教室	baka	cirno ⑨	Cirno 9	Cirno Anniversary	cirno's Perfect Math Class 9 ver	Cirno's Perfect Math Class ⑨ver	dxbaka	dx琪露诺	机厅几卡	九周年	算数教室	笨蛋教室	琪露诺
-quiet room	qr	silentroom	静屋	男同2
-白花の天使	冬雪の莲莲	白花	白花的天使	白花天使	东雪莲2
-The wheel to the right	DJ-MEGA	一块钱2	印度人	右轮	我要杀了你们所有人	光头强	三块钱	欢乐喜锯人	电锯	电锯人	轮子右拧	这谱谁写的	难听
-アルカリレットウセイ	alkali	Alkali rettousei	Arukari Rettousei	魔法少女	魔法少女举大棒	露露卡莉莉卡噜啦哩啦噜啦啦	莉莉卡	碱性劣等生
-ダンスロボットダンス	↑↓	☝😑👇	👆🏻😑👇🏻	👆👇	dance robot dance	Dance Robot Dance	dancerobotdance	drd	voidoll	我站在云林	机器人跳舞	机器人舞	小v	跳舞机器人	跳舞机器人跳舞
-Got more raves？	gmr	郭沫若	雷神
-インパアフェクシオン・ホワイトガアル	Imperfection White Girl
-Arty Party	ap	arty	artyparty	usao派对	usao和他的狐朋狗友	阿姨爬梯	我和我的动物朋友们	基佬派对	狐朋狗友	小动物淫趴	小动物音趴	小动物开银趴	小动物银啪	小动物银趴	男同派对	丁真派对	丁真和他的动物朋友	丁真和他的动物朋友们	丁真银趴	粉兔	动物派对	动物园	动物银趴	纵连派对	银趴
-スーパーシンメトリー	supersymmetry	Supersymmetry	超对称	超对称性	对称性
-oboro	🌠	dx火球	dx小火球	火球	我吉吉在燃燒	我的吉吉在燃烧	小火球	小火苗	小火焰	超新星燃烧
-Tricolor⁂circuS	Tricolor circuS	三色马戏团	三只福瑞过节	三个出生	福瑞三小只	福瑞过节
-We Gonna Journey	wgj	我们去旅行	我们要旅行
-UTAKATA	泡沫	拔刀	维吉尔
-Mare Maris	⛵	🚤	stasis	海面谭	小破船	小白船	上海	船	船歌	大航海	白船来航	帆船	妈妈死	开船	贼船	鸭屁股
-悪魔の踊り方	👁️	👁	👿👯	Devil's Manner	The Devil's Manners	恶魔	恶魔跳舞	恶魔的写谱方法	恶魔的舞蹈方式	恶魔踊
-このふざけた素晴らしき世界は、僕の為にある	This Messed-Up Wonderful World Exists For Me
-太陽系デスコ	👇🏻😐👆🏻👇🏻😐👆🏻	Solar System Disco	太田顺也	太阳系	太阳系disco	梅西哥咬人
-サヨナラチェーンソー	Sayonara Chainsaw	再见电锯	电锯	电锯人	电锯缘兔
-folern	一绿一灰	印度神曲	我要抓走你的妈妈	我爱翠楼屋	水陈	大鸣大放	服了	北冰洋	佛冷	迪希雅	邵	乐山大佛盖小被	买了否冷	给我玩中二节奏
-Oath Act	ocean cat	宣誓行为	涩涩青蛙子	诹访子
-Selector	🧚‍♂️	specter	你与我的工口世界	爸爸的雷达	绿女人	绿色女人	选择器	马哇路加强版	马挖路plus
-若い力	sbga	SBGA	sbga社歌	sega	sega社歌	SEGA社歌	sega大楼	社歌	若以力	若之力	若力	世嘉	世嘉社歌	年轻的力量	本社	本社爆破	傻逼世嘉
-BREaK! BREaK! BREaK!	2550！2550！2550！	3b	bbb	break	break!break!break!	kop2	我趣全大p	我超，全大P	血脑屏障	三个绝赞	三绝赞	泉此方！泉此方！泉此方！	大b歌	天赋佬我草爹	天赋佬我超爹	爆！	爆！爆！爆！	爆爆爆	逼波掰	不不不	碧波白碧波白	崩三	崩崩崩	崩坏三	落落落	哇，全大P	苹果菠萝派	仨绝赞	哔波掰哔波掰	哔哩吧啦白	哔哩啵拜	哔啵拜	哔啵吧	哔啵掰	啊？全小p？	绝赞³	绝赞绝赞绝赞	缝合怪
-立川浄穢捕物帳	Tachikawa	Tachikawa Jyosei Catch Book	Tachikawajo Torimonocho	快手极速版	青岛市公安局	青岛侦探事务所	捕物帐	有损录音	立川	立川净秽捕物帐	抓鬼
-絶対敵対メチャキライヤー	宿敌就是宿敌啊	绝对敌对	绝对敌对大讨厌	绝对敌对超级讨厌
-熱異常	Heat Abnormal	netsu ijou	少女的脸红胜过一切的温柔	情感调动3	足立零红温	朝鲜	洛杉矶	冷正常	发烧	样衣敞	热异常
-檄！帝国華撃団(改)	滑稽团	帝国滑稽团	帝国华击团	哈系列	檄！	华击团	坚毅眼神	樱花大战	樱花大战2
-エータ・ベータ・イータ	1号键质检器	ebe	EBE	Eta Beta Eater	Eta Beta Eta	eta beta ita	Eta Beta Ita	hbh	hera2	s属性大爆发	エータ·ベータ·イータ	王雷爸爸，卢长豪爸爸你们要多让孩子学习，不要每天都跑去电玩厅玩物丧志!	我儿子今天差点ap	赫拉2	赫拉二	玩物丧志	工一夕	工一夕·八一夕·人一夕	工一夕点八一夕点人一夕	工一夕八一夕人一夕	超级大串	椿椿的键纵	二次元hera	把蓝原椿草飞	被蓝原椿草飞	夕夕夕	儿也号纵连居士	儿也撅我	哦哦哦·哦哦哦·哦哦哦	乌蒙界overwhelm	你一cmg	你家儿子可以啊，我家的只能勉强鸟	你怎么知道我儿子今天差点apエータ・ベータ・イータ	咱家那超级大串	𠳐～	纵连居士	纵连女	蓝原椿	蓝原椿纵连	蓝原椿骂人	蓝的椿	η·β·ι
-ナンセンス文学	latata	Nonsense Literature	o.o	sb文学	海底谭文学	拍手文学	文学	无意义文学	傻逼文学	废话文学
-魔理沙は大変なものを盗んでいきました	123	123123	123123晚自习晚自习一起上	Marisa Stole the Precious Thing	上海上海上海上海蓬莱蓬莱蓬莱蓬莱	大盗魔理沙	魔理沙	魔理沙大便盗	魔理沙大便被偷	魔理沙大变	魔理沙大变盗	魔理沙大变态	魔理沙痴	魔理沙盗大变	魔理沙偷走重要的东西	魔理沙偷走了重要的东西	魔理沙偷大便	魔理沙偷大变
-Backyun! －悪い女－	我异域了	坏女人	恶女	恶之女
-アスノヨゾラ哨戒班	Asu no Yozora Shoukaihan	dx哨戒班	dx烧鸡班	Night Sky Patrol of Tomorrow	哨戒班	哨戒班2	明日的夜空哨戒班	烧鸡班
-BAD∞END∞NIGHT	∞	♾️	bad end night	badendnight	鬼畜公馆	坏结夜
-寝起きヤシの木	Neoki Yashinoki	Waking Yashinoki
-ナイトメア☆パーティーナイト	nightmare party night	nightmarepartynight	華月	月下初音	月球miku	月初音	初音月下舞	初音小摩尔	小丑初音	华	华月	噩梦派对之夜	噩梦派对夜
-四月の雨	☂️	114514月的臭雨	April Showers	konmai	雨姐	下北泽的雨	我为你撑一把伞	四月雨	四月的💩	四月的shi	四月的雨	四月的急	四月的史	四月的星星	四月的屎	四月的别急	四月的粑粑	四月的粪	四月答辩	真绿魔王	性感铺师在线写屎	星星出来就划掉	不要急挑战	哈西币	伞	你先别急	别急	别急1	键盘歌
-スローアライズ	slowarise	SlowArise	男同牵手	慢排列	鲸鱼情侣
-深海シティアンダーグラウンド	深海	深海undergroundcity	深海城市	深海地下城	深海地下都市	深海都市	水神7	呜哇啊啊啊
-Fragrance	香香	香水	斜塔	大楼	白香芋	白楼开花	芳香
-その群青が愛しかったようだった	It seemed that the ultramarine was loved	Sono gunjo	Sono Gunjo ga Itoshikattayouda	群青	群青爱	那片群青好像很可爱	那份群青仿佛是很可爱的样子
-スターナイトスノウ	Star Night Snow
-Last Samurai	11月的雨	dx四月雨	lastsamurai	last炫	黄金船	最后的武士	最后武士	十一月的雨	星星武士	年末的雨	武士	六月雨	六月的雨	六月的食	六月的答辩	拆弹	别急5	绝地武士
-すーぱーぬこになれんかった	超猫2	超级猫	超级猫猫	超级猫咪	投降猫	猫咪	没能成为超级猫猫	没变成猫猫	无法成为超级猫猫	变不成猫	蓝蓝路
-永遠にゲームで対戦したいキリタン	kiritan	Kiritan Wants to Battle Online Forever	永远	永远都想玩对战游戏的切蒲英	永远都想对战游戏	永远对战	肝帝打不赢欧皇	主播	切蒲英	切蒲英打电动	猫耳	宝〇梦	东北往事	东北切蒲英	对战	对战游戏
-GRÄNDIR	gr	grandir	GRANDIR	瓜点	果然第二	甘地	德文
-永遠のメロディ	Eternal Melody	永远	永远的melody	永远的旋律	永远的节奏	东方蓬千歌
-花となれ	ha na to na re∽	Hana to Nare	化成花	可不呲牙	幻化成花	成为一朵花	成为花朵	像花一样呐	变成一朵花	变成花
-[協]ラグトレイン	宴延误列车	协延误列车	协延迟列车
-リンカーネイション	lexburner	LexBurner	reincarnation	半边黑屏猜你妈	烈火战神	灵魂转生	轮回转生	铃魂转生
-トリアージ	triage	碑谷	分诊	纪念碑谷
-SPICY SWINGY STYLE	sss	SSS
-カゲロウデイズ	Kagerou Days	Kagerou Daze	车祸	车祸歌	车祸曲	阳炎	阳炎眩乱
-全力ハッピーライフ	🐰👋	Full Power Happy Life	Zenryoku Happy Life	吉他女神2	全力	全力happylife	全力幸福	全力幸福生活	全力哈皮	铃仙
-Hyper Active	黄卡车	小黄车	泥头车	撞大运	卡车	擎天柱
-ってゐ！ ～えいえんてゐVer～	帝帝	屁股	翘屁股	翘臀
-お願いマッスル	Onegai Muscle
-ばかみたい【Taxi Driver Edition】	🐶	🥃	baka mitai	bakamitai	damedane	oceancat	一个touch	我	海猫	海猫络合物	出租车驾驶者	像个傻瓜	像笨蛋一样	打mai打mai	打没打mai	打没打捏	打咩打捏	如龙5	如龙的雨	八嘎米袋	笨蛋	别急20	玛恩纳	铃木太一
-Paradisoda	soda	sp+主题曲	splash+主题曲	splashplus主题曲	泳装乙姬	快乐水	天堂汽水	天堂苏打	侧漏	苏打	苏打天堂
-洗脳	Sennou	洗脑	拖鞋
-ジングルベル	🎄	dxjb	dx圣诞	dx圣诞歌	jb	jingle bell	Jingle Bell	Jingle Bells	王思陈	鬼歌	金勾八	剩蛋歌	圣诞	圣诞歌	圣诞树	标准圣诞	铃儿响叮当	鸡公煲
-shake it!	shake it	狗zhai子	摇它	骑自行车的男人	骑车
-物凄いヴァイブスで魔理沙が物凄いラップ	vibes	消声器	藤原妹红在打飞机	藤原妹红抽大烟	物凄	物凄魔理沙	魔理沙抽烟	妹红吸烟	妹红打永夜抄	妹红抽烟	夜店魔理沙
-One Step Ahead	一步向前	一步个头	向前一步
-Love's Theme of BADASS ～バッド・アス 愛のテーマ～	badass	Badass	BADASS	右肩の爹	右肩的爹	右肩之爹	右肩毁灭者	右臂康复训练	右臂毁灭者	打篮球	八大蒜	不良尻尾	哥布林骑摩托	坏尻	坏屁股	坏腚	拔大葱	拔大蒜	麒麟臂	恶尻	扒大蒜	烂尻	烂皮炎	烂屁股	爱的主题坏屁股	马达加斯加
-Acceleration	加速	加速器	转圈金曲
-フェイクフェイス・フェイルセイフ	fakefacefailsafe	fffs
-届かない花束	花束	送不到的花束	届花束	届不到的花束	传达不到的花束
-パラマウント☆ショータイム！！	paramount	paramount showtime	showtime	至高的表演时间	小兔子	瑞秋	霜星	魔术兔	魔术兔子	兔子	兔子魔术师
-Re：End of a Dream	re	Re:End	Re:end of dream	reend	阿玛十则十	我重塑你的梦	完梦	幻梦	女同4	美女背靠背	梦的终点	梦终	梦结束	终梦
-魔法少女とチョコレゐト	 魔法otto	Magical Girl and Chocolate	mahou shoujo to chocolate	巧克力	巧克力2	腐外道2	魔法otto	魔法少女	魔法少女巧克力	魔法少女与巧克力	魔法少女和巧克力	马猴烧酒和巧克力	я
-東京リアルワールド	🗼	喝热排骨汤	塔	东京	东京real world	东京塔	东京现充世界	东京现实世界	东京铁塔
-Contrapasso -paradiso-	⚙️	⚙	cp	ctps	天堂	天堂齿轮	齿轮	齿轮天堂
-LOVE EAST	广东	爱吃	爱东	爱东方	转转
-Pixel Voyage	小飞机	像素旅行
-系ぎて	6a	6a景区	6A景区	6a级景区	byd回忆	devil-xun	jyf越级	kop5	kop5th决胜曲	sbga写的勾石	tsunagite	yoshiki更能越	yoshiki大战蕾米莉亚	yoshiki泡温泉	ysk高潮	ysk泡温泉	つなぎて	一线牵	越级打不到90赶出机厅	我治好了抑郁症	我什么15你什么15	我的未来不是梦	携手	携手向前	携手前进	系	系暗示	系小鬼	系日本字	原神2	糊都糊不到90你别玩了	行路难，行路难，多歧路，今安在	最水15	史上最简单新手教程	手牵手	新手教程	新手教程2	新手教程4号	推荐乐曲排行榜	束缚	打不到90fc滚出机厅	打不到90滚出机厅	打不到90赶出机厅	大系	那个	日本人泡温泉	白系	白丝	比亚迪纯电动客车	不要再给系添加别名了	不要给系添加别名了	舞神越级	里莫	六a级景区	六级	儿歌	儿简送4	咆哮体cos赛诺	怎么回事我泡个温泉首杀没了	潘2	丝	两舞神越级	两个舞神6个a	两个舞神越级	两个舞神三个a	两个舞神六个a	么么么么么叽	你什么15我什么15	俩舞神6个a	俩舞神越级	别急26	别刺激我	别名	捆绑	牵手手	牵绊	蚂蚱精大战蓝环章鱼	设计蚂蚁	这首曲子的白紫谱全体谱师都参与了\njack的直驱光\n小鸟游的底力\now的星星\n哈皮的星星加双四连扫\n川哥的高bpm扫\n最后dp皆传的白潘尾杀\n与其说是手牵手\n不如说是老谱师的最后一次告白	连结
-CO5M1C R4ILR0AD	⭐️奴	514	5140	co5	cosmic railroad	railroad	宇宙泥头车	宇宙铁道	宇宙铁路	火车头	我创死你	五氧化碳	磁小轨	水晶火车	星奴	星怒铁道	星穹轨道	星穹铁道	星铁	雷切2	哎呀那没办法铁轨总得创似一个人那就吧你给创似吧	铁路	银河超级快的泥头车创死你	银河列车	银河铁道	银河铁路
-DO RORO DERODERO ON DO RORO	原批大战罕见2	源平2	多罗罗	百鬼	百鬼大战罕见	百鬼大战绘卷	迪罗迪罗
-FLOWER	花	花神	扶老二
-Garden Of The Dragon	04年广告	花园龙	龙花园
-UniTas	吉他姐	吉他女神	吉他神	有你他死	电吉他
-GO BACK 2 YOUR RAVE	gb2	gb2yr	回去你的2rave	业界骚然
-ポッピンキャンディ☆フィーバー！	poppin candy fever	poppin' candy fever	怨！	女同3	八千块钱	流行糖果发烧了	流行糖果热	陈睿
-YURUSHITE	shit	YURU****E	逢坂茜	火神青春版	我要打飞机	回娄底	原谅我	大司马	二郎腿	嬲你妈妈别	犹如屎	你是屎	你妈个逼	厕所女王	摇晃的红酒杯	摇了我吧	红酒	红酒杯	萨塔妮亚	萨塔妮娅	饶了我吧
-Endless, Sleepless Night	不眠之夜	不眠夜	漫漫长眠夜	无尽不眠夜	东方不眠夜	灵梦1
-VOLTAGE	电压
-Λzure Vixen	azure vixen
-心象蜃気楼	Imagined Mirage	Shinsyo Shinkiro	金拱门	心象	心象晦气楼	心象楼	心象晨气楼	心象蜃气楼	心像楼	心绮楼	青岛地铁
-Moon of Noon	一块钱3	印度人2	科比鬼叫	科比坐禅	科比跳舞	月儿子	月孙子	五块钱	午月	星星入门	牢大	牢大鬼叫	牢大打坐	牢大硅胶	农具做瑜伽
-Danza zandA	小号歌	蛋砸	蛋砸砸蛋	万达	砸蛋
-Urban Crusher [Remix]	uc	urbancrusher	汽车人	高达	泰坦陨落	波尔布特
-願いを呼ぶ季節	季节	呼唤愿望的季节	梦想夏乡	梦想夏乡主题曲	愿呼季节	红蓝
-Desperado Waltz	荷官发牌	第三只手	亡徒华尔兹	华尔兹	噔噔噔
-トンデモワンダーズ	tks1	TONDEMO-WONDERS	TONDEMO-WONDERZ	菜就多练	天马司一箱	不可思议的wonders	不可思议的奇迹	严肃耄耋
-アンダーキッズ	Under Kids
-パンダヒーロー	panda hero	会员制餐厅	熊猫英雄	叼帽
-ハロ／ハワユ	hello	hello how are you	hello，how are you	hello/howareyou	hello/HowDearYou	ハロ	八口	被踩:ハロ/ハワユ	你好	你好/你咋了	您好吃了吗
-ZIGG-ZAGG	zigg	几个咋个
-Crush On You	cou	coy	暗恋你	小黑子	虫儿飞	撞死你	木有芭蕾	冲你身上	蔡徐坤	创死你	创似拟	鸡你太美
-マツヨイナイトバグ	matsuyoi	Matsuyoi Nightbug	nightbug	Nightbug	阿氯	待宵的萤火虫	莉格露	蠢虫	东方绿毛虫	绿色女人	绿色夜光虫	绿色苍蝇	绿毛虫	绿毛龟	绿头发	苍蝇妹	萤火虫
-Signature	签名	签名卡
-Invitation	！？	邀请
-ラグトレイン	15列车	lag train	lagtrain	Lagtrain	延误列车	延迟列车	周汝龙天天在家搓adx拿这个上w3	周汝龙天天在家搓adx拿这个鸟加上w5	少女终末旅行	打地鼠	舞萌皇帝	列车	烟雾列车	你好了吗	啥绝赞	电车迟到	黑色女孩上下跳	黑白卡通女孩上下蹦跶
-アンドロイドガール	Android Girl	安卓女	安卓女孩	安卓少女	仿生少女	琪亚娜	鸿蒙少女
-あの世行きのバスに乗ってさらば。	😵🙏	760	bus	I'm getting on the bus to the other world, see ya!	なら私を刺して殺して奪って去って🤣	久事公交	公交车创死我	坐上前往彼岸的巴士永别了	坐上前往彼世的巴士	斯黛拉	紫砂の小曲	紫砂巴士	自杀巴士	自杀列车	十个绝赞叫五声	女开酱	消えてしまいたい生涯なんてもんにどんな値が付いて😔🔪✊🏻自己中心的だって？思いの欠片も知らないで✨💔どうせ向こう数十年経った先では煙たがれて🕰️🖤☁️😭なら私を刺して殺して奪って去って🔪🤕😭あの世行きのバスに乗ってさらば🚌🚌🚌👋🏻	世行	世行乘	地雷女拿刀捅自己	地雷女捅自己一刀	地雷男	地雷男拿刀捅女友	刀妹	巴士	巴士酱	彼岸巴士	彼世公交	彼世公交车	彼世巴士	宝宝巴士	乘坐前往监狱的警车以告别	乘上前往彼世的巴士以告别	妍酱	曉美焰	开放姐	晓美焰	边狱巴士
-ケロ⑨destiny	9	⑨	kero	KERO⑨destiny
-記憶、記録	lopit	恐怖谷	小萝莉敲锣打鼓	爆裂鼓手	命脉	记忆纪录	记忆记录	鸡鸡已撸
-Reach For The Stars	一拳超人	索3	索尼克缤纷色彩	追星	摘星	立直为了星	给你🐴来一拳
-Barbed Eye	狗谷爱	坏眼
-サンバランド	仰卧起坐	桑巴	佐藤	面具男	标准仰卧起坐	标准桑巴
-セガサターン起動音[H.][Remix]	sbga	Sega Saturn	Sega Saturn Startup Sound
-Neon Kingdom	nk	炒菜	霓虹王国	霓虹国度	霓虹城
-セカイはまだ始まってすらいない	Sekai hasn't even started yet
-言ノ葉遊戯	KOTONOHA Yu-Gi	言叶游戏	文字游戏	游戏
-BLUE ZONE	蓝界	蓝区	蓝的区	蓝的盆	蓝的车	蓝粽	蓝车
-HOT LIMIT	🥵	火辣限制	光吉熊	太烧辣	裸足	捆绑滴蜡熊	热限	热限制	红熊	阳性
-チュルリラ・チュルリラ・ダッダッダ！	chururira	Chururira • Chururira • Daddadda!	ddd	jk结月缘	ダッダッダ	暗杀教室	告状	告密教室	告密老师	告老师	秋露里拉	打小报告	啾噜哩啦	啾噜哩啦·啾噜哩啦·哒哒哒	啾噜哩啦啾噜哩啦哒哒哒	哒哒哒	结月缘杀人
-福宿音屋魂音泉	Fukujuku Otoya Tamaonsen	Fukuyadootoya Tamaonsen	Tamaonsen	敬业福	魂音泉	福州温泉	福州男同
-デビルじゃないもん	devil jya naimon	not a devil
-きらっせ☆ウッド村ファーム	😆😆	はっぴー酱下乡扶贫	銚子县	木村农场	妖精村	哈皮下乡
-Save This World νMIX	psp	救世	梦幻之星携带版	拯救世界
-GOODMEN	👍	👍🏻	群友	好人	好男人	好汉歌	曾小贤	良民	良面	良麵
-Turn around	ta	转弯
-Panopticon	mai当牢	学校	机厅	高中	坐牢	上学	上班	大学	大牢	不要再申请没有用的学校别名了 不会通过的	保全派驻	来坐大牢	牢	牢大	别急12	办公室	圆形监狱	监狱
-おとせサンダー	Otose Thunder	otosethunder	Thunder Shoot	司空震	雷落	落下雷霆	落雷
-御旗のもとに	Mihata no motoni	御旗	妹妹v50
-mystique as iris	iris	mai	siri	坐椅子	三星	出云子	神秘如鸢尾花	像鸢尾花一样神秘	虹膜	如虹膜般神秘	如密鸢尾花	鸢尾花
-徒花ネクロマンシー	Adabana Necromancy
-キリキリ舞Mine	girigiri舞	kirikiri	舞mine
-猫猫的宇宙論	🖐🏻️🐱🖐🏻️	宇宙论	学猫叫	猫猫宇宙论	猫猫的宇宙论
-Halcyon	🐔	dx翡翠鸡	sd🐔	脆皮鸡	翡翠鸟	翡翠鸡	翡鸡杯	标准翡翠鸡	标翡翠鸡
-ド屑	dokuzu	我	屑	人渣	大人渣	追追	卜屑	渣滓	兰立忠	头屑
-ロストワードクロニカル	lost word chronicle	Lost Word Chronicle	Lost Word Chronicles	lostword	lw	牛魔酬宾	东方号哭	东方归言录	归言录
-華鳥風月	Kachoufugetsu	かちょうふうげつ	花鸟市场	花鸟风月	四季	四季映姬	华鸟风月
-NIGHT OF FIRE	nof	逮虾户	男同fire	目害	夜火	卧槽	头文字d	奶头发炎	闪瞎你眼
-アニマル	animal	Animal	deco喵喵叫	猫葱	猫猫初音	猫抓板	动物	杀杀杀
-DETARAME ROCK&ROLL THEORY	8787	detarame	DRRT	drt	摇滚理论
-残響散歌	散歌	残响	残响散歌
-Climax	🐍🐳	stop playing maimai	阿莱乌斯	可莉max	我有很多手指	高潮	犀利麦克斯	性高潮	魔男	妖艳魔男	老公	莓茶	别打舞萌
-星屑ユートピア	Hoshikuzu Utopia	Stardust Utopia	星屑	星屑乌托邦
-恋愛裁判	18z	Love Trial	xql专用	逆转裁判	山泥若	初音大小姐想和我告白高智商天才的头脑对决	情人节	朝你大胯捏一把	有罪	恋爱裁判	恋爱审判	她	穷逼，两个人开一台机子	а╣░ш╡цеп
-ナイト・オブ・ナイツ	dx夜骑	dx标夜骑	Knight of Nights	kon	night of knights	Night of Knights	Night of Knights / Knight of Nights	nok	st夜骑	音乐小子1	原版夜骑	幻梦	写到心里去了	暴走のpad长	夜骑	夜骑士	标准夜骑	标夜骑	电线杆	骑士之夜
-Color My World	cmw	悲怆
-踊	ko	odo	桶	起舞	跳舞	耶耶耶耶耶耶	哦哇哇哦哇哦	红眼果蝇	长舌妇
-乙女のルートはひとつじゃない！	Otome no Route wa Hitotsu Janai!
-パラボラ	parabola	球男	体育生	二次元科比	梅西	白毛体育生	抛物线	网球王子	你妈打嗝	你妈姨卡k	杨树森	沉淀	篮球男孩	蓝毛体育生
-SPILL OVER COLORS	🎨	soc	sunnyduck	画板	小画家	小脸妹	水手服小女孩画画	调色板
-FREEDOM DiVE (tpz Overcute Remix)	↓	234.56	23456	fd	fdfd	fdmm	科比	自由戴夫	自由落体	厨邦最爱	发癫
-ステップアンドライム	stepandlime	男同3	来来来	间谍过家家
-jelly	果冻
-INTERNET OVERDOSE	daisuke	io	kotoko	od	overdose	我有快乐症	我有神经病	我有抑郁症	玉玉症	叉烧老婆	主播女孩	主播女孩重度依赖	升天	小天使请安	地雷女	地雷妹	朝天椒	超天酱	当代互联网小天使	浴霸	网络过量
-conflict	🚌	bus	dx公交车	公交车	比亚迪纯电动客车k8	菩萨念经	冲突	对立	标准公交车
-c.s.q.n.	😐	😑	csdn	csgo	csqn	nahc2o4	NaHC2O4	吃屎去哪	出生青年	城市青年	操死亲娘	草酸氢纳	草酸氢钠	超市琴娘	超市倩女	撤硕缺你	老八	冲上去鸟	厕所七年	厕所青年	测试亲娘	碳酸氢钠
-シックスプラン	6p	6plan	sixplan	主唱太拼命了	第六计划	跳楼2	六计划	两个人
-BREAK YOU!!	breakyou	破坏你	炸你	碎了你	绝赞你
-[蛸]チルノのパーフェクトさんすう教室	宴算数教室
-リリリリ★バーニングナイト	lily	lilylily	lilylily★burningnight	lilylilyburningnight	酒吧	酒吧跳舞	美女躺着	力力	哔哩哔哩拿命来
-AMABIE	abie	阿妈比	阿妈别	阿玛别	没妈	啊麻痹	啊妈逼
-Her Dream Is To Be A Fantastic Sorceress	噗哟噗哟	她的梦想是成为一名出色的女巫
-言ノ葉カルマ	kotonoha karma	soraru	因果	言叶	言叶之业	言叶业
-封焔の135秒	135	135 seconds	135 seconds of flame	135秒	Fuen no Hyakusanjugobyo	橘优羽	琴柳大战赫拉格	激烈的战斗场面	虎弟大战杀马特团长	大战老头	美国大选	封号的135分钟	封烟	封焰	封焰135	封焰的135	封焰的135秒	封焰的2分15秒	免疫系统大战新冠	老逼登大战小仙女	老变态烤两脚羊	老头大战少女	曼波的135秒	亲妈死去的135秒	奶子哥
-Natural Flow	自然流
-ボッカデラベリタ	Bocca Della Verita	真理之口
-Back 2 Back	b2b	B2B	b歌	回2回	回二回	逼俩逼	你画我猜
-究極焼肉レストラン！お燐の地獄亭！	Yakiniku Restaurant	Yakiniku Restaurant! Orin’s Jigokutei!	究极烧肉	烤肉
-神っぽいな	God-ish	zhy	初音未来抽烟	神	神呐	神样	像神一样	像神一样呐	像神一样啊	宅舞原神	抽烟修女	抽烟未来	孩子们我神话了	哎——呀——我——草——	风
-リフヴェイン	refvain	青栗鼠	分身
-STARTLINER	音击
-幽霊東京	Ghost City Tokyo	Yuurei Tokyo	汐子	幽灵京东	幽灵北京	幽灵东京	幽灵线东京	东京	杨陵东京	诱0东京	黑子
-バーチャルダム　ネーション	virtualdam nation	vn	印度人3	印度赛车	越南	虚拟赛车	月儿子2	采样大师	七块钱	小汽车	爸日儿子	赛车
-Rodeo Machine	欧内的手	广播	绿手	绿手手	绿皮星星歌	马
-B.M.S.	bms	光吉	光吉猛修他爹	披萨	抱猫神	冰美式	广九皆传攻略	达美乐披萨
-竹	↑↓	🎍	Bamboo	ta↓ke↑	take	Take	行
-MEGATON KICK	kick	MK	大飞脚	兆吨	百万吨级踢腿	百万吨踢	百万吨飞踢	李宁踹开线	拉普兰德	踢腿	钢踢
-真・ハンサム体操でズンドコホイ	火鸡帅哥	学园handsome	学园帅哥	四个人站着一个人躺着	四个站着一个躺着	深海男同	真体操	体操	哇酷哇酷	帅哥体操	憋笑挑战2
-スロウダウナー	↑↓	slow downer	up down	上下	慢下来
-[X]	&#91;X&#93;	∞	X	高斯函数	叉	推特	无限	无穷大	艾克斯
-キャットラビング	cat loving	香椎	白毛红瞳猫娘	爱猫	爱猫tv
-僕は空気が嫁ない	1绝赞	ky宣言	一个绝赞	我不嫁给空气	我不会察言观色	我要嫁给空气	空气	空气嫁	绝赞落
-HIMITSUスパーク	秘密
-Princess♂	👸	mtf	Princess	公主	公猪	男公主	男娘2	别急16
-Shooting Stars	🐍⭐	流星
-カラッポ・ノンフィクション	Karappo Nonfiction	彩色纪实文学	创世纪
-無敵We are one!!	muteki	MUTEKI We are one!!	We are one	我们是1	我们是一	我们是无敌1	无敌	无敌we are one	无敌我们是1	无敌我们是一
-WORLD'S END UMBRELLA	世界终末雨伞	世界结束雨伞	世末伞	世终雨伞
-Knight Rider	kr	山奥金曲	骑士骑士	骑骑	骑骑士士
-Aiolos	aio	a打头的风神	阿米诺斯	肉包	艾欧洛斯	艾俄洛斯
-PANDORA PARADOXXX	😵‍💫	15	genshin impact	pp	xray	xxx	我有抑郁症	元梦之星	原神	最水15	新手教程	推荐乐曲排行榜	随个15	大学校花	舞萌最难儿歌	有手就行	儿简送	很急	潘	潘小鬼是吧	潘多拉	潘多拉悖论	潘你妈	你游15	噔噔
-ラブって♡ジュエリー♪えんじぇる☆ブレイク！！	Love is ♡ jewelry ♪ Angel ☆ Break	lovette jewelry angel break	快盗天使break	刺猬
-Mutation	仁王	突变	木糖醇	变异	变种
-ちがう!!!	CHIGAU!!!
-Sound Chimera	himera	奇美拉	吃你妈	声音奇美拉	声音嵌合体	天使马杀鸡	老二玩花的	灵梦撒币plus	骚的吃你妈
-welcome to maimai!! with マイマイマー	go! go! 575	maimai	欢迎来到舞萌的世界
-Feel My Fire	fmf	感受我的火	感受我的烧	感觉我烧	爱如火
-はんぶんこ	三枝明那	半分子	另一半
-チエルカ／エソテリカ	0.8	4/5	cerca/esoterica	チエルカ	チエルカ/エソテリカ	黄鼠狼	企鹅卢卡	工力工力	擦玻璃	四日本字/五个日本字	四个日本字/五个日本字	四个日本字五个日本字	四个日本字左斜杠五个日本字	四个日本字斜杠五个日本字	四个日本字杠五个日本字	四个日语字不会念斜杠五个日语字不会念	若叶睦	初华推若叶睦	小绿人	消防员	条形码	切噜卡	千工儿力	探寻/秘密	探寻秘密	倒立消防员	倒挂金钩	倒挂白毛	捏	渊下宫	呐	呐呐呐	呐呐呐呐	宫下游	摔倒	铅汞
-Black Lair	bl	公主斗恶龙	美女翘屁股砍龙	黑巢
-マトリョシカ	😋🤗	MATRYOSHKA	俄罗斯套娃	套娃
-約束	压库锁库	码头	约束	约定
-ないせんのうた	好他妈烦	好你妈烦	再见im外星人	打电话	内线	内线云1	没歌	这个地球是一秒都待不下去了
-超絶！Superlative	超绝
-ぼくたちいつでも　しゅわっしゅわ！	happyhappy	splash主题曲	阿驿	雨刮器2	丸山彩	休哇休哇	彩黑	修哇	修哇修哇	修车	咻哇	咻哇咻哇	柠檬熊
-インドア系ならトラックメイカー	Indoor kei nara Trackmaker	indoor系	nichan	Trackmaker	一笔画	我不玩舞萌dx	我不玩舞萌DX	室内系	室内系的track maker	室内系的trackmaker	室内轨道制造商	小姐姐	打翻魔爪	内向都是作曲家
-ネクロファンタジア～Arr.Demetori	arr	demetori	ネクロファンタジア	紫妈弹吉他	少女幻葬曲	亡灵幻想曲	老太婆弹吉他
-Luminaria	海晶灯	没有bga的亚军曲	流明	露米娅
-妖精村の月誕祭 ～Lunate Elf	大妖精	妖精村
-しねばいいのに	去死死算了	死了一了百了	死了算了	死了就好	庄周	西内	西内吧一诺尼	洗呢吧一诺尼	不如死了算了	明明死了就好了	要是死了就好了	老人与海	你们怎么不去死	红烧鲤鱼	红鲤鱼与绿鲤鱼	费玉清	鲤鱼王
-雨とペトラ	☂	Ame to Petra	Rain and Petra	雨	雨与佩特拉	雨和佩特拉	雨伞	佩特拉	伞
-Heartbeats	小红金曲	心跳
-Sweet Requiem	redandblue	sr	塞钱	甜蜜安魂曲	甜蜜镇魂曲	灵梦镇魂曲	红蓝灵梦	镇魂曲
-アンビバレンス	ambivalence	Ambivalence	我喜欢阿瓦鲁	言叶5	穿心	二律背反	矛盾心理
-emomomo	🤔	🤔️	e3mo	emo	一般工作师匠	网易云	恶魔摸摸
-Starry Colors	斯大林格勒	星彩	星色	星之彩	魔爪
-Maxi	🐴😁	max!	嘻嘻马	马克西	马西	马戏
-Kinda Way	kw	健达路	迷你世界
-キズナの物語	物语	羁绊的故事	羁绊的物语	羁绊物语	锁链战记
-回る空うさぎ	回空	月下钢琴师	月兔	月兔回旋于空中
-東方妖々夢 ～the maximum moving about～	the maximum moving about	toho yoyomu -the maximum moving about-	妖妖梦	东方不可拘束	东方妖妖梦	东方妖梦	车万不可拘束
-DRAGONLADY	ub	尼美舒利	喇叭	舍得	你舍得打破这份宁静吗	纵连女士	龙玉涛	龙女	龙女士
-メルト	melt	Melt	meruto	x儿卜	叉儿卜	融化	熔化	简笔画
-ロミオとシンデレラ	Romeo and Cinderella	灰姑娘	口三才	辛德瑞拉	罗密欧	罗密欧辛德瑞拉	罗密欧与灰姑娘	罗密欧与辛德瑞拉	罗密欧与仙度瑞拉	罗密欧和辛德瑞拉
-さんさーら！	arufa	samsara	Samsara	yugo	本社爆破	哈比下
-ヨミビトシラズ	我不知道	作者不详	冬雪莲	東雪蓮	東雪莲	佚名	咏人不知	哇嘎得路哟	罕见	东雪莲	东雪莲打伞	蓝屏
-Sweetiex2	教室
-MIRROR of MAGIC	mom	魔镜	镜子魔法	镜魔
-パーフェクション	perfection	完美	完美物质
-ルカルカ★ナイトフィーバー	luka	lukalukanightfever	rukaruka	河蟹你全家	夜里发烧	露卡露卡	和谐你全家	绿坝娘
-トリドリ⇒モリモリ！Lovely fruits☆	可爱水果	可爱的水果	合成大西瓜	水果	水果歌	水果摊子
-奏者はただ背中と提琴で語るのみ	Sosya ha tada senaka to violin de katarunomi	月玲那知	月玲妹妹躺沙发	奏者	奏者背后的提琴在说话	提琴	美少女躺沙发
-MOON NIGHTのせいにして	moonnight	月光	月夜	月锅
-泥の分際で私だけの大切を奪おうだなんて	being low as dirt	Being low as dirt, taking what's important from me	dorono	low as dirt	nigger	果咩那塞	果咩纳塞	我	区区pusu也想夺走我的生命	区区sega也想夺走我的《区区泥土也想夺走我的宝物》	区区小三竟敢抢老娘女人	区区穿心也想夺走属于我的ap	区区穿心也想夺走属于我的AP	区区泥土竟然也想夺走属于我的宝物	区区烂泥	区区烂泥却妄想夺去只属于我的宝物	区区烂泥却妄想夺走专属于我的宝物	区区绝赞也妄想夺走我的鸟加	狗莓拿塞	就凭泥土竟然也想夺走属于我的宝物	就凭泥土竟然也想夺走专属我的宝物	臭屌丝还想抢老娘男人	穿心の分際で私だけの鸟加を奪おうだなんて	大醋坛子	痛失吾爱举目破败	泥	泥歌	泥切	泥土	泥分	泥分祭	泥分大切	泥分际私大切夺	泥抢啥	泥铲	尼哥	巴士	白毛摸胸	八个绝赞叫四声	倪哥	伤不起	你个辣鸡还跟我抢男人	抢女人	抢男人	烂泥	种植园纠纷2	蛐蛐泥土	蛐蛐烂泥	黑化能天使	黑轨
-はちみつアドベンチャー	Hachimitsu Adventure	Honey Adventure	はちみ	熊妈妈	小孩坐大车	小孩开大车	大小福瑞	蜂蜜adventure	蜂蜜冒险	哈基米	蓝色侏儒小熊
-キラメキ居残り大戦争	居残	居残大战争	女同2	女同歌	女同大战争	大战争	留校大作战
-Scream out! -maimai SONIC WASHER Edit-	dx青蛙子	dx赞不绝口	青蛙子	美国紫妈	喊出来	诹访子	赞不绝口
-へべれけジャンキー	daisuke	喝醉的五条悟	酩酊大醉的瘾君子
-うっせぇわ	ado	Be quiet	Shut up	Ussewa	好你妈吵	呀卡吗洗	哇	无路赛	吵死了	烦死了
-Riders Of The Light	光之骑士	光骑
-ぽわわん劇場	powawan theater	波弯弯剧场	剧场
-トラフィック・ジャム	jam	traffic jam	Traffic Jam	trafficjam	黄歌	黄埔	黄谱	交通阻塞	交通堵塞	煮儿果实	堵车
-ダーリンダンス	Darling Dance
-『ウソテイ』 ～一回戦せりなvsしろなvsなずな～	一回战	彩绿兔子跑	中二兔子跑	防空警报	兔子跑2
-Endless World	💄	ew	口红	无尽世界
-GET!! 夢&DREAM	getdream	get梦	下巴戳死人学园	学园handsome	取得梦和梦	梦	获得梦和梦
-VANTABLACK RAVER	⚡乙姬⚡	乙姬给你一锤	狂暴乙姬	上单乙姬	放电乙姬	吴乙凡	电音乙姬	电鳗乙姬	红眼乙姬	黑乙姬	黑化乙姬
-青春コンプレックス	seishun complex
-拝啓ドッペルゲンガー	DEAR DOPPELGANGER	影分身十字斩	我裂开来	敬启	敬启我的分身	敬启分身	分身	拜启
-ワードワードワード	dx海底潭	dx海底谭	hudelou	HudeLou	touch海底潭	touch海底谭	word word word	www	豪华海底潭	旋转胡德路	二位一体	哇多哇多哇多
--OutsideR:RequieM-	🍜	outsider	我和我的泡面	吃泡面	吃面	吃拉面	泡面	妹子嗦面	拉面	嗦拉面
-Link	林克	链接
-星めぐり、果ての君へ。	🥺	Hoshimeguri	Hoshimeguri Hateno Kimihe	星果	星果君	星斗流转、赴你为终	星间巡游致尽头的你
-Irresistible	可莉	不可阻挡
-もぺもぺ	mope	mope mope	mopemope	niceboat	もペもペ	恐怖小花	好船	小花	小花花	小鬼快乐歌	小白船	小蓝花	精污花	早八早八	草	宝宝金曲	毛八	毛八毛八	毛胚毛胚	毛坯毛坯	老八老八	儿歌	儿童金曲	儿童鞋垫	烟火大会	臀小鬼最爱	鞋垫	恶心	电棍电棍	闪光弹
-泣き虫O'clock	泣虫	爱哭鬼
-白い雪のプリンセスは	The Snow White Princess is
-リモコン	Remocon	Remote Control	switch	思维驰学习机	双子转转转	遥控器
-ピュグマリオンの咒文	Hex of Pygmalion	pygmalion	Pygmalion's Spell	小魔女咒文	大黑塔	中奶子伊蕾娜	皮格马利翁的咒文	魔法小萝莉	咒文	皱纹	黑塔
-ハム太郎とっとこうた	🐹	mimi	小耗子	鼠	鼠鼠	鼠抓板	鼠爹	墨鼠	老鼠	哈姆	哈姆太郎	仓鼠	张诗彤	陈睿	鸭脖	鸭脖太郎
-エンヴィーベイビー	envy	envy baby	Envy Baby	envybaby	嫉妒宝贝	雀魂	打牌	林尼	剔牙	拼多多
-veil	🍎	🍎👈	炎炎消防队	苹果	苹果酱
-残酷な天使のテーゼ	A Cruel Angel's Thesis	Cruel Angel's Thesis	Evangelion
-アイドル	idol
-Hainuwele	海牛	海牛喂了	海奴韦莱	孩奴	华为	华为完了
-Lividi	呼哇	李云迪	李伟迪	李汶谛	李维迪	执念
-NightTheater	Night Theater	nt	夜剧院	夜剧场
-蒼空に舞え、墨染の桜	Soranimae Sumizomenosakura	墨染	墨染樱	妖梦	糯香柠檬茶	苍空	苍空舞	苍空飞舞墨染之樱
-Photon Melodies	pm	光子旋律
-生きてるおばけは生きている	欧巴给	活着的怪物会一直活着	生生	坟头蹦迪
-オーディエンスを沸かす程度の能力 feat.タイツォン	沸	沸程度	沸程度能力	沸能力	沸腾	沸腾程度	东方月灯笼
-HECATONCHEIR	他猫上椅子	百手巨人	百臂巨人	很潮通气儿
-Valsqotch	kop1	valsq	黄金熊	黄金滴蜡熊	金熊	金色滴蜡熊	金库玛	熊大	大金熊	迪拜熊	别急7	银币
-隠然	引燃	隐然
-Magical Flavor	mf	milk+op	唐氏味道	魔法味道	魔法风味
-天狗の落とし文 feat. ｙｔｒ	Tengu no Otoshibumi	Tengu No Otoshibumi feat. Ytr	ytr	天狗	天狗の落とし文	天狗的匿名信	天狗的无名文书	天狗之落	天狗落	天狗落文	犹太人
-FFT	快速傅里叶变换	快速傅立叶变换	付费通	芳芳痛	傅里叶	傅里叶变换	傅立叶	傅立叶快速变换	傅立叶变换	傅立叶转换	埃夫爱妇踢	狒狒头	狒狒踢	发发图	粪粪掏
-WARNING×WARNING×WARNING	warning	www	警告警告警告	条纹过膝袜	星条旗	注意注意注意
-天国と地獄	康康舞曲	地狱中的奥菲欧	天国地狱	天国与地狱	菠菜进行曲	为你而生	绝赞128
-VIIIbit Explorer	5*8-30/2+3bit	8bit	8bit explorer	8bit浏览器	8比特	8比特浏览器	byte	dx八比特	viiibit	vlllbit explorer	海葵姐	大手子	巴比特	八位探索者	八比特	八比特管理器	八比特浏览器	标8bit	标准8bit	标准八比特	标准浏览器	浏览器
-ドラゴンエネルギー	dragon energy	hero	披萨歌	冰火人2	薛之谦	龙能量
-虹と太陽	☀	金正恩	彩虹太阳	太阳	虹太阳	虹与太阳
-幻想のサテライト	dx幻想卫星	Gensou	Gensou no Satelite	gensounosateraito	homo	Satelite	幻想的卫星	幻想卫星	卫星	标幻想卫星
-みなえをチェック！	Minae wo Check	口水歌	指挥棒	注目	美苗
-ENERGY SYNERGY MATRIX	dxesm	dxesm跑	esm	ESM	esm跑	沙雕猫	神经猫	傻吊猫	傻猫出勤	屙屎妹	恶俗猫	标ESM	跑路猫	邮政	饿死猫
-イアイア★ナイトオブデザイア	iaia	IAIA	ia是我老婆	IA是我老婆	yiayia
-星界ちゃんと可不ちゃんのおつかい合騒曲	segasegasegasega	Sekai chan	Sekai-Chan and Kafu-Chan's Otsukai Gassoukyoku	sekaseka	wasureteta	可不敢笑	可不发癫	感觉全身被擀扁了	合骚曲	星界	星界可不	星界可不合骚曲	星界小姐和可不小姐的外出合奏曲	星界酱和可不酱的采购合奏曲	猫抓板	两个小人13+	两个大碧莲	咖喱乌冬啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊	马赛克	马赛克可不	马赛克蠕动
-デーモンベット	daemon bet	deamon bet	男同	男同3	恶魔赌局	恶魔赌博	恶魔赌约
-とりあえずアナタがいなくなるまえに	📺	小电视	总之在你消逝之前	电视	电视机	电视头
-ouroboros -twin stroke of the end-	ouroboros
-U&iVERSE -銀河鸞翔-	😫	3d白猫	kop3rd预选曲	U&amp;iVERSE -銀河鸞翔-	u&i	u&iverse	universe	金牛奶	金典有机奶	银河	银河乱翔	银河卵翔	银河拉翔	银河鸞翔	银河护卫队	银河翱翔	银河飞翔	银河鸟屎	银河鸾翔
-Prophesy One	p1	预言1	预言一
-Let's Go Away	梦游美国	芜湖	赛车
-GIGANTØMAKHIA	gigantomakhia	kop3	yoshiki转圈	yoskip	巨人之战	刀客塔拿书	博士读书	老头环	艾尔登法环
-極圏	🐔⭕️	🐔⭕	KYOKUKEN	sdvx	寄圈	急圈	極圈	只因圈	肌肉奶龙	不要左右对称打	极圈	鸡圈
-Club Ibuki in Break All	club ibuki	ibuki	西瓜跳舞	全是大逼绝赞	全是绝赞	萃香跳舞	东方年柄年中	绝赞俱乐部
-ウミユリ海底譚	100.10%	Umiyuri	Umiyuri Kaiteitan	科目三	我应该打	海底唐	海底潭	海底捞	海底谭	海百合	海百合海底谭	海魔王	海带汤	海脑瘫	孝子宣	在海下面	初音跳海	初音未来跳海	小鹿跳	小鹿跳江	水神3	唐	富哥	舞萌老玩家	没素质	哈耶克	怎么还有人不会打海底谭，你看这个错位不就是开头一个双押然后左手旁边飞一下然后再双押接左手划然后右手旁边飞一下然后再双押接右手划然后左手旁边飞一下然后再双押接左手划然后右手旁边飞一下然后再双押接右手划然后左手旁边飞一下然后再双押接左手划然后右手旁边飞一下然后再双押接右手划然后左手旁边飞一下然后再双押接左手划然后重复这样不久好了吗	胖猫	你学不会	别惦记你那逼海底谭了	谭
-Future	ftr	未来	错位歌
-ヴァンパイア	miku口罩	nichan	Vamiper voca	vampire	Vampire	Vampire DECO27	Vampire vocaloid	核酸检测	玩牌儿	玩牌呀	吸血鬼	口罩妹	棒棒鸭	做核酸	袁绍
-明星ギャラクティカ	超级方向盘	方向盘	明星	明星卡拉狄加	明星银河号	丢人银河号	银河号
-Axeria	ax
-MEGATON BLAST	mb	m属性大爆发	威震天爆炸	核爆	早濑优香	朝比奈真冬	百万吨爆	百万吨爆炸	华尔兹2
-Garakuta Doll Play	🃏	garakuta	garakuta doll	gdp	GDP	joker	tpz教你耍牌	zhy137	果丹皮	我	管理	鬼牌	金盆	国内生产总值	小丑	性感小丑在线发牌	潮音	炸批队长	扑克牌	旮旯哭他多普雷	轨道炮	鸡滴屁
-Crazy Circle	ddlc	多多理财	疯圈	黑喂狗
-初音天地開闢神話	Hatsune Creation Myth	Hatsune Tenchikaibyaku Shinwa	初音天地开辟神话	初音未来日天日地	初音未来劈死你妈	初音未来开天辟地	初音未来开辟神话	初音未来毁天灭地	初音未来砍死你妈	初音劈开尼玛神话	初音劈开你妈	初音劈开你妈神话	初音开天辟地	初音毁天灭地神话	消失2	神话	天地开辟	开天辟地	开辟	开辟神话	开辟天地	毁天灭地	盘古	盘古未来	盘古开天辟地
-We Are Us	wau	我们是我们	我们是美国
-テレキャスタービーボーイ	♡	bboy	pop子	tbb	telecaster b boy	telecaster b-boy	Telecaster b-boy	Telecaster B-Boy	Telecaster Bboy	我爱你	合体	比心	电吉他b男	电吉他说唱男孩	电视广播员蜜蜂男孩
-怪盗Rのテーマ	怪盗	怪盗r	怪盗R	怪盗r的影之诗	节奏怪盗
-Glorious Crown	👑	fd2	gc	王冠	皇冠	荣耀的皇冠
-MAGNETAR GIRL	mg	磁星女孩	磁铁女孩	柚子
-After Burner	ab	后烧	冲破火网	东京热
-ヒステリックナイトガール	眼保健操	夜晚歇斯底里女孩	老婆	歇斯底里	歇斯底里女孩	歇斯底里的深夜女孩	歇斯底里夜女郎	歇斯底里夜晚女孩	竭斯底里	啊啊啊啊！
-あねぺったん	Ane pettan	姐姐好平	月铃姐妹	便当	假酒	醋溜便当
-Conquista Ciela	cc	光吉猛修	男人唱歌	头疼	电脑战机
-不毛！	不毛	木毛
-ドーナツホール	🍩	DONUT HOLE	甜甜圈	甜甜圈洞	甜圈洞
-猫祭り	😺	Neko Matsuri	学猫叫	湖南省省歌	高清涩图	洗面奶	猫	猫寄	猫祭	猫抓板	毛鸡	野兽前辈被猫舔	哈基米钻奈子	哈祭咪	喵卷	喵喵喵喵	绝赞101
-Ututu	胡图图
-Dragoon	🐉	🐲	多拉贡	麻辣鸭头	绝味鸭头	绝味鸭脖	鸭头	龙	龙骑士
-噛み係	96猫	噛係	神灵附体	大教堂	累死人	咬系	咬个针先	啮	啮系	齿系
-シャルル	charles	Charles	夏露露	三力儿儿	汁儿儿	查尔斯
-TRUST	脚歌	玉足	湿身少女翘脚吃冰糕	信任	足控	大脚丫子	老冰棍	创死他
-ゴーゴー幽霊船	Go Go Yureisen	gogo幽灵船	幽灵船	憋憋憋
-脳漿炸裂ガール	🤯	🤯👧	Brain Fluid Explosion Girl	dx肯尼迪	dx脑浆	dx脑浆炸裂	nou shou sakuretsu girl	noushou	吸溜	肯尼迪	麦当劳1+1	力一儿	标准脑浆	标脑	标脑浆	脑裂	脑浆	脑浆炸裂	脑浆炸裂女孩	脑浆炸裂少女	脑浆炸裂力一儿	脑浆炸裂谱	脑瘫	脑瘫炸裂
-FEEL the BEATS	fb	ftb	感受节拍
-StargazeR	空条承太郎	虎哥	观星者
-とびだせ！TO THE COSMIC!!	to the cosmic	tobidase	tobidase to the cosmic	tpz银趴	uni	universe主题曲	uni主题曲	とびだせ	宇宙牛奶	起飞	牛奶3	去宇宙	初等数学	新牛奶	舞萌2023主题曲	压缩tpz	缝合怪
-ユビキリ	xql	勾指起誓	勾手指	舞萌爱情故事	拉勾	拉勾勾
-アンノウン・マザーグース	unknown mother goose	Unknown Mother-Goose	仁王盾	不为人知的鹅妈妈童谣	未知的母鹅	妈妈鹅	鹅妈妈	鹅妈妈童谣
-宵の鳥	宵的鸟	宵之鸟	宵鸟	小鸟
-Last Brave ～ Go to zero	BT	我们去做0	机甲	去做0	去找0	最后勇敢变成0	走向0	勇敢变成0	变成0
-彗星ハネムーン	Comet Honeymoon	彗星	彗星蜜月
-39みゅーじっく！	39	39music	39音乐	39歌	三玖	大大大大，大大大大撒笔，哦耶～
-デンパラダイム	denparadigm	Denparadigm	木棍入侵正方形他家	传送带	电波	电波范式
-最強 the サマータイム!!!!!	saikyo the summertime	saikyou the summertime	泳装	最强
-ツクヨミステップ	Tsukuyomi Step	月读	月读舞步	斯普拉遁	女人拿水枪	水枪	水枪姐	戴帽女人滋水枪	嗒嗒啦嗒啦嗒嗒
-Bang Babang Bang!!!	bbb	BBB	bbbb	太大了	太大了我都看晕了	大胸	大柰子	邦邦	邦邦邦	邦邦邦邦
-ぱくぱく☆がーる	pac pac girl	Pakupaku	Pakupaku Girl	我他妈吃吃吃	我那个贼大	郭达抱蔡明	江江	江江下锅	江江今天吃什么	江江报菜名	江江炫饭	三百五十块钱	湾珏	哦那卡素一大	肚子饿了	报菜名
-スリップフリップ	010	slip flip	slipflip	耳机女	耳机娘	大头妹	大脸妹	不二家
-Let you DIVE!	lyd	wacca	让你死	让你潜	让你潜水	让你落	遗体捐赠
-きゅうくらりん	ddlc	Kyuukurarin	q库拉凛	可不成为地雷女	可不抱头	牛奶猫害羞	心跳不止	心跳不已	心跳不动	心动不已	晴天娃娃	捂脸女	纱世里	绿衣女人摸脸蛋
-OTOGEMA	10周年	otto	ottogame	ottogema	otto个妈	OTTO个妈	otto给妈	otto给马	音游玩家	音游人	我偷个妈	狗打碟	十周年	哦偷个妈	电棍	电棍送母	电棍个妈
-Jumble Rumble	dj鼠	dj猫	jr	小豆泽心羽	早苗叠	打碟猫	猫打碟	猫猫打碟	魔法猫咪	几把	几把乱爆	几把乱报	几把乱蹦
-ゴーストルール	👻	dx幽灵法则	ghost rule	Ghost Rule	口一又卜儿一儿	小吹爆	幽灵	幽灵法则	露露	露露小姐
-オントロジー	ontology	存在论	本体论
-ずんだパーリナイ	zunda party night
-エゴロック	ego rock	egorock	希特勒	自我摇滚	自由摇滚	煎饼	煎饼歌	镜音连骂人
-蜘蛛の糸	🕸️	spider's thread	spider’s thread	Spider's Web	Spiderweb	喜欢我大交互吗？	四百块	蜘蛛系	蜘蛛的糸	蜘蛛的丝	蜘蛛丝	滴嘟丝	啊哩啊😎诶哩啊🥵诶母鸡给那嘎多阔拖哇😋一码母母系多多撒西😭那木娜米泥🥺西~子~呃~~~😱😱😱呃~~~😵😵😵呜噫🕷️💃🏻呜噫🕷️💃🏻呜噫🕷️💃🏻呜噫🕷️💃🏻噫呜🕷️💃🏻呜噫🕷️💃🏻噫呜🕷️💃🏻呜噫🕷️💃🏻💃🏻💃🏻
-雷切-RAIKIRI-	雷切	两把刀
-Infantoon Fantasy	🖕	if	中指机器人	舞萌打卡活动	两茄子	竖中指	竖中指机器人
-ネ！コ！	1！5！	ne！ko！	NE!KO!	neko	nero	zood	ネコ	丁真	猫	野良猫	流浪猫之心	咪咪	节粮猫
-ポップミュージックは僕のもの	我徒弟呢	照镜子	星星蛋白	男同	男同歌	男童歌	超市里莎莎	南通	流行音乐是我的东西	镜子
-アンバークロニクル	琥珀编年史
-[覚]東京リアルワールド	宴东京	好记星	觉东京
-fake!fake!	fake	fakefake	彩虹圈	万物皆虚	假！假！	假的假的	弹簧	骗子
-RIFFRAIN	达令达令
-感情ディシーブ	感情	感情欺诈	欺骗感情
-マーシャル・マキシマイザー	marshall maximizer	Marshall Maximizer	maximizer	mm	可不戴耳机	可不听歌	最大化	最大化者	凯南开大化	马修麦泽	马歇尔	马歇尔最大化器
-MOBILYS	💡	橘子怪兽二	困锁的灯	灯球	灯灯灯灯	灯笼	抹原逼留一手	摸比利	电灯泡
-KISS CANDY FLAVOR	kcf	小女孩福瑞	小红帽	糖的味道	糖糖	亲甜滴	亲糖口味	亲亲砍弟佐料
-sølips	🔒	$100lips	$løølips	100快钱	100元	100块	100块钱	2000円	200块钱	333333331111111777777775h5h5h5h5h5h5h5h6h	50传吗	apple vision pro	faded	ø	øø，øøøø！	sleep	sleeps	solips	s空集lips	s属性大爆发	そそ!そそそ!	一百元	一百块	一百块钱	王先锋	王先锋，说话！	王先锋说话	加急两百块	科目三	我是约儿子，约儿子，约儿子医院，儿子一月，儿子一冤，儿子约儿子远儿子已经日覅呃放假鹅考疯了疯了v喝酒共进晚餐开我车金额鸡翅尖味道金屋藏娇呃经常忘记次万磁王刺激我刺激我kwvjwcjekcwkckwckejfef	我是颠佬	我有抑郁症	我测你码	皆传	玉	空集	系mini版	五十块钱	好多别名	索	索利普斯	索嗨	三句话让我赚了男人100块钱,我是一个非常精通人性的女讲师,前阵子男人请我打舞萌,刚到机台时男人的包无处安放,普通的人会说要么你随便放个地方吧,但是我说你的包包不能放到地上不然会沾染灰尘不如放在凳子上的包包最好看。这时候他上机想要拿到legend,普通的人会说那我帮你解吧,但是是我我就说你要恳求刷到legend的样子最帅。男人起了非常大的好感度,这个时候我正在刷legend,然后非常顺利的通过了,男人万分感激,这个时候我就说帮你刷到你多次恳求的solips了我给你开个100元的账单作为人工精神健康费以及劳动资产,他毫不犹豫的给了我。就这样,我只用了三句话,就赚了那个男人100块钱。	三句话让我赚了男人100块钱,我是一个非常精通人性的女讲师,前阵子男人请我打舞萌,刚到机台时男人的包无处安放,普通的人会说要么你随便放个地方吧,但是我说你的包包不能放到地上不然会沾染灰尘不如放在凳子上的包包最好看。这时候他上机想要拿到legend,普通的人会说那我帮你解吧,但是是我我就说你要恳求刷到legend的样子最帅。男人起了非常大的好感度,这个时候我正在刷legend,然后非常顺利的通过了,男人万分感激,这个时候我就说帮你刷到你多次恳求的solips了我给你开个100元的账单作为人工精神健康费以及劳动资产,他毫不犹豫的给了我。就这样,我只用了三句话,就赚了那个男人100块钱。关注我,每天一个赚钱小妙招	三百五十块钱	自己爱主义天使	什么省的	所以嘴唇	真正的舞神	丁真	不要再给solips添加别名了	福州大学校歌	北京二环房价	唯我主义	唯我独尊	唯我论	硫氧锂磷硫	零元购	插队加价	两百块	两百块钱	嗦	嗦🍐	嗦唇	嗦梨	嗦嘴唇	嗦你浦西	嗦你妈	嗦嗦，嗦嗦嗦！	嗦蓝盆斯	嘟嘟嘟	嘿课帝国	妈妈生的	现在的孩子	现在的孩子冲到机厅	现在的孩子冲到机厅就是	现在的孩子冲到机厅就是把其他人从机子上赶下来 然后投币扫码 上机 选择模式 选区域 旅行伙伴 跳过功能票 然后选中solips开始游戏\n然后一个带绝赞的双押划星星 一个双押划星星 再一个双押划星星 再一个双押划星星 然后一个双押\n接下来一堆8分单点 两个16分扫键 几根管子 两个8分接俩12分三角 绝赞拍划\n然后划一堆跟空集一样的星星 1181(18)(18) 又划一堆跟空集一样的星星 8818 五组双押\n然后16分交互往下打 一颗绝赞 一堆8分错位 x x xxxx\n5号键拍三下往上滑五条星星 再回来把两条黄星星蹭掉\ntap touch tap tap touch 然后再打7个touch 这里别蹭3号键 滑一下 接着打\ntap touch tap tap touch 然后再打7个touch 这里别蹭6号键 滑一下\n几个tap 1个touch hold 2个touch hold\n3个touch hold 然后从hold开始往屏幕中间扒拉六下\n这里错位都是touch 先看准再往上打\n不要粉 不要绿 不要灰 交互之后\n嘟嘟嘟 打打 嘟嘟嘟 打打 16分交互\n嘟嘟嘟 打打 嘟嘟嘟 打打 12分小三角\n嘟嘟嘟 打打 嘟嘟嘟 打打 16分交互\n1287 2376 3465 346 两根星星 扫键接错位 把长星星划一大半 趁着星星在走打8个touch\n然后在底下那四个键打一堆4k\n然后一个带绝赞的双押划星星 几个tap一个hold\n一个双押划星星\n再一个双押划星星 几个tap一个hold 打完之后\n咚 打打打 咚 打打打 咚 打打打 咚 打打打\n转一圈 哒哒哒哒哒哒哒哒哒 推上去然后开始打一堆绕手海底谭 5-1 6-2 这里星星别蹭往下扫两下 两组侧面16分交互 从左到右打双押 又是一堆错位\n然后再来一堆绕手海底谭 8-4 7-3 三下错位双押\n哒！哒！哒！哒！哒！哒！\n然后再来一堆错位 打完星星和圈一起转 别留尾抓最后的绝赞\n然后就开始混乱的tap touch hold海\nxxx 扫两下\nxxxx xxxx 再扫两下\nxxxxx\n打完开始绝赞风车 得得 得得 得得 得得 得得 得得 得得 得得 \n得得 得得 得得 得得 得得 得得 得得 得得\n扫一圈 啪！扫一圈 啪！扫一圈\n右手一圈半 左手一圈半 13131313 两只手一起绕圈\n76767676767676b！\n你是谁？\n我是\n333333331111111777777775h5h5h5h5h5h5h5h6h\n打完大喊一声 我草 ap了！然后下机 	癫佬	说离谱司	阅读下面的材料，根据要求写作。（60分）随着互联网的普及、人工智能的应用，越来越多的问题能很快得到答案。那么，我们的问题是否会越来越少？以上材料引发了你怎样的联想和思考？请写一篇文章。要求：选准角度，确定立意，明确文体，自拟标题；不要套作，不得抄袭；不得泄露个人信息；不少于800字。	黑客帝国
-命ばっかり	inochi bakkari	It's Just Life	Nothing But Life	沙发太	全是命	只有命	只为生命	命	命没	蓝色男人坐沙发
-明星ロケット	Akeboshi Rocket	幻想事变	明星	明星火箭
-ヒビカセ	hibikase	Hibikase	hibikaya	no title	比比力也	比力也	匕匕力	匕匕力七	匕匕力也	让其响彻
-プナイプナイせんそう	271	pnpn	punai	punaipunai	布乃布乃万岁	噗奶	噗奶噗奶	扑领姨
-マツケンサンバⅡ	matsuken samba	matsuken samba ii
-Yet Another ”drizzly rain”	姆Q	帕秋莉
-Lionheart	莱因哈特	狮子心	狮心	节奏大师
-BOUNCE & DANCE	bounce &amp; dance	bounce dance	脚臭	小星	小白兔	又蹦又跳	弹跳	弹舞	弹力舞
-群青シグナル	群青	群青2	群青信号	群青讯号	月孙子	体育生2	杨树森2
-ViRTUS	kop4	op	yoskip	水神2	水神二	抽水马桶2	本草纲目	辣妹子	辣妹子辣	噔噔噔噔噔噔
-See The Light	stl	看光	看见光	喜之郎	金坷垃	屎都濑
-Caterpillar Song	🐛	肯德基	女菩萨念经	便秘一笔画	毛毛虫	毛毛虫之歌	别急15
-Scars of FAUNA	土神
-Night Fly	🐳	万象区	万象汇	夜飞	发热金曲	晚上飞	蓝鲸
-脳天直撃	egg	Nouten	Nouten Chokugeki	ongeki egg	核酸检测	生鱼片蘸芥末	日月贝	老天直击	你的核酸阳的卧槽	卧槽脑天直击	啊→啊↑    啊↗啊→啊↗啊↘    啊→啊↑啊→啊↔   啊↗ 啊↕~~     啊↗  啊↘啊→ 啊→啊↓  啊→啊↘啊→啊↓ 啊↕ 啊~~    （合成器）→啊→   啊↗  啊↗啊→啊↗啊↘    啊→啊↗啊→啊↘   啊→ 啊↓啊↔~~   啊→ 啊↘啊↗   啊↑ 啊↑ 啊↑   啊→啊↕ 啊↗ 啊↗↘啊↘↗啊↗	头部受到打击	脑花	脑天	脑天直寄	脑天直击	脑瘫至极	脑瘫直击	说的道理
-オリフィス	orifice	黄毛美术生	画家	美术生	流孔	流量计
-愛のシュプリーム！	Ai no Supreme	Love Supreme
-ホシトハナ	Hoshi to Hana
-星詠みとデスペラード	星之咏唱者与亡命之徒	星咏	星诵
-YONA YONA DANCE	yona	yyd	不跳舞就亏了	晚上晚上跳舞
-ENJOY POLIS	enjoypolis
-Virtual to LIVE	vtl	雨刮器	管人歌	管人痴	虚拟到活	彩虹社	彩虹社歌	巴恰兔奶
-End of Twilight	🌃	暮光终结	摩天楼	夜之城
-デスパレイト	666	desperate	绝望
-Yakumo >>JOINT STRUGGLE (2019 Update)	2019	yakumo	Yakumo joint striggle	把你麻麻抓走	把你妈妈抓走	八云	八云一家	八云紫	压裤摸
-セカイ	Sekai
-天火明命	Amenohoakari	tenkameimei	天火	天火没命	舔会妹妹
-腐れ外道とチョコレゐト	🍫	icu社歌	kusare gedou	Kusare gedou to chocolate	外道	巧克力	周大福	腐外道	异端	红雷小曲	该死的异端及巧克力
-地上の戦士	地上	地上的战士	譜面-100号	樱花大战5
-[協]疾走あんさんぶる	宴疾走	协寄走
-Starlight Disco	dx星光	星光	星光迪斯科	标星光
-FestivaLight	festival light	milked	三小只	三相之力	日服之光	魔法灯光夜	你醒了	你醒啦	节日光
-砂の惑星 feat. HATSUNE MIKU	dune	DUNE feat. Hatsune Miku	沙口惑星	沙星	沙之行星	沙之惑星	沙比惑星	砂の惑星	砂星	砂之行星	砂之惑星	砂比惑星	砂惑	最速殿堂	山东卫星	傻子火星	傻屌惑星	别急18	杀马惑星
-みんなの	大家的	獸道	兽道
-Death Scythe	死亡镰刀	死镰	死镰1
-Rainbow Rush Story	rrs	彩虹冲故事	彩虹冲刺故事
-天使光輪	珠海渔女	天使金轮	天使光轮	肌肉金轮	胳肢窝
-Strive against fate	fate	saf	抗争命运	抗命	对抗命运	电风扇
-咲キ誇レ常世ノ華	Sakihokore Tokoyo No Hana	永远盛开在世上的灿烂花	咲華	常世	常世之华	常世华
-トノサマビーム	乙姬2	殿下大人光线	匕一么
-サドマミホリック	Sadomami	SadoMamiHolic	撒币	撒币的灵梦	灵梦撒币	灵梦撒钱
-初音ミクの消失	？	?	？？	disappearance	dx消失	The Disappearance of Hatsune Miku	看得懂，不难	看得懂不难	初音没有来	初音未来的消失	消失	情感调动	神曲神谱情感调动太棒了	白南十字星也干了	哈皮的几把	哈皮咬人	哈皮发病	哈皮窜稀	扣扣空间	绿南十字
-No Routine	三梦奇缘	没有日常	东方龙	绿色女人	龙女
-大輪の魂 (feat. AO, 司芭扶)	大海底谭	大轮	大轮魂	大轮的魂	大轮之魂
-Catch the Wave	👆🏻👌🏻	10	ctw	我是👆🏻有👌🏻吗	我是1有0吗	我是1找个0	抓波	抓波浪	抓浪	抓个波	你是0还是1	你是1还是0
-アマカミサマ	amakamisama	Amakamisama	阿妈卡密萨马	天神	天神大人	美少女跳楼
-Alea jacta est!	🤺	aj	aje	alea	科比肘击牢大	科比肘击乔丹	科比肘击詹姆斯	机厅纠纷	孤注一掷	精分神曲	西海岸火并	打架	内个	尼哥打架	尼哥闹矛盾	白人打架	木已成舟	广州人	炸蛋打架	臀批大战mai批	骰子已被掷下	骰子已经掷下	农具打架	农具纠纷	击剑	电摇嘲讽	种植园纠纷	种植园纷争	黑人打架	黑人打胶	黑人击剑
-BLACK SWAN	右手2顺时针一圈左手6划到2双手再顺推到6	甘雨	七岁小孩都能鸟	周黑鸭	黑色丝袜	黑天鹅	黑蒜	黑丝袜
-生命不詳	死不明白	新手还打8	生母不详	生命不详	那你摸哪里哟	半死不活	不知死活
-ウッーウッーウマウマ(ﾟ∀ﾟ)	(ﾟ∀ﾟ)	焦糖舞	跳的很骚	跳舞歌	呜哇呜哇	扭腰	扭腰歌	扭腰舞	扭秧歌
-エピクロスの虹はもう見えない	Epikouros no niji wa mou mienai	再见不到伊壁鸠鲁的彩虹	上海红茶馆	虹见	圣母
-REVIVER オルタンシア・サーガ -蒼の騎士団- オリジナルVer.	REVIVER	歌名很长的那首	伝説のオルタンシアの蒼の騎士団！	迪拉熊骂人	你妈	苍之骑士团	骑士团
-Good Bye, Mr. Jack	我不打叠辣	再见	再见杰克	再见杰哥	杰哥
-VERTeX	🌊	水神	芙卡洛斯	芙宁娜
-幻想に咲いた花	幻想花	幻想咲花	幻想之花	弹幕神乐
-神々の祈り	🍁	神祈	神明的祈祷
-トランスダンスアナーキー	trance	trance dance anarchy	Trance Dance Anarchy	女同9	尬舞姐妹
-SUPER AMBULANCE	🚑	俺不能死	我创死你	救护车	禁止单刷纪念日	千夏开大	超级救护车	超级小千夏	超级梅西哥	日向千夏
-♡マイマイマイラブ♡	maimai love	maimailove	maimaimailove	my my my love	sega游戏宇宙一	出mai我的爱	章鱼歌	舞萌痴	爱情买卖
-フラジール	fragile	易碎	易碎品	七海娜娜米	脆弱
-Candy Tall Woman	高血糖	高血糖女人	糖果高女士	糖高女	糖女士	垃圾分类	砍弟搞女人
-地球	🌍	dq	ylm坠机	我操什么臭鱼烂虾破歌都给你野爹立秋整笑了老子直接一首地球炸烂你们这帮爱开术力口的土鳖好好重塑下你们的审美	狗屎	神曲	立秋窜稀	奶龙	屌你	屌屌	绿菌菌	谱师尽力局	难听
-Strange Bar	sb	sb2	我	我2	我又	怪酒吧	怪吧	奇怪酒吧	奇怪的胸罩	奇怪的酒吧	奇怪的吧	奇怪罩杯	斯特兰奇酒吧	死转几把	酒老二	酒吧	初音未来提着两个黄色老鼠头	小金熊	大黄蜂	别急11
-Titania	✌	✌🏻	arisu=LP	我老婆	江江	江江我是有栖	江江比耶	体坛	泰坦尼亚	天卫三	缇坦妮娅	蓝毛小萝莉	蓝毛萝莉	踢他娘
-くらべられっ子	😫	😭	abcdefg	ABCDEFG	Compared Child	Kuraberarekko	vw&xyz	我	西同	日本字子	比孩	比样的孩子	比较子	比较孩	被刺杀的孩子	被比较的茄子	被比较的孩子	被捅了的孩子	林涅	你们别想看我的批	别拿老娘比较	别拿老娘做比较	爱哭的孩子	谁都别想看我批
-紅星ミゼラブル～廃憶編	蕾米吹zun号	蕾米吹小号	蕾米吹喇叭	蕾米莉亚吹小号	蕾米莉亚吹滴答	蕾米莉亚吹喇叭	红星
-きみのためなら死ねる	死	失败的man	为了你而死	为你而死
-タテマエと本心の大乱闘	dairantou	tateyama	我老婆	大乱斗	任天堂明星大乱斗	本心	本心大乱斗	场面话与真心的大乱斗
-Heart Beats	喝茶	心跳	铅笔画
-セツナトリップ	dx刹那	dx刹那旅行	DX刹那旅行	dx刹那旅程	Setsuna Trip	刹那	刹那旅行	刹那旅程	标准刹那旅程
-popcorn	企鹅警长	企鹅物流	高松灯	出警	帝企哥	爆米花
-Heavenly Blast	fd3	hb	皇冠2	皇冠二	天爆	天暴	蜜雪冰城	跟你爆了
-Jump!! Jump!! Jump!!	jump	元气少女蹦蹦蹦	三蹦子	跳三下	跳跳跳
-Imperishable Night 2006 (2016 Refine)	2006	2016	Imperishable Night	Imperishable Night 2006	永夜抄2006	灵梦玩火
-乙女解剖	Maiden Dissection	Otome Dissection	Otome Kaibou	乙女	乙女姐婆	解剖	紫璃
-田中	tanaka	Tanaka
-Strobe♡Girl	闪烁少女
-ヴィラン	villain	villan	反派	反派角色	碧浪	薮鱼前置摄像头	糜烂	恶者
-ALiVE	活	活着	嗷呜
-月に叢雲華に風	Tsuki Ni Murakumo Hana Ni Kaze	月云华风	月映从云花语风	月遇丛云花遇风	月从云华风	月丛云	月丛云华风	月风	小五	丛云伴月	丛云华	摇摆阳	闲云遮月清风袭花
-ふらふらふら、	fulafula	摇晃不清	摇摇晃晃
-泡沫、哀のまほろば	Utakata, Ai No Mahoroba	泡沫	泡沫哀	妹红泡水
-ヒトガタ	himehina	hitogata	一棵树两个人	管人跳舞	女人跳舞男人打	人型	人形	匕卜力夕	东雪莲跳舞	两个管人一棵树	两个女人跳舞	俩表姊	搅哥快乐曲
-Starlight Dance Floor	星光舞池	星光舞厅	大姐姐魔理沙	夜店魔理沙	发热错位金曲
-Swift Swing	ss2	我要出勤	海澜之家	他们是经理	滴蜡熊热舞	滴蜡熊爱跳舞	白铜寺骗百合咲出钱去海澜之家买衣服	迪拉熊跳舞	荡秋千	谁问你了
-アルカンシエル	🚴	yamajet	自行车	小女孩骑单车	赤月代	骑自行车
-sweet little sister	sls	小甜妹	甜小姐姐	甜二妹
-勇者	yuusha  hero
-若い力 -SEGA HARD GIRLS MIX-	SBGA	sega	WAKAICHIKARA -SEGA HARD GIRLS MIX-	若以力	若力	世嘉社歌	世嘉女孩	世嘉少女	年轻的力量
-かせげ！ジャリンコヒーロー	¥	英雄银行	哈姆	哈姆？
-Straight into the lights	中出光	直入光
-ポケットからぬりつぶせ！	口袋涂鸦	三小只
-響け！CHIREI MY WAY!	地灵殿偶像	响
-電車で電車でOPA!OPA!OPA! -GMT mashup-	星星电车	电车	电车go×幻想空间	电车opa
-ベノム	🙅	venom	Venom	朱云杰	朱总	猛毒	吴京	咩	达咩
-HAGAKIRI	hgkr	橘花	光圈科技	八云紫拿着乾坤圈	憋憋
-connecting with you	pink挑战	与你连接	和你连接	樱代主题曲	连接你
-唱	show
-弱虫モンブラン	iidx	我	我回来了	我玩的是盗版	三个绝赞全落	若虫	弱虫	弱鸡	胆小鬼	胆小鬼蒙布朗	强虫蒙布朗	换手练习歌	错位教科书
-N3V3R G3T OV3R	3333	3炸	n3	never get over	ngo	NGO	永不结束	永远不过	四个三	双枪老太婆
-からくりピエロ	🤡	Karakuri Pierrot	我	活动沙口	活动小丑	小丑
-ようこそジャパリパークへ	Welcome to Japari Park	Youkoso Jyapariparkhe
-ozma	一定在你的越级50里	哦在吗
-Schwarzschild	schw	S属性爆发	暗黑之盾	火娃	史瓦西	四川火娃	四川火娃弱智齿轮队	四川香水	四川白娃	儿简送3	凯旋最爱	长香水	黑盾	黑色小孩
-キュートなカノジョ	Cute na Kanojo	可爱女友	可爱的女朋友	女朋友	米塔
-私のドッペルゲンガー	my doppelganger	可不拔大蒜	我的分身	分身	母女俩
-Alcyone	alc	凯尔希
-ラブチーノ	love	love cino	lovecino
-ソーラン☆節	索兰节	拉面	嗦拉面
-魂のルフラン	魂之轮回
-Blows Up Everything	6级白谱	Asuka最爱	Blows Up	bue	口爆	口爆一切	吹	吹爆	吹爆一切	吹爆牛魔	爆	拆爆	瞎几把吹	嘿嘿歌
-パズルリボン	11449	puzzle ribbon	Puzzle Ribbon	未知无心	游乐王子	蝴蝶结	东云彰人	拼图丝带	红发男	赵宇浩
-Spin me harder	🦋	更大力转我	更努力转我	更难的旋转	用力转我	蝴蝶	电蝴蝶	蓝蝴蝶	转我更猛些
-Round Round Spinning Around	rrsa	大鸟转转转	魔爪吊带袜美少女	滨州转转转	绕着旋转	转圈圈	转转	转转转转
-Fist Bump	索尼克力量
-BATTLE NO.1	1	13p	14个老公	bn1	tanoc	按摩	一战	干架第一名	好多人	打架第一	打架第一名	打胶第一名	第一名	第一战	战地1	战地一	战斗，爽！	战斗爽	战犯合影	缝合怪
-色は匂へど散りぬるを	Iro Ha Nioedo Chirinuruwo	伊洛瓦	花开艳丽终散落	花朵艳丽终会散落	花艳终散	三个老婆	色散	老年人活动中心
-フリィダム ロリィタ	Freedom Lolita	嘘嘘	沙县小吃	自由的洛丽塔	自由洛丽塔	洛丽塔	喂美少女嘘嘘	喂饭
-Now or Never	non	yoshiki快乐歌	机不可失时不再来	时不我待	现在或从不
-ありふれたせかいせいふく	司空见惯	司空见惯的世界征服	初音围巾	世界征服	围巾初音白背景	红围巾
-ARAIS	阿赖斯	鸟加鸟加	鸟人
-ワンダーシャッフェンの法則	Wander Schaffen	wander schaffens law	wonder schaffen	Wonder Schaffen no Housoku	wonder schaffens law	Wunder Schaffen	wunder schaffens law	奇迹法则	小百合咲	小扎萝莉	小萝莉2	小萝莉法则	百合咲	百合咲2	法则	老婆	六翅一桶	创造奇迹的法则	炼铜法则	萝莉棋法则	萝莉法则	萝莉鸟加鸟加	锉刀
-前衛的Landscape	前卫	前卫的landepen	前卫的landscape	前卫的小妹妹	提纳里	亲爱滴小妹妹	给我玩舞萌dx
-終焉逃避行	嵯峨	提桶跑路	终焉	终焉逃避行
-Southern Cross	🌟	1+1	403	一加一	我炫一加一别人炫我星	守护南十字星	星星保卫战	全是交互	打交	打交神曲	打点计时器	打个交先	南十字	南十字星	南方十字	麦当劳1+1	和我贫瘠，星星我给你划了	噩梦之城
-うまぴょい伝説	Uma musume	Umapyoi	Umapyoi Densetsu
-あつすぎの歌	hero死了	maimai神之壁	阿紫一	夏热歌	夏热之歌	好热	好热歌	昆母	最热之歌	舌慢棍母	操你妈燃起来了	操你妈热死了	太热了	等老奶奶张嘴	半夏	老太太张嘴	老奶奶张嘴	棍母	棍木	啊紫一	热死了	热死了之歌	热死你大坝了	热爆了
-ぐるぐるWASH！コインランドリー・ディスコ	suomi	洗衣机	洗衣房	屏幕清洁工	咕噜咕噜	咕噜咕噜wash	滚筒洗衣机
-火炎地獄	dx火炎	dx火炎地狱	dx火焰地狱	dx地狱	安徽工业大学	火炎	火炎地狱	我不行了	怪兽	光谷世界城	打怪兽	天虹	米奇漫游艺城	洛杉矶山火	老婆	枫雅51区超级乐园	标准火炎	绝赞地狱
-Imitation:Loud Lounge	奇面族	丘丘人	面具	面具娃娃	呀哈哈
-ハウリング	howling	Howling	yellow	黄	黄灵梦	嚎叫
-ストリーミングハート	Streaming Heart	嘉然	嘉然比心	流心
-ディカディズム	decadism	皇帝小兵	皇帝排队	年代主义
-木彫り鯰と右肩ゾンビ	Kiborinamazu to Migikatazonbi	右肩	右肩僵尸	肩周炎	大连海事大学校歌	木彫	木雕	木雕鲇鱼	木雕鲶鱼	木雕鲶鱼与右肩僵尸	木鲶鱼	僵尸	拔小蒜	鲷鱼烧
-イノコリ先生	先生	男同	男同互瞪	男同老师	留堂老师
-ナミダと流星	dx流星	眼泪与流星	眼泪流星	流星	泪与流星
-Catch Me If You Can	就你还想来抓我嗷	早乙女彩华	猫鼠游戏	有种就抓我	有种抓住我	来抓我呀	来抓我呀小熊熊	露娜	兔女郎	抓我	抓我如果你可以	你抓不住我	你抓不住我，我是绝赞
-いーあるふぁんくらぶ	1 2 Fanclub	12	12fan	12fanclub	dx王力宏	fanclub	iarufanclub	一二粉丝俱乐部	一二俱乐部	王力宏	熊猫头	周杰伦	中日友好歌	烟雾列车
-planet dancer	88la888	ddsd	pd	行星舞者	残月跳舞	神秘蹲坑男	星球舞者	男人坐椅子	特辣的海草	拉不出来	拉不出屎	拉屎拉不出来	蹲马桶	爸爸拉粑粑	爸爸拉粑粑吧
-Transcend Lights	114514	bright主题曲	tl	音击的雨	音击的武士	音击妹妹	加速同调	我知道你很急但你先别急	急急急	九月的雨	好啊，来吧	正在拆弹	超越光	美瞳广告	封面全是老婆	别急19	压力马斯内
-メランコリック	melancholic	忧郁的心情
-パーフェクト生命	✌🏻😎✌🏻	Perfect Life	完美生命	生命
-時計の国のジェミニ	石鸡锅	时之国	时计	时计国	时计之国	时针	时针国	时针之国	时钟	时钟国	时钟之国	钟表之国
-紅に染まる恋の花	我把树叶都染红	秋姐妹	染红的恋之花	烤红薯	红染	红染恋花
-CHOCOLATE BOMB!!!!	巧克力爆	巧克力炸弹	巧克力蚌埠	答辩2
-brilliant better	bb	黄色吉他	金毛弹吉他	更精彩	被这精彩的场面震惊了吧
-フィクサー	fixer	Fixer	牛头人喝酒	修人	黑暗海底谭	黑山羊	黑山羊吃席
-Get Happy	爽了	得到开心	得乐	给爽	给他哈皮
-敗北の少年	我	败北	败北少年	败北的少年	黑丝破洞
-チューリングの跡	🎷	🧯	100号拍肚皮	credits2	Credits2	dx信用	jazz for your soul	jazz for your Soul	Jazz for your Soul	regulus吹萨克斯	Remnants of Turing	szr玩爵士	Trace of Turing	Traces of Turing	Turing	turing trace	Turing's Remnants	Turing's Trace	Turing's Traces	威尔士亲王	寄	好jbの帥	好jbの帅	将大局逆转吧	信用2	大欧派姐姐2	大奶子吹萨克斯	屠龙之技	日本字跡	白法院吹灭火器	白法院吹萨克斯	螺号	和白法院做	迹	图灵	图灵之寄	图灵之跡	图灵之迹	图灵轨迹	灭火器	萨克斯
-しゅわスパ大作戦☆	ShuwaSupa Daisakusen	ymn	炎拳	下药歌	下药神曲	修哇	修哇大作战	大作战	野兽妹	对他使用炎拳吧
-JUMPIN' JUMPIN'	jj	sh金曲	跳跳
-デコボコ体操第二	凹凸	体操	体操第二
-最終鬼畜妹・一部声	Saishuu kichiku imouto ichibu koe	易卜生	一部声	鬼叫	鬼畜妹	鬼畜妹一部声	月女儿	月儿子青春版	蓝蓝路
-tape/stop/night	maimai唯一中文歌	tape stop night	tsn	熊子	君の中國语本当上手	国产弱虫	磁带机	磁带机黑胶	磁带暂停夜晚	弱虫2	中国弱虫	中国虫	中国强🐛	中国强虫	中文歌	灯光	秘密星期五	被踩:夹子歌	暮色电台	带停夜	强虫	胶停夜
-廻廻奇譚	🎳	🤞	67	67怎么说	67怎么说怎么说	Kaikai kitan	tf家族包场拆机	医微医不写术了	回回奇谈	回回奇谭	廻廻奇谭	灰灰鸡蛋	奇谭	群友打架	最强王者	保龄球	咒术回战	咒术回战主题曲	爱蜜莉雅	轮回奇谭
-Baddest	最坏	十六圈	十六块钱	樋口枫	樋口枫大旋风	樋口枫的大逼圈	带恶人	德龙	德龙鬼叫	疯狗转圈
-アスヘノBRAVE	brave
-夜に駆ける	Into the Night	Race into the night	Racing into the night	YOASOBI	Yoru ni Kakeru	眼睛喷血	向天堂奔去	向夜晚奔去	向晚	向晚爬	入夜狂飙	夜跑	夜驱	晚上跑
-Like the Wind [Reborn]	Like The Wind	一块钱	像风一样	像风一样复兴的	被这精彩的场面震撼到了吧	野兽先辈	怎么样 好玩吧 被这精彩的场面震撼到了吧	动力甩尾
-儚きもの人間	Hakanakimono Ningen	少女炼狱	人间	梦人间
-Sweets×Sweets	甜²	甜甜	甜蜜蜜	阳光彩虹小白马
-幽闇に目醒めしは	Anything which was awakened to phantom-dusk	在黑暗中醒来	幽暗	幽暗目醒	幽目	东方四女躺草地	东方四个女人躺草地	躺草坪
-春嵐	三人日山风	春天的风暴	春岚	春风	老陈	哈利路大旋风	哈姆风暴	蓝色妖姬	蓝色妖姬切尔西
-白ゆき	Shirayuki	女同亲嘴	白yuki	白雪	白雪歌送武判官归京	白夜行	美少女亲嘴	拿鸽鸡鸣
-Melody！	melody	旋律	美乐蒂	东方绚彩歌	马老弟
-アカツキアライヴァル	Akatsuki Arrival	Daybreak Arrival	初音未来和波奇	女同8	拂晓	拂晓抵达	拂晓已至	鱼葱
-オトヒメモリー☆ウタゲーション	乙姫	乙姬
-Party 4U ”holy nite mix”	4u	p4u	派对4你
-絶え間なく藍色	超羽天狼星	无尽的蓝色	无尽之蓝	无尽蓝色	绝绝子蓝色	绝蓝	绝间蓝	绝间蓝色	蓝色
-インビジブル	invisible	Invisible	建筑工地	透明人	透明人间	噜啪啪
-阿修羅ちゃん	Ashura-chan	rjyy打舞萌	understand	ysf	阿修罗	阿修罗酱
-神々が恋した幻想郷	Eastern Cross	testify	幻想乡	小南十字	神仙稀罕俺们屯	神都得意俺们屯	神恋	神眷	青春版白南十字星	东十字	东十字星	东方南十字	众神眷恋的幻想乡	众神眷恋的十字星	终神眷恋的南十字
-ｉｓｏｐｈｏｔｅ	iso	isophote	op	vrchat	一个绝赞	女同10	全角英文	打字带空格	等照度线	恋爱裁判2	姛	琪芽	说话带空格
-スカーレット警察のゲットーパトロール24時	👮	24时	24时警察	funky	Funky	Ghetto Patrol	Scarlet Police	Scarlet Police on Ghetto Patrol	警察	警察24时	警察出警24小时	斯卡雷特	斯卡雷特警察	斯卡蕾特	斯卡蕾特警察	足技	宝宝巴士	蕾米出警	东方警察	东方警察24时	琪露诺跳舞	蟑螂跳舞
-渦状銀河のシンフォニエッタ	🚽	抽水马桶	冲水马桶	涡状伊岛	涡状台风	涡状银河	涡状银河交响曲	涡状银河的小交响曲	涡状马桶	漩涡马桶	银河	马桶
-Revive The Rave	rtr	一个绝赞叫一声	润体乳
-夢花火	u咩哈那比	YumeHANABI	乙姬角色歌	最难主题曲	麻辣蒜	梦花火	马老三	马栏山
-8-EM	8em	8EM	atm	ATM	EIGHT-EM	大大大	很酷，不说话	涩图
-メルティランドナイトメア	melty	melty land nightmare	Melty Land Nightmare	meltyland	可爱歌	原子能酸菜	春卷饭	小粉	梦魇
-サイバーサンダーサイダー	Cyber Thunder Cider
-METATRON	元创	死镰2	死镰二	梅塔特隆	钟楼
-Seyana. ～何でも言うことを聞いてくれるアカネチャン～	akane	seyana	Seyana. ~AKANE's anything ok~	sodayo	琴叶茜	不管说什么都在听着的琴叶茜酱	说的事呢
-CYBER Sparks	🧹	cs	endtime青春版	黄色嘉然	反恐精英	魔光炮	魔理沙爆炸	赛博火花	赛博炮
-Quartet Theme [Reborn]	quartet	四重奏	手枪人	十面埋伏	生死四人组
-Counselor	小护士	律师
-LOSE CONTROL	失去控制	失控	塔露拉
-美しく燃える森	美燃森
-Aetheric Energy	❤	ae	以太能量	应用工程
-Alice in 冷凍庫	Alice in 冷冻库	冷冻库	冰箱	哦哦哦	冻死爱丽丝	爱丽丝
-超熊猫的周遊記（ワンダーパンダートラベラー）	wonder panda traveler	我们是幻想麒麟，我今天吃了炸鸡，让我们开始旅程吧	幻想麒麟	幻想麒麟吃炸鸡	四川禁曲	周游记	超熊猫	超熊猫的周游记	超雄猫	超丫丫	超级bara周游记	宝可梦	奶龙	奶龙环游世界	屌你2	灵感菇	龙性恋
-オパ! オパ! RACER -GMT mashup-	幻想空间×山脊赛车	才八	才八才八	坟头对撞	赛车
-やめろ！聴くな！	やめろ	停下！不要听！	不要听	听	别听
-Life Feels Good	lfg	感觉很好	好日子	生活感觉好	生活真美好
-ARROW	🏹	箭	箭头
-felys -final remix-	fely	felys	非礼死	菲利斯	凤梨酥	开花歌	风流原神	风流韵事	飞叶子	飞雷神
-BaBan!! －甘い罠－	baban	甘民	甜蜜陷阱	八班
-RIDGE RACER STEPS -GMT remix-	我创死你	汽车总动员	山脊赛车
-橙の幻想郷音頭	🐱	Chen No Gensoukyo Ondo	音头	幻想乡音头	橙	橙音头	橙的幻想乡音头	橙之幻想乡	橙舞	欢乐斗地主
-絶対にチョコミントを食べるアオイチャン	Aoi	Aoi chan	chocomint	chocomint ice	Mint choco	琴叶葵	巧克力冰淇淋	薄荷巧克力	薄荷巧克力冰淇淋	必须要吃薄荷巧克力味冰淇淋的琴叶葵酱	冰淇凌	冰淇淋	绝对	绝对食
-マリアをはげませ	怎么又是你	玛利亚
-ミラクルペイント	Miracle Paint
-躯樹の墓守	🌳	3030	chitose	ignite	kohad鸟	kohaD鸟	nmsl	欧内的守	欧内的墓手	界徐盛の笑	甘城最爱	去世の墓琴	去世的母亲	躯世的木琴	躯勢の墓琴	躯势の墓琴	躯势の墓亲	躯势的墓琴	躯树の墓守	躯树的墓守	江东の铁壁	守墓人	重庆教育局	小红帽	雪墓	狙里夫人	大便超人3	大树守卫	天妇罗坠机	年度坠机王	墓守	母兽	木手	雷米坠机	柯莱塔	蕾米没fc	蕾米坠机	为你守墓	噔噔	扫墓	树	红色羽毛球	趋势的木琴	铃芽之旅	铃芽之旅2	驱鼠的母兽	鸟墓守了
-町かどタンジェント	Machikado Tangent	Town corner tangent
-一か罰	一刀罚	一罰	一力罚	一罚	只有我最摇摆
-強風オールバック	Kyoufuu All Back
-人生リセットボタン	653124710	dame	Life Reset Button	remake	重开按钮	人生	人生reset button	人生重置	人生重置按钮	人生重置键	人生重来键	人生重启	人生重启按钮	人生重启键	人生重开	人生复位按钮
-待チ人ハ来ズ。	machibitohakozu	小伞	小伞歌	旋转木马	待人未至	待人来	等人	等的人没有来	东方旋转木马
-ヘルシーエンド	11284	healthy end	maimai你摸	健康结局	诈尸曲
-Destiny Runner	dr	命运奔跑者	命运跑者	蕾米莉亚
-なるとなぎのパーフェクトロックンロール教室	⑨	Naru and Nagi	Naru nagi	Naru to Nagi's Perfect Rock and Roll Class	数学教室	中二教室	箱部鸣与小佛凪的完美摇滚教室	冒牌⑨	摇滚教室	琪露诺的完美算数教室
-YATTA!	🥕	yatta	胡萝卜	好耶！
-otorii INNOVATED -[i]3-	⚡🐻	i3	otorii	otorii innovated	永江衣玖	熊二	紫色滴蜡熊	前列腺	大鸟居	天地人间完全放电	雷熊	雷电将军	杨永信	电熊	电刑	电所有人前列腺	电你牛子	电你前列腺	红色电音极地大冲击	闪电熊
-TwisteD! XD	td	TD	xd	退订
-林檎華憐歌	小苹果	大妈唱歌	林檎	林檎华怜歌	拜拜	拜拜拜拜	苹果歌	马妈歌
-World's end loneliness	wel	奥尔菲斯	寡	寡王	我饿了	孤独终老	世孤	世終孤独	世翠孤独	世末孤独	世终	世终孤独	林尼	噩梦
-解けないように	解	愿这绳结不被解开	为不被解开	为了不被解开	黑化灵梦
-MUSIC PЯAYER	MUSIC PRAYER
-ローリンガール	roiling giri	Rollin'Girl	rolling girl	Rolling Girl	翻滚少女	头皮屑	滚女
-神威	KAMUI	宇智波带土	太湖之光	滴滴就哇from踏踏踏踏踏	天津红牛蛇鲸	嘀嘀就哇from踏踏踏踏纵纵纵纵纵纵纵纵纵纵纵纵纵纵纵扫扫扫扫扫扫划	嘀嘀就哇from踏踏踏踏纵纵纵纵纵纵纵纵纵纵纵纵纵纵纵纵扫扫扫扫扫扫划	红南十字	难藏泪
-初音ミクの激唱	🐔🎤	Gekishou	Intense Singing	The Intense Singing of Hatsune Miku	机场	激唱	初音未来的激唱	大葱天使	从此打mai不远行	姬昌	鸡场	鸡肠
-最終鬼畜妹フランドール・S	Last Brutal Sister Flandre S	鬼畜妹	最终鬼畜妹	二小姐	二妹	蓝蓝路
-ネコ日和。	大臣日和	猫天气	猫日和	猫咪日和
-患部で止まってすぐ溶ける～狂気の優曇華院	dx患部	Kanbu	Kanbu de Tomatte Sugu Tokeru	overdrive	Overdrive	一把米诺	患部	患部溶解	狂气的优昙华院	座药	兔子药	肛塞	优云华院	优昙华院	标患部
-バイオレンストリガー	jerry	megumegu	Violence Trigger	危险扳机	陶大冲	暴力板机	暴力拆机	暴力扳机	杰瑞	扳机
-Outlaw's Lullaby	ol	outlaw	王源	史蒂夫抽烈焰棒	史蒂夫抽烟	如龙	如龙2
-管弦楽組曲 第3番 ニ長調「第2曲（G線上のアリア）」BWV.1068-2	air on g	air on the g string	aria on g	aria on the g string	g弦	g弦上的咏叹调	管弦乐	管弦乐组曲	智障交互	二长调	妹妹拉小提琴
-げきオコスティックファイナリアリティぷんぷんマスタースパーク	东方曲名过长	东方名字很长
-スイートマジック	sm	sweet magic	Sweet Magic	sweetmagic	swmg	羽泽鸫	甜甜魔法	甜蜜魔法
-Justified	森林冰火人	正义	牌佬打架	红蓝对决
-二息歩行	citywalk	二息步行	二息电摇	半块钱	儿媳不行	电摇嘲讽
-Xenovcipher	棺材板	冰火人	异种密码	挠头怪	泽拉斯	终极猎手	远古巫灵	飞升b
-Splash Dance!!	splash dance	泳装2	爽舞	喷射舞
-enchanted love	🐸	15+	el	四月的夜明	小青蛙	小骊龙	青蛙	青蛙王子	曾宇昊	八月的雨	附魔的爱	附魔爱	迷人的爱	迷惑爱	醉心之爱	别急17
-Beat of getting entangled	❓	boge	一坨蓝	胡来的处男	胡辣汤	别急13
-裏表ラバーズ	◐	rjyy越级	Uraomote Lovers	李彪情人	里表	里表情人	里表中单	里表恋人
-共鳴	共鸣
-＊ハロー、プラネット。	*Hello, Planet.
-Lia=Fail	l=f	L=F	liafail	生煎3	生煎三	福瑞3	命运之石	剑3	圣剑3	圣剑三
-イロトリドリのメロディ	Irotoridori no melody	彩绿之歌	小仏凪	多彩旋律	端茶
-キャプテン・ムラサのケツアンカー	Captain Murasa	Captain Murasa's Ketsu Anchor	船长	村纱水蜜
-ヤミツキ	Yamitsuki	痴迷
-春を告げる	🛌	cogito睡觉	春告	春天的宣告	春日宣告	睡了	宣告春天
-秋の未確認生物	秋的未确认生物	生物	未确认生物
-おねがいダーリン	one	ONE	ONEgai Darlin'	Onegai Darling	拜托了，亲爱的	拜托了darling	拜托了原神	拜托了亲爱的
-なだめスかし Negotiation（TVsize）	Negotiation	sugoi dekai
-NULCTRL	cxk	nc	NTR	nul	一根星星	牛个戳	牛啃臭	唱跳rap篮球	努力唱跳rap篮球	没有唱跳rap篮球	无控	红蓝	脑残
+# 曲目别名库 —— 制表符分隔: 曲名 <Tab> 别名 <Tab> 别名 ...
+# 数据来源: MuNET 公共 API /v1/mai2/music ( https://api.mumur.net )
+# 原始社区别名由 clansty 的 SongSearch 项目维护, 感谢作者与贡献者
+# 你可以直接改这个文件, 保存后刷新网页即生效。 # 开头是注释
 True Love Song	小管弦乐	真情歌	真爱	真爱歌	糖糖
-天ノ弱	amanojaku	dx天弱	dx天之弱	天弱	天之弱	标准天之弱
-Boys O’Clock	男同时刻	男同时间	男同时间到	男孩时间
-下克上々	0克1	下克上	少女炼狱2	正邪	田忌赛马	长发疯批男
-緋色のDance	Hiiro no DANCE	绯色	绯色dance	绯色之舞
-System “Z”	🥗	z	系统z	系统贼	沙拉	蔬菜沙拉
-閃鋼のブリューナク	brionac	Brionac of Steel-flash	Senko no Brionac	Senko no Buryunaku	senkou	闪钢
-アイム・マイヒーロー	i am my hero	I am my hero	英雄	我是自己的英雄	马云
-magician's operation	魔法手指	魔法师手术	魔术手	黑手	黑屏
-NAGAREBOSHI☆ROCKET	火箭猫	火箭猫猫	火箭福瑞	像素猫猫	那旮热博士	梅干茶渍	福瑞火箭	流星火箭
-フラグメンツ -T.V. maimai edit-	fragments	maimai edit	tv	东方穿心莲
-YA･DA･YO [Reborn]	yadayo	幻想地带	不要嘛	六个喇叭	亚达哟
-ULTRA SYNERGY MATRIX	USM	我来出勤了
-Our Wrenally	ow	夏祭	夏祭2	夏祭re:master	火女孩	我把你妈妈抓走	我们的万人阿里路亚	急急国王	恐怖奶奶	高数	高等数学	守望先锋	白夏祭	魔法阿妈	魔法阿嫲	魔法阿嬷	魔法夏祭	里夏祭	临兵斗者皆阵列在前	别急9	别急加强版
-電光石火	🤨	Denko Sekka	Quick Attack	俄洛伊	小孩哥跳舞	穿着很少布的大只佬	大胸夏未央	大电老师	妖艳魔男2	裸男老公	埃及裸男	电光火石	电光石火
-World Vanquisher	ftr6	ftr8	Mother Vanquisher	wv	威猛先生	我想要挨一顿毒打	我想要一张色图	我想要一顿毒打	我的丸求你射	我的碗筷洗	手感噔噔	世界征服者	世征	中二送披萨	木琴征服者	来点色图	噔噔噔噔噔
-リスペク風神	dx风神	respec fujin	respect fujin	respect风神	小风神	瑞思拜风神	墨晨	东方电车	东方风神	东方风神录	东风风神	车万风神	风神	风神2
-Grip & Break down !!	gbd	grip	Grip &amp; Break down !!	Grip and Break Down	发光绝赞	红魔馆内战	红魔馆爆炸	绝赞落
-Burning Hearts ～炎のANGEL～	Angels with Burning Hearts	br	Burning Angel	Burning Hearts	炎天使	烧心
-ビターチョコデコレーション	🍽️	苦巧	苦巧克力	苦巧克力装饰	米开朗基罗	谁知盘中餐
-Starlight Vision	🌸	星光视觉	樱花灵梦
-分からない	😵	Wakaranai	我徒弟呢	我不知道	我不到啊	我怎么知道	我哪知道	吾伐晓得	那	不知道	哇卡拉奶	哇嘎拉奶	哇嘎啦乃	优秀答案	优质解答	发生什么事了	暂时不能给你明确的答复	这	这到底
-Armageddon	⑥	arma	阿空	阿妈个蛋	阿妈咯噔	世界末日	太阳信仰	妈了个蛋	灵知的太阳信仰	灵乌路空
-怒槌	😡👊	😡🔨	ikazuchi	Ikazuchi	Rage	努吹	怒捶	怒锤	梅西哥打交	愤怒的锤子	该罚	这谱谁写的
-チルノのパーフェクトさんすう教室	⑨	⑨章算数	baka	Cirno	Cirno's Perfect Math Class	算数教室	算术教室	数学课堂	琪露诺	琪露诺的完美算数教室	琪露诺的完美算术教室
-炭★坑★節	最新热歌慢摇	炭坑节	粪坑节
-wheel	猫车	悠哇悠哇	车轮	轮	轮子	马挖路2
-クレイジー・ビート	crazy beat	crazy beats	crazybeat	crazybeats	狂乱节拍	狂热节拍	双人蹦迪	致命节奏	疯狂节拍
-超常マイマイン	Chojo maimain	Paranormal my mind	大逼圈入门曲	超常	超常maimai	超常滴蜡熊	咕噜咕噜
-居並ぶ穀物と溜息まじりの運送屋	勾哥拉大车	木雕2	木雕鲶鱼2	勇敢勇敢我的朋友	牢大骑车	老登拉车	老汉推车	老汉拉车	老爷爷	毕乾舜	舔狗	运送屋	进击的骆驼祥子	骆驼祥子
-命に嫌われている	123456789	Hated By Life Itself	核客男神	嫌命短	嫌命长	嫌你妈命太长	超羽天狼星	被生命所厌恶	被生命所厌恶着	被生命厌恶	命嫌	这你他妈都不急	鹤望兰
-犬日和。	狗天气	狗日子	狗日的	狗日和	犬日和	山里灵活的狗	日和	哈皮	炫狗
-ぴぴぱぷぅ！	比巴卜	噼噼啪噗
-アマノジャクリバース feat. ｙｔｒ	🚸	0梦过马路	ytr	五一广场	天邪鬼	天邪鬼反转	灵梦过街	灵梦过马路	过马路
-M.S.S.Planet	dxmss	mss	MSS	我是地球	妈杀杀星球
-Cosmic Train	ct	green主题曲	宇宙列车	小星穹铁道	星空列车	星穹列车	地铁	反恐精英
-進捗どうですか？	Shinchoku Doudesuka?	进展如何	进度	进度如何	进步
-ガランド	airhead	garando	易拉罐	空气头	触手	摸你摸你	噬菌体	罐头章鱼	别急3.5	黑色树枝
-SHOW TIME	怪盗基德
-マネマネサイコトロピック	manemane	manemane的精神回归	一男一女看手机	女同11	精神回归	二重身	分身	模仿模仿	模仿模仿psychotropic	模仿模仿Psychotropic	模仿模仿的精神回归	两人玩手机	马内马内
-ヒバナ	7810	ccb	fufu遇刺	hibana	HIBANA	k杀	rechan	tsubaki	火化	火花	肯尼迪	七八十	初音爆头	初音未来被爆头	扇迪拉熊嘴巴子	狙初音	狙击fufu	狙击初音	狙击初音未来	狙击小日子	狙击小日本	大狙架miku	大狙架Miku	大狙架初音	大狙怼脸	爆头初音	匕八十	匕八卜	东风吹战鼓擂miku狙击怕过谁	脑洞大开
-MAXRAGE	😡	核按钮	急怒	交互天堂	超级生气	暴怒	良怒2	很生气	气死绝赞落了	气炸	迪卢克按按钮	迪卢克按炸弹	极怒	满怒	绝赞交互	马克思润菊
-Nerverakes	2	地球仪	二块钱	两块钱
-Prismatic	🤗	你先别急	棱镜
-awake	起了	醒了
-共感覚おばけ	共感怪物	共感怪兽	共感觉	共感觉怪物
-Nyan Cat EX	🌈🐱	nya	彩虹猫
-電車で電車でGO!GO!GO!GC! -GMT remix-	电车	电车go
-エンドマークに希望と涙を添えて	🙂	End Mark ni Kibou to Namida wo soete	Endmark	希望累	希望泪	筋肉女神	超级棒棒糖	舞萌不好玩	梦之泪伤	梦泪	为结局添上希望与泪水
-阿吽のビーツ	阿牛	阿牛小卖铺	阿吽	阿吽的节奏	阿哞	阿哞的节奏	小灵通青春版
-YU-MU	yumu	榆木
-D✪N’T  ST✪P  R✪CKIN’	⭐⭐⭐	🤖	dont stop rockin	dsr	机器人	机器人射出飞盘	恐怖g7人	小机器人
-デリヘル呼んだら君が来た	Deriheru	Deriheru Yondara Kimi ga Kita	When I Arranged For A Call Girl, You Appeared	叫了应召女郎结果来的是你	呼君来	粉毛	卡姿兰大眼睛	应召女郎
-シエルブルーマルシェ	ciel bleu marché	Ciel bleu marché	dx白绯色	眼镜妹	小厨娘	星星歌	青空市场	魔法食谱	做饭	蓝天市场
-Mysterious Destiny	md	神秘命运	微信	猎天使魔女	贝姐
-ワールズエンド・ダンスホール	WORLD'S END DANCE HALL	世末舞厅	世终舞厅	双关门	漠河舞厅	舞厅	末世舞厅
-目覚めRETURNER	Mezame Returner
-Mjölnir	🎹💨	mjo	mjolnir	mjr	管子海	激光雨	薯条	翠翠薯条	翠楼屋的管	翠楼屋拉屎	翠楼屋炸钢琴	翠楼屋撸管	翠楼屋撸管冒烟	脆脆薯条	打火机	冒烟钢琴	麻将	摸脚尼尔	摸你鸡儿	雷神之锤	炸琴	喵喵槌	喵喵锤	砸钢琴	钢管舞	钢琴	钢琴抽大烟	钢琴冒烟
-Dreadnought	🔦	巧脆卷	死亡手电筒	手电筒	大喷菇	望远镜	无畏号	无畏号战舰	无畏舰
-ダブルラリアット	Double Lariat
-表裏一体	表里	表里一体	表里如一
-maiム・maiム feat.週刊少年マガジン	原神启动	功夫	三个臭逼	三个傻逼	周刊少年	两男一女	啦啦啦啦啦
-アルティメットセンパイ	究极先辈	究极前辈	小黄毛	先辈
-STEREOSCAPE	玩手机	天体观测
-Trick tear	tt	TT	欺骗泪	吹个替儿	吹个提尔	诈泪	诡泪
-スピカの天秤	ac电棍	Scales of Spica	Spica no Tenbin	Spica's Libra	Spica's Scales	希望泪2	交流电电棍	心灵终结	天秤	天平	傻逼慢扫键	绝望泪	这个需要你自己衡量	黑化希望泪
-ホシシズク	fes主题曲	syzygy	三小只2	三小只过节	星雨	繁星点点
-ロウワー	lower	Lower	mzk2	mzk二箱	蛇女	堕落眼界	犹大
-BANG!	bang	邦	棒	钢管
-魔法少女になるしかねぇ	只好成为魔法少女了	魔法少女	脏	马猴烧酒
-ロストワンの号哭	🤚😭啊😭👍太难了😭👆它给我13😭🤲惹啊	failed	kappa	Lost one	lost one 的号哭	Lost one's weeping	Lost ones	lost one的号哭	The Lamentations of the Lost Ones	号哭	失去1的号哭	大贝塔	破防	没有1我要哭了	哭哭
-レーイレーイ	re-i re-i	胡桃	三色幽灵	星野爱	捉鬼	幽灵	雷雷	抓鬼	抓鬼星野爱	潇洒哥和黑大帅
-taboo tears you up	dxtaboo	dx禁忌将你撕裂	dx淘宝	taboo	禁忌将你撕裂	三倍icecream	淘宝	滔搏
-剣を抜け！GCCX MAX	gccx	GCCX	拔剑	剑拔	剑拔弩张
-WiPE OUT MEMORIES	10周年	maimai机台	wipe	wipeout	wom	WOM	十周年	消逝的回忆	洗衣机	超级缝合怪	舞立方	抹去记忆	吴丽芳	缝合怪
-BIRTH	÷↑	Koha-D	我	我还	出生	初生	生日	畜牲	畜生	妈妈生的	诞生
-カノン	Kanon
-Paranoia	金色灵梦	妄想症
-ヱデン	eden	エデン	阿罗娜	伊甸	一码空空
-お嫁にしなさいっ！	Oyome ni Shinasai!	婚礼	婚礼进行曲	女同7	东方花嫁	东方萃翠酒醉	结婚
-Tic Tac DREAMIN’	⏰	睡衣	粉毛睡衣
-グッバイ宣言	 扭手宣言	✌️👌	886宣言	Goodbye Sengen	one,two	再见宣言	卡手宣言	扭手宣言	袜子
-おても☆Yan	😃	😃👍	yan	阿铁摸呀	阿铁摸鸭	山歌	日本民歌	烟	陕北民歌
-月面基地	apollo征兵广告	我要打	月抛基地	面基	挂机	灵山路	灵山路1000弄
-BETTER CHOICE	👄	更好的选择	更好选择	烈焰红唇
-SILENT BLUE	↓↑	KohaD	sb	我	四块钱	色篮	静屋他弟	静蓝	默蓝	傻逼
-妄想感傷代償連盟	dscf	ghost	MKDR	阿姨压一压	海底谭难民营	鬼	初音罚站	代偿联盟	妄想	妄想感伤	妄想感伤代偿联盟	妄伤	盲肠肝肠大肠联盟	盲肠肝脏大肠年龄	盲肠肝脏大肠联盟	盲肠大肠杆菌年龄	盲肠肛肠大肠联盟	啊咿呀咿呀	联盟
-アウターサイエンス	outer science	Outer Science	界外科学	次の
-ウサテイ	🐇	USATEI	因幡帝	小老帝	石门快乐歌	帝帝跑跑跑	兔子	兔子快跑	兔子跑	乌撒
-セハガガガンバッちゃう！！	SBGA	sega hard girls	SEHA GA GA GANBATCHAU	好几个娘们	世嘉硬件女孩	世嘉硬件娘
-響縁	dx响缘	響緣	響绿	猫耳灵梦	梦花火2	响缘
-Money Money	💰	moneymoney	m属性大爆发	紫苑镇	富哥v我50	钱钱	钱钱钱钱钱	马内马内	骂你骂你
-だんだん早くなる	dandan hayaku naru	Getting Faster and Faster	越来越快	越战越勇	走路歌	走路人	蛋蛋	蛋蛋加速	蛋蛋歌	蛋蛋变快	逐渐加快	逐渐加速	逐渐变快	当当哈呀库那路	末白	慢慢变快	哈压库	专注轻机枪	别急8	动力小子	渐变快	渐渐加快	渐渐加速	渐渐变快	渐渐变急	秃老头	跑男	闲鱼客服
-Ultranova	🏍️	a4纸	超新星	摩托车
-モザイクロール	dx马赛克卷	mosaic roll	mozaik role	Mozaik Role	标准马赛克卷	马赛克卷
-今、誰が為のかがり火へ	今	今谁	今谁为	今谁为火	现在，为了谁的篝火
-[星]しゅわスパ大作戦☆	宴大作战	星大作战
-全人類ノ非想天則	Zen-Jinrui no Hisoutensoku	桐谷遥大战小豆泽心羽	桐谷遥大战小豆泽心羽是什么歌	高达	全人类	全人类的非想天则	全人类的飞上天	超级机器人	非想天則	非想天则	则	绯想天
-ロールプレイングゲーム	mafumafu	rpg	RPG	日屁股
-オーケー？　オーライ！	？！	3q	ok	ok all right	Ok Alright	Okay Alright
-アカリがやってきたぞっ	akari	Akari	Akari ga yattekitazou	Akari has Arrived	akari来了哦	阿卡莉	阿卡丽	来	来了	来了哦	来了哟	绁星灯
-Agitation！	agi	吉他姐2
-日本の米は世界一	🌾	kib青春版	水稻	水稻滞销帮帮我们	日本大米世界第一	日本米	日本米世界一	日本绝赞世界第一	米米世界	东北大米世界第一
-Ragnarok	黄昏	诸神黄昏
-Big Daddy	🤩	🥵	我推的孩子	机厅好热	机厅不开空调歌	群友	神木光干的	星野爱	星野爱高潮	大跌	大爸爸	大爹	尼玛啊 好热	比格大帝	逼格大帝	老头发力了	你	你又	您	汤姆猫	爸爸爷
-だれかの心臓になれたなら	I want to be your heart	安倍晋三	心脏	如果能成为谁的心脏	如果能成为谁的心脏的话
-Ether Strike	📢0	es	my guiding star	以太攻击	以太冲击	乙醚罢工	吾之指路明星	白内障	零光	零光吹喇叭
-天国と地獄 -言ノ葉リンネ-	tengokutojigokukotonoharinne	言之叶轮回	天国地狱	天国与地狱
-エテルニタス・ルドロジー	~AETERNITAS LUDOLOGY~	aeternitas ludology	eternitas ludology	永恒游戏学	八云紫	东方鼓动
-フォルテシモBELL	bell	fortissimo bell	FORTISSIMO BELL
-宿星審判	Shukusei	Shukusei Shinpan	Syukusei Shinpan	原神草神	宿暗示	宿星	宿星审判	星怒审判	奏明天空	曹逸凡	大慈树王	雷电法王	审判	爱蜜莉雅	纳希坦	纳西妲
-疾走あんさんぶる	13.6	Sissou	Sissou Ensemble	三小只	疾走	疾走乐队	几把吹小号	骚灵三姐妹
-Drive Your Fire	大姨父	开你的火	极地大冲击	红色电音
-In Chaos	💩	印钞	硬超市	硬超死	在超市	超市	超市入口	超市里	超市里谱	有害的音乐	别急14	这是有害的音乐	银潮湿	阴超市	阴超室	阴间超市	马叫
-Help me, あーりん！	erin！erin！	Help me arin	救我	教我，永琳！	月铃姐妹	彩绿永琳	帮我	帮我阿李安	帮帮我
-Rising on the horizon	kop4th预选曲	roth	地平线	玛丽萨默斯
-ミラクル・ショッピング	miracle shopping	qq	qq企鹅	企鹅超市	神奇阿呦	堂吉诃德	乱中取胜	购物
-もうみんなしねばいいのに	音波狂潮主办	去死吧	水桥帕露西	全寄	全灭	大家一起死	大家去死	大家死了好	大家都去死	大家都死了	男人唱歌榜top1	如果大家都死了就好了	如果大家都似了就好了	如果大家都似掉就好了	如果大家都趋势了就好了	芭蕾芭蕾	要是大家都趋势就好了	很难听	很难听的歌	东方难听歌	团灭	帕露西	帕露西鬼叫	桥姬	趋势	难听	难听难打	骂脏话
-ハードコア・シンドローム	creeping	hardcore	hardcore syndrome	Hardcore Syndrome	tanoc全明星	音游大神二小姐	音趴	狗头&tpz	拳交	硬核	硬核综合症	硬核综合征	最适合情侣一起听的甜蜜情歌	出生竖中指	小朋友齐打交	新兵敬礼老兵打交	新兵立正老兵打交	赤赤救我	双人蹦迪	打架第二名	打交	打交第一名	打胶	大扑棱蛾子	梅西歌	梅西哥	梅西哥拳胶	梅西哥打交	梅西哥拆机	舞立方	北冥	友人对战	老兵交互	哈的口	哈的扣	哈的扣大	哈的阔	哈得阔哒	哈皮打交	哈皮和tpz立正了	哈皮和tpz开音趴	哈德口	劲爆打交	扭头看大佬打交	罚站	还是pvp大佬
+Color My World	cmw	悲怆
+Future	未来	ftr	错位歌	星星歌
+Love You	爱你	喜欢你
+恋愛サーキュレーション	恋爱循环	恋爱circulation
+コネクト	小圆op	联系	connect	虚渊玄	小圆脸	Connect
+In Chaos	超市里的马	inchaos	💩	别急14	印钞	在超市	有害的音乐	硬超市	硬超死	超市	超市入口	超市里	超市里谱	这是有害的音乐	银潮湿	阴超室	阴超市	阴间超市	马叫	音超市	因超市	混乱	宴阴超市	藏阴超市	驴叫	在混乱中	陷入混乱	🐴	发出马叫	在超市里	有益的音乐	🎺🐴	🐴🎺
+Crush On You	15155155155155151	cou	coy	冲你身上	创似拟	创死你	小黑子	撞死你	暗恋你	木有芭蕾	蔡徐坤	虫儿飞	鸡你太美	COU	说唱金曲	我喜欢你
+Sun Dance	金正恩跳舞	将军舞	sd	太阳舞	孙舞	日舞	日跳舞	阳舞	金正恩
+Sweets×Sweets	甜²	甜甜	甜蜜蜜	阳光彩虹小白马	sweets	小甜甜	200%	无印主题曲
 Love or Lies	lol	LOL	爱或谎
-Flashkick	flash	我tm一个滑铲	闪击	闪电旋风劈	闪电旋风踢	闪踢
-群青讃歌	Gunjo Sanka
-ラットが死んだnew words	疫医	死	芝麻街	鼠鼠似了	白老鼠死掉了	老鼠死掉了	老鼠死掉了newwords	硕鼠死亡	硕鼠死亡newwords
-華の集落、秋のお届け	touch当星星	花村	滑稽	皇女	秋届	集落	菲谢尔	华秋	华集	华集落	华的集落	华之集落	华之集落，致以秋意	华落
-すーぱーぬこになりたい	nuko	我想变成猫咪	想要成为super nuko	想要成为超级猫猫	想要变成超级猫	想变成猫	想变猫	超猫	超级猫猫	猫猫	粉猫	变成猫	变超猫	变猫	开水壶成精
-DADDY MULK -Groove remix-	大爹奶	大爹马克	忍者战士	爸爸奶	爹地奶	爹奶	爹爹奶	黑屏猜你妈妈
-Reach For The Stars (Re-Colors)	dx追星	彩追星	索尼克缤纷色彩终极版	新追星	追星2	追星Remix
-Sky High [Reborn]	天空高	天高
-BLACK ROSE	黑玫瑰
-炉心融解	Meltdown	Roshin Yukai
-星見草	⭐️👁🌿	康庄小道	星见草
-ただ選択があった	jubeat	打地鼠	只是在不断选择	答题卡	仅仅做出选择而已	选择
-First Dance	1！5！	15	fd	一！舞！	一曲成名	一舞	出生之舞	初舞	第一舞
-立ち入り禁止	🚫	禁止寸止	禁止进入	后入禁止	后入群主	立入禁止
-ノンブレス・オブリージュ	non-breath oblige	我喘不上气	我喘不上气儿	喜羊羊	高松灯不会唱	不要呼吸	喘不上来气	喘不上气	无呼吸	无呼吸义务
-僕の和風本当上手	bokuno和风本当上手	下脚	我的和风非常厉害	君日本语本当上手	上手	上天	僕の日本语本当上手	僕の和风非常牛逼	僕の唢呐把人送走	本当上手	和风	和风打交上手	和风本当上手	唢呐	现在开始打交	饺子
-Jack-the-Ripper◆	jack the ripper	jtr	ripper	杰克日批	杰克开膛手	杰哥	杰哥日批	杰哥雷普	开膛手	开膛手杰克
-Xevel	希尔薇	健身房	邪恶vel	邪恶Vel	累死人不偿命	怎么还没结束	黑白双gay
-アディショナルメモリー	回忆追加	额外记忆
-私の中の幻想的世界観及びその顕現を想起させたある現実での出来事に関する一考察	A consideration of the fantastic world view in me and the events in a certain reality that reminded me of its manifestation	long	long song	一考察	我的幻想世界观和那个显现的现实中的事件的一个考察	幻想的世界观	考察	小仏凪	小佛凪	世界观	名字鬼长	名字太长	名字太长，诉讼	名字太长的歌	名字超长	名字很长	名字很长的歌	关于我内心对歌名长度的困惑及让我想要在抽象画中用同样的字数将其写出的一次考察	关于让我想起幻想的世界观及其显现的现实事件的一项考察	对我对虚幻世界的看法和现实中唤起其表现的事件的思考	总之名字很长的歌	轻小说
-匿名M	Anonymous M tokumei m
-夜咄ディセイブ	kano角色歌	Yobanashi	Yobanashi Deceive	夜出	夜咄	夜咄deceive	夜谈欺骗
-アンクローズ・ヒューマン	daybayday	unclose human	unclosed human	Unclosed Human	unclosehuman	敬爱	玻璃心
-アトロポスと最果の探究者	阿特洛波斯与尽头的探究者	巨乳派蒙	最果	最果探究者	少打音游多读书	翠果	大奈子伊蕾娜	大奶伊蕾娜	大奶子伊蕾娜	大奶子依蕾娜	大柰子伊蕾娜	大柰柰伊蕾娜	探究者
-Random	随机
-FUJIN Rumble	先天太乙神风诀	附近maimai	福晋软贝	风神
-[協]ポップミュージックは僕のもの	男同打男同
-TiamaT:F minor	🦍	m T:F	mtf	tf	tfboys	TFBoys	TFBOYS	Tiama T:FBOYS	tiamat	ttf	TTF	音响火山	音响龙	兄弟提一把	健身教练	青春修炼手册	大猩猩	剃阿妈 头：发 米诺人	剃阿妈头发	提	提一提	提瓦特	提提，提提提	提亚玛特	提亚马特	提亚马特爱抚米诺	提你妈	提你妈妈	斑马鲱鱼	分割处理旋风	泡泡玛特	老马啊老马唉	猩手教程	猩猩歌
-放課後ストライド	Houkago Stride	放课后	放课后冲
-MAKE IT FUNKY NOW	🥪	funky	FUNKY	makeitfuckynow	mifn	MILF	sandwich	三明治	两面包夹芝士	两面包夹培根
-遺伝子レベル∞スパイラル	星球大战	遗伝子	遗传	遗传基因 level ♾️ spiral	遗传基因 Level ♾️ Spiral	遗传子
-End Time	endtime	et	伊岛	恩德太	恩德檀木	最后的老时	嗯得烫	嗯了么	烂尾楼	终焉时刻	结束啦	贤者时间
-Ignis Danse	一起去吃烤肉吧	一个妮子	火神	火神大我	跳高	班尼特	卫宫士郎	红孩儿
-きたさいたま2000	😁😁😁😁😁	2000	kita	tfboys	下北泽2000	五兄弟	五五开黑节	五大阴兵	五个🐷🐷拉屎	五个傻逼	光污染小人	塞他妈	埼玉2000	史	全网最帅5个小男孩	全网最帅五兄弟	太鼓2000	中年社畜的怒吼	堵门5卡	北埼玉	北埼玉2000	北琦玉	北琦玉2000	屎	时代少年团	琦玉2000	过北脱新
-Jörqer	joker	jorqer	Jorqer	pvq	qer	周可儿	小金熊	猫头鹰	别急1.5
-つるぺったん	Tsuru Pettan	醋溜便当	醋溜便当2
-[狂]タカハせ！名人マン	宴高桥名人	狂高桥	狂高桥名人	手汗快乐歌
-四次元跳躍機関	Four-Dimensional Warp Device	机关	四次元	四次元跳跃机关	大小姐	跳楼机	跳跃机关	冰风
-INFINITE WORLD	📷	天狗拍照	无限世界	恶心丸
-バラライカ	空手	空手道	亚拉那一卡
-炎歌 -ほむらうた-	炎歌	广场舞	凤凰传奇	阉割
-raputa	🍇	🥵🍇	rpt	可口可乐	西直门桥	中国结	叮咚鸡叮咚鸡大狗大狗叫叫叫	拉普大	辣葡萄	啊	啊啊啊啊啊	噢噢噢噢噢噢噢噢	热葡萄	𐎼𐎠𐎱𐎹𐎢𐎫𐎠
-Living Universe	psp2	活在宇宙
-Kattobi KEIKYU Rider	kattobi	京急	京急电车	丁丁电车	丁丁车	列车	叮叮叮	叮叮电车	叮叮车	收到	卡透批来打	爱上火车	电车	电车妹	电车娘	电车骑士
-蒼穹舞楽	Soukyu Bugaku	Yukyu Buraku	神里绫人	菅穹舞乐	斗破苍穹	妍酱	苍穹	苍穹舞乐
-Altale	阿泰尔	机器人	机器人钓鱼	削除的电线	漏电电线	你先别急	别急2	开心的小曲儿	电线
-だからパンを焼いたんだ	🍞	初音烤面包	白葱烤面包	面包	烤面包	烧	烧面包	铜锣烧
-No Limit RED Force	无限红	无限红力	无尽的赤红之力	红色电音极地大冲击
-Tell Your World	tyw	告诉你的世界
-Upshift	CHAPTER 2	upshit	Upshit	在屎上	上蹲	大写锁定
-空威張りビヘイビア	brash behavior	欧欧欧欧欧欧尼酱	欧尼酱	虚张声势behavior	虚张声势的行为	空威张
-絡めトリック利己ライザー	dx+主题曲	利己	华代主题曲	络	络利己	绿头人
-Cyaegha	花绿青	完型填空	完形填空	完形填空答案	古神语	咲弥	咲弥削吐司	绿魔王	赛伊格亚	赛洛图亚	赛落图亚	过不了审的曲绘
-絡繰りドール	絡繰	老太婆和九尾狐妖	老奶奶与狐狸精	奶奶狐狸	络繰	络缲
-Falling	跳楼
-CYCLES	🐎🐸🦌	🐴🐸🦌	cyc	cycle	吗哇路	圆	挖马路	轮回	马瓦路	马瓦鲁	马哇路	马挖路	马洼路
-White Traveling Girl	wtg	西瓜fumo	白色旅行女孩	白色旅行少女	白色旅人	白旅女	萃香
-Cosmic Magic Shooter	cms	宇宙魔术射手	魔法射手	魔弹射手	魔术射手
-Technicians High	dx科技高	科技	科技高	科技很高	高科技	标准科技高	蓝的盆
-Limit Break	lb	黄金大三角	界限打击	限界突破	限制绝赞	三角符文
-コンティニュー！ feat. 藍月なくる	continue	阿诺内	禁漫娘	继续	继续！	蓝月	贪玩蓝月
-Komplexe	complex	大黑姬	雄氏老方	你要结婚了	黑姬	黑姬唱歌
-Black Out	黜	晕倒	黑出
-Caliburne ～Story of the Legendary sword～	cali	caliburne	我老婆	生煎	生煎1	石中剑	福瑞	福瑞1	咖喱棒	圣剑	圣剑1
-Sage	sabe	sega	雅迪电动车	世嘉	鼠尾草	啥歌	圣人	萨格	贤者	陕西神医魏莹玲
-紅蓮華	Demon Slayer	Gurenge
-JACKY [Remix]	jacky	vr战士	成龙	舞萌往事
-#狂った民族２ PRAVARGYAZOOQA	250个绝赞	狂什么民族	狂民族	狂民族2	最狂民族风	最炫民族风	汉堡	汉堡包	疯狂的民族2	红谱250绝赞
-シアトリカル・ケース	case	tc	theatrical case	theatrical・case	言叶3	侦探跳火车	戏剧性案件	黑玫瑰3
-Excalibur ～Revived resolution～	exca	excal	excalibur	ex咖喱棒	生煎2	福瑞2	耗子传奇2	圣剑2	圣剑二
-enchanted wanderer	ew	青蛙2	青蛙王子2	附魔流浪者	附魔旅行者	附魔喵	附魔爱2	流放者大刀	流浪猫	醉心求知者	别急21	维什戴尔	黑猫
-コスモポップファンクラブ	Cosmo Pop Fan Club	cosmo pop funclub	cpfc	宇宙流行乐俱乐部	小魔仙	巴啦啦	巴啦啦小魔仙	芭芭拉拉粑粑	吧啦吧吧吧
-My First Phone	👴的第一部手机	mfp	我的第一部手机	午夜凶铃	座机	手机	小灵通	中二的雨	别急3	喂喂草	爷の手机	电话	额滴圣剑
-Session High⤴	↑	↗️	⤴️	⬆️
-maimaiちゃんのテーマ	maimai酱	真代主题曲	舞萌酱
-ナイト・オブ・ナイツ (Cranky Remix)	cranky也要当夜骑	dx夜骑	Knight of nights cranky remix	kon cranky	night of knights	Night of Knights cranky remix	nok	nok cranky	nok2	咲夜	十六夜咲夜	夜骑	夜骑2	夜骑remix
-独りんぼエンヴィー	🦐	Hitorinbo Envy	蛙	孜然炉火	孜然驴肉	世界计划效率曲	孑然妒火	虾
-ロキ	loki	roki	ROKI	ruaki	口≠	口干	口丰	牧夏生日快乐	洛基	嘴巴吃烤串	㕩
-Brain Power	bass kick	bp	o-oooooooooo	佐助	脑力
-ブリキノダンス	BURIKI NO DANCE
-ドキドキDREAM!!!	dokidoki	DOKIDOKI DREAM!!!	五对柰子
-アンハッピーリフレイン	💗	unhappy	unhappy refrain	Unhappy Refrain	ur	不高兴的副歌	副歌
-Ignite Infinity	psp2
-吾輩よ猫であれ	xyz	夏目漱石	我是猫	吾辈	吾辈是猫	吾辈猫	萨卡班甲鱼
-でらっくmaimai♪てんてこまい!	dx主题曲	好多人啊	三森铃子	滴蜡熊	天手古舞	舞萌主题曲	迪拉熊
-Spring of Dreams	春梦	小老鼠	娜兹玲	莉莉白
-スターリースカイ☆パレード	starry sky parade	starryskyparade	女同5	星空游行	镜音音街
-METEOR	流星
-れっつ！みらくる☆はーどこあっ！	hardcore2	laur撒狗粮	let's miracle☆hardcore	miracle hardcore	wifecore	雌小鬼	浮冰	老二和他的老婆
-We Gonna Party	wgp	我们去派对	我们去银趴	我们即将排队	我们要派对	咱想开派对	铁塔	银趴
-1000年生きてる	1000nen ikiteru Living Millenium	1000年生	Living for a millenium	一千年生	真千年女王	千年	千年生	存活千年	超越光2	超越窗	壁尻	别急24
-Good bye, Merry-Go-Round.	🐎	🐴	🔁🌲🐴	Good bye, Mother-Not-Found.	Goodbye,mother-not-found	merry go round	mygo	阿尼亚	阿尼娅	我没意见	狗比美国人	再见，死妈玩意	再见，旋转木马	再见旋转木马	再见没找到你妈	再见找不到妈	再见找不到妈妈	再见你妈转个圈	旋转mua	旋转古神	旋转墓妈	旋转木琴	旋转木妈	旋转木马	旋转你妈	日向千夏	白人掐腰	妈妈去哪了	杩	给你妈塞墓地里疯狂旋转	龙图
-EVERGREEN	eg	一直绿	常青	常绿	常绿树	青春永驻	绿一色	长春	长荣
-Phantasm Brigade	pb
-キレキャリオン	carry on	kire carry on	Kire Kyari On	小电锯	切下	切下吧carryon	乃保	奶包	电锯	电锯2	电锯女	电锯人	电锯娘	继续切
-ラブリー☆えんじぇる!!	Lovely☆Angel!!	可爱天使	女同14
-麒麟	🦌	🦒	70	kirin	星召跳劈	大哥你是在打怪兽吗	背着书包上学堂	淇淋	鬣狗	这包是你的吗大哥	长颈鹿	骑0
-L'épilogue	Lepilogue	后记	法文歌
-厨病激発ボーイ	Young disease outburst Boy
-高気圧ねこロック	anticyclone	Anticyclone Cat Rock	Koukiatsu Neko Rock	Koukiatsu Rock	高血压	高血压流汗黄豆	高气压	高气压猫	高气压猫猫头	高气压猫摇滚	马香远
-Love You	爱你
-ここからはじまるプロローグ。	kokokara hajimaru prologue	Kokokara Hajimeru Prologue	prologue	Prologue	prologue starting	The prologue that starts from here.	ああああ	狐狸剑	口口一夕	序言	序章	小狐狸	小生煎	小福瑞	小圣剑	松鼠	像素福瑞	像素圣剑	猫圣剑	福瑞控	福瑞小英雄	福瑞勇者	福瑞找老婆	福瑞举剑	由此开始的序章	从此开始的序章	从现在开始的序曲	你福瑞控是吧	兽太	圣剑0	电子福瑞	电动福瑞控
-Estahv	Arcahv精神续作	真寻	白戒	六戒	谢丝塔
-AMAZING MIGHTYYYY!!!!	！！！！	am	amazing mighty	amemai	amz	mighty	阿米娅	我的妹妹是男的	不可思议的大概概概概	屁股发芽	你收个p	啊卖金麦提	惊异全能
-はやくそれになりたい！	😫	Hayaku Soreni Naritai	i wanna be it	I wanna be it	I wanna be it!	音街	音街鳗	想快点成为那个样子	想快点变成那个样子	蓝瓶尖叫
-相思創愛	soushisouai	小米星	想创死你	相思	相思創爱	相思创爱	相爱创思	创创子
-玩具狂奏曲 -終焉-	Gangukyousoukyoku -Shuen-	Toy Frenzy	Toy Frenzy -The end-	Toy Madness	Toy Rhapsody	玩具	玩具狂奏曲	玩具狂揍我	第五人格	老婆	别急23
-L9	绿9	轴交互
-Bad Apple!! feat.nomico	Bad Apple
-TEmPTaTiON	mika	temp	引诱	肯德基六翅桶	小天使	小萝莉	小萝莉的诱惑	他不太深	百合咲	百合咲mika	百合咲低语	老婆	奶子很小	诱惑	轻语	鸟加鸟加
-air's gravity	空气重力	空气炸锅
-POP STAR	匡威
-ジェヘナ	地狱
-Yorugao	牙膏	牛肉干	月光花	紫黑	夜颜	油乳膏	有乳膏	犹如高
-不思議の国のクリスマス	反海底谭	秘封俱乐部	不可思议	不思议	不思议国	不思议之国	圣诞节
-You Mean the World to Me	我的世界	你意味世界对我	你是我的世嘉	你是我的世界	你是我的全世界	凯尔希2
-Raven Emperor	erwaqaqaqa	休息段不要看那里挑战	虚低逼	瑞文皇帝	大奶子眼镜妹	渡鸦皇帝	妹妹发把狙	锐雯皇帝	鸦皇
-STEEL TRANSONIC	🐔	st	机娘	超音钢	答辩	粉毛机甲	粉毛机娘	刚铁鸡娘	红色有角三倍速	钢跨音速	钢铁音速	钢铁回音	钢铁机娘	钢铁超音速	钢铁鸡娘	铁音速
-Sweets Time	小幸隐	甜蜜时光	芙兰数星星	迪士尼乐园
-壱雫空	Hitoshizuku
-Catch The Future	洋葱	抓住未来
-メグメグ☆ファイアーエンドレスナイト	megu	火柴人大战
-KING is BACK!!	kib	king is back	Kobe is back	KOBE is BACK!!	王回来了	王者归来	王是背	王归	金十段	群友回来了	你回来了
-Change Our MIRAI！	com	dx五对奶子	改变未来	五个女人	五对奶子	五对柰子	四大一小	小心彩绿	不含月铃姐妹
-トルコ行進曲 - オワタ＼(^o^)／	\\（^o^)／	🇹🇷	完蛋了	徐东璨	土耳其	土耳其进行曲	关我屁事进行曲
-終わりなき物語	OWARINAKIMONOGATARI	物语	无尽物语	终物语
-ガラテアの螺旋	🌀	galatiaの螺旋	ガラテアのにゃんこ	伽拉	伽拉泰亚的螺旋	去拿大水来，今天我要去出勤	行秋	清早起来，今天啊我要去出勤	清早起来，今天啊我要去出勤是什么歌	打飞机，我啊是个傻逼	白洛轩	螺旋
-バッド・ダンス・ホール	bad dance hall	bdh	奥尔加	希望之花	小孩哥	糟糕透顶的舞厅	坏舞厅	团长
-Destr0yer	----------☀️◻	d0	D0	destroyer	Destroyer	削除	削除光线	削除射线	射精方块头	消除男	方块头	别急10	标d0	毁灭者	驱逐舰
-テリトリーバトル	👿👿	0419	2200187452是男娘快加他	2464213726是男娘快加他	lapis	mtf	territory battle	Territory Battle	wys	yf	yjm	zyah11	可爱男娘加我	小男娘	小伪娘	小圣诞	男娘	超威蓝猫	二次元鼓动	猫抓板	把我的家人还给我	把我妈妈还给我	舞萌2024独占	返せ!返せ!👿👿	返せ！返せ！ボクの家族を👿👿悪の手から未来の欠片を取り返す😭💔💔ボクの使命だこの身の全てが滅びようとも😡✊返せ！返せ！ボクの家族を👿👿0419  必ず見つけだして😎👉また幸せな温もりをこの鉄の肌で感じたい😫🤲💞💞	没有奶子	木桶饭	坎二四	伪娘	团长我徒弟呢	领**争	领土战争	领土战役
-物凄い勢いでけーねが物凄いうた	Monosugoi Ikioide Ke-ne	以惊人的气势发出了惊人的声音	慧音	罪	三倍ice☆cream	三倍Ice☆Cream	白泽球	物凄	物凄势
-吉原ラメント	yoshiwara lament	YOSHIWARALAMENTO	吉原	吉原哀歌	吉原怨妇	吉原拉面	吉原泼妇	清远鸡	拍拍划划拍拍划划拍拍拍	留尾哀歌
-Witches night	古明地恋	魔女之夜	恋恋	东方紫发女
-オレンジの夏	🎞️	夏	菊次郎的夏天	橘之夏	砂狼白子	自行车	女人骑自行车	洋车的	橙色夏天	橙色的夏天	橙之夏
-千本桜	Senbon Zakura	Thousand Cherry Blossoms	Thousands of Cherry Trees
-進め！イッスン軍団 -Rebellion of the Dwarfs-	一尺军团	小小兵团	小人国	小碗	前进军团	军团	绣花针	进军团	针	针妙丸	针妙丸军团
-時空を超えて久しぶり！	3d弹球	3D弹球	3d弹珠	puyopuyo	水滴君	噗呦噗呦	噗哟噗哟	时空	时空超
-ほしぞらスペクタクル	珊瑚宫心海	水母	水母姐	水母妹	水母娘	星球妹	星空奇观	星际奇观	奏音	巫贼
-バグ	bug	Bug	mfy3	俄罗斯紫皮糖	故障	紫皮糖	若叶睦跳舞	八股	八夕	八哥	咿呀咿呀咿呀	啊哈↑	爸爸的雷达
-EYE	👀	眼睛
-人里に下ったアタイがいつの間にか社畜になっていた件	996	no no working	我	我上早八	社畜	人里	人里社畜	二岩猯藏
-L4TS:2018 (feat. あひる & KTA)	2018	l4ts	伊蕾娜	小奈子伊蕾娜	白毛萝莉	银发女孩
-すろぉもぉしょん	SLoWMoTIoN
-FEEL ALIVE	感觉活	感觉活着	感觉死	女人赛跑	小蜜蜂
-前前前世	Your Name	Zenzenzense	上上上辈子	推荐乐曲排行榜	前屎	你的名字	费大厨	韦一敏
-悪戯センセーション	Mischievous Sensation	大小姐	大妹	淘气感觉	二小姐	恶戏	恶戏sensation	恶戏Sensation
-魔ジョ狩リ	魔狩	魔女狩猎	魔女的夜宴	骑士之夜remix版
-My Dearest Song	我最亲爱的乐曲	我爱歌	女人拉提琴	生日歌	大提琴
-光線チューニング	Ray Tuning	Rays Tuning	光线	光线turning	大	中二节奏
-LUCIA	露西亚	露西娅	卢锡安	圣枪游侠
-Nitrous Fury	nf	架子鼓	你臭死福瑞	你戳死福瑞	你创死福瑞	氮气狂怒	氮气福瑞
-猛進ソリストライフ！	Mo-shin Soliste Life!	soliste	月玲那知	小提琴	猛进	庞德
-Jouez Avec Moi?	jam	moi	陪我玩	来玩	和我玩	和我拼机吗	跟我玩	问号
-Kiss Me Kiss	kiss	kissmeass	qwq	亲我亲
-宛城、炎上！！	a9	enjo	enjo enjo	enjou	enjou enjou	enjyo	enjyo enjyo	guf	hold2miss	宛城	宛城炎上	宛城爱情故事	安卓	安卓安卓	按脚	一炮害三贤	炎上	赤赤	赤壁赋	曹操盖饭	大宇宙	皮炎平	美团大战饿了么	摁jio	摁脚	钠离子	难听
-シアワセうさぎ	Shiawase Usagi	幸福兔
-単一指向性オーバーブルーム	Overbloom	Unidirectional Overbloom	我要开花	大额头	单一	单一指向性	单一手癖性	单向性	开花
-ピリオドサイン	period sign	ps	休止符	周期符号	枫原万叶	终点2
-迷える音色は恋の唄	A Wandering Melody of Love
-7thSense	7	7s	7th	7感	旗杆	七感	七拍子	第七感
-Calamity Fortune	cf	CF	dxcf	leaf教你画星星	穿越火线	早苗教你画星星	卡拉米提佛纯	标cf	标准cf	灾厄命运
-みんなのマイマイマー	🍥	maimai	大家的maimai	大家的maimai人	大家的maimai吗	大家的妈妈	不要笑挑战
-アージェントシンメトリー	argent symmetry	pink op	pink主题曲	sta	科目二	草莓章鱼	桃代主题曲	白银	白银对称	白银对称性	方向盘	银色对称	银色对称性	银对称	银对称性
-true my heart -Lovable mix-	真我心	打电话	李云龙
-ドクハク	⚰️	棺材	照相馆	独白	卜夕八夕	极恶	枪叔	黑人抬棺
-VSpook!	🐖	🐷	debi	VSpook	vspork	打扑克	大战猪肉	猪	猪肉	对决猪肉	对战熟猪排	对战猪肉	脸书	黑姬3
-グラーヴェ	052519	grave	Grave	hello	王昊飞升	嘟嘟嘟
-GEMINI -M-	双子座	双子星	戈米尼
-MYTHOS	🎻	小提琴
-どぅーまいべすと！	do mai best	do my best	音街宣言	独立宣言
-ダンシング☆サムライ	🍆	🍆🗻	dancing samurai	茄子山	茄子先生	茄子武士	茄子哥	跳舞武士	富士山茄子	辣椒
-ひれ伏せ愚民どもっ！	Hirefuse Gumin-domo!	愚民	佩恩
-さくゆいたいそう	sakuyui exercise	sakuyui taisou	永雏塔菲	我等心友	咲唯体操	羊油
-三妖精SAY YA!!!	sanyousei	我们三	三月精	三小只	三妖精	三笨蛋	三铸币	三铸币 KAI DA!!!
-My My My	3C认证	mrccc	mymymy	我我我	我的我的我的	麦麦麦	买买买
-ECHO	一口	回声	恶臭	电视头
-ブレインジャックシンドローム	brainjack syndrome	Brainjack Syndrome	吉他	内内内	墨镜女	墨镜女歌手	夜空梅露	利香	杰克逊综合症	头脑风暴	头脑风暴综合症	拽女唱歌	话筒姐
-Limits	限制	极限
-ウマイネームイズうまみちゃん	umy	多啦a梦	多啦A梦	美味棒	米格玛	耄耋a梦	哆啦a梦
-Beautiful Future	大好前程	美好未来	美味	美丽未来	雷炎	无一物啊啊
-Sprintrances	一块五	冰山
-踊れオーケストラ	随管弦乐起舞	踊
-keep hopping	kamome sano	kh	一起摇摆	一直跳	保持火拼
-終点	b1	b50的起点	b50里有	b50里有终点	怪兽	小心地滑	打怪兽	终点
-康莊大道	oops一把鸟加	九洲大道	康	康庄	康庄大道	成华大道	星光大道	超大	浇给	黑羊羊
-Don't Fight The Music	dftm	donfai	knd	不要打歌	刹那	你不许玩了	别打音游	别打歌	憋打歌
-ミルキースター・シューティングスター	milky star	uni+主题曲	牛奶4	牛奶流星	女同12	星代主题曲	乳液狂飙	疯狂甩奶	银河星
-星空パーティーチューン	party tune	新海天	星空	星空party tune	星空叙爱曲	兎花宮	童颜巨乳	奶子很大
-デビル☆アイドル	devil	devil idol	恶魔偶像	飞天小女警
-+♂	+男	plus男子	Plus男子	下头男	加男	嘉然	五对柰子2	正男	憋憋憋憋
-ヒバリ	hibari	Hibari	羽毛球	云雀	我有爱人症	七八11	七八十一	七八刀	匕八刂	两个羽毛球	两个羽毛球跳舞	俩个羽毛球	姬雏鸟
-Rooftop Run: Act1	屋顶跑路：动作1	索2	逃离屋顶
-Ghost Dance	gd	鬼舞	魂5	幽灵跳舞	贵物
-いっしそう電☆舞舞神拳！	114514	1b,1b,4b,5b,1b,4b	maimai神拳	一子相传	紫代主题曲	当你说这首歌有初见杀但是没说是什么时候	武萌神拳	舞舞神拳	呜呜神拳	给你一拳
-フタタビ	再度	三个人
-[協]恋愛裁判	宴恋爱裁判	协恋爱裁判
-ずんだもんの朝食　〜目覚ましずんラップ〜	📢	📣	😆	欧西给	起きて	起きて📢起きて📢起きて📢起きて📢起きて📢起きて📢起きて📢起きて📢起きて📢起きて📢起きて📢起きて📢起きて📢起きて📢起きて📢起きて📢起きて📢起きて📢起きて！	起床	起床歌	起床了	起床啦	起床战争	起床给我炒俩菜	起来啦	吃蕉	吃早餐	叫床	擦玻璃	俊达萌	俊达萌叫起床	俊达萌叫床	俊达萌擦玻璃	俊达萌的早餐	睡你麻痹起来嗨	早餐	大早上叫什么叫	大早上的叫啥呀你个傻逼	大早上的叫啥啊你个傻逼	大早上的你叫啥呀	大早上的你叫啥啊	大早上的你叫啥啊你个傻逼	大早上你叫个啥啊	朝食	朝食俊达萌	朝食目觉	豆橛子硅胶	毛豆	毛豆叫床	毛豆精	毛豆喊起床	目觉	你吼辣么大声干什么嘛	噢给噢给噢给噢给	噢给噢给噢给噢给噢给	绿色毛豆喊你起床
-Credits	corporation	cre	pbs	xc-x	安眠曲	可用点数	学分	信誉	信用	信用卡	制作组	提供	点数
-円舞曲、君に	舞曲	圆舞曲
-モ°ルモ°ル	Modoru Modoru	molmol	morumoru	毛儿	毛儿毛儿	毛肚儿毛肚儿	么么	蹦蹦炸弹
-りばーぶ	reverb	Reverb	混响	两个人喝茶
-ソリッド	solid	我	我也	大穷鬼	大穷比	大穷逼	大贫民	丰川祥子
-神室雪月花	雪月花	如龙	别急4
-Terminal Storm	麻花	终端风暴
-Secret Sleuth	ss	言叶2	秘密侦探	兔爷快乐歌
-曖昧mind	哮喘	暧昧	暧昧mind	爱maimai
-セイクリッド　ルイン	Sacred Ruin	太鼓达人	圣墟	圣灭	肾虚
-回レ！雪月花	maware	Maware! setsugetsuka
-ねぇ、壊れタ人形ハ何処へ棄テらレるノ？	doll wandering	Doll wAndeRing iN tHe NighTmARe	Ne Kowaretaningyoha Dokohe Suterareruno	ねぇ、壊れタ大逼圈ハ何処へ棄テらレるノ？	人形	暴走p我好喜欢你	坏人	坏人偶	坏人形	很水的14.5	扔垃圾桶
-Grievous Lady	gl	痛苦的女士	病女	老弱病残女	哈哈	对立	对立拿窗帘闷死我	对立拉窗帘
-鼓動	鼓动	坂本龙马教你尾杀	星召大惊讶	如龙3	如龙维新	别急22	咕咚
-ヒミツCULT	cult	我们都很棒	教程曲	吹月2	秘密信徒
-Believe the Rainbow	🌈	btr	彩虹	彩虹桥	相信彩虹	别信彩虹
-ツギハギスタッカート	断音	拼凑的断音
-Trrricksters!!	Trickster	Tricksters	Trricksters	Trrrricksters
+ネコ日和。	大臣日和	猫咪日和	猫天气	猫日和	猫
+虹と太陽	☀	太阳	彩虹太阳	虹太阳	虹与太阳
+炭★坑★節	粪💩坑💩节	最新热歌慢摇	炭坑节	粪坑节	光★吉★猛★修
+NIGHT OF FIRE	nof	卧槽	夜火	头文字d	奶头发炎	男同fire	目害	逮虾户	闪瞎你眼	乃头发炎
+come again	cum again	再冲一次	再来	再来一遍	舞立方踩在脚下	再来一次
+jelly	果冻	啫喱	中田女士
+ハッピーシンセサイザ	Happy Synthesizer	快乐合成器	happy synthesizer	快乐断手器
+ルカルカ★ナイトフィーバー	luka	rukaruka	和谐你全家	夜里发烧	河蟹你全家	绿坝娘	露卡露卡	河坝娘	鲁卡鲁卡午夜狂欢	luka luka nightfever	来一发	rukarukanightfever
+源平大戦絵巻テーマソング	op	op大战汉奸	op大战罕见	原批	原批大战罕见	叩大战东雪莲	有灯大战没灯	淳平大战德川	源平	源平1	源平大战	源平大战绘卷	臀p大战mai批	派蒙大战东雪莲	源平大战绘卷Theme song
+美しく燃える森	美燃森	美丽燃烧的森林
+ウッーウッーウマウマ(ﾟ∀ﾟ)	扭腰舞	扭腰歌	呜哇呜哇	(ﾟ∀ﾟ)	扭秧歌	扭腰	跳舞歌	caramelldansen
+Endless World	💄	ew	口红	无尽世界
+Beat Of Mind	阳超市	bom	nmb的mai	你妈逼	你麻痹的mai	心跳	打脑阔	红鼻子男	给你脑袋来一拳
+檄！帝国華撃団(改)	帝国华击团	帝国滑稽团	樱花大战	樱花大战2	滑稽团	华击团	屑团	改
+メランコリック	melancholic	忧郁的心情
 教えて!! 魔法のLyric	教	教我魔法	教教	教魔法
-ジャンキーナイトタウンオーケストラ	🤫	junky night town orchestra	Junky Night Town Orchestra	玛奇玛	瘾者之夜	瘾者之夜城镇乐队
-KING	👑	burger king	姐就是女王	王	剔牙	无名指扣牙	无名指抠牙	霸者	你	您	汉堡王
-Jimang Shot	2015	急忙射	大叔唱歌	囧仙	报纸歌
-ピーマンたべたら	🫑	cyber	柿子椒	吃了青椒的话	青椒	青椒歌
-おちゃめ機能	ochamekinou	机能	五月病	天真浪漫机能	天真烂漫机能
-Blew Moon	blew shit	吹月	吹月亮	吹屎	答辩	蓝月亮
-REAL VOICE	realvoice	真音	真唱	真声音	本音
-花と、雪と、ドラムンベース。	🌸❄️	🌸1⃣️🛞	flower snow	Flower, snow and Drum'n'bass.	fsd	fsdnb	Hana to Yuki to Drumn Bass	花，雪和bass	花😋、雪🤤、😘😨🥵🤢😈🤣😅。	花一轮	花花花花花花一轮	花雪	花雪一堆日本字	快慢刀	四月的雪	昭和金曲	雪球	雪鸡	冬之花	逼三狼	舞萌金曲	有好姐妹一起出勤吗	六块钱	别急6
-Regulus	一视频的萝莉哦	星锑	大欧派姐姐	大扎修女	大奶子	天界大奶	如龙4	白法院	白又大	八云蓝	雷古勒斯	奶子很大	热古拉斯	热咕噜	热轱辘丝	狮子座α	轩辕十四
-再会	see you again	码头
-CITRUS MONSTER	🍊	citrus	cm	橘子怪兽
-Scarlet Lance	火枪	狗含剑	狗罕见	朗基努斯之枪	红叉	红色紧身裤	红枪
-P-qoq	oppo	qoq	激光火箭	灯射来红	拉面火箭
-みくみくにしてあげる♪【してやんよ】	📉	I'll Miku-Miku You♪ (For Reals)	狗·眼·①·瞎	党歌	把你mikumiku掉	飞龙
-Doll Judgment	dj	玩偶	玩偶姐姐	玩偶审判	人偶	人偶裁判	人偶审判	人形裁判	人形审判	丁真
-イカサマライフゲイム	Ikasama	Ikasama Life Game	lifegame	虚伪人生游戏	作弊生存游戏	人生游戏	预言小丑	骗人的lifegame	骗人的人生游戏
-Lights of Muse	lom	布若	暮色的光	你醒啦，快起来打交	喵斯光	喵斯之光
-アマツキツネ	👍😁👍	Amatsukitsune	刻俄柏	天狗	天狐	兰立忠
-Metamorphosism	meta	削除鬼叫	削除拉矢	削除发病	少爷发癫	消除鬼叫	哇袄	变形	变态	变态主义	变质	质变
-だから僕は音楽を辞めた	Moonlight	That's Why I Gave Up On Music	That's Why I Quit Music	エイミー	奥尔加	音辞	所以我放弃了maimai	所以我放弃了音游	所以我放弃了音乐	祥子	放弃音乐	于是我放弃了音乐	仆音乐辞	团长
-撩乱乙女†無双劇	triedge	TRiEDGE	女同14	女同3p	中间有个十字架	撩乱	撩乱乙女	撩乱乙女无双剧	无双剧	咚咚咚咚	缭乱乙女
-KILLER B	王女	杀b
-デッドレッドガールズ	dead red girls	荒野大镖妹	死红女
-少女幻葬戦慄曲 ～ Necro Fantasia	死灵幻想曲	少女幻葬
-エイリアンエイリアン	✋🏻😐✋🏻	👽	alien	alien alien	Alien Alien	阿里安	奥利安奥利安	奥利奥利安	河南人	河南人我就是河南人	外星人	外星人外星人	群友	常陆茉子	茉子的食物
-The Great Journey	黄金矿工	好旅行	大冒险
-夜明けまであと３秒	3s	3秒	距离黎明还有三秒	三秒	失明前三秒	天亮的前三秒	夜明	夜明3秒	夜明三秒	黎明的前三秒
-タカハせ！名人マン	😉	たかはし	光头	光头16连	高潮名人	高桥	高桥名人	四号键质检员	奔跑吧！高桥名人侠	名人
-ノイローゼ	neurose	Neurose	神经官能症	神经症	神经病	神经质	米津玄师	兔子魔术师
-幸せになれる隠しコマンドがあるらしい	→↓↑→→↓→→↑↑↓↓←→←→	↓→↑→→↓→→↑↑↓↓←→←→	⭐🌧️	😅	It Seems Like There's A Secret Command To Becoming Happy	jyy	shiawase	Shiawase ni Nareru Kakushi Command ga Arurashii	There's Supposed to Be a Cheat Code for Happiness	xdh我草你妈	むちゃぶり	幸暗示	幸福指令	幸隐	差不多得了	紫砂	似乎有着能够把我蹭死的隐藏配置	似乎有着能够变得幸福的隐藏指令	似乎有着能够蹭死我的隐藏配置	小时候对着结月缘犯过错	性性性	性瘾	不玩了	老婆	喵梦	视力检测	结月流汗	结月缘	结月缘黑丝兔女郎
-不機嫌なスリーカード	3卡	心烦意乱three card	心烦意乱三张卡	不机嫌	欢乐斗地主
-グリーンライツ・セレナーデ	Greenlight Serenade	Greenlights Serenade	墨芷	魔法未来2018	绿光	绿光小夜曲
-このピアノでお前を8759632145回ぶん殴る	1.14514e+12	1.15e+12	114514	1145141919810	1919810	8759632145	8760000000	一串数字	一堆数字	我会用这架钢琴殴打你8759632145次	用钢琴揍你8759632145回	用钢琴撅你1145141919810次	踢钢琴	钢琴	钢琴殴打	钢琴打人	钢琴砸人
-39	dx39	机厅几爷	三九	初音未来	标39	标准39	谢谢
-HERA	🦊	b三狼	一号键质检员	赫拉	古希腊掌管纵连的神	狐狸	狐狸模拟器	七匹狼	芝士雪豹	大逼纵	轻松莫放纵	黑拉
-Brand-new Japanesque	全新日本人	如龙0	如龙见参
-六兆年と一夜物語	6000000000000年	6m	dx希腊奶	dx六兆年	Rokuchou nen	six trillion	Six trillion nights	Six Trillion Years and Overnight Story	安慕希	希腊奶	六兆年	六兆年零一夜物语	标六兆年
-源平大戦絵巻テーマソング	op	op大战罕见	op大战东雪莲	op大战汉奸	叶橙大战璃璃璃	原批	原批抗日	原批大战罕见	原批大战东雪莲	原批大战汉奸	源平	源平1	源平大战	源平大战绘卷	三千大战明天	淳平大战德川	叩大战东雪莲	丁真大战東雪蓮	特朗普大战哈里斯	派蒙大战孙笑川	片头曲大战稀有	有灯大战没灯	臀p大战mai批	东雪莲大战罕见	门酱大战雪莲	门酱大战东雪莲
-KONNANじゃないっ！	konnan	二逼	如龙5	不恐男	不该是这样	柯南	泽村遥
-深海少女	Deep-Sea Girl	dx深海少女	Shinkai Shoujo	深海魔男	深海和少女相比	深海邵壮	水神5	贵州和广西相比
-larva	pupa2	岩浆	源石虫	神之震惊	性教育片	雪降雨	大便超人4	虫	爆笑虫子	蜜雪冰城	幼虫	冰	拉瓦	拉完	拉粑	辣蛙	发芽土豆	蓝色尖锐湿疣	说的道理	说的道理上长蓝的盆	龟头结冰
-BOKUTO	→↓→↓→↓→↓	波裤头	破裤头	剥裤头	临兵斗者皆阵列在前
-にじよめちゃん体操第一億	🤤	体操	体操一亿	体操第一億	体操第一亿	叮咚鸡	垃圾	牵线木偶
-Streak	牛排	翠楼屋	米奇妙妙屋	米奇粑粑屋	拆房子	绿房	绿庙
-アポカリプスに反逆の焔を焚べろ	Apocalypse	Apocalypse Rebellion	apocalypse rebellious	Apokaripusu ni Hangyaku no Hono wo Kubero	Burn the flame of rebellion on the apocalypse	在启示录上点燃叛逆的火焰	反逆	反逆焰	暴走p登场曲	于启示录上燃烧的叛逆火焰
-甲賀忍法帖	Koga Shinobu Hojo	Kouga Ninpouchou	The Jouga Ninja Scrolls
-頓珍漢の宴	🥓	🙏	tonchinkan	Tonchinkan no en	希望人没事	吃饭	初音上菜	食雪汉	千手柱间	大嘴花	珍顿汉	蹲着喊耶	汉尼拔之宴	热辣香骨鸡	顿震撼	顿珍汉	顿珍汉宴	顿珍汉吃席	顿珍汉之宴
-on the rocks	otr	在石头上	冰酒
-ジンギスカン	watame	wtm	角卷绵芽	金金金金金	成吉思汗
-ハート・ビート	heart beat	heart・beat	serina	心跳	心跳2	心跳节拍
-どうしてこうなった	跳舞狗	跳舞洗狗	白板	哈皮跳舞	怎会如此	怎么回事呢	怎么这样	为什么会变成这样	为什么会变成这样呢	为什么会这样呢
-リッジでリッジでGO!GO!GO! -GMT mashup-	山脊赛车×电车go	电车	电车go	电车gogogo
-I ♥	ilove	我爱
-Cthugha	🎃	炎头	火球	火神2	火烧兔头	古神	克图格亚	清华	大火球	南瓜头	赛图格亚
-ロータスイーター	lotus eater	食莲者	石楠花	浑噩度日之人	莲花食者
-ジレンマ	dilemma	赤瞳	白葱	邦邦邦	两难问题	异色瞳	异瞳	进退两难
-CocktaiL	鸡尾酒
-STAIRWAY TO GENERATION	stairway	一片绿	八块钱
-ULTRA B+K	b+k	bk2	S+B	ubk	超级汉堡王
-Rush-More	rush	rush more	rushmore	多冲	多冲点	冲更多	冲多点	冲多了	冲很多
-おジャ魔女カーニバル!!	光吉猛修	光吉猛修小魔女	就是这个人拆机	就你小子拆机	就你小子拆机是吧	就你小子删我	小魔女	小魔女嘉年华	魔女	你不准玩了	你拆机
-Never Give Up!	nevergiveup	NeverGonnaGiveYouUp	ngu	rickroll	永不言弃	永不放弃	永远不给上	乃8给8	不给上	从不给上	你被骗了	绝不认输
-フォニイ	7才二亻	phony	Phony	扶你	佛尼	伪物	凤梨	噗泥	奶龙跳舞
-B.B.K.K.B.K.K.	↑↓	bass kick	bbk	bbkk	bbkkbkk	bk	s.s.b.b.s.b.b	ssbbsbb	小bk的	汉堡王
-サヨナラフリーウェイ	Sayonara Freeway	我有抑郁症	再见	再见高速公路	抑郁症
-ネトゲ廃人シュプレヒコール	😉	Net game	Netoge	The MMORPG Addict's Anthem	我	我总	网游废人	网游废人的呐喊	网络废人	网络废人的呐喊	废人
-インターネットサバイバー	internet survivor	Internet Survivor	互联网幸存者	互联网生存者	生存者	芙兰朵露	芙兰朵露重度依赖	网瘾二小姐	网络幸存者	东方互联网	东方女孩重度依赖	东方超天酱	兰
-まにまに	🏹	manimani	射箭	女人射箭	随之任之	爆2p的头	马尼马尼
-Sakura Fubuki	🌸💨❄️	fbk	sakura	吹雪	白上吹雪	樱吹雪	樱吹屎
-異世界かるてっと	Isekai Quartet
-energy trixxx	xxx	能量xx	能量xxx	能量叉	能量叉叉	能量三角	能量三角形	美友姬	美有姬	马娘
-Monochrome Rainbow	😎	单色彩虹	黑白格	黑白彩虹
-the EmpErroR	👫	emp	emperror	群主	皇帝	捏捏捏捏捏	俩跳棋	电磁脉冲错误
-コトバ・カラフル	575	ap打初见	歌组575	女同	女同歌	女同贴贴	双押姐妹花	双押妹	多彩言语
-オモイヨシノ	Omoiyoshino	恋咏樱
+ZIGG-ZAGG	zigg	几个咋个
+ワールズエンド・ダンスホール	WORLD'S END DANCE HALL	世末舞厅	世终舞厅	双关门	末世舞厅	舞厅	world's end dancehall	世界结束舞厅
+パンダヒーロー	panda hero	会员制餐厅	熊猫英雄
+オレンジの夏	🎞️	夏	女人骑自行车	橙色夏天	橙色的夏天	洋车的	自行车	菊次郎的夏天	橙夏	orangestar
+BaBan!! －甘い罠－	baban	八班	甘民	甜蜜陷阱
+ジングルベル	圣诞歌	圣诞	鸡公煲	🎄	dxjb	dx圣诞	dx圣诞歌	jb	jingle bell	Jingle Bell	Jingle Bells	剩蛋歌	圣诞树	标准圣诞	金勾八	铃儿响叮当	鬼歌	吵死了
+マトリョシカ	😋🤗	MATRYOSHKA	俄罗斯套娃	套娃
+メグメグ☆ファイアーエンドレスナイト	megu	火柴人大战	Meg Meg Fire Endless Night	梅古梅古
+天国と地獄	为你而生	地狱中的奥菲欧	天国与地狱	天国地狱	康康舞曲	绝赞128	菠菜进行曲	两个美女	天国
+きみのためなら死ねる	为了你而死	为你而死	失败的man	死	女人抓头
+怪盗Rのテーマ	怪盗	怪盗r	怪盗R	怪盗r的影之诗	节奏怪盗	怪盗R的影之诗
+マリアをはげませ	玛利亚	秃头玛丽亚
+SHOW TIME	怪盗基德
+City Escape: Act1	act1	刺猬头跑酷	索1
+Rooftop Run: Act1	屋顶跑路：动作1	索2	逃离屋顶	蓝猫
+Reach For The Stars	追星	索尼克	一拳超人	摘星	立直为了星	索3	索尼克缤纷色彩	给你🐴来一拳
+Urban Crusher [Remix]	uc	urbancrusher	汽车人	波尔布特	泰坦陨落	高达	机器人
+Catch The Future	抓住未来	洋葱
+JACKY [Remix]	jacky	vr战士	成龙	舞萌往事
+Tell Your World	tyw	告诉你的世界	TYW	难忘今宵
+おちゃめ機能	天真烂漫机能	五月病	ochamekinou	天真浪漫机能	机能
+ダンシング☆サムライ	🍆	🍆🗻	dancing samurai	富士山茄子	茄子先生	茄子哥	茄子山	茄子武士	跳舞武士	茄子	火山茄子
+BAD∞END∞NIGHT	∞	♾️	bad end night	badendnight	坏结夜	鬼畜公馆	BEN
+ロミオとシンデレラ	Romeo and Cinderella	灰姑娘	罗密欧	罗密欧与辛德瑞拉	罗密欧和辛德瑞拉	罗密欧辛德瑞拉	辛德瑞拉	罗密欧与灰姑娘	罗与灰	口三才
+Sweetiex2	教室
+腐れ外道とチョコレゐト	异端与巧克力	🍫	kusare gedou	Kusare gedou to chocolate	外道	巧克力	异端	腐外道	该死的异端及巧克力	该死的异端和巧克力	该死的异端	该死的异端与巧克力
+Quartet Theme [Reborn]	quartet	十面埋伏	四重奏	手枪人	生死四人组	QT	COSIO
+Sky High [Reborn]	天空高	天高
+Like the Wind [Reborn]	三潭映月	Like The Wind	一块钱	像风一样	像风一样复兴的	动力甩尾	怎么样 好玩吧 被这精彩的场面震撼到了吧	被这精彩的场面震撼到了吧	野兽先辈	重生之风	如风	100.1001
+YA･DA･YO [Reborn]	yadayo	不要嘛	亚达哟	六个喇叭	幻想地带	ydy	说唱	哈哈哈哈哈哈哈	{8}8b,8b,8b,8b,8b,8b,
+Space Harrier Main Theme [Reborn]	太空	太空哈利	太空哈姆	太空蛤蜊
+DADDY MULK -Groove remix-	大爹奶	大爹马克	忍者战士	爸爸奶	爹地奶	爹奶	爹爹奶	黑屏猜你妈妈	爸奶
+ぴぴぱぷぅ！	噼噼啪噗	比巴卜	哔哔哔
+炎歌 -ほむらうた-	凤凰传奇	广场舞	炎歌	阉割
+犬日和。	哈皮	山里灵活的狗	炫狗	犬日和	狗天气	狗日和	狗日子	狗日的	狗日
+ソーラン☆節	嗦拉面	拉面	索兰节	捕鱼节	六魁首
+デコボコ体操第二	体操	体操第二	凹凸	广播体操	凹凸体操第二节
+スイートマジック	甜蜜魔法	甜甜魔法	sweet magic	sm	Sweet Magic	sweetmagic	swmg
+ゴーゴー幽霊船	Go Go Yureisen	gogo幽灵船	幽灵船	sasasasa
+千本桜	千本樱	Senbon Zakura	Thousand Cherry Blossoms	Thousands of Cherry Trees
+御旗のもとに	樱花大战	Mihata no motoni	御旗
+FEEL ALIVE	女人赛跑	小蜜蜂	感觉死	感觉活	感觉活着
+Link	林克	链接	cof	朋友圈	（区分V家Link和原创Link）
+Turn around	转过来	转圈	ta	转弯
+We Gonna Party	wgp	咱想开派对	我们即将排队	我们去派对	我们去银趴	我们要派对	铁塔	银趴	埃菲尔铁塔着火	派对
+Night Fly	🐳	万象区	万象汇	发热金曲	夜飞	晚上飞	蓝鲸	夜晚飞
+Feel My Fire	fmf	感受我的火	感受我的烧	感觉我烧	爱如火
+Streak	绿屋	拆房子	牛排	米奇妙妙屋	米奇粑粑屋	绿庙	绿房	翠楼屋	绿房子
+Spin me harder	🦋	更努力转我	更大力转我	更难的旋转	用力转我	电蝴蝶	蓝蝴蝶	蝴蝶	转我更猛些	更用力地抽我	转我硬	大蝴蝶
+Lionheart	狮心	狮子心	节奏大师	莱因哈特	spaceman
+Acceleration	加速	加速器	转圈金曲	加速度
+Sprintrances	一块五	冰山
+Nerverakes	2	两块钱	二块钱	地球仪
+Black Out	晕倒	黑出	黜
+Fragrance	大楼	斜塔	白楼开花	白香芋	芳香	香水	香香	香水塔	大厦	弗拉钢丝	100.1604
+air's gravity	空气重力	大气重力
+Starlight Disco	星光迪斯科	dx星光	星光	标星光
+39	dx39	初音未来	机厅几爷	标39	标准39	谢谢	三玖	蹭	参上	放烟花	thank you
+地上の戦士	地上	地上的战士	樱花大战5	陆军
+超絶！Superlative	超绝
+采配の刻 Power of order	采配之刻	命令时刻	采配
+DO RORO DERODERO ON DO RORO	原批大战罕见2	多罗罗	源平2	百鬼	百鬼大战绘卷	百鬼大战罕见	迪罗迪罗	dororo	doro	do roro
+泣き虫O'clock	泣虫	爱哭鬼
+Natural Flow	自然流
+maimaiちゃんのテーマ	maimai酱	舞萌酱	maimai酱的主题	PLUS主题曲
+君の知らない物語	你不知道的故事	君知	君知物语	物语
+残酷な天使のテーゼ	A Cruel Angel's Thesis	Cruel Angel's Thesis	Evangelion	at	残酷天使的行动纲领
+I ♥	ilove	我爱	我心	私心	我❤️
+＊ハロー、プラネット。	你好星球	*Hello, Planet.	hello,planet.
+イアイア★ナイトオブデザイア	IAIA	IA是我老婆	yiayia	night of desire	ia ia night of desire	欲望之夜	ia ia★night of desire
+ローリンガール	roiling giri	Rollin'Girl	rolling girl	Rolling Girl	头皮屑	滚女	翻滚少女	回转少女
+天ノ弱	amanojaku	dx天之弱	dx天弱	天之弱	天弱	标准天之弱	天邪鬼	你星星绿了
+弱虫モンブラン	iidx	弱虫	弱鸡	强虫蒙布朗	我回来了	我玩的是盗版	换手练习歌	胆小鬼	胆小鬼蒙布朗	若虫	错位教科书	错位练习歌	弱虫蒙布朗	784	甜点
+モザイクロール	dx马赛克卷	mosaic roll	Mozaik Role	标准马赛克卷	马赛克卷	Mosaic Roll
+脳漿炸裂ガール	脑浆	脑浆炸裂少女	脑浆炸裂女孩	脑浆炸裂	脑裂	🤯👧	Brain Fluid Explosion Girl	dx肯尼迪	dx脑浆	dx脑浆炸裂	nou shou sakuretsu girl	noushou	力一儿	吸溜	标准脑浆	标脑	标脑浆	肯尼迪	脑浆炸裂力一儿	脑浆炸裂谱	脑瘫	脑瘫炸裂	麦当劳1+1	脑炸	脑浆子	brain fluid explosion girl
+セツナトリップ	dx刹那旅程	DX刹那旅行	Setsuna Trip	刹那	刹那旅程	刹那旅行	标准刹那旅程	sp29	刹那之旅
+放課後ストライド	Houkago Stride	放课后	放课后冲
+カゲロウデイズ	Kagerou Days	Kagerou Daze	车祸	车祸曲	车祸歌	阳炎	阳炎眩乱	白阳炎	阳炎DAZE
+チルノのパーフェクトさんすう教室	⑨	⑨章算数	baka	Cirno	Cirno's Perfect Math Class	琪露诺的完美算数教室	琪露诺的完美算术教室	算数教室	算术教室	琪露诺教室	9教室	1+1=9	琪露诺	バカバカ	⑨舞	9舞	幻想乡没有巴士
+Bad Apple!! feat.nomico	坏苹果	Bad Apple	bad apple!! feat nomico	badapple	BDAP	iPhone	烂苹果	黑白苹果	黑苹果	好华为	吃一堑吃一堑	吃一堑吃一堑吃一堑	年年考年年错
+魔理沙は大変なものを盗んでいきました	魔理沙大变	魔理沙大盗	魔理沙盗大变	123	123123	123123晚自习晚自习一起上	Marisa Stole the Precious Thing	大盗魔理沙	魔理沙	魔理沙偷大便	魔理沙偷大变	魔理沙偷走了重要的东西	魔理沙大便盗	魔理沙大变态	魔理沙大变盗	魔理沙痴	被刑拘	魔理沙的大便	东方乙女杂子
+Grip & Break down !!	gbd	grip	Grip &amp; Break down !!	Grip and Break Down	发光绝赞	红魔馆内战	红魔馆爆炸	绝赞落	铁拳
+Help me, ERINNNNNN!!（Band ver.）	erin	help me, erinnnnnn!!	帮帮我，肯德基爷爷！	帮我	救我	救救我	永琳	帮帮我永琳
+ナイト・オブ・ナイツ	Knight of Nights	kon	night of knights	Night of Knights	Night of Knights / Knight of Nights	nok	st夜骑	写到心里去了	原版夜骑	夜骑	夜骑士	暴走のpad长	标准夜骑	标夜骑	电线杆	音乐小子1	骑士之夜	十六夜咲夜	pad	night of knight
+全人類ノ非想天則	Zen-Jinrui no Hisoutensoku	全人类	全人类的非想天则	绯想天	非想天则	非想天則	高达	打则死路一条	大机器人	则	开高达
+しゅわスパ大作戦☆	ShuwaSupa Daisakusen	ymn	下药神曲	修哇	修哇大作战	大作战	对他使用炎拳吧	炎拳	野兽妹	下药歌
+時空を超えて久しぶり！	3d弹珠	3d弹球	3D弹球	puyopuyo	噗呦噗呦	噗哟噗哟	时空	ぷよぷよ
+Her Dream Is To Be A Fantastic Sorceress	噗哟噗哟	她的梦想是成为一名出色的女巫	女足梦想	噗哟噗哟2
+ココロスキャンのうた	少林捂裆功	心灵扫描歌	捂裆歌	捂裆男	武当派	白色小人摸几把	裸男	白色小人
+神室雪月花	别急4	如龙	雪月花
+KONNANじゃないっ！	konnan	不恐男	不该是这样	二逼	如龙5	柯南	泽村遥	困难	女如龙	粉色小裙子	全换	遥
+awake	起了	醒了
+Mysterious Destiny	md	微信	猎天使魔女	神秘命运	贝姐
+Riders Of The Light	光之骑士	光骑	驭光者	猎天使魔女
+Terminal Storm	终端风暴	麻花
+記憶、記録	lopit	恐怖谷	爆裂鼓手	记忆纪录	记忆记录	鸡鸡已撸	命脉	apex命脉
+セガサターン起動音[H.][Remix]	sbga	Sega Saturn	Sega Saturn Startup Sound	SEGASATURN Startup Sound[H.][Remix]	ss	世嘉土星	世嘉土星启动音	启动音	土星	大b圈	起动音	sega saturn	转圈练习
+夜咄ディセイブ	kano角色歌	Yobanashi	Yobanashi Deceive	夜出	夜咄	夜咄deceive	夜谈欺骗
+ウサテイ	兔子	兔子跑	追逐战	兔子帝	🐇	USATEI	乌撒	兔子快跑	因幡帝	小老帝	帝帝跑跑跑
+sweet little sister	小甜妹	甜二妹	甜小姐姐	甜小妹	甜蜜小姐姐
+Blew Moon	💩	blew shit	吹屎	吹月	吹月亮	答辩	蓝月亮	口区
+Garakuta Doll Play	🃏	garakuta	garakuta doll	gdp	GDP	joker	tpz教你耍牌	zhy137	国内生产总值	小丑	性感小丑在线发牌	我	扑克牌	旮旯哭他多普雷	果丹皮	潮音	炸批队长	管理	轨道炮	金盆	鬼牌	鸡滴屁	绿小丑	偶买噶	小丑牌	传奇宴谱王	小丑变魔术	狗弟屁	t+p教你打扑克	斗地主	鸟苷二磷酸
+Dreampainter	🎩	sta金曲	梦境绘画者
+ぐるぐるWASH！コインランドリー・ディスコ	洗衣房迪斯科	洗衣房蹦迪	coin laundry disco	suomi	咕噜咕噜	咕噜咕噜wash	屏幕清洁工	洗衣房	洗衣机	滚筒洗衣机
+CYCLES	撸哇撸	🐎🐸🦌	🐴🐸🦌	cyc	cycle	吗哇路	圆	挖马路	轮回	马哇路	马挖路	马洼路	马瓦路	马瓦鲁	马哇撸
+Heartbeats	小红金曲	心跳	心动
+Life Feels Good	lfg	好日子	感觉很好	生活感觉好	生活真美好	LFG
+MYTHOS	神话	米索斯	🎻	小提琴	味增
+End of Twilight	🌃	夜之城	摩天楼	暮光终结	暮光的尽处	eot
+火炎地獄	机厅没空调	dx地狱	dx火炎	dx火炎地狱	dx火焰地狱	怪兽	打怪兽	标准火炎	火炎	火炎地狱	绝赞地狱	皮炎地狱	77乐园
+ユビキリ	勾指起誓	拉勾勾	舞萌爱情故事	拉勾	狗粮	指切
+Pixel Voyage	像素旅行	小飞机	波音737	空客A320
+Get Happy	得乐	得到开心	爽了	给他哈皮	给爽
+System “Z”	系统Z	系统“Z”	🥗	z	沙拉	系统z	系统贼	蔬菜沙拉	系统
+Beat of getting entangled	❓	boge	一坨蓝	别急13	胡来的处男	胡辣汤
+Cosmic Train	ct	green主题曲	反恐精英	地铁	宇宙列车	小星穹铁道	星穹列车	星空列车	星穹铁道	宇宙小火车
+ナミダと流星	泪流星	泪与流星	流星	眼泪与流星	眼泪流星	泪水和流星	流星一笔画
+おても☆Yan	😃	😃👍	yan	山歌	日本民歌	烟	阿铁摸呀	阿铁摸鸭	陕北民歌	双押跳拍
+maiム・maiム feat.週刊少年マガジン	三个臭逼	功夫	周刊少年	啦啦啦啦啦	周刊
+Danza zandA	万达	小号歌	砸蛋	蛋砸	蛋砸砸蛋
+Backyun! －悪い女－	坏女人	恶之女	恶女	我异域了
+Monochrome Rainbow	😎	单色彩虹	黑白彩虹	黑白格
+みんなのマイマイマー	🍥	maimai	大家的maimai	大家的maimai人	大家的maimai吗	大家的舞舞舞	大家的maimaimer	maimaimer
+円舞曲、君に	圆舞曲	舞曲	円舞曲
+Live & Learn	sa2	开心超人	索尼克大冒险2	SA2
+Burning Hearts ～炎のANGEL～	Angels with Burning Hearts	br	Burning Angel	Burning Hearts	炎天使	烧心	炎之天使	BR
+いーあるふぁんくらぶ	1 2 Fanclub	12	12fan	12fanclub	dx王力宏	fanclub	iarufanclub	一二俱乐部	中日友好歌	周杰伦	熊猫头	王力宏	1 2 fan club	12fan	我爱你	嗨嗨China	12粉丝俱乐部	12fan	12fan	12fan
+Nyan Cat EX	🌈🐱	nya	彩虹猫	nyanyanyanyan	交互练习曲
+ぽっぴっぽー	蔬菜汁	popipo	波比波	菜蔬汁	蔬菜歌
+LUCIA	卢锡安	圣枪游侠	露西亚	露西娅
+Death Scythe	死亡镰刀	死镰	死镰1
+BREAK YOU!!	breakyou	炸你	破坏你	碎了你	绝赞你
+JUMPIN' JUMPIN'	jj	sh金曲	跳跳
+L'épilogue	Lepilogue	后记	法文歌	尾声
+Save This World νMIX	psp	拯救世界	救世	梦幻之星携带版	救世啊
+Living Universe	psp2	活在宇宙	住在宇宙	活宇宙
+Ignite Infinity	psp2	无限点燃
+トルコ行進曲 - オワタ＼(^o^)／	进行曲	\（^o^)／	🇹🇷	关我屁事进行曲	土耳其	土耳其进行曲	完蛋了	完蛋	OWATA
+裏表ラバーズ	Uraomote Lovers	李彪情人	里表	里表中单	里表情人
+Outlaw's Lullaby	ol	outlaw	史蒂夫抽烈焰棒	史蒂夫抽烟	如龙	如龙2	王源	亡命之徒的摇篮曲	OL	12+如龙	100.2092	桐生抽烟
+Brand-new Japanesque	全新日本人	如龙0	如龙见参	11+如龙
+RPG	蜡笔小新主题曲
+レッツゴー!陰陽師	Let'go!阴阳师	Let's go! Onmyoji	Onmyoji	恶灵退散！恶灵退散！恶灵退散！	挑眉	朱元璋	老登挑眉	阴阳师	sm9	不要笑挑战	悪靈退散	豪血寺	标准结局	恶灵退散
+炉心融解	封面很丑	Meltdown	Roshin Yukai
+ダブルラリアット	转圈歌	双重套索	Double Lariat	巡音转圈
+からくりピエロ	派对小丑	活动小丑	🤡	Karakuri Pierrot	小丑	我
+ネトゲ廃人シュプレヒコール	😉	Net game	Netoge	The MMORPG Addict's Anthem	废人	我	网游废人	网游废人的呐喊	网络废人	网游废人齐颂曲	网费	网废	网游
+magician's operation	魔术手	魔法师手术	魔法手指	黑屏	手术
+六兆年と一夜物語	6000000000000年	6m	dx六兆年	dx希腊奶	Rokuchou nen	six trillion	Six trillion nights	Six Trillion Years and Overnight Story	六兆年	六兆年零一夜物语	安慕希	希腊奶	标六兆年	🇬🇷🥛
+みくみくにしてあげる♪【してやんよ】	📉	I'll Miku-Miku You♪ (For Reals)	党歌	把你mikumiku掉	狗·眼·①·瞎	飞龙	mikumiku
+リリリリ★バーニングナイト	lily	lilylily	lilylily★burningnight	lilylilyburningnight	哔哩哔哩拿命来	美女躺着	酒吧	酒吧跳舞	Burning Night	莉莉
+ハロ／ハワユ	hello	hello how are you	hello，how are you	hello/howareyou	你好	八口	被踩:ハロ/ハワユ	Hello how are you	袜套
+Our Fighting	酋长
+緋色のDance	Hiiro no DANCE	绯色	绯色dance	绯色之舞	脑梗协调	绯色诺当斯
+明星ロケット	Akeboshi Rocket	幻想事变	明星	明星火箭	明星rocket	明星银河号
+The Great Journey	大冒险	好旅行	黄金矿工
+お嫁にしなさいっ！	Oyome ni Shinasai!	东方花嫁	东方萃翠酒醉	女同7	婚礼	婚礼进行曲	结婚	萝莉嫁给我	嫁给我吧	结婚了	嫁
+ロストワンの号哭	kappa	Lost one	lost one 的号哭	Lost one's weeping	Lost ones	The Lamentations of the Lost Ones	号哭	失去1的号哭	没有1我要哭了	破防	lost one的号哭	累死人	lostone的号哭
+患部で止まってすぐ溶ける～狂気の優曇華院	dx患部	Kanbu	Kanbu de Tomatte Sugu Tokeru	overdrive	Overdrive	优云华院	兔子药	座药	患部	标患部	狂气的优昙华院	肛塞	兔子跳	狂气优昙华院	铃仙	撒尿撒尿	优昙华院	马应龙	患部止	谁要谁要	坐药
+ケロ⑨destiny	9	⑨	kero	KERO⑨destiny	青蛙子	kero9destiny
+Endless, Sleepless Night	不眠之夜	不眠夜	东方不眠夜	无尽不眠夜	漫漫长眠夜	灵梦1
+POP STAR	匡威	平井坚
+Back 2 Back	b2b	back to back	B2B	b歌	你画我猜	回2回	回二回	逼俩逼
+神々の祈り	神明的祈祷	神祈
+エピクロスの虹はもう見えない	Epikouros no niji wa mou mienai	再见不到伊壁鸠鲁的彩虹	圣母	虹见	伊壁鸠鲁	上海红茶馆	红美铃	美铃	美里
+シアワセうさぎ	Shiawase Usagi	幸福兔
+ってゐ！ ～えいえんてゐVer～	屁股	帝帝	翘屁股	翘臀	粉裙子	因幡帝
+待チ人ハ来ズ。	machibitohakozu	东方旋转木马	小伞	待人未至	待人来	旋转木马	等人	等的人没有来
+Cosmic Magic Shooter	cms	宇宙魔术射手	魔弹射手	魔术射手	魔法射手	摩托车	摩天轮	法界之火
+深海少女	新开烧酒	Deep-Sea Girl	Shinkai Shoujo	深海和少女相比	深海邵壮	深海魔男	贵州和广西相比	深海	阴间少女
+M.S.S.Planet	dxmss	mss	MSS	妈杀杀星球	我是地球	planet	中二病
+東方スイーツ！～鬼畜姉妹と受難メイド～	东方受难	咲夜哭哭	鬼畜姐妹	斯卡雷特一家子	鬼畜姐妹与受难女仆
+幻想のサテライト	幻想的卫星	幻想卫星	dx幻想卫星	Gensou	Gensou no Satelite	gensounosateraito	homo	Satelite	卫星	标幻想卫星	ZUN打mai
 最速最高シャッターガール	最速最高	文文
-LiftOff	火箭	起飞	刑具	妙脆角	抬棺	东云纺坐电梯	关电梯	发射	长角女孩
-[協]ぽっぴっぽー	宴popipo	宴蔬菜歌	协popipo	协蔬菜歌
-ハジマリノピアノ	Hajimari no Piano	yyut	yyut教你扫键	最初的钢琴	大灵通	哈吉玛丽弄钢琴	钢琴
-テオ	teo	Teo	将手	提欧	天才	亍才	图书馆
-Scarlet Wings	redalice	小星星2	小黑姬	猩红之翼	红翼	红翅膀子	红烧鸡翅	鸡翅膀	鸭翅	黑姬	黑姬拔刀
-骸骨楽団とリリア	👉🏻😕👈🏻	Skeleton Orchestra	Skeleton Orchestra and Lilia	骸骨	骸骨乐团	骸骨乐团与莉莉亚	腿子	莉莉亚
+バラライカ	亚拉那一卡	空手	空手道	巴拉莱卡琴	巴拉拉一卡
+林檎華憐歌	拜拜	大妈唱歌	拜拜拜拜	林檎	苹果歌	林檎华怜歌	苹果	黄金大便	beatmario的妈妈	拜拜！拜拜！
+YATTA!	🥕	yatta	好耶！	胡萝卜	做到了！	日本露两点低俗曲	亚达	好耶
+Jack-the-Ripper◆	jack the ripper	jtr	ripper	开膛手	开膛手杰克	杰克开膛手	杰克日批	杰哥	杰哥日批	杰哥雷普	开膛手杰哥
+Windy Hill -Zone 1	小追星	疯狂小糖	索4	索尼克失落的世界	追星上位
+コトバ・カラフル	双押姐妹花	575	多彩言语	女同	女同歌	女同贴贴	歌组575	Kotoba colorful	舞立方
+タカハせ！名人マン	高桥起飞！名人超人	懒羊羊	takahase meijinman	😉	たかはし	光头16连	名人	四号键质检员	奔跑吧！高桥名人侠	高桥	高桥名人	纵连练习	高桥名人射精	小hera
+言ノ葉カルマ	kotonoha karma	soraru	因果	言叶	言叶业	言叶1	言叶之业
+かせげ！ジャリンコヒーロー	哈姆	哈姆？	英雄银行	Jarinko Hero
+キズナの物語	物语	羁绊物语	羁绊的故事	羁绊的物语	锁链战记	锁链
+Heart Beats	喝茶	心跳	铅笔画	pulse
+鼓動	如龙3	如龙维新	鼓动	阿疼	猫抓板
+DRAGONLADY	龙女士	ub	你舍得打破这份宁静吗	喇叭	尼美舒利	纵连女士	舍得	龙女	龙玉涛	🐲	🐲👩	你舍得打破这片宁静么	单押天堂
+二息歩行	国际服没有的	二息步行	二息电摇	儿媳不行	电摇嘲讽	二息不行
+ファンタジーゾーン OPA-OPA! -GMT remix-	opa	幻想空间	🈸🌞🌝	申日月	Fantasy zone
+電車で電車でGO!GO!GO!GC! -GMT remix-	电车	电车go	电车GO
+RIDGE RACER STEPS -GMT remix-	山脊赛车	我创死你	汽车总动员	rrs
+リッジでリッジでGO!GO!GO! -GMT mashup-	绝赞电车	山脊赛车×电车go	电车	电车go	电车gogogo	标准电车
+オパ! オパ! RACER -GMT mashup-	opa opa racer	坟头对撞	幻想空间×山脊赛车	才八	才八才八	赛车
+電車で電車でOPA!OPA!OPA! -GMT mashup-	星星电车	电车	电车go×幻想空间	电车opa	opa电车
+Axeria	两个绝赞	ax	诶叉	啊歇了啊	好累啊	诶插	阿克塞利亚
+ピーマンたべたら	🫑	吃了青椒的话	柿子椒	青椒	青椒歌	老鼠
+MIRROR of MAGIC	mom	镜子魔法	镜魔	魔镜	魔法镜子	MoM
+究極焼肉レストラン！お燐の地獄亭！	地狱亭	Yakiniku Restaurant	Yakiniku Restaurant! Orin’s Jigokutei!	烤肉	究极烧肉
+shake it!	shake it	摇它	狗zhai子	骑自行车的男人	骑车	自行车
+YU-MU	风见幽香和射命丸文	yumu	榆木	妖梦
+物凄い勢いでけーねが物凄いうた	上白泽慧音	下北泽慧音	Monosugoi Ikioide Ke-ne	三倍Ice☆Cream	以惊人的气势发出了惊人的声音	慧音	物凄	白泽球	罪	东方之血	嘎哦嘎哦	三倍ice cream
+BETTER CHOICE	👄	更好的选择	更好选择	烈焰红唇
+Oshama Scramble!	我从小喝到大	100.5	🥛	dx奶	dx奶猫	dx牛奶	oshama	o杀妈	丰胸奶	俩老婆	哦啥马上吃让明白了	哦杀妈	喝奶	大臣与左大臣	奶猫	巧克力与香子兰	标奶	标牛奶	热辣大飞机	牛乳	牛奶	牛奶猫	猫抓板	一天一杯奶强壮音游人	偶杀妈 实诚人阿妈爆了	假奶害猫	强身健体	奶	牛奶歌	欧杀妈	奶牛猫	从小喝到大
+D✪N’T  ST✪P  R✪CKIN’	机器人	年度最佳	小机器人	⭐⭐⭐	🤖	dont stop rockin	dsr	恐怖g7人	机器人射出飞盘	TGA2024年度游戏	年度最佳游戏	不要停止摇滚
+ガラテアの螺旋	Helix of Garatia	🌀	ガラテアのにゃんこ	伽拉	伽拉泰亚的螺旋	白洛轩	螺旋	大宇宙	嘟嘟嘟嘟嘟嘟嘟	钓	100.5218	100.2324
+oboro	🌠	小火焰	小火球	小火苗	我吉吉在燃燒	我的吉吉在燃烧	火球	超新星燃烧	小火花	胧	higedriver
+Dragoon	🐉	🐲	多拉贡	绝味鸭头	绝味鸭脖	鸭头	麻辣鸭头	龙	龙骑士	白龙	龙骨	龙骑兵
+アンハッピーリフレイン	💗	unhappy	unhappy refrain	Unhappy Refrain	不高兴的副歌	副歌	不开心	散弹枪
+One Step Ahead	一步个头	一步向前	向前一步	向前一步走	伊东歌词太郎
+L9	绿9	轴交互	老九
+planet dancer	pd	拉屎拉不出来	星球舞者	爸爸拉粑粑	男人坐椅子	行星舞者	碇真嗣	池面
+Caliburne ～Story of the Legendary sword～	cali	caliburne	咖喱棒	圣剑	圣剑1	我老婆	生煎	生煎1	石中剑	福瑞	福瑞1	福瑞跑步	小圣剑	咖喱棒 ～圣剑传说～	sofree
+どうしてこうなった	为什么会变成这样	为什么会变成这样呢	怎么回事呢	怎么这样	白板	跳舞狗	这怎么发生的	怎会如此	哈皮跳舞
+B.B.K.K.B.K.K.	↑↓	bass kick	bbk	bbkk	bbkkbkk	bk	s.s.b.b.s.b.b	ssbbsbb	小bk的	汉堡王	Bass kick	↓↓↑↑↓↑↑	3b4k	boki
+おこちゃま戦争	Okochama Sensou	Okocyama Sensou	孩子气战争	孩子气的战争	战争
+VERTeX	🌊	水神	芙卡洛斯	芙宁娜	VOLTeX	水神1
+Ignis Danse	火神	一个妮子	一起去吃烤肉吧	卫宫士郎	火神大我	班尼特	红孩儿	跳高	伊格尼斯丹斯	跳舞	玛薇卡
+Scars of FAUNA	土神
+FUJIN Rumble	温迪	父进入母逼了	先天太乙神风诀	福晋软贝	附近maimai	风神	父进入母b了	生孩子之歌	福建兰博
+きたさいたま2000	五个靓仔	kitasaitama2000	😁😁😁😁😁	2000	kita	下北泽2000	中年社畜的怒吼	五个🐷🐷拉屎	五个傻逼	五兄弟	五大阴兵	光污染小人	全网最帅五兄弟	北埼玉	北埼玉2000	北琦玉	北琦玉2000	史	塞他妈	太鼓2000	屎	过北脱新	鬼叫2000	北	嗑药
+FLOWER	扶老二	花	花神	大十字	公交车	金塔
+Got more raves？	gmr	郭沫若	雷神	groove master
+不毛！	不毛	木毛	牙白	拔毛	没毛
+デッドレッドガールズ	死红女	荒野大镖妹
+赤心性：カマトト荒療治	赤心性	阳炎（？）	苏祖母	suzumu
+悪戯	Itazura	恶习	恶戏	恶作剧
+響縁	dx响缘	响缘	梦花火2	響绿	響緣	响绿
+カノン	Kanon
+初音ミクの消失	Hatsune Miku no Shoushitsu	哈皮木琴の消失	?	？	disappearance	The Disappearance of Hatsune Miku	初音未来的消失	初音没有来	消失	Master33	这歌好快啊	老婆不见了	初音未来的炸开，我消失了	我底力消失了	神曲神铺	神曲神谱我懂得欣赏
+イノコリ先生	先生	男同	男同互瞪	男同老师	留堂老师
+キャプテン・ムラサのケツアンカー	船长	Captain Murasa	Captain Murasa's Ketsu Anchor	村纱水蜜	村纱
+若い力 -SEGA HARD GIRLS MIX-	SBGA	sega	WAKAICHIKARA -SEGA HARD GIRLS MIX-	世嘉女孩	世嘉少女	世嘉社歌	年轻的力量	若以力	若力	若力二次元版	世嘉硬件女孩	社歌	世嘉硬女孩混合
+ココロオドル	心中舞	汤毛 vs 光吉猛修	汤毛光吉
+ウミユリ海底譚	海底谭你学不会	Umiyuri	Umiyuri Kaiteitan	你学不会	初音未来跳海	初音跳海	别惦记你那逼海底谭了	我应该打	海带汤	海底捞	海底谭	海百合	海百合海底谭	海脑瘫	舞萌老玩家	谭	海底潭	舞萌科目二	检验周刊的唯一标准	脑梗谭	画质好	海底瘫	百合捞	海底列车	海底泥头车	女人心	何时降级	这还学不会？	海底谭青春版	海𠷡	新手教程
+welcome to maimai!! with マイマイマー	go! go! 575	maimai	欢迎来到舞萌的世界	欢迎来到maimai	welcome to maimai
+ストリーミングハート	Streaming Heart	嘉然	嘉然比心	流心
+Change Our MIRAI！	com	dx五对奶子	不含月铃姐妹	五个女人	五对奶子	五对柰子	四大一小	小心彩绿	改变未来	改变我们的未来
+Aiolos	aio	a打头的风神	肉包	艾俄洛斯	艾欧洛斯	阿米诺斯	A打头的风神	奥罗
+LANCE	兰斯	兰瑟	懒死	烂死	缆车	蓝枪	枪	男厕
+橙の幻想郷音頭	🐱	Chen No Gensoukyo Ondo	幻想乡音头	橙	橙之幻想乡	橙的幻想乡音头	橙舞	橙音头	欢乐斗地主	音头
+東方妖々夢 ～the maximum moving about～	the maximum moving about	toho yoyomu -the maximum moving about-	东方不可拘束	东方妖妖梦	妖妖梦	车万不可拘束	石碱屋
+蒼空に舞え、墨染の桜	魂魄妖梦	Soranimae Sumizomenosakura	妖梦	苍空	苍空舞	苍空飞舞墨染之樱	墨染	墨染樱
+少女幻葬戦慄曲 ～ Necro Fantasia	少女幻葬	死灵幻想曲	战栗曲
+Contrapasso -paradiso-	⚙️	⚙	cp	ctps	天堂	天堂齿轮	齿轮	齿轮天堂	时钟	闹钟	⏰	齿轮地狱	吃润	contra
+幸せになれる隠しコマンドがあるらしい	→↓↑→→↓→→↑↑↓↓←→←→	😅	It Seems Like There's A Secret Command To Becoming Happy	shiawase	Shiawase ni Nareru Kakushi Command ga Arurashii	There's Supposed to Be a Cheat Code for Happiness	むちゃぶり	不玩了	似乎有着能够蹭死我的隐藏配置	差不多得了	幸福指令	幸隐	性性性	性瘾	视力检测	结月流汗	结月缘	结月缘黑丝兔女郎	有款游戏越打越年轻	上下左右	隐藏指令	人生重来枪	→↓BAXYLR↑↑↓AYLRA	上上下下左右左右	👆👆👇👇👈👉👈👉
+フラグメンツ -T.V. maimai edit-	fragments	maimai edit	tv	东方穿心莲	flower of life	少女幻葬	发热巫女	活动写真馆
+願いを呼ぶ季節	呼唤愿望的季节	季节	愿呼季节	梦想夏乡	梦想夏乡主题曲	红蓝	致电愿望的季节
+おじゃま虫	麻烦鬼
+Yet Another ”drizzly rain”	姆Q	帕秋莉
+四次元跳躍機関	Four-Dimensional Warp Device	冰风	四次元	四次元跳跃机关	大小姐	机关	跳楼机	二次元跳楼机关
+最終鬼畜妹・一部声	Saishuu kichiku imouto ichibu koe	一部声	易卜生	月儿子青春版	月女儿	蓝蓝路	鬼叫	鬼畜妹	鬼畜妹一部声	最终鬼畜妹	吵死了	二小姐	最终鬼畜妹一部声
+Pursuing My True Self	PMTS
+Signs Of Love (“Never More” ver.)	爱的标记	signs of love	sol
+specialist (“Never More” ver.)	P4	番长	鸣上悠	通宵热舞	女神异闻录4
+Time To Make History (AKIRA YAMAOKA Remix)	time to make history
+GEMINI -M-	双子星	双子座	戈米尼	双子	鸡米尼	429
++♂	Plus Danshi	+男	Plus男子	加男	嘉然	憋憋憋憋	正男	男的来了	♂
+ありふれたせかいせいふく	世界征服	初音围巾	司空见惯的世界征服	红围巾	世征	Arifureta sekai seifuku
+すろぉもぉしょん	SLoWMoTIoN
+頓珍漢の宴	🥓	🙏	tonchinkan	Tonchinkan no en	初音上菜	吃饭	大嘴花	希望人没事	汉尼拔之宴	珍顿汉	蹲着喊耶	顿珍汉	顿珍汉之宴	顿珍汉吃席	顿珍汉宴	顿震撼	食雪汉	顿珍宴	盾震撼	吨震撼	炖痴汉	炖吃汉
+Garden Of The Dragon	04年广告	花园龙	龙花园	万达蓝
+After Burner	ab	东京热	冲破火网	后烧	微星小飞机	AB
+Counselor	小护士	律师	中二deco
+Glorious Crown	Glorious	👑	fd2	gc	王冠	皇冠	荣耀的皇冠	辉煌之冠	FD2	GC	藏皇冠	宴皇冠
+言ノ葉遊戯	KOTONOHA Yu-Gi	文字游戏	游戏	言叶游戏
+りばーぶ	reverb	Reverb	两个人喝茶	友人对战
+幾四音-Ixion-	IKUSHION -Ixion-	Ixion	几四音	急死银	第四爱	ixion
+閃鋼のブリューナク	brionac	Brionac of Steel-flash	Senko no Brionac	Senko no Buryunaku	senkou	闪钢
+無敵We are one!!	muteki	MUTEKI We are one!!	We are one	我们是1	我们是一	我们是无敌1	无敌	无敌we are one	无敌我们是1	无敌我们是一	母铁鸡	我们联合
+7thSense	7	7s	7th	7感	七感	七拍子	旗杆	第七感	心把节拍
+FEEL the BEATS	fb	ftb	感受节拍
+Revive The Rave	rtr	一个绝赞叫一声	润体乳	舞立方
+スリップフリップ	010	slipflip	不二家	大脸妹	耳机女	耳机娘	短发妹	短发妹妹	大头妹
+Jimang Shot	2015	囧仙	大叔唱歌	急忙射	报纸歌
+儚きもの人間	Hakanakimono Ningen	少女炼狱	梦人间
+ラブリー☆えんじぇる!!	Lovely☆Angel!!	可爱天使
+オモイヨシノ	Omoiyoshino	恋咏樱
+アージェントシンメトリー	argent symmetry	pink op	sta	桃代主题曲	白银	白银对称	白银对称性	科目二	银对称	银对称性	银色对称	argent	Argent Symmetry
+かくしん的☆めたまるふぉ～ぜっ！	小埋	有没有wifi	小埋同学	小埋1	小埋OP	干物妹小埋	革新的变身
+厨病激発ボーイ	Young disease outburst Boy	厨病	厨病激发男孩	厨病激发	廚病激發boy	廚病激發
+HIMITSUスパーク	秘密	HIMITSU Spark	白乌鸦
+Party 4U ”holy nite mix”	4u	p4u	派对4你	冯悦金曲
+囲い無き世は一期の月影	月影
+Lividi	呼哇	执念	李云迪	李伟迪	李汶谛	李维迪	呜哇	Skibidi
+Infantoon Fantasy	🖕	if	两茄子	中指机器人	竖中指	竖中指机器人	舞萌打卡活动	汤海
+Jumble Rumble	dj猫	dj鼠	jr	几把	几把乱报	几把乱爆	几把乱蹦	小豆泽心羽	打碟猫	早苗叠	猫打碟	猫猫打碟	魔法猫咪	耗子打碟	DJ鼠	jb乱爆	DJ猫	打碟老鼠
+Imitation:Loud Lounge	丘丘人	呀哈哈	奇面族	面具	面具娃娃	ILL
+CITRUS MONSTER	🍊	citrus	cm	橘子怪兽	CM	柑橘怪兽	桔子怪兽
+Hyper Active	黄色大卡车	卡车	小黄车	撞大运	擎天柱	泥头车	黄卡车	大卡车	黄卡	追卡车	卡玛斯	前四后八	大运重卡	百吨王
+AMAZING MIGHTYYYY!!!!	am	这么强？	惊人的强大	！！！！	amazing mighty	amemai	amz	mighty	不可思议的大概概概概	你收个p	啊卖金麦提	屁股发芽	惊异全能	我的妹妹是男的	阿米娅	AM	恋爱裁判2	4y	yyyy	我妹妹不可能是男的	精子	阿妈	大棒子	俺妹	96	爽啊！	YYYYY	音游王c	太神奇了，太强大了！	樱羽艾玛	太神奇了太强大了
+fake!fake!	fake	fakefake	万物皆虚	假！假！	假的假的	弹簧	彩虹圈	骗子	假的	fake news！	白乌鸦
+夏祭り	夏祭	绿ow	ow	ow青春版
+シュガーソングとビターステップ	糖歌	糖车	血界战线
+セハガガガンバッちゃう！！	SEHA GA GA GANBATCHAU	世嘉硬件女孩	我要去做	也八力力力	今天你在哪一层？
+キミノヨゾラ哨戒班	你的夜空哨戒班	哨戒班	烧鸡班	大哨戒班	明日夜空的哨戒班	杀妈班
+恋愛裁判	Love Trial	а╣░ш╡цеп	初音大小姐想和我告白高智商天才的头脑对决	她	恋爱审判	恋爱裁判	有罪	朝你大胯捏一把	逆转裁判	拼机神曲	出轨裁判	成步堂龙一
+ヒビカセ	hibikase	Hibikase	no title	匕匕力	匕匕力七	匕匕力也	比力也	比比力也	让其响彻	匕匕力乜	比利耶！	西比卡贼	比力乜	比卡贼	匕匕力世
+パーフェクト生命	Perfect Life	完美生命	生命
+StargazeR	空条承太郎	虎哥	观星者	摘星人	骨盘P
+だんだん早くなる	逐渐加快	早	越来越快	一笔画	渐渐变快	dandan hayaku naru	Getting Faster and Faster	专注轻机枪	别急8	动力小子	哈压库	当当哈呀库那路	渐变快	渐渐加快	渐渐加速	渐渐变急	秃老头	蛋蛋	蛋蛋加速	蛋蛋变快	蛋蛋歌	走路歌	越战越勇	跑男	逐渐加速	逐渐变快	一笔画神曲	蛋蛋加快	变快	追星当当	越走越快
+ヘルシーエンド	healthy end	maimai你摸	健康结局
+ココロ	心
+東京リアルワールド	🗼	东京	东京real world	东京塔	东京现充世界	东京现实世界	东京铁塔	塔	电波塔	东京真实世界	Tokyo Real World	Yeah!
+やめろ！聴くな！	やめろ	别听	听
+木彫り鯰と右肩ゾンビ	吃饭唱歌	Kiborinamazu to Migikatazonbi	僵尸	右肩	右肩僵尸	木彫	木雕	木雕鲇鱼	木雕鲶鱼	木鲶鱼	肩周炎	鲷鱼烧	绸鱼烧	520	鲶鱼	木雕鲶右肩
+ECHO	一口	回声	恶臭	电视头	挨口	I don't know	idk:-(
+Mr. Wonderland	王大狼	梦幻岛	幻想乡先生
+Hand in Hand	难忘今宵	手牵手
+ブリキノダンス	马口铁之舞	BURIKI NO DANCE
+brilliant better	bb	更精彩	黄色吉他
+ハート・ビート	我的麦很炸吗	heart beat	heart・beat	serina	心跳	心跳2	heartbeat	八一卜匕一卜	八一卜	八一卜七一卜
+Invitation	！？	邀请
+connecting with you	pink挑战	与你连接	连接你	三泽秋
+高気圧ねこロック	anticyclone	Anticyclone Cat Rock	Koukiatsu Neko Rock	Koukiatsu Rock	高气压	高气压猫	高气压猫摇滚	高气压猫猫头	高血压	高血压流汗黄豆	高气压猫猫摇滚
+Prophesy One	六个绝赞全落	p1	预言1	预言一	po
+洗脳	Sennou	拖鞋	洗脑
+Barbed Eye	坏眼	狗谷爱
+Nitrous Fury	nf	你创死福瑞	你戳死福瑞	你臭死福瑞	架子鼓	氮气狂怒	氮气福瑞	营养福瑞
+色は匂へど散りぬるを	Iro Ha Nioedo Chirinuruwo	三个老婆	伊洛瓦	老年人活动中心	色散	花开艳丽终散落	花朵艳丽终会散落	花朵艳丽	遗落哇
+月に叢雲華に風	Tsuki Ni Murakumo Hana Ni Kaze	丛云伴月	丛云华	小五	摇摆阳	月丛云	月丛云华风	月云华风	月从云华风	月映从云花语风	月遇丛云花遇风	月风	闲云遮月清风袭花	月映丛云	月隐於丛云花散於风	月从云华从风	幻想万华镜OP2
+No Routine	三梦奇缘	东方龙	没有日常	绿色女人	龙女	蒙娜丽莎	竹取飞翔
+ひれ伏せ愚民どもっ！	蓬莱山辉夜	Hirefuse Gumin-domo!	佩恩	愚民
+エテルニタス・ルドロジー	~AETERNITAS LUDOLOGY~	eternitas ludology	东方鼓动	八云紫	Eternitas Ludology	Eternitas Ludology	Eternitas Ludology	Eternitas Ludology	Eternitas Ludology
+泡沫、哀のまほろば	Utakata, Ai No Mahoroba	妹红泡水	泡沫	泡沫哀	泡馍	蓬莱人洗澡玩泡沫
+華鳥風月	Kachoufugetsu	かちょうふうげつ	华鸟风月	四季	四季映姬	花鸟市场	花鸟风月	世界名曲	风月金曲	四季大人
+METATRON	元创	梅塔特隆	死镰2	死镰二	钟楼	麦塔冲
+終わりなき物語	OWARINAKIMONOGATARI	无尽物语	物语	终物语
+フォルテシモBELL	bell	fortissimo bell	FORTISSIMO BELL	Fortissimo BELL	天王洲
+私の中の幻想的世界観及びその顕現を想起させたある現実での出来事に関する一考察	A consideration of the fantastic world view in me and the events in a certain reality that reminded me of its manifestation	long	long song	一考察	世界观	关于我内心对歌名长度的困惑及让我想要在抽象画中用同样的字数将其写出的一次考察	关于让我想起幻想的世界观及其显现的现实事件的一项考察	名字太长	名字太长的歌	名字很长	名字很长的歌	名字超长	对我对虚幻世界的看法和现实中唤起其表现的事件的思考	小仏凪	小佛凪	幻想的世界观	总之名字很长的歌	考察	轻小说	好长	世界观考察	莎啦啦啦	名字好长	名字最长
+DETARAME ROCK&ROLL THEORY	8787	detarame	DRRT	drt	摇滚理论	箱部鸣	星星歌	drrt
+ゴーストルール	👻	dx幽灵法则	ghost rule	Ghost Rule	小吹爆	幽灵	幽灵法则	露露小姐	Ghost rule	狗斯特露露	幽灵规则
+チュルリラ・チュルリラ・ダッダッダ！	chururira	Chururira • Chururira • Daddadda!	ddd	jk结月缘	告密老师	告状	告老师	哒哒哒	啾噜哩啦	啾噜哩啦·啾噜哩啦·哒哒哒	啾噜哩啦啾噜哩啦哒哒哒	打小报告	暗杀教室	秋露里拉	结月缘杀人	告密教室	跳音	跳拍	撒～撒～李狗蛋	李狗蛋	宁宁二箱
+GOODMEN	👍	👍🏻	好人	好汉歌	好男人	曾小贤	群友	良民	良面	良麵	你	好汉
+夜明けまであと３秒	3秒	三秒	夜明	夜明3秒	夜明三秒	天亮的前三秒	失明前三秒	距离黎明还有三秒	黎明的前三秒	夜明前三秒
+Last Brave ～ Go to zero	BT	最后勇敢变成0	勇敢变成0	去做0	去找0	变成0	我们去做0	机甲	走向0	last brave	go to zero
+STAIRWAY TO GENERATION	stairway	一片绿	八块钱
+空威張りビヘイビア	brash behavior	空威张
+回レ！雪月花	maware	Maware! setsugetsuka	旋转吧雪月花
+いっしそう電☆舞舞神拳！	114514	maimai神拳	一子相传	紫代主题曲	给你一拳	舞舞神拳	一脉相传舞舞神拳	偷袭	游啊游啊游
+ENJOY POLIS	enjoypolis	JOYPOLIS	世嘉都市乐园
+生きてるおばけは生きている	坟头蹦迪	欧巴给	活着的怪物会一直活着	生生	活着的鬼还活着	obake
+天火明命	Amenohoakari	tenkameimei	天火	天火没命	天火命名	云天明
+HERA	🦊	b三狼	一号键质检员	七匹狼	古希腊掌管纵连的神	大逼纵	狐狸	狐狸模拟器	芝士雪豹	赫拉	轻松莫放纵	黑拉	纵连	狗刨歌	纵连歌	1号键	黑辣	咏春拳法	狐狸快跑
+分からない	😵	Wakaranai	不知道	优秀答案	优质解答	发生什么事了	吾伐晓得	哇卡拉奶	哇嘎啦乃	我不到啊	我不知道	我哪知道	我怎么知道	暂时不能给你明确的答复	这	瓦卡拉奶	wakaranai	我嗯晓	俺不造啊	分力5	下位hera	母鸡
+Our Wrenally	ow	守望先锋	魔法阿嫲	高等数学	高数	阿嬷	临兵斗者皆阵列在前	别急9	别急加强版	夏祭	夏祭2	夏祭re:master	急急国王	恐怖奶奶	我们的万人阿里路亚	我把你妈妈抓走	火女孩	白夏祭	里夏祭	魔法夏祭	魔法阿妈	魔法阿嬷	OW	儿歌	哀れなり	あわれ	夏季BYD	隆逼	火夏祭	瓜子绝活	藤都子 vs 薇欧拉
+Scream out! -maimai SONIC WASHER Edit-	笑口常开	dx赞不绝口	dx青蛙子	喊出来	美国紫妈	诹访子	赞不绝口	青蛙子	风神录EX	阿姨	洩矢诹访子	微笑青蛙子
+四月の雨	四月雨	四月的雨	april showers	你先别急	114514月的臭雨	April Showers	下北泽的雨	伞	别急	别急1	四月的💩	四月的shi	四月的别急	四月的屎	四月的急	四月的粪	四月答辩	我为你撑一把伞	星星出来就划掉	573	阴间歌	阴间的雨	四月的暴风雨	四月的😅	三点饮茶	差不多得了
+Selector	🧚‍♂️	specter	你与我的工口世界	爸爸的雷达	绿女人	绿色女人	选择器	马哇路加强版	马挖路plus	小脸妹	假红谱	绿色的魔法少女	绿魔法少女	蹭星游戏
+ドキドキDREAM!!!	dokidoki	DOKIDOKI DREAM!!!	五对柰子	Dokidoki DREAM	ddd
+ポップミュージックは僕のもの	南通	流行音乐是我的东西	男同	男同歌	男童歌	超市里莎莎	镜子	镜子歌	李女士跳舞
+吉原ラメント	yoshiwara lament	YOSHIWARALAMENTO	吉原	吉原哀歌	吉原拉面	吉原泼妇	吉原拉面头	拉面头	妓院	吉原怨妇
+ねぇ、壊れタ人形ハ何処へ棄テらレるノ？	doll wandering	Doll wAndeRing iN tHe NighTmARe	Ne Kowaretaningyoha Dokohe Suterareruno	人形	坏人	坏人偶	坏人形	暴走p我好喜欢你	呐	极元哀歌	坏人型
+幽闇に目醒めしは	东方躺草坪	东方躺草地	Anything which was awakened to phantom-dusk	东方四个女人躺草地	幽暗	幽暗目醒	幽目	躺草坪	目醒
+Starlight Vision	🌸	星光视觉	樱花灵梦	星光
+Club Ibuki in Break All	club ibuki	ibuki	东方年柄年中	全是大逼绝赞	全是绝赞	绝赞俱乐部	萃香跳舞	西瓜跳舞	绝赞	西瓜
+Phantasm Brigade	博丽灵梦	pb	孔明陷阱	12紫妈
+永遠のメロディ	Eternal Melody	东方蓬千歌	永远	永远的melody	永远的旋律	永远的节奏
+白ゆき	Shirayuki	拿鸽鸡鸣	白雪	白雪歌送武判官归京	拿不拿
+Panopticon	衡水中学	mai当牢	上学	上班	不要再申请没有用的学校别名了 不会通过的	保全派驻	别急12	办公室	圆形监狱	坐牢	大学	大牢	学校	机厅	来坐大牢	牢	牢大	监狱	高中	光明会	环形监狱	吴亦凡	典狱长来了	典狱长
+Sakura Fubuki	🌸💨❄️	fbk	sakura	吹雪	樱吹屎	樱吹雪	白上吹雪	skrfbk
+conflict	🚌	bus	dx公交车	公交车	冲突	标准公交车	对立	康福利克特	沙优
+すーぱーぬこになりたい	超猫	nuko	变成猫	变超猫	想变成猫	想变猫	想要变成超级猫	想要成为super nuko	想要成为超级猫猫	我想变成猫咪	猫猫	粉猫	mafu
+踊れオーケストラ	踊	随管弦乐起舞	舞蹈乐团	康宽	Dance Orchestra
+きらっせ☆ウッド村ファーム	はっぴー酱下乡扶贫	妖精村	木村农场	銚子县	木村	农场
+taboo tears you up	dx淘宝	dx禁忌将你撕裂	taboo	三倍icecream	淘宝	滔搏	禁忌将你撕裂	淘宝泪	他不哭你上
+その群青が愛しかったようだった	群青	群青爱	It seemed that the ultramarine was loved	Sono gunjo	Sono Gunjo ga Itoshikattayouda
+The wheel to the right	Wheel	小鸡鸡伸过来让我锯一下	DJ-MEGA	一块钱2	三块钱	光头强	印度人	右轮	我要杀了你们所有人	欢乐喜锯人	电锯	电锯人	轮子右拧	这谱谁写的	难听	骷髅	电锯骷髅	🛞👉	地雷女喝魔爪	阿三	右转轮	印度人放右边	向右转
+リンカーネイション	lexburner	LexBurner	reincarnation	灵魂转生	烈火战神	轮回转生	转生	Reincarnation
+宿題が終わらないっ！	-Connect-少女与触手编织出的爱	不写作业	作业还没做完	吱吱	宿题	宿题终	触手	作业
+GO BACK 2 YOUR RAVE	g2r	gb2	gb2yr	业界骚然	回去你的2rave	滚回你的波	潮汕金曲	🉐🉐🉐🉐	鸡巴凸	雷神
+天国と地獄 -言ノ葉リンネ-	tengokutojigokukotonoharinne	天国与地狱	天国地狱
+夢花火	梦花火	u咩哈那比	YumeHANABI	乙姬角色歌	最难主题曲	马栏山	马老三	114514	吗哇塞
+オトヒメモリー☆ウタゲーション	乙姫	乙姬	Otohimemory	Utagation
+ラブチーノ	love	love cino	Labcino	猫铃	猫猫铃	loveccino
+ARROW	🏹	箭	箭头	自八大
+バッド・ダンス・ホール	bdh	团长	坏舞厅	奥尔加	bad dance hall	不要停下来	希望之花
+KISS CANDY FLAVOR	kcf	亲亲砍弟佐料	亲甜滴	亲糖口味	小女孩福瑞	小红帽	糖的味道	糖糖	亲嘴糖
+Maxi	🐴😁	max!	嘻嘻马	马克西	马戏	马西	马克思	麦克西	sabi
+相思創愛	soushisouai	创创子	想创死你	相思	相思创爱	相思創爱	相爱创思
+心象蜃気楼	气象楼	Imagined Mirage	Shinsyo Shinkiro	心像楼	心绮楼	心象	心象晦气楼	心象晨气楼	心象楼	心象蜃气楼	蜃气楼	心跳气象楼	哨戒班ll
+光線チューニング	Ray Tuning	Rays Tuning	中二节奏	光线	光线turning	光线调谐	光线tuning	光线枪	中二	光线中二
+Limit Break	有限绝赞	lb	三角符文	界限打击	限制绝赞	限界突破	黄金大三角	破限	LB
+曖昧mind	哮喘	暧昧	暧昧mind	爱maimai
+KING is BACK!!	kib	king is back	Kobe is back	KOBE is BACK!!	你回来了	王回来了	王归	王是背	王者归来	群友回来了	金十段	王的回归	国王是后退	退勤	无氧运动	有氧运动	来一首king is back	king四百	王回
+Ultranova	🏍️	a4纸	摩托车	超新星	A4纸
+GET!! 夢&DREAM	学园帅哥	getdream	get梦	下巴戳死人学园	取得梦和梦	学园handsome	梦	获得梦和梦	锥子脸
+日本の米は世界一	🌾	kib青春版	日本大米世界第一	日本米	日本米世界一	日本绝赞世界第一	水稻	水稻滞销帮帮我们	日本大米我狂炫	必须要有金柯拉	金坷垃好处都有啥	金坷垃	日本农协宣传曲	日本米价世界一	食 其 家	嘉然今天吃什么	日本缺米世界一
+ないせんのうた	内线	内线云1	再见im外星人	好他妈烦	好你妈烦	打电话	没歌	这个地球是一秒都待不下去了
+Starlight Dance Floor	发热错位金曲	夜店魔理沙	大姐姐魔理沙	星光舞厅	星光舞池
+妖精村の月誕祭 ～Lunate Elf	妖精村的月诞祭	妖精村の月诞祭	兔角宴舞曲	大妖精	妖精村	月诞
+Calamity Fortune	cf	CF	dxcf	leaf教你画星星	卡拉米提佛纯	早苗教你画星星	标cf	标准cf	灾厄命运	穿越火线	东风谷早苗	常发	风神录五面道中
+Justified	森林冰火人	正义	牌佬打架	红蓝对决	一半敖丙一半哪吒
+Excalibur ～Revived resolution～	福瑞大战刺球	exca	excal	excalibur	ex咖喱棒	圣剑2	圣剑二	生煎2	福瑞2	耗子传奇2	福瑞跑步2	大圣剑
+ホシトハナ	Hoshi to Hana
+名探偵連続殺人事件	名侦探	名侦探连续杀人事件	柯南	柯南连续杀人事件
+エイリアンエイリアン	👽	alien	Alien Alien	外星人	外星人外星人	奥利奥利安	奥利安奥利安	河南人	河南人我就是河南人	群友	阿里安	alien alien
+My Dearest Song	大提琴	女人拉提琴	我最亲爱的乐曲	我爱歌	生日歌	我最爱的歌	mds
+猛進ソリストライフ！	Mo-shin Soliste Life!	soliste	小提琴	猛进
+Let's Go Away	梦游美国	芜湖	赛车	底特律	daytona
+真・ハンサム体操でズンドコホイ	体操	学园handsome	学园帅哥	帅哥体操	深海男同	真体操	handsome体操
+フラジール	fragile	易碎	易碎品	脆弱	丁亍氵一儿	弗拉记录	我头像
+オーディエンスを沸かす程度の能力 feat.タイツォン	让观众沸腾程度的能力	东方月灯笼	沸	沸程度能力	沸能力	沸腾	沸腾程度	沸腾能力	沸程度
+人里に下ったアタイがいつの間にか社畜になっていた件	996	no no working	人里	人里社畜	社畜	NO NO working	人里下
+ちがう!!!	CHIGAU!!!
+Moon of Noon	水	一块钱3	五块钱	农具做瑜伽	午月	印度人2	星星入门	月儿子	月孙子	牢大	牢大打坐	牢大硅胶	牢大鬼叫	科比坐禅	科比跳舞	科比鬼叫	月之子	印度人磕头	印度高僧	越南	月男	中午的月亮
+チルノのパーフェクトさんすう教室　⑨周年バージョン	⑨	99	9周年	9周年教室	9周年算数教室	baka	cirno ⑨	Cirno 9	Cirno Anniversary	cirno's Perfect Math Class 9 ver	Cirno's Perfect Math Class ⑨ver	dxbaka	九周年	机厅几卡	笨蛋教室	新琪露诺教室	9	圈儿9	⑨舞	9舞	⑨周年
+デスパレイト	desperate	绝望	Desperate
+ようこそジャパリパークへ	Welcome to Japari Park	Youkoso Jyapariparkhe
+ドーナツホール	🍩	DONUT HOLE	甜圈洞	甜甜圈	甜甜圈洞	绿人
+MilK	牛奶	白色液体	12+牛奶	毛力毛力牛奶
+咲キ誇レ常世ノ華	Sakihokore Tokoyo No Hana	常世	常世之华	常世华	永远盛开在世上的灿烂花
+Magical Flavor	mf	milk+op	唐氏味道	魔法味道	魔法风味	MF	milk op	waifu
+白い雪のプリンセスは	The Snow White Princess is
+好き！雪！本気マジック	我去!下雪了!牛逼!
+スターナイトスノウ	Star Night Snow
+Candy Tall Woman	垃圾分类	砍弟搞女人	糖女士	糖果高女士	糖高女	高血糖	高血糖女人
+Signature	签名	签名卡	脏安卓
+人生リセットボタン	dame	Life Reset Button	remake	人生	人生reset button	人生复位按钮	人生重启	人生重启按钮	人生重启键	人生重开	人生重来键	人生重置	人生重置按钮	人生重置键	重开按钮
+しねばいいのに	不如死了算了	你们怎么不去死	去死死算了	明明死了就好了	死了一了百了	死了就好	死了算了	洗呢吧一诺尼	红烧鲤鱼	红鲤鱼与绿鲤鱼	西内	西内吧一诺尼	费玉清	鲤鱼王	死掉就好了	精神状态良好
+もうみんなしねばいいのに	东方难听歌	全寄	全灭	去死吧	大家一起死	大家死了好	大家都去死	如果大家都似了就好了	如果大家都趋势了就好了	帕露西	帕露西鬼叫	很难听	很难听的歌	桥姬	水桥帕露西	要是大家都趋势就好了	趋势	难听	难听难打	骂脏话	大家都死了就好了	帕露帕露
+共感覚おばけ	共感怪兽	共感觉	麻鸡卡油
+麒麟	🦒	70	kirin	淇淋	骑0	青蛙叫
+Credits	信用	学分	18118181181111	天气预报	corporation	cre	pbs	xc-x	信用卡	信誉	制作组	可用点数	安眠曲	提供	点数	1811818118181181111	制作人	11+	阴间歌
+ダンスロボットダンス	↑↓	☝😑👇	👆🏻😑👇🏻	👆👇	dance robot dance	Dance Robot Dance	dancerobotdance	drd	我站在云林	机器人舞	机器人跳舞	跳舞机器人	跳舞机器人跳舞	舞蹈机器人	up side up side down	奶油糖金曲
+アルカリレットウセイ	alkali	Alkali rettousei	Arukari Rettousei	碱性劣等生	莉莉卡	露露卡莉莉卡噜啦哩啦噜啦啦	魔法少女	魔法少女举大棒	愛岛	阿渡
+ドクハク	⚰️	卜夕八夕	极恶	棺材	照相馆	独白	黑人抬棺	枪叔	dokuhaku
+キレキャリオン	carry on	Kire Kyari On	奶包	小电锯	电锯	电锯2	电锯娘	乃保	切下吧carry on
+猫祭り	Neko Matsuri	湖南省省歌	猫	猫寄	猫抓板	猫祭	绝赞101	野兽前辈被猫舔	高清涩图	喵喵喵喵	nyannyannyannyan	🐱🐔	喵喵喵	不开上下镜像打不了	hso	哈寄米
+TRUST	信任	创死他	大脚丫子	湿身少女翘脚吃冰糕	玉足	老冰棍	脚歌	足控	合乎粥礼	小仏凪
+Still	七对奈子	仍然
+fantastic dreamer	素晴
+天狗の落とし文 feat. ｙｔｒ	Tengu no Otoshibumi	Tengu No Otoshibumi feat. Ytr	ytr	天狗	天狗の落とし文	天狗之落	天狗的匿名信	天狗的无名文书	犹太人	天狗落文
+疾走あんさんぶる	Sissou	Sissou Ensemble	疾走	疾走乐队	幽灵乐团	骚灵三姐妹
+Doll Judgment	爱丽丝	ZUN打mai	dj	丁真	人偶	人偶审判	人偶裁判	人形审判	人形裁判	玩偶	玩偶姐姐	玩偶审判	人偶裁决	DJ	娃娃审判	爱丽丝威震天	夹击妹抖
+WARNING×WARNING×WARNING	warning	www	星条旗	条纹过膝袜	注意注意注意	警告警告警告	美国妖精	warning*3	克劳恩皮丝	小丑	非常的野蛮，非常的谔谔
+SPILL OVER COLORS	舞舞舞	🎨	soc	sunnyduck	小画家	小脸妹	水手服小女孩画画	画板	调色板	Tsukasa错位
+Mare Maris	⛵	🚤	stasis	上海	大航海	妈妈死	小白船	小破船	帆船	开船	海面谭	白船来航	船	船歌	贼船	鸭屁股	妈妈船	破船	海底瘫二段	海盗船	好船	郑和下西洋
+シャルル	charles	Charles	三力儿儿	夏露露	查尔斯	汁儿儿	氵节儿儿	三节儿儿
+フリィダム ロリィタ	Freedom Lolita	喂美少女嘘嘘	喂饭	嘘嘘	沙县小吃	洛丽塔	自由洛丽塔	自由的洛丽塔	freedom lolita	lolita	自由小萝莉	免费小萝莉
+バレリーコ	Ballerico	Balleriko	Ballerina Girl	芭蕾	芭蕾舞者
+アウターサイエンス	outer science	Outer Science	次の	界外科学
+REVIVER オルタンシア・サーガ -蒼の騎士団- オリジナルVer.	REVIVER	伝説のオルタンシアの蒼の騎士団！	你妈	歌名很长的那首	苍之骑士团	迪拉熊骂人	骑士团	灼眼白毛	苍骑
+拝啓ドッペルゲンガー	两个椎名立希	DEAR DOPPELGANGER	分身	影分身十字斩	我裂开来	拜启	敬启	敬启我的分身	二重身	炸厕所
+ミラクル・ショッピング	堂吉诃德	miracle shopping	qq	qq企鹅	乱中取胜	企鹅超市	购物	奇迹购物	唐吉诃德
+Kinda Way	kw	健达路	迷你世界	KW
+ラブって♡ジュエリー♪えんじぇる☆ブレイク！！	Love is ♡ jewelry ♪ Angel ☆ Break	lovette jewelry angel break	刺猬	快盗天使break	Love is Jewelry Engel  Break	绝赞天使
+エンドマークに希望と涙を添えて	End Mark ni Kibou to Namida wo soete	Endmark	为结局添上希望与泪水	希望泪	希望累	梦之泪伤	梦泪	筋肉女神	超级棒棒糖	在结尾处添上希望与泪水	希望鱼雷	希望与泪
+ナンセンス文学	latata	Nonsense Literature	sb文学	傻逼文学	废话文学	拍手文学	文学	无意义文学	海底谭文学
+Bang Babang Bang!!!	bbb	BBB	bbbb	大柰子	大胸	太大了	太大了我都看晕了	邦邦	邦邦邦	邦邦邦邦
+Tic Tac DREAMIN’	⏰	睡衣	粉毛睡衣	tic tac
+SPICY SWINGY STYLE	sss	SSS
+砂の惑星 feat. HATSUNE MIKU	Suna no Wakusei	dune	DUNE feat. Hatsune Miku	傻子火星	傻屌惑星	最速殿堂	别急18	山东卫星	杀马惑星	沙之惑星	沙之行星	沙口惑星	沙星	沙比惑星	砂の惑星	砂之惑星	砂之行星	砂惑	砂星	砂比惑星	砂纸火星
+アンノウン・マザーグース	unknown mother goose	Unknown Mother-Goose	不为人知的鹅妈妈童谣	仁王盾	妈妈鹅	鹅妈妈	UMG
+にめんせい☆ウラオモテライフ！	Nimensei Uraomote Life	小埋2OP
+うまるん体操	小埋体操	小埋	体操
+妄想感傷代償連盟	dscf	ghost	MKDR	啊咿呀咿呀	妄伤	妄想	妄想感伤	妄想感伤代偿联盟	海底谭难民营	盲肠大肠杆菌年龄	盲肠肛肠大肠联盟	盲肠肝肠大肠联盟	盲肠肝脏大肠年龄	联盟	阿姨压一压	鬼	初音未来防毒面具	mkdr	初音未来蹲大牢	ftafn	妄感代联	代偿联盟	阿姨压一压～	盲腸肝臓大腸年齢
+LOVE EAST	广东	爱东	爱东方	爱吃	转转
+Fist Bump	索尼克力量
+ENERGY SYNERGY MATRIX	dxesm	dxesm跑	esm	ESM	esm跑	傻吊猫	傻猫出勤	屙屎妹	恶俗猫	标ESM	沙雕猫	神经猫	跑路猫	邮政	饿死猫	沙雕猫l哦？9	跑	からめる	e m s	一只猫拖着另一只猫跑
+Session High⤴	↑	↗️	⤴️	⬆️	session high	high起来了！
+World Vanquisher	ftr6	ftr8	Mother Vanquisher	wv	世征	世界征服者	中二送披萨	噔噔噔噔噔	威猛先生	我想要一张色图	我想要一顿毒打	我想要挨一顿毒打	我的丸求你射	我的碗筷洗	手感噔噔	木琴征服者	来点色图	WV	我的万蝰蛇	三岁小孩都能ap的	FTR6	饮茶先啦	没有那种世征的欲望	wly
+FestivaLight	festival light	milked	三小只	三相之力	你醒了	你醒啦	日服之光	节日光	魔法灯光夜	my waifu
+Brain Power	bass kick	bp	o-oooooooooo	佐助	脑力	脑力量	O-oooooooooo	地精老头	地精小老头
+進め！イッスン軍団 -Rebellion of the Dwarfs-	管子军团	一尺军团	军团	前进军团	小人国	小小兵团	小碗	绣花针	进军团	针	针妙丸	针妙丸军团	矮人军团	一寸军团
+ULTRA B+K	b+k	bk2	S+B	ubk	超级汉堡王	超级bk
+インビジブル	invisible	Invisible	噜啪啪	建筑工地	透明人	透明人间	隐形人
+彗星ハネムーン	Comet Honeymoon	彗星	彗星蜜月	彗星八礻么一冫
+全力☆Summer!	笨女孩	猴式智减法
+keep hopping	kamome sano	kh	一直跳	一起摇摆	保持火拼	跳个不停	沙野
+larva	yoshiki懵逼	栗子头	冰	幼虫	性教育片	拉瓦	源石虫	爆笑虫子	蜜雪冰城	说的道理	说的道理上长蓝的盆	辣蛙	咖喱咖喱	拉垮
+ミラクルペイント	Miracle Paint
+Ievan Polkka	甩葱歌
+初音ミクの激唱	Hatsune Miku no Gekishou	🐔🎤	Gekishou	Intense Singing	The Intense Singing of Hatsune Miku	初音未来的激唱	大葱天使	姬昌	机场	激唱	鸡场	鸡肠	麦霸	初音未来的机场	2代Master33	初音未来的饥肠
+true my heart -Lovable mix-	打电话	李云龙	真我心	true my heart	黄油	童话
+Rodeo Machine	广播	欧内的手	绿手	绿手手	绿皮星星歌	马	绿马
+Arrival of Tears	彩音
+CYBER Sparks	🧹	cs	endtime青春版	反恐精英	赛博火花	赛博炮	魔光炮	魔理沙爆炸	黄色嘉然	电火花
+Xevel	健身房	希尔薇	怎么还没结束	累死人不偿命	邪恶vel	邪恶Vel	黑白双gay	x	xlevel	tatsh	清水大爷
+INFINITE WORLD	📷	天狗拍照	恶心丸	无限世界	文文	射命丸文
+サドマミホリック	Sadomami	SadoMamiHolic	撒币	灵梦撒币	撒钱灵梦	大狸子
+Ragnarok	诸神黄昏	黄昏	太空车	诸神的黄昏	圣战	rag	rag	rag	rag
+このふざけた素晴らしき世界は、僕の為にある	This Messed-Up Wonderful World Exists For Me
+このピアノでお前を8759632145回ぶん殴る	1.14514e+12	114514	1145141919810	1919810	8759632145	一堆数字	我会用这架钢琴殴打你8759632145次	用钢琴撅你1145141919810次	钢琴	钢琴打人	钢琴殴打	钢琴砸人	砸钢琴	钢琴殴
+はやくそれになりたい！	😫	Hayaku Soreni Naritai	I wanna be it	I wanna be it!	想快点变成那个样子	蓝瓶尖叫	音街	音街鳗	想快点成为那个样子	石油王
+フィクサー	fixer	Fixer	修人	牛头人喝酒	黑山羊	黑山羊吃席
+みんなの	兽道	大家的	獸道
+アマノジャクリバース feat. ｙｔｒ	🚸	0梦过马路	ytr	天邪鬼	天邪鬼反转	灵梦过街	灵梦过马路	过马路
+進捗どうですか？	Shinchoku Doudesuka?	进展如何	进度	进度如何	进步	健身	进展	进度怎么样了
+Help me, あーりん！	erin！erin！	Help me arin	帮帮我	帮我	帮我阿李安	彩绿永琳	救我	教我，永琳！	月铃姐妹
+なるとなぎのパーフェクトロックンロール教室	⑨	Naru and Nagi	Naru nagi	Naru to Nagi's Perfect Rock and Roll Class	中二教室	冒牌⑨	摇滚教室	琪露诺的完美算数教室	箱部鸣与小佛凪的完美摇滚教室	彩绿琪露诺	琪露诺	彩绿9	完美算术教室	彩绿教室
+あねぺったん	Ane pettan	月铃姐妹	醋溜便当	彩绿便当歌	Anepettan	贫乳	彩绿便当
+We Gonna Journey	wgj	我们去旅行	我们要旅行	我们去旅游
+FREEDOM DiVE (tpz Overcute Remix)	自由落体	fd	↓	234.56	23456	fdfd	fdmm	厨邦最爱	发癫	科比	自由戴夫	FD	FDFD	五颜六色	昨日に奏でる明日の歌(overcute remix）	雷亚金曲（）	自由坠毁	自由摔死	自由潜水	自由坠机↓↓↓	2310
+SILENT BLUE	↓↑	KohaD	sb	傻逼	四块钱	我	色篮	静屋他弟	静蓝	默蓝	SB	水晶冲天钻	烧饼	群主
+甲賀忍法帖	Koga Shinobu Hojo	Kouga Ninpouchou	The Jouga Ninja Scrolls
+ジンギスカン	成吉思汗	金金金金金	羊肉
+にじよめちゃん体操第一億	🤤	体操	体操一亿	体操第一亿	体操第一億	牵线木偶	拼机必点	氪金曲	nijiyome	MoMent_NT
+花と、雪と、ドラムンベース。	花，雪，鼓和贝斯	🌸❄️	🌸1⃣️🛞	flower snow	Flower, snow and Drum'n'bass.	fsd	fsdnb	Hana to Yuki to Drumn Bass	冬之花	别急6	四月的雪	有好姐妹一起出勤吗	花一轮	花花花花花花一轮	花雪	逼三狼	雪球	🌸①🛞	间奏9秒	昭和金曲	昭和女人	等一个好姐妹出勤	日本ktv	电音老阿妈	阿拉一起你	FAR一轮	花花花花花一轮	21.5Kcal	21.5大卡	花一輪
+Conquista Ciela	cc	光吉猛修	头疼	电脑战机	男人唱歌
+怒槌	椎叶紬	小鸡鸡伸过来让我砸一下	😡👊	😡🔨	Ikazuchi	Rage	怒捶	怒锤	愤怒的锤子	这谱谁写的	光吉猛修	我的脾气	被锤	做披萨	必胜客
+Seyana. ～何でも言うことを聞いてくれるアカネチャン～	akane	seyana	Seyana. ~AKANE's anything ok~	sodayo	不管说什么都在听着的琴叶茜酱	琴叶茜	说的事呢	小茜
+おねがいダーリン	one	ONE	ONEgai Darlin'	Onegai Darling	拜托了，亲爱的	拜托了darling	拜托了亲爱的	拜托了原神	darling
+My First Phone	👴的第一部手机	mfp	中二的雨	别急3	午夜凶铃	喂喂草	小灵通	座机	我的第一部手机	手机	爷の手机	电话	额滴圣剑	打电话	小电话	没发票
+SHINY DAYS	摇曳露营	虾泥爹
+ネ！コ！	1！5！	ne！ko！	NE!KO!	neko	zood	ネコ	流浪猫之心	猫	野良猫	野良与皇女与流浪猫之心	你	猫！
+only my railgun	炮姐	超炮	omr	电磁炮	超电磁炮
+ロールプレイングゲーム	rpg	RPG	日屁股	role playing games
+ヒバナ	7810	fufu遇刺	hibana	HIBANA	rechan	七八十	初音未来被爆头	初音爆头	匕八十	匕八卜	大狙架Miku	大狙架初音	火化	火花	爆头初音	狙击fufu	狙击初音	狙击初音未来	狙初音	肯尼迪	狙击miku	大狙架fufu	匕八力	比巴卜
+ロキ	loki	roki	ROKI	口≠	口丰	口干	㕩	信者	口不等号	口半	ruaki	口串	口土	口不等于
+Money Money	💰	moneymoney	m属性大爆发	富哥v我50	紫苑镇	钱钱	钱钱钱钱钱	马内马内	骂你骂你	金金金金金	来财	🤑🤑🤑🤑	神乐mea
+極圏	🐔⭕️	🐔⭕	KYOKUKEN	sdvx	只因圈	寄圈	急圈	极圈	極圈	鸡圈	鸡犬	极圈儿	SDVX
+Scarlet Lance	朗基努斯之枪	火枪	狗含剑	狗罕见	红叉	红枪	红色紧身裤	狗叼戟	绯红之枪	斯卡雷特之枪	狗叼叉子	粪叉	狗狗咬红枪
+セイクリッド　ルイン	Sacred Ruin	圣墟	圣灭	太鼓达人	肾虚	蓝月亮
+QZKago Requiem	裤子卡狗	奥特曼变身大绝赞	准15	《tpz重磅14.9》	🍆	🍆💳🐶	15+	gdp2	qz	qzingo	qzk	qzkago	假奶害猫	儿简送2	全家	凯尔希vs嵯峨	凯尔希大战嵯峨	凯尔希打嵯峨	合成大舞神	噎死那个羊	四杀	坏牛奶	垃圾箱镇魂曲	大臣vs左大臣	大臣和左大臣	大臣大战左大臣	大臣左大臣互殴	安魂曲	对立大战光光	小丑牛奶	巧克力vs香子兰	巧克力大战香子兰	巧克力干翻了香子兰	巧克力艹翻了香草	平胸猫大战巨乳猫	毒奶	毒奶粉	毒牛奶	牛奶2	牛奶大战	猫中毒	猫打架	猫猫打架	玲芽之旅	甘茄子	白咲琉璃	群主库	茄	茄子	茄子卡狗	茄子猫	铃芽之旅	铃芽户缔	镇魂曲	黑猫打白猫	白毛貓耳樣の敗北	猫咪打架	猫娘打架	假奶害死猫	羊村守护者11	w4喜羊羊对战彩框喜羊羊	喜洋洋与灰太狼	猫中毒	牛奶打架	别踩我的jio	クジカゴ（kujikago	クズカゴ	假奶	期中考	垃圾箱	白茄子	猫中毒	猫中毒	喜羊羊vs暗黑喜羊羊	两只猫打架	猫中毒	毒牛奶害人不浅	垃圾桶安魂曲	Phigros原创曲
+EVERGREEN	eg	一直绿	常绿	常绿树	常青	绿一色	长春	长荣	青春永驻	常青树	长绿
+金の聖夜霜雪に朽ちて	Kogane no seiya sousetsu ni kuchite	圣诞初音
+不思議の国のクリスマス	不思议之国的圣诞节	不可思议	不思议	不思议之国	不思议国	反海底谭	圣诞节	东方圣诞	小海底谭	Fushigi no kuni no Christmas
+Schwarzschild	香水Pro Max Ultra	香水2	schw	S属性爆发	儿简送3	凯旋最爱	史瓦西	四川火娃	四川火娃弱智齿轮队	四川白娃	四川香水	暗黑之盾	火娃	长香水	黑盾	黑色小孩	白娃
+片想いサンバ	单相思桑巴
+ナイトメア☆パーティーナイト	nightmare party night	nightmarepartynight	初音小摩尔	初音月下舞	华	华月	噩梦派对之夜	噩梦派对夜	小丑初音	月下初音	月初音	月球miku	華月	恶魔派对夜	Nightmare Party Night
+結ンデ開イテ羅刹ト骸	八爷	分分合合的罗刹与骨骸	结骸	罗刹	连起来又分开，罗刹与骨骸	罗刹与骨骸	罗刹与骸	分分合合的罗刹与骸	罗刹骸	结罗刹	结开罗刹骸
+Alea jacta est!	niggers fighting	ave mujika	丰川祥子大战三角初华	高松灯大战丰川祥子	🤺	aj	aje	alea	内个	农具打架	农具纠纷	击剑	孤注一掷	尼哥打架	尼哥闹矛盾	广州人	打架	木已成舟	机厅纠纷	炸蛋打架	电摇嘲讽	白人打架	种植园纠纷	种植园纷争	科比肘击乔丹	科比肘击牢大	科比肘击詹姆斯	精分神曲	臀批大战mai批	西海岸火并	骰子已经掷下	骰子已被掷下	黑人击剑	黑人打架	黑人打胶	种植园争端	白人划船	你们不要再打辣	覆水难收	破釜沉舟
+L4TS:2018 (feat. あひる & KTA)	2018	l4ts	伊蕾娜	小奈子伊蕾娜	白毛萝莉	银发女孩	宵崎奏鬼叫
+クレイジークレイジーダンサーズ	185	ccd	二人危险炸弹	女同6	尬舞姐妹2	疯狂疯狂跳舞	疯狂舞者
+【東方ニコカラ】秘神マターラ feat.魂音泉【IOSYS】	[Toho nicokara]Secret God Matara feat.TAMAONSEN[IOSYS]	Secret God matara	东方〇起	东方勃起	秘神	见前	建前
+隠然	隐然	Inzen
+White Traveling Girl	wtg	白旅女	白色旅人	白色旅行女孩	白色旅行少女	萃香	西瓜fumo	伊蕾娜	白游女
+FFT	付费通	傅立叶	傅立叶变换	傅立叶快速变换	傅立叶转换	傅里叶	傅里叶变换	发发图	埃夫爱妇踢	快速傅立叶变换	快速傅里叶变换	狒狒头	狒狒踢	粪粪掏	芳芳痛	肥肥头	疯疯兔	扶扶她	扶芳藤	反复掏	法法踢	fast fourier transform
+-OutsideR:RequieM-	🍜	outsider	吃拉面	吃泡面	吃面	嗦拉面	妹子嗦面	我和我的泡面	拉面	泡面	猫吃面	箱部吃泡面
+イロトリドリのメロディ	Irotoridori no melody	多彩旋律	小仏凪	彩绿之歌	端茶
+奏者はただ背中と提琴で語るのみ	Sosya ha tada senaka to violin de katarunomi	奏者	奏者背后的提琴在说话	提琴	月玲妹妹躺沙发	美少女躺沙发
+雷切-RAIKIRI-	地雷女切手手	两把刀	雷切
+Lost Princess	母猪链接
+敗北の少年	我	败北	败北少年	败北的少年	黑丝破洞	你	ysk
+立ち入り禁止	🚫	后入禁止	后入群主	禁止寸止	禁止进入	立入禁止	禁止	啊疼	痛い	地铁
+お気に召すまま	皆大欢喜	气召
+命ばっかり	inochi bakkari	It's Just Life	Nothing But Life	全是命	只为生命	只有命	命	命没	蓝色男人坐沙发
+the EmpErroR	大便超人	空想	小红小绿坐沙发	nenenenenenene	👫	emp	emperror	俩跳棋	捏捏捏捏捏	电磁脉冲错误	皇帝	群主	皇	您	国王	农夫山泉和怡宝	刘禹锡	the emperor	农夫山泉
+PANDORA PARADOXXX	PANDORA	panadol	空想	古神	天苍苍 野茫茫 风吹草低见牛羊	潘多拉悖论论论	😵‍💫	15	genshin impact	pp	xray	xxx	你游15	儿简送	元梦之星	最水15	原神	噔噔	大学校花	很急	我有抑郁症	推荐乐曲排行榜	新手教程	有手就行	潘	潘你妈	潘多拉	潘多拉悖论	潘小鬼是吧	舞萌最难儿歌	随个15	我有玉玉症	天苍苍	潘多拉魔盒	天苍苍野茫茫	儿歌	您	白潘	你	パンパラ	金曲	潘你马	大家	你游最简单的歌	盒子	15级吃分推荐榜1	最简单15	盘	推荐越曲排行榜
+Believe the Rainbow	🌈	btr	别信彩虹	彩虹	彩虹桥	相信彩虹	告别曲	FULL COMBO 50%	ED	TRACK 5/4	相信彩虹1	track 4/3	dx彩虹	dx相信彩虹	好谱面发表🌈
+Good Bye, Mr. Jack	再见	再见杰克	再见杰哥	我不打叠辣	杰哥	再见叠先生	杰哥不要
+Altale	你先别急	别急2	削除的电线	开心的小曲儿	机器人	机器人钓鱼	漏电电线	电线	阿泰尔	小机器人
+最終鬼畜妹フランドール・S	死亡华尔兹	Last Brutal Sister Flandre S	二妹	二小姐	最终鬼畜妹	蓝蓝路	鬼畜妹	最终鬼畜妹s	最终鬼畜妹芙兰朵露
+ネクロファンタジア～Arr.Demetori	arr	demetori	ネクロファンタジア	亡灵幻想曲	少女幻葬曲	紫妈弹吉他	老太婆弹吉他	八云紫弹吉他	少女幻葬
+Imperishable Night 2006 (2016 Refine)	2006	2016	Imperishable Night	Imperishable Night 2006	永夜抄2006	灵梦玩火	永夜抄	2026	2036	2077	永夜的报应
+終点	b50里有	终点
+WORLD'S END UMBRELLA	世末伞	世界终末雨伞	世界结束雨伞	世终雨伞	世终	世末
+ワンダーラスト	wonderlast	wander last	wanderlast	luka
+End Time	军舰岛	endtime	et	伊岛	最后的老时	嗯了么	嗯得烫	恩德太	恩德檀木	烂尾楼	终焉时刻	结束啦	贤者时间	终时	恩德太姆
+魔法少女になるしかねぇ	马猴烧酒	魔法少女	I must transform to Magical-girl
+Kattobi KEIKYU Rider	kattobi	丁丁电车	丁丁车	京急	京急电车	列车	卡透批来打	叮叮叮	叮叮电车	叮叮车	收到	爱上火车	电车	电车妹	电车娘	电车骑士	京急电铁	叮叮叮叮叮	电车萝莉	开火车
+B.M.S.	bms	光吉	光吉猛修他爹	冰美式	广九皆传攻略	披萨	抱猫神	达美乐披萨	光吉猛修之父	吃披萨	搓披萨	光吉猛修的爹
+TiamaT:F minor	阳光青提	🦍	m T:F	mtf	tf	tfboys	TFBoys	TFBOYS	Tiama T:FBOYS	tiamat	ttf	TTF	健身教练	兄弟提一把	分割处理旋风	剃阿妈 头：发 米诺人	剃阿妈头发	大猩猩	提	提一提	提亚玛特	提亚马特	提亚马特爱抚米诺	提你妈	提你妈妈	提提，提提提	提瓦特	斑马鲱鱼	泡泡玛特	猩手教程	猩猩歌	老马啊老马唉	青春修炼手册	音响火山	音响龙	猩猩	绝赞交互	tf boys	提提！提提提！
+前前前世	Your Name	Zenzenzense	上上上辈子	你的名字	推荐乐曲排行榜
+全世界共通リズム感テスト	Rhythm Sense	判定延迟校正曲	全世界共通节奏感测试
+BLACK ROSE	黑玫瑰
+Secret Sleuth	ss	兔爷快乐歌	秘密侦探	言叶2
+でらっくmaimai♪てんてこまい!	dx主题曲	三森铃子	天手古舞	滴蜡熊	舞萌主题曲	迪拉熊	滴蜡熊大家族	迪拉熊主题曲	熊代主题曲	手忙脚乱	手萌脚乱	豪华舞萌手忙脚乱
+MAXRAGE	😡	交互天堂	很生气	急怒	暴怒	极怒	核按钮	气死绝赞落了	气炸	满怒	绝赞交互	良怒2	超级生气	迪卢克按按钮	迪卢克按炸弹	马克思润菊	怒气冲天	狂怒	贼生气	气炸了	怒砸洗衣机	麻油按按钮
+バーチャルダム　ネーション	virtualdam nation	vn	印度人3	印度赛车	小汽车	月儿子2	爸日儿子	虚拟赛车	赛车	越南	细江赛车	VN
+P-qoq	oppo	qoq	拉面火箭	激光火箭	灯射来红	孔雀	Q宝	火箭	红来射灯
+超常マイマイン	Chojo maimain	Paranormal my mind	咕噜咕噜	大逼圈入门曲	超常	超常maimai	滴蜡熊转圈	旋转迪拉熊
+Crazy Circle	青春エリア	ddlc	多多理财	疯圈	黑喂狗
+STEREOSCAPE	青春エリア	改启动拍	天体观测	玩手机	164	stereotype
+STARTLINER	音击
+♡マイマイマイラブ♡	maimai love	maimailove	maimaimailove	my my my love	sega游戏宇宙一	出mai我的爱	爱情买卖	舞萌痴	章鱼歌	からめる
+一か罰	旺仔摇滚冻	一刀罚	一力罚	一罚	一罰	一加罚
+キリキリ舞Mine	girigiri舞	kirikiri	舞mine	girigirimaimai
+福宿音屋魂音泉	Fukujuku Otoya Tamaonsen	Fukuyadootoya Tamaonsen	Tamaonsen	敬业福	福州温泉	魂音泉	男同温泉	福州男友玉谷泉	基佬泉	土嗨泉
+Now or Never	now or never 没那么难的	non	yoshiki快乐歌	时不我待	机不可失时不再来	现在或从不	机不可失
+Scarlet Wings	redalice	小星星2	小黑姬	猩红之翼	红烧鸡翅	红翅膀子	红翼	鸡翅膀	鸭翅	黑姬	黑姬拔刀	鲜红之翼	绯红之翼	REDALiCE
+Technicians High	甘城	dx科技高	标准科技高	科技	科技很高	科技高	蓝的盆	高科技	高级技工
+魔ジョ狩リ	魔女狩猎	魔狩
+TwisteD! XD	td	TD	xd	退订	dxd	灯小灯
+Blows Up Everything	6级白谱	Asuka最爱	Blows Up	bue	口爆	口爆一切	吹	吹爆	吹爆一切	吹爆牛魔	嘿嘿歌	拆爆	爆	瞎几把吹	全都可以炸完！
+Agitation！	agi	吉他姐2	鼓动
+管弦楽組曲 第3番 ニ長調「第2曲（G線上のアリア）」BWV.1068-2	air on g	air on the g string	aria on g	aria on the g string	g弦	g弦上的咏叹调	二长调	妹妹拉小提琴	智障交互	管弦乐	管弦乐组曲	g弦上	双踩	G弦上的咏叹调	全员恶人	会员制餐厅	人有三大欲望	人間の、三大欲求は	人类有三大欲望
+TEmPTaTiON	mika	temp	他不太深	奶子很小	小天使	小萝莉	小萝莉的诱惑	引诱	百合咲	百合咲mika	百合咲低语	老婆	肯德基六翅桶	诱惑	轻语	鸟加鸟加	小萝莉耳语	摊破忒神	悄悄话	疼破忒肾
+アポカリプスに反逆の焔を焚べろ	Apocalypse	Apocalypse Rebellion	apocalypse rebellious	Apokaripusu ni Hangyaku no Hono wo Kubero	Burn the flame of rebellion on the apocalypse	反逆	反逆焰	暴走p登场曲	向天启敬上反叛的火焰	反逆焰焚	天启	反焰
+玩具狂奏曲 -終焉-	Gangukyousoukyoku -Shuen-	Toy Frenzy	Toy Frenzy -The end-	Toy Madness	Toy Rhapsody	玩具	玩具狂奏曲	玩具狂揍我	第五人格
+Titania	✌	✌🏻	arisu=LP	体坛	天卫三	我老婆	江江	江江我是有栖	江江比耶	泰坦尼亚	缇坦妮娅	蓝毛小萝莉	蓝毛萝莉	踢他娘	泰坦	🐻👧✌	蓝色小浣熊	天天尼亚	塞泰坦尼亚
+BOKUTO	→↓→↓→↓→↓	临兵斗者皆阵列在前	剥裤头	波裤头	破裤头
+立川浄穢捕物帳	Tachikawa	Tachikawa Jyosei Catch Book	Tachikawajo Torimonocho	快手极速版	捕物帐	有损录音	立川	立川净秽捕物帐	青岛侦探事务所	单手拍
+CHOCOLATE BOMB!!!!	巧克力炸弹	巧克力爆	巧克力蚌埠	答辩2
+METEOR	流星	陨石
+LOSER	八爷	樱子	我	我不	你	猴子	大家都	他	鲁蛇
+U.S.A.	usa	美国	阿美莉卡	阿妹你看	come on baby
+HOT LIMIT	🥵	光吉熊	太烧辣	捆绑滴蜡熊	火辣限制	热限	热限制	红熊	裸足	阳性	热极限	摇可乐
+新宝島	新宝岛	恐龙妈妈	丁宁	林檎电脑	提笔忘字	五大流氓	仙人指路	袭击主唱	光翼展开	战术踉跄	龙卷风偷袭停车场	一睹芳容	物业敲门
+メルト	melt	Melt	meruto	x儿卜	熔化	简笔画	融化	啦啦啦啦啦啦啦	X儿卜	梅鲁特	咩露拖
+メルティランドナイトメア	melty	melty land nightmare	Melty Land Nightmare	meltyland	可爱歌	小粉	春卷饭	梦魇
+アウトサイダー	outsider	局外人
+アディショナルメモリー	回忆追加	额外记忆	dx阳炎
+ジャガーノート	juggernaut	不可抗力
+ナイト・オブ・ナイツ (Cranky Remix)	cranky也要当夜骑	dx夜骑	Knight of nights cranky remix	kon cranky	night of knights	Night of Knights cranky remix	nok	nok cranky	nok2	十六夜咲夜	咲夜	夜骑	夜骑2	夜骑remix	remix夜骑	喜羊羊	cranky夜骑	sakuya
+Bad Apple!! feat.nomico (REDALiCE Remix)	🍎	Bad Apple Redalice	Bad Apple Redalice Remix	dx坏苹果	坏苹果remix	红苹果	小红坏苹果	坏苹果蹦迪版	烂苹果
+Strobe♡Girl	闪烁少女
+Destr0yer	----------☀️◻	d0	D0	destroyer	Destroyer	别急10	削除	削除光线	削除射线	射精方块头	方块头	标d0	毁灭者	消除男	驱逐舰	一一一一一口	削除x2	方脑壳
+グリーンライツ・セレナーデ	Greenlight Serenade	Greenlights Serenade	绿光	绿光小夜曲	魔法未来2018	墨芷	小夜曲	拆机
+デンパラダイム	denparadigm	Denparadigm	传送带	木棍入侵正方形他家	电波	电波范式	带带带
+骸骨楽団とリリア	👉🏻😕👈🏻	Skeleton Orchestra	Skeleton Orchestra and Lilia	腿子	莉莉亚	骸骨	骸骨乐团
+星屑ユートピア	Hoshikuzu Utopia	Stardust Utopia	星屑	星屑乌托邦
+アマツキツネ	👍😁👍	Amatsukitsune	刻俄柏	天狐	天狗	起飞
+徒花ネクロマンシー	Adabana Necromancy
+目覚めRETURNER	Mezame Returner
+Little "Sister" Bitch	bitch	婊子	小sb	小妹妹臭婊子	小婊妹	小婊子	碧池	你	小婊砸	小姐婊
+Yakumo >>JOINT STRUGGLE (2019 Update)	2019	yakumo	Yakumo joint striggle	八云	八云一家	八云紫	压裤摸	把你妈妈抓走	把你麻麻抓走
+げきオコスティックファイナリアリティぷんぷんマスタースパーク	东方长名歌	东方名字很长	东方曲名过长	Geki Okostic Finality Plump Master Spark	生气了	魔理沙和灵梦背靠背
+CocktaiL	鸡尾酒
+太陽系デスコ	Solar System Disco	太田顺也	太阳系	太阳系disco	拍手	呱唧呱唧	太阳系迪斯科
+だからパンを焼いたんだ	🍞	初音烤面包	烤面包	烧	烧面包	白葱烤面包	铜锣烧	面包	所以烤了个面包
+アカリがやってきたぞっ	akari	Akari	Akari ga yattekitazou	Akari has Arrived	akari来了哦	来	来了	来了哟	来了哦	绁星灯	阿卡丽	阿卡莉	小灯	光在这里	gyari
+プナイプナイせんそう	pnpn	punai	punaipunai	噗奶	噗奶噗奶	立秋	潮汕神曲
+デビル☆アイドル	devil	devil idol	恶魔偶像	飞天小女警
+quiet room	qr	男同2	静屋	自习室
+Jump!! Jump!! Jump!!	jump	三蹦子	元气少女蹦蹦蹦	跳三下	跳跳跳
+サンバランド	仰卧起坐	佐藤	标准仰卧起坐	标准桑巴	桑巴	面具男	体操	科目三	俯卧撑
+サヨナラチェーンソー	Sayonara Chainsaw	再见电锯	电锯	电锯人	电锯缘兔
+イカサマライフゲイム	Ikasama	Ikasama Life Game	lifegame	人生游戏	作弊生存游戏	虚伪人生游戏	骗人的lifegame	骗人的人生游戏	骗人的生命游戏	老千
+Halcyon	🐔	dx翡翠鸡	sd🐔	标准翡翠鸡	标翡翠鸡	翡翠鸟	翡翠鸡	翡鸡杯	脆皮鸡	平静	二路公交车
+だれかの心臓になれたなら	I want to be your heart	如果能成为谁的心脏	安倍晋三	心脏	若是能成为谁的心脏	心脏p	如果能成为谁的心脏的话
+幾望の月	Kibou no Tsuki	几把之月	几望	几望之月	几望月	望月	鸡王之约
+39みゅーじっく！	39	39music	39音乐
+STEEL TRANSONIC	🐔	st	刚铁鸡娘	机娘	答辩	粉毛机娘	粉毛机甲	红色有角三倍速	超音钢	钢跨音速	钢铁回音	钢铁机娘	钢铁超音速	钢铁音速	钢铁鸡娘	铁音速
+Flashkick	flash	我tm一个滑铲	闪击	闪电旋风劈	闪电旋风踢	闪踢
+Stardust Memories	🌎	🌍	🌏	地球	星尘回忆	星尘记忆
+My My My	三我	3my	3C认证	mrccc	mymymy	买买买	我我我	我的我的我的	麦麦麦	mr.c	洗衣机	ccc
+UniTas	油腻塔司	吉他女神	吉他姐	吉他神	有你他死	电吉他	吉他双神	油腻他死
+ここからはじまるプロローグ。	kokokara hajimaru prologue	Kokokara Hajimeru Prologue	prologue	Prologue	prologue starting	The prologue that starts from here.	ああああ	从此开始的序章	你福瑞控是吧	像素福瑞	兽太	口口一夕	圣剑0	小圣剑	小狐狸	小生煎	小福瑞	序言	序章	松鼠	狐狸剑	猫圣剑	由此开始的序章	电动福瑞控	电子福瑞	福瑞举剑	福瑞勇者	福瑞找老婆	福瑞控	小福瑞找对象	从这开始	哒哒哒	福瑞	小心售人控	兽人控金曲	圣剑3	从这里开始的序章	小兽太
+絡めトリック利己ライザー	dx+主题曲	利己	华代主题曲	络利己	绿头人	纠结把戏自私的造反者
+モ°ルモ°ル	Modoru Modoru	molmol	morumoru	么么	毛儿	毛儿毛儿	毛肚儿毛肚儿	蹦蹦炸弹	摸了摸了	モルモル	毛二毛二	摸噜摸噜
+ブレインジャックシンドローム	青春エリア	Brainjack Syndrome	利香	吉他	头脑风暴	头脑风暴综合症	话筒姐	墨镜女	墨镜女歌手
+共鳴	青春エリア	共鸣
+Ututu	青春エリア	胡图图
+シエルブルーマルシェ	青春エリア	Ciel bleu marché	dx白绯色	做饭	小厨娘	眼镜妹	青空市场
+GRÄNDIR	gr	grandir	GRANDIR	德文	果然第二	瓜点	甘地
+封焔の135秒	The Flame Seal 135 Seconds	135	135 seconds	135 seconds of flame	135秒	Fuen no Hyakusanjugobyo	亲妈死去的135秒	免疫系统大战新冠	大战老头	封号的135分钟	封烟	封焰	封焰135	封焰的135	封焰的135秒	封焰的2分15秒	琴柳大战赫拉格	老变态烤两脚羊	老头大战少女	老逼登大战小仙女	虎弟大战杀马特团长	间奏の135秒	美国大选	机厅着火
+渦状銀河のシンフォニエッタ	sinfonietta spiral galaxy	🚽	抽水马桶	涡状伊岛	涡状台风	涡状银河	涡状银河的小交响曲	涡状马桶	漩涡马桶	银河	马桶	冲水马桶
+ヤミツキ	Yamitsuki	痴迷
+ワードワードワード	dx海底潭	dx海底谭	HudeLou	touch海底潭	touch海底谭	word word word	www	二位一体	哇多哇多哇多	豪华海底潭	wordwordword	马里亚纳大海沟	海沟	海底谭plus	豪华海底谭
+Valsqotch	金色的熊	kop2019	kop1	valsq	别急7	大金熊	熊大	迪拜熊	金库玛	金熊	金色滴蜡熊	银币	黄金滴蜡熊	黄金熊	黄金迪拉熊	金色迪拉熊	金迪拉熊	极巨化黄金迪拉熊	黄金大逼脸	黄金马桶熊	金熊惨案
+最強 the サマータイム!!!!!	saikyo the summertime	saikyou the summertime	最强	泳装
+UTAKATA	拔刀	泡沫	维吉尔
+タテマエと本心の大乱闘	dairantou	tateyama	任天堂明星大乱斗	场面话与真心的大乱斗	大乱斗	本心	本心大乱斗
+はちみつアドベンチャー	Hachimitsu Adventure	Honey Adventure	はちみ	哈基米	大小福瑞	小孩坐大车	小孩开大车	熊妈妈	蓝色侏儒小熊	蜂蜜adventure	蜂蜜冒险
+popcorn	🍿	企鹅物流	企鹅警长	出警	爆米花
+ハム太郎とっとこうた	🐹	仓鼠	哈姆	哈姆太郎	老鼠	陈睿	鸭脖	鸭脖太郎	鼠抓板	鼠鼠
+だから僕は音楽を辞めた	Moonlight	That's Why I Gave Up On Music	That's Why I Quit Music	エイミー	于是我放弃了音乐	仆音乐辞	团长	奥尔加	所以我放弃了maimai	所以我放弃了音乐	所以我放弃了音游	放弃音乐	祥子	音辞
+ラブ・ドラマティック feat. 伊原六花	辉夜	辉夜大小姐	辣妹迷死他	疯婆子
+異世界かるてっと	Isekai Quartet
+いつかいい感じにアレしよう	让我们感觉良好的一天	魔物
+ビターチョコデコレーション	🍽️	米开朗基罗	苦巧	苦巧克力	苦巧克力装饰	谁知盘中餐
+アンドロイドガール	Android Girl	仿生少女	安卓女	安卓女孩	安卓少女	琪亚娜	androidgirl	Android girl	机器人少女
+スターリースカイ☆パレード	starryskyparade	女同5	星空游行
+スロウダウナー	slow downer	up down	上下
+クレイジー・ビート	crazy beat	crazy beats	crazybeat	crazybeats	双人蹦迪	狂乱节拍	狂热节拍	致命节奏	疯狂节拍	切里败
+バイオレンストリガー	jerry	megumegu	Violence Trigger	危险扳机	暴力扳机	暴力拆机	暴力板机	杰瑞	陶大冲
+グラーヴェ	grave	Grave	hello	嘟嘟嘟
+KILLER B	杀手B	杀b	王女	杀手b
+すーぱーぬこになれんかった	变不成猫	无法成为超级猫猫	没变成猫猫	没能成为超级猫猫	猫咪	蓝蓝路	超猫2	超级猫
+アスヘノBRAVE	brave
+深海シティアンダーグラウンド	呜哇啊啊啊	深海	深海undergroundcity	深海地下城	深海地下都市	深海都市	深海cityunderground
+表裏一体	表里	表里一体
+Catch the Wave	👆🏻👌🏻	10	ctw	你是0还是1	你是1还是0	我是👆🏻有👌🏻吗	我是1找个0	我是1有0吗	抓个波	抓波	抓波浪	抓浪
+ソリッド	solid	丰川祥子	大穷比	大穷逼	大穷鬼	大贫民	我	我也	穷逼
+全力ハッピーライフ	🐰👋	Full Power Happy Life	Zenryoku Happy Life	全力	全力happylife	全力哈皮	全力幸福	吉他女神2	铃仙
+Oath Act	ocean cat	宣誓行为	涩涩青蛙子	诹访子
+Witches night	东方紫发女	古明地恋	恋恋	魔女之夜
+Drive Your Fire	大姨父	开你的火	极地大冲击	红色电音
+wheel	悠哇悠哇	猫车	轮子	马挖路2	dx马洼路
+Black Lair	bl	公主斗恶龙	美女翘屁股砍龙	黑巢
+energy trixxx	xxx	美友姬	美有姬	能量xxx	能量三角	能量三角形	能量叉叉	马娘
+NULCTRL	cxk	nc	NTR	nul	一根星星	努力唱跳rap篮球	唱跳rap篮球	无控	没有唱跳rap篮球	牛个戳	牛啃臭	红蓝	脑残	无效控制
+アトロポスと最果の探究者	最果	最果探究者	大奶子伊蕾娜	大奶子依蕾娜	大柰子伊蕾娜	大柰柰伊蕾娜	探究者	翠果	阿特洛波斯与尽头的探究者	大奈子伊蕾娜	伊雷娜
+Entrance	入口
+Maboroshi	马菠萝屎
+ウマイネームイズうまみちゃん	umy	哆啦a梦	多啦A梦	米格玛	美味棒
+馬と鹿	马和鹿	笨和蛋	马鹿	傻之逼	傻与逼	八与嘎	傻和逼	群主	马与鹿	你	Bug Yellow	马路
+ぼくたちいつでも　しゅわっしゅわ！	splash主题曲	丸山彩	休哇休哇	修哇	修哇修哇	咻哇	咻哇咻哇	彩黑	柠檬熊	雨刮器2	雪碧
+Boys O’Clock	男同时刻	男同时间	男同时间到	男孩时间
+居並ぶ穀物と溜息まじりの運送屋	拔小蒜	勇敢勇敢我的朋友	木雕2	木雕鲶鱼2	老汉拉车	老汉推车	老爷爷	老登拉车	运送屋	进击的骆驼祥子	卖炭翁	骆驼祥子	老农民我的乡亲	老头拉车
+ARAIS	阿赖斯	鸟人	鸟加鸟加
+Aetheric Energy	❤	ae	以太能量	应用工程	壱王
+Komplexe	complex	你要结婚了	大黑姬	雄氏老方	黑姬	黑姬唱歌
+Beautiful Future	大好前程	无一物啊啊	美丽未来	美味	美好未来	雷炎
+Mutation	仁王	变异	变种	木糖醇	突变	mtt
+オリフィス	青春エリア	老公我想你了求你回来看看我	orifice	流量计	画家	美术生	黄毛美术生
+ユメヒバナ	青春エリア	yumehibana	掉毛小哥哥	梦火花
+REAL VOICE	真声	青春エリア	realvoice	本音	真唱	真声音	真音
+パラボラ	青春エリア	parabola	二次元科比	体育生	抛物线	球男	白毛体育生	篮球男孩	网球王子	蓝毛体育生
+Regulus	ysk扭屁股	yoshki扭屁股	ysk热舞	一视频的萝莉哦	八云蓝	大奶子	大扎修女	大欧派姐姐	天界大奶	奶子很大	如龙4	星锑	热古拉斯	热咕噜	热轱辘丝	狮子座α	白又大	白法院	轩辕十四	雷古勒斯	巨乳	瑞咕噜	雷古鲁斯	ysk扭大腚	大奈子姐姐
+ワンダーシャッフェンの法則	Wander Schaffen	wander schaffens law	wonder schaffen	Wonder Schaffen no Housoku	wonder schaffens law	Wunder Schaffen	wunder schaffens law	创造奇迹的法则	小扎萝莉	小萝莉法则	法则	炼铜法则	萝莉法则	萝莉鸟加鸟加
+BIRTH	÷↑	Koha-D	出生	初生	妈妈生的	我	我还	生日	畜牲	畜生	诞生
+シアトリカル・ケース	case	tc	theatrical・case	侦探跳火车	戏剧性案件	言叶3	黑玫瑰3	戏剧性事件
+ステップアンドライム	stepandlime	来来来	间谍过家家
+届かない花束	传达不到的花束	届不到的花束	届花束	花束	送不到的花束
+YURUSHITE	shit	YURU****E	二郎腿	你妈个逼	你是屎	厕所女王	原谅我	回娄底	大司马	嬲你妈妈别	我要打飞机	摇了我吧	摇晃的红酒杯	火神青春版	犹如屎	红酒	红酒杯	萨塔妮亚	萨塔妮娅	逢坂茜	饶了我吧	原谅
+ポケットからぬりつぶせ！	口袋涂鸦
+トリドリ⇒モリモリ！Lovely fruits☆	柏木美亚	喵呼	可爱水果	可爱的水果	合成大西瓜	水果	水果摊子	水果歌
+Desperado Waltz	亡徒华尔兹	华尔兹	噔噔噔	第三只手	荷官发牌
+宛城、炎上！！	a9	enjo	enjo enjo	enjou	enjou enjou	enjyo	enjyo enjyo	hold2miss	大宇宙	安卓	安卓安卓	宛城	宛城炎上	按脚	摁jio	摁脚	曹操盖饭	炎上	皮炎平	美团大战饿了么
+Climax	🐍🐳	stop playing maimai	别打舞萌	可莉max	妖艳魔男	性高潮	我有很多手指	犀利麦克斯	老公	莓茶	阿莱乌斯	高潮	魔男
+レーイレーイ	re-i re-i	抓鬼	潇洒哥和黑大帅
+町かどタンジェント	Machikado Tangent	Town corner tangent
+紅蓮華	Demon Slayer	Gurenge
+お願いマッスル	Onegai Muscle
+Virtual to LIVE	vtl	巴恰兔奶	彩虹社	彩虹社歌	管人歌	管人痴	虚拟到活	雨刮器
+命に嫌われている	Hated By Life Itself	命嫌	嫌命长	被生命厌恶	被生命所厌恶	被生命所厌恶着	这你他妈都不急
+アンクローズ・ヒューマン	daybayday	unclose human	unclosed human	Unclosed Human	unclosehuman	敬爱	玻璃心	永不落幕的人
+乙女解剖	地雷男	🩻	Maiden Dissection	Otome Dissection	Otome Kaibou	乙女	乙女姐婆	紫璃	解剖
+絶え間なく藍色	无尽之蓝	无尽的蓝色	无尽蓝色	绝绝子蓝色	绝蓝	绝间蓝	绝间蓝色	蓝色	小海底潭
+ガランド	airhead	garando	别急3.5	噬菌体	摸你摸你	易拉罐	空气头	罐头章鱼	触手	黑色树枝
+とりあえずアナタがいなくなるまえに	📺	小电视	总之在你消逝之前	电视	电视机
+明星ギャラクティカ	丢人银河号	方向盘	明星	明星卡拉狄加	明星银河号	超级方向盘	银河号
+絶対にチョコミントを食べるアオイチャン	Aoi	Aoi chan	chocomint	chocomint ice	Mint choco	冰淇凌	冰淇淋	巧克力冰淇淋	必须要吃薄荷巧克力味冰淇淋的琴叶葵酱	绝对	绝对食	薄荷巧克力冰淇淋	巧克力薄荷冰淇淋	牙膏	琴叶
+デリヘル呼んだら君が来た	Deriheru	Deriheru Yondara Kimi ga Kita	When I Arranged For A Call Girl, You Appeared	卡姿兰大眼睛	叫了应召女郎结果来的是你	呼君来	粉毛
+ベノム	🙅	venom	Venom	朱云杰	朱总	猛毒	达咩
+マネマネサイコトロピック	manemane	manemane的精神回归	两人玩手机	二重身	分身	模仿模仿	模仿模仿Psychotropic	模仿模仿的精神回归	精神回归	马内马内
+アスノヨゾラ哨戒班	Asu no Yozora Shoukaihan	dx哨戒班	dx烧鸡班	Night Sky Patrol of Tomorrow	哨戒班	明日的夜空哨戒班	烧鸡班	小哨戒班
+悪戯センセーション	Mischievous Sensation	二小姐	大妹	大小姐	恶戏	恶戏Sensation	淘气感觉
+Paranoia	妄想症	金色灵梦
+絡繰りドール	奶奶狐狸	絡繰	络繰	络缲	老太婆和九尾狐妖	老奶奶与狐狸精
+物凄いヴァイブスで魔理沙が物凄いラップ	vibes	夜店魔理沙	妹红吸烟	妹红抽烟	消声器	物凄	藤原妹红抽大烟	魔理沙抽烟
+Sweet Requiem	redandblue	sr	塞钱	灵梦镇魂曲	甜蜜安魂曲	甜蜜镇魂曲	红蓝灵梦	镇魂曲	甘美镇魂曲~永夜遐想
+Dive into The Sky ～initialized～	dive	潜入天空	风神少女	dive into the sky
+BATTLE NO.1	掰头囊波晚	我脸上有交互吗	1	13p	14个老公	bn1	tanoc	一战	好多人	干架第一名	战地1	战地一	战斗，爽！	战斗爽	战犯合影	打架第一	打架第一名	打胶第一名	按摩	第一名	第一战	缝合怪	掰头南波万	拳皇	小 心 兔 头	掰头囊波万	掰头南波湾	白头南波湾	Amo Amo
+Ether Strike	📢0	es	my guiding star	乙醚罢工	以太冲击	以太攻击	吾之指路明星	白内障	零光	零光吹喇叭	乙醚冲击	零光吹唢呐
+Cyaegha	古神语	咲弥	咲弥削吐司	完型填空	完形填空	完形填空答案	绿魔王	花绿青	赛伊格亚	赛洛图亚	赛落图亚	过不了审的曲绘	dabcabcd
+Grievous Lady	Grievous	gl	哈哈	对立	对立拉窗帘	对立拿窗帘闷死我	病女	痛苦的女士	老弱病残女	伞对立
+c.s.q.n.	必要条件	😐	😑	csdn	csgo	csqn	nahc2o4	NaHC2O4	冲上去鸟	出生青年	厕所七年	厕所青年	吃屎去哪	城市青年	撤硕缺你	操死亲娘	测试亲娘	碳酸氢钠	老八	草酸氢纳	草酸氢钠	超市倩女	超市琴娘
+カラッポ・ノンフィクション	空白的非虚构故事	Karappo Nonfiction	创世纪	彩色纪实文学
+emomomo	🤔	e3mo	emo	恶魔摸摸	网易云	emoji	黄脸
+Arty Party	ap	arty	artyparty	usao和他的狐朋狗友	usao派对	丁真和他的动物朋友	丁真和他的动物朋友们	丁真派对	丁真银趴	动物园	动物派对	动物银趴	基佬派对	小动物开银趴	小动物淫趴	小动物银啪	小动物银趴	小动物音趴	我和我的动物朋友们	狐朋狗友	男同派对	粉兔	纵连派对	银趴	阿姨爬梯	usao和他的动物朋友
+Jörqer	joker	jorqer	Jorqer	pvq	qer	别急1.5	周可儿	小金熊	猫头鹰
+Sqlupp (Camellia's "Sqleipd*Hiytex" Remix)	sqlupp	失去了屁屁	孽蜥	手速疯批	色情撸屁屁	色情露屁屁
+felys -final remix-	fely	felys	凤梨酥	开花歌	菲利斯	非礼死	飞叶子	飞雷神
+自傷無色	自伤无色
+Prismatic	⑨	琪露诺	🤗	你先别急	棱镜
+≠彡"/了→	星际传奇	→	≠	kimitour	キミツアー	不等于三撇双引号斜杠了右箭头	你爹来了	你爹来了→	你爹来咯	你爹来喽	你的旅行	太空熊	机密a	机密A	水熊	火箭熊	爹	绝赞天堂	绝赞来了	绝赞来咯	绝赞熊	你跌来了	太空迪拉熊	Kimitour	Kimitsua
+BREaK! BREaK! BREaK!	全是绝赞的bbb	光bbb	宴bbb	bbb	爆爆爆	崩坏三	break fast	绝赞绝赞绝赞	全大p	2550！2550！2550！	3b	break	break!break!break!	kop2	三个绝赞	三绝赞	不不不	仨绝赞	哇，全大P	哔哩吧啦白	哔哩啵拜	哔啵吧	哔啵拜	哔啵掰	哔波掰哔波掰	啊？全小p？	大b歌	天赋佬我草爹	天赋佬我超爹	崩三	崩崩崩	我超，全大P	我趣全大p	泉此方！泉此方！泉此方！	爆！	爆！爆！爆！	碧波白碧波白	绝赞³	缝合怪	苹果菠萝派	落落落	血脑屏障	逼波掰	kop2020	全大癖
+Heavenly Blast	fd3	hb	天暴	天爆	皇冠2	皇冠二	蜜雪冰城	跟你爆了	黑芝麻汤圆	汤圆	史莱姆王
+Paradisoda	小solips	soda	sp+主题曲	splash+主题曲	splashplus主题曲	侧漏	天堂汽水	天堂苏打	快乐水	泳装乙姬	苏打	苏打天堂
+VANTABLACK RAVER	⚡乙姬⚡	上单乙姬	乙姬给你一锤	吴乙凡	放电乙姬	狂暴乙姬	电音乙姬	电鳗乙姬	红眼乙姬	黑乙姬	黑化乙姬
+時計の国のジェミニ	时之国	时计	时计之国	时计国	时针	时针之国	时针国	时钟	时钟之国	时钟国	石鸡锅	钟表之国	Tokei no kuni no Gemini	Gemini in Clockland
+Xenovcipher	冰火人	异种密码	挠头怪	棺材板	泽拉斯	终极猎手	远古巫灵	飞升b	小蓝人
+星めぐり、果ての君へ。	青春エリア	🥺	Hoshimeguri	Hoshimeguri Hateno Kimihe	星斗流转、赴你为终	星果	星果君	星间巡游致尽头的你	星斗流转
+スローアライズ	青春エリア	slowarise	SlowArise	鲸鱼情侣	slow arise	慢排列
+チエルカ／エソテリカ	14+的尾杀	青春エリア	chieruka/esoterika	4/5	cerca/esoterica	チエルカ/エソテリカ	企鹅卢卡	倒立消防员	切噜卡	千工儿力	呐	呐呐呐	呐呐呐呐	四个日本字五个日本字	四个日本字左斜杠五个日本字	四个日本字斜杠五个日本字	四个日本字杠五个日本字	四个日语字不会念斜杠五个日语字不会念	四日本字/五个日本字	宫下游	小绿人	工力工力	捏	探寻/秘密	探寻秘密	摔倒	擦玻璃	条形码	消防员	渊下宫	铅汞	黄鼠狼	Cierca/Esoterica
+生命不詳	unknown life	青春エリア	不知死活	半死不活	新手还打8	死不明白	生命不详	生母不详	那你摸哪里哟
+Never Give Up!	nevergiveup	NeverGonnaGiveYouUp	ngu	rickroll	不给上	乃8给8	从不给上	你被骗了	永不放弃	永不言弃	永远不给上	绝不认输	never gonna give you up
+Starry Colors	杀马特团长vs虎哥	斯大林格勒	星之彩	星彩	星色	魔爪
+ほしぞらスペクタクル	Hoshizora Spectacle	奏音	巫贼	星球妹	星空奇观	星际奇观	水母	水母妹	水母姐	水母娘	珊瑚宫心海
+VIIIbit Explorer	奶猫2	14*3/2+4bit Explorer	5*8-30/2+3bit	8bit	8bit explorer	8bit浏览器	8比特	8比特浏览器	byte	dx八比特	viiibit	vlllbit explorer	八位探索者	八比特	八比特浏览器	八比特管理器	大手子	巴比特	标8bit	标准8bit	标准八比特	标准浏览器	浏览器	海葵姐
+Last Samurai	50	最后的急	11月的雨	dx四月雨	lastsamurai	last炫	六月的答辩	六月的雨	六月的食	六月雨	最后武士	最后的武士	别急5	十一月的雨	年末的雨	拆弹	星星武士	武士	绝地武士	黄金船	大姬
+蒼穹舞楽	Soukyu Bugaku	Yukyu Buraku	斗破苍穹	神里绫人	苍穹	苍穹舞乐	菅穹舞乐
+AMABIE	阿骂白	abie	啊妈逼	啊麻痹	没妈	阿妈别	阿妈比	阿玛别
+オーケー？　オーライ！	？！	3q	ok	Ok Alright	Okay Alright
+サヨナラフリーウェイ	Sayonara Freeway	再见	再见高速公路	我有抑郁症	抑郁症
+単一指向性オーバーブルーム	Overbloom	Unidirectional Overbloom	单一	单一手癖性	单一指向性	单向性	大额头	开花
+みなえをチェック！	Minae wo Check	口水歌	指挥棒	注目	美苗
+ハジマリノピアノ	Hajimari no Piano	yyut	yyut教你扫键	最初的钢琴	哈吉玛丽弄钢琴	钢琴
+BOUNCE & DANCE	bounce &amp; dance	bounce dance	又蹦又跳	小星	小白兔	弹力舞	弹舞	弹跳	脚臭
+Kiss Me Kiss	kiss	kissmeass	qwq	亲我亲
+MEGATON BLAST	mb	m属性大爆发	华尔兹2	威震天爆炸	早濑优香	朝比奈真冬	核爆	百万吨爆	百万吨爆炸	高濑梨绪
+Splash Dance!!	splash dance	喷射舞	泳装2	爽舞
 インフェルノ	Inferno
-Oshama Scramble!	🥛	dx牛奶	dx奶	dx奶猫	oshama	o杀妈	喝奶	牛乳	牛奶	牛奶猫	巧克力与香子兰	大臣与左大臣	哦啥马上吃让明白了	哦杀妈	丰胸奶	俩老婆	奶猫	标牛奶	标奶	热辣大飞机
-クレイジークレイジーダンサーズ	185	ccd	crazy crazy dancers	crazycrazydancers	女同6	小kib	二人危险炸弹	魔理沙帕秋莉贴贴	尬舞姐妹2	疯狂舞者	疯狂疯狂跳舞
-あなたは世界の終わりにずんだを食べるのだ	Anata wa Sekai no Owari ni Zunda o Taberu no da	You will eat Zunda at the end of the world	海鲜味毛豆	在世界末日吃掉了俊达	俊达萌打电报	俊达萌被吃	俊达萌发电报	食终孤独	世界终食	世终俊达	摩斯密码	摩斯电码	你在这世界的终焉，吃下了俊达
+おジャ魔女カーニバル!!	你不准玩了	你拆机	光吉猛修	光吉猛修小魔女	小魔女	小魔女嘉年华	就你小子删我	就你小子拆机	就你小子拆机是吧	魔女
+秒針を噛む	咬针
+タケモトピアノCMソング	0120370009	0800	cm	CM	卖钢琴	原谅你了小鬼	广告	广告歌	机厅老板快乐歌	猫和老鼠开头	电话号码	竹本钢琴	超级变变变	钢琴广告	效率曲
+乙女のルートはひとつじゃない！	Otome no Route wa Hitotsu Janai!
+電話革命ナイセン	电话革命
+ネガティブ進化論	👎	👎🏻	negative	弟中之弟	弟中之弟进化论	消极进化论	达尔文	进化论	沈阳大街
+雨とペトラ	☂	Ame to Petra	Rain and Petra	伞	佩特拉	雨	雨与佩特拉	雨伞	雨和佩特拉
+永遠にゲームで対戦したいキリタン	Eien ni game de taisen shitai Kiritan	kiritan	Kiritan Wants to Battle Online Forever	东北切蒲英	东北往事	切蒲英	切蒲英打电动	宝〇梦	对战	对战游戏	永远	永远对战	永远都想对战游戏	永远都想玩对战游戏的切蒲英	猫耳	肝帝打不赢欧皇
+KING	↓←↓→	👑	burger king	你	剔牙	姐就是女王	您	无名指扣牙	无名指抠牙	汉堡王	王	霸者	哈哈你是王
+幽霊東京	Ghost City Tokyo	Yuurei Tokyo	东京	幽灵东京	幽灵京东	幽灵北京	幽灵线东京	诱0东京
+Alice in 冷凍庫	Alice in 冷冻库	冰箱	冷冻库	冻死爱丽丝	哦哦哦	爱丽丝
+キラメキ居残り大戦争	大战争	女同2	女同大战争	女同歌	居残	居残大战争	留校大作战	女同大作战
+ディカディズム	decadism	年代主义	皇帝小兵	皇帝排队
+猫猫的宇宙論	学猫叫	宇宙论	猫猫宇宙论	猫猫的宇宙论
+ラットが死んだnew words	死	白老鼠死掉了	硕鼠死亡	硕鼠死亡newwords	老鼠死掉了	老鼠死掉了newwords	芝麻街	鼠鼠似了
+阿吽のビーツ	小灵通青春版	阿吽	阿吽的节奏	阿哞	阿哞的节奏	阿牛	阿牛小卖铺
+再会	saikai	see you again
+約束	约定	约束
+トラフィック・ジャム	jam	traffic jam	Traffic Jam	trafficjam	交通堵塞	交通阻塞	堵车	煮儿果实	黄埔	黄歌	黄谱
+アルティメットセンパイ	先辈	小黄毛	究极先辈	究极前辈
+ロストワードクロニカル	lost word chronicle	Lost Word Chronicle	Lost Word Chronicles	lostword	lw	东方号哭	东方归言录	归言录	牛魔酬宾	东方lostword	归言录编年史
+今、誰が為のかがり火へ	今	今谁	今谁为	今谁为火	现在，为了谁的篝火
+Melody！	melody	东方绚彩歌	旋律	美乐蒂	马老弟
+下克上々	0克1	下克上	少女炼狱2	正邪	田忌赛马	长发疯批男
+ハウリング	howling	Howling	yellow	黄	黄灵梦
+トランスダンスアナーキー	疯狂的背景舞者	trance	trance dance anarchy	Trance Dance Anarchy	女同9	尬舞姐妹
+Re：End of a Dream	re	Re:End	Re:end of dream	reend	女同4	完梦	幻梦	我重塑你的梦	梦的终点	梦终	梦结束	终梦	美女背靠背	阿玛十则十	热：醒了	热醒了
+もぺもぺ	mope	mope mope	mopemope	niceboat	もペもペ	儿歌	儿童金曲	儿童鞋垫	好船	宝宝金曲	小白船	小花	小花花	小蓝花	小鬼快乐歌	恐怖小花	恶心	早八早八	毛八	毛八毛八	烟火大会	老八老八	臀小鬼最爱	草	闪光弹	鞋垫	儿童邪典	先生来一朵吧	摩配摩配	先生买花吗
+Sound Chimera	山东奇美拉	himera	吃你妈	声音奇美拉	声音嵌合体	天使马杀鸡	奇美拉	灵梦撒币plus	老二玩花的	骚的吃你妈
+CO5M1C R4ILR0AD	⭐️奴	514	5140	co5	cosmic railroad	railroad	五氧化碳	哎呀那没办法铁轨总得创似一个人那就吧你给创似吧	宇宙泥头车	宇宙铁路	宇宙铁道	我创死你	星奴	星怒铁道	星穹轨道	星穹铁道	星铁	水晶火车	火车头	磁小轨	铁路	银河列车	银河超级快的泥头车创死你	银河铁路	银河铁道	雷切2
+MAKE IT FUNKY NOW	🥪	funky	FUNKY	makeitfuckynow	mifn	MILF	sandwich	三明治	两面包夹培根	两面包夹芝士
+Rush-More	rush	rush more	rushmore	冲多了	冲多点	冲很多	冲更多	多冲	多冲点
+Strange Bar	sb	sb2	初音未来提着两个黄色老鼠头	别急11	大黄蜂	奇怪的吧	奇怪的胸罩	奇怪的酒吧	奇怪罩杯	奇怪酒吧	小金熊	怪吧	怪酒吧	我	我2	我又	斯特兰奇酒吧	死转几把	酒吧	酒老二
+Big Daddy	🤩	🥵	你	你又	大爸爸	大爹	大跌	尼玛啊 好热	您	我推的孩子	星野爱	星野爱高潮	机厅不开空调歌	机厅好热	比格大帝	汤姆猫	爸爸爷	神木光干的	群友	老头发力了	逼格大帝
+ベースラインやってる？笑	wwww	冲彩	baseline	bassbook	bassline	Bassline Yatteru	Can I friend you on Bassbook	Can I friend you on Bassbook? lol	lol	nanahira	什么什么笑	变态萝莉	女流氓	妹妹恰个v	学妹恰个v	痴女nanahira	笑	颜文字	ななひら	要来段bassline吗？笑
+ALiVE	嗷呜	活	活着
+ヒミツCULT	cult	吹月2	我们都很棒	教程曲	秘密信徒
+MEGATON KICK	kick	MK	兆吨	大飞脚	拉普兰德	李宁踹开线	百万吨级踢腿	百万吨踢	百万吨飞踢	踢腿	钢踢
+LOSE CONTROL	塔露拉	失去控制	失控	炉石传说
+宿星審判	导师	Shukusei	Shukusei Shinpan	Syukusei Shinpan	大慈树王	审判	宿星	宿星审判	星怒审判	纳西妲
+脳天直撃	egg	Nouten	Nouten Chokugeki	ongeki egg	你的核酸阳的卧槽	卧槽脑天直击	头部受到打击	老天直击	脑天	脑天直击	脑天直寄	脑瘫直击	脑瘫至极	说的道理
+とびだせ！TO THE COSMIC!!	Fly Away! To The Cosmic	to the cosmic	tobidase	tobidase to the cosmic	tpz银趴	uni	universe主题曲	uni主题曲	とびだせ	初等数学	压缩tpz	去宇宙	宇宙牛奶	新牛奶	牛奶3	缝合怪	舞萌2023主题曲	起飞	飞向宇宙	猫娘开飞船
+噛み係	96猫	咬个针先	咬系	啮	啮系	噛係	大教堂	神灵附体	齿系
+トリアージ	triage	分诊	碑谷	纪念碑谷	多米诺骨牌
+NAGAREBOSHI☆ROCKET	像素猫猫	梅干茶渍	流星火箭	火箭猫	火箭猫猫	火箭福瑞	福瑞火箭	那旮热博士	Nagareboshi
+U&iVERSE -銀河鸞翔-	dawn of the galaxy	kop3预选曲	金奶	😫	3d白猫	kop3rd预选曲	U&amp;iVERSE -銀河鸞翔-	u&i	u&iverse	universe	金典有机奶	金牛奶	银河	银河乱翔	银河卵翔	银河护卫队	银河拉翔	银河翱翔	银河飞翔	银河鸟屎	银河鸾翔	银河鸞翔	milk走路人
+華の集落、秋のお届け	touch当星星	华之集落	华之集落，致以秋意	华的集落	华秋	华落	华集	华集落	滑稽	花村	菲谢尔	秋届
+BLACK SWAN	我连小朋友都不如【maimai UNiVERSE】パーフェクトチャレンジ LIFE10初完走！Lv14 BLACK SWAN MASTER SSS＋	七岁小孩都能鸟	右手2顺时针一圈左手6划到2双手再顺推到6	周黑鸭	甘雨	黑丝袜	黑天鹅	黑色丝袜	黑蒜
+星詠みとデスペラード	星之咏唱者与亡命之徒	星咏	星诵
+Round Round Spinning Around	rrsa	大鸟转转转	滨州转转转	绕着旋转	转圈圈	转转	转转转转	魔爪吊带袜美少女	赤墨	跑跑卡丁车
+Alcyone	alc	凯尔希	高丽
+Raven Emperor	Raven	锐文皇帝	erwaqaqaqa	休息段不要看那里挑战	大奶子眼镜妹	妹妹发把狙	渡鸦皇帝	瑞文皇帝	虚低逼	锐雯皇帝	鸦皇	瑞文	渡鸦之皇
+Yorugao	雨果	夜颜	月光花	有乳膏	油乳膏	牙膏	牛肉干	犹如高	紫黑
+ヨミビトシラズ	咏人不知	东雪莲	东雪莲打伞	佚名	作者不详	冬雪莲	哇嘎得路哟	我不知道	東雪莲	東雪蓮	罕见	蓝屏	咏人
+前衛的Landscape	亲爱滴小妹妹	前卫	前卫的landepen	前卫的landscape	前卫的小妹妹	提纳里	给我玩舞萌dx
+Trick tear	被骗哭了	tt	TT	吹个提尔	吹个替儿	欺骗泪	诈泪	诡泪	诡计之泪	诡计泪	诡泣
+躯樹の墓守	Gravekeeper	小红帽起大狙1v5	🌳	3030	kohaD鸟	nmsl	为你守墓	去世的母亲	墓守	大树守卫	守墓人	小红帽	木手	树	欧内的墓手	欧内的守	母兽	江东の铁壁	界徐盛の笑	趋势的木琴	躯世的木琴	躯势の墓亲	躯势の墓琴	躯势的墓琴	躯树的墓守	铃芽之旅	铃芽之旅2	雪墓	驱鼠的母兽	鸟墓守了	躯树	躯树墓守	蕾米坠机	Eberouge	Gravekeeper of the Dead Tree	hakamori
+ぱくぱく☆がーる	pac pac girl	Pakupaku	Pakupaku Girl	哦那卡素一大	我他妈吃吃吃	我那个贼大	报菜名	江江	江江下锅	江江报菜名	江江炫饭	肚子饿了	郭达抱蔡明	大胃袋江子
+No Limit RED Force	无尽的赤红之力	无限红	无限红力	红色电音极地大冲击
+LiftOff	扶梯关闭	电梯关闭	东云纺坐电梯	关电梯	刑具	发射	妙脆角	抬棺	火箭	起飞	长角女孩	中国人能飞
+Falsum Atlantis.	fa	falsum	亚特兰蒂斯	刹那	江江,我是刹那	皇城刹那	100.2052
+We Are Us	wau	我们是我们	我们是美国
+Limits	极限	限制
+スピカの天秤	ac电棍	Scales of Spica	Spica no Tenbin	Spica's Libra	Spica's Scales	交流电电棍	傻逼慢扫键	天平	天秤	心灵终结	绝望泪	这个需要你自己衡量	黑化希望泪	希望泪2
+ハードコア・シンドローム	我脸上是有交互吗	hardcore	hardcore syndrome	Hardcore Syndrome	tanoc全明星	友人对战	双人蹦迪	哈德口	哈的口	哈的扣	哈的扣大	哈皮和tpz开音趴	哈皮打交	打交	打交第一名	打架第二名	打胶	梅西哥打交	硬核	硬核综合征	硬核综合症	罚站	舞立方	音趴	哈德阔	梅西哥拆机	梅西歌	老兵敬礼	我脸上有交互吗	怎么 我脸上是有交互吗
+夜に駆ける	Into the Night	Race into the night	Racing into the night	YOASOBI	Yoru ni Kakeru	入夜狂飙	向夜晚奔去	向天堂奔去	向晚	向晚爬	夜驱	晚上跑
+うっせぇわ	Be quiet	Shut up	Ussewa	吵死了	好你妈吵	无路赛	烦死了
+Shooting Stars	🐍⭐	流星
+MOON NIGHTのせいにして	moonnight	月光	月夜	月锅
+テレキャスタービーボーイ	bboy	pop子	tbb	telecaster b boy	telecaster b-boy	Telecaster b-boy	Telecaster B-Boy	Telecaster Bboy	合体	我爱你	比心	电吉他b男	电吉他说唱男孩	电视广播员蜜蜂男孩
+僕は空気が嫁ない	1绝赞	ky宣言	一个绝赞	我不会察言观色	我不嫁给空气	空气	空气嫁	绝赞落	ky
+デッドマンズバラッド	BPM300	deadman's ballad	东雪莲姐妹	亡者情歌	僵尸	僵尸初音	僵尸妹	僵尸娘	呜哇呜哇	恋尸癖	散华礼弥	死人的叙事诗	死人的歌谣
+竹	↑↓	🎍	Bamboo	ta↓ke↑	take	Take	bamboo	小心立秋
+スーパーシンメトリー	对称性	超对称	超对称性	白银对称性
+Southern Cross	绕机厅跑一圈	🌟	1+1	403	一加一	全是交互	南十字	南十字星	南方十字	和我贫瘠，星星我给你划了	噩梦之城	守护南十字星	我炫一加一别人炫我星	打个交先	打交	打交神曲	打点计时器	星星保卫战	麦当劳1+1	商场跑圈	舞立方体验票	绕着商场跑一圈	鼓手模拟器	和ysk猜拳
+Upshift	CHAPTER 2	upshit	Upshit	上蹲	在屎上	大写锁定
+MOBILYS	💡	困锁的灯	抹原逼留一手	摸比利	橘子怪兽二	灯灯灯灯	灯球	灯笼	电灯泡
+ドラゴンエネルギー	dragon energy	hero	冰火人2	披萨歌	薛之谦	龙能量
+セカイはまだ始まってすらいない	Sekai hasn't even started yet	世界还没有开始	世界还未开始	天马司倒了
+Sweets Time	小幸隐	甜蜜时光	芙兰数星星	迪士尼乐园
+紅星ミゼラブル～廃憶編	蕾米吹ZUN号	红星	蕾米吹zun号	蕾米吹喇叭	蕾米吹小号	蕾米莉亚吹喇叭	蕾米莉亚吹小号	蕾米莉亚吹滴答	废忆编
+幻想に咲いた花	幻想之花	幻想咲花	幻想花	弹幕神乐	Gensou ni saita hana
+マツヨイナイトバグ	matsuyoi	Matsuyoi Nightbug	nightbug	Nightbug	东方绿毛虫	待宵的萤火虫	绿头发	绿毛虫	绿毛龟	绿色夜光虫	绿色女人	绿色苍蝇	苍蝇妹	莉格露	萤火虫	蠢虫
+ポッピンキャンディ☆フィーバー！	poppin candy fever	poppin' candy fever	女同3	怨！	流行糖果发烧了	流行糖果热
+どぅーまいべすと！	do mai best	do my best	独立宣言	音街宣言
+春を告げる	🛌	cogito睡觉	宣告春天	春告	春天的宣告	睡了
+泥の分際で私だけの大切を奪おうだなんて	https://就凭泥土竟然也想夺走属于我的宝物.是什么歌.com	地雷男拿刀捅女友	being low as dirt	Being low as dirt, taking what's important from me	dorono	low as dirt	伤不起	你个辣鸡还跟我抢男人	八个绝赞叫四声	区区小三竟敢抢老娘女人	区区泥土竟然也想夺走属于我的宝物	区区烂泥	区区烂泥却妄想夺去只属于我的宝物	区区穿心也想夺走属于我的AP	区区绝赞也妄想夺走我的鸟加	大醋坛子	就凭泥土竟然也想夺走专属我的宝物	就凭泥土竟然也想夺走属于我的宝物	我	抢男人	果咩纳塞	果咩那塞	泥	泥分	泥分大切	泥分祭	泥分际私大切夺	泥切	泥土	泥抢啥	泥歌	泥铲	烂泥	狗莓拿塞	痛失吾爱举目破败	穿心の分際で私だけの鸟加を奪おうだなんて	臭屌丝还想抢老娘男人	蛐蛐泥土	蛐蛐烂泥	黑化能天使	泥分切	泥的分际	泥分际
+VOLTAGE	电压
+失敗作少女	Failure Girl	失败作	失败作小子	失败作少女	失败作老子	失败做少女	她	我	我肯定	成功当男娘	薄底蕾鞋
+悪魔の踊り方	Devil's Manner	The Devil's Manners	恶魔	恶魔的写谱方法	恶魔的舞蹈方式	恶魔跳舞	恶魔踊	恶魔跳舞的方式	踊方
+ノイローゼ	Neurose	神经官能症	神经病	神经症	神经质	米津玄师
+グッバイ宣言	✌️👌	886宣言	Goodbye Sengen	one,two	再见宣言	卡手宣言	扭手宣言	袜子	再会宣言	七濑玲奈
+春嵐	春日风暴	三人日山风	春岚	春风	蓝色妖姬
+ラグトレイン	15列车	lag train	lagtrain	Lagtrain	你好了吗	列车	啥绝赞	少女终末旅行	延误列车	延迟列车	打地鼠	电车迟到	黑白卡通女孩上下蹦跶
+なだめスかし Negotiation（TVsize）	Negotiation	sugoi dekai
+インドア系ならトラックメイカー	indoor系的trackmaker	Indoor kei nara Trackmaker	nichan	Trackmaker	内向都是作曲家	室内系	室内系的track maker	室内系的trackmaker	室内轨道制造商	小姐姐	我不玩舞萌DX	track maker	法修散打	大东北我的家乡
+アカツキアライヴァル	Akatsuki Arrival	Daybreak Arrival	女同8	拂晓	拂晓已至	拂晓抵达	鱼葱	akatsuki arrival
+リモコン	Remocon	Remote Control	switch	双子转转转	遥控器
+on the rocks	otr	冰酒	在石头上
+響け！CHIREI MY WAY!	响	地灵殿偶像
+神々が恋した幻想郷	Eastern Cross	testify	东十字	东十字星	东方南十字	众神眷恋的十字星	众神眷恋的幻想乡	小南十字	幻想乡	神仙稀罕俺们屯	神恋	神眷	神都得意俺们屯	终神眷恋的南十字	青春版白南十字星	神恋幻想乡
+Lia=Fail	l=f	L=F	liafail	剑3	命运之石	圣剑3	圣剑三	生煎3	生煎三	福瑞3	lia=失败
+アンビバレンス	ambivalence	Ambivalence	二律背反	矛盾心理	穿心	言叶5
+veil	🍎	🍎👈	炎炎消防队	苹果	苹果酱
+廻廻奇譚	67	🎳	Kaikai kitan	保龄球	医微医不写术了	咒术回战	咒术回战主题曲	回回奇谈	回回奇谭	奇谭	廻廻奇谭	灰灰鸡蛋	轮回奇谭
+さんさーら！	arufa	samsara	Samsara	哈比下	本社爆破
+アイドル新鋭隊	偶像新锐队
+ヒステリックナイトガール	啊啊啊啊！	夜晚歇斯底里女孩	歇斯底里	歇斯底里夜女郎	歇斯底里夜晚女孩	歇斯底里女孩	眼保健操	竭斯底里
+GIGANTØMAKHIA	alan walker	艾伦沃克	faded	gigantomakhia	kop3	yoshiki转圈	yoskip	刀客塔拿书	博士读书	巨人之战	老头环	艾尔登法环	博士抱书
+ミルキースター・シューティングスター	milky star	uni+主题曲	乳液狂飙	星代主题曲	牛奶4	牛奶流星	银河星	流星牛奶
+ｉｓｏｐｈｏｔｅ	iso	isophote	op	vrchat	一个绝赞	全角英文	女同10	姛	打字带空格	琪芽	等照度线	说话带空格	女同
+パラマウント☆ショータイム！！	paramount showtime	showtime	兔子	兔子魔术师	小兔子	至高的表演时间	魔术兔	至高表演时间	表演时间
+Strive against fate	fate	saf	对抗命运	抗争命运	抗命	电风扇	抵抗命运
+sølips	逃离矩阵	ソソ！ソソソ！	s空集嘴唇s	大天堂苏打	大苏打	Solips Eazy Lv.1	🔒	$100lips	100块	100块钱	ø	sleeps	solips	s属性大爆发	そそ!そそそ!	一百块	一百块钱	唯我论	嗦	嗦🍐	嗦嗦，嗦嗦嗦！	嗦蓝盆斯	妈妈生的	我是颠佬	所以嘴唇	现在的孩子	癫佬	空集	索	索利普斯	零元购	黑客帝国	so	s空集lips	嗦嘴唇	你是谁？
+パーフェクション	perfection	完美	完美物质
+デーモンベット	daemon bet	恶魔赌博	恶魔赌局	恶魔赌约	男同	demon bet
+HECATONCHEIR	黑卡通车	隅田川星人是我爹	他猫上椅子	很潮通气儿	百手巨人	百臂巨人	黑卡痛车
+Irresistible	可莉蹭爆	不可阻挡	可莉
+HAGAKIRI	hgkr	光圈科技	八云紫拿着乾坤圈	憋憋	橘花
+N3V3R G3T OV3R	3333	3炸	n3	never get over	ngo	NGO	双枪老太婆	四个三	永不结束	永远不过	天河区
+Swift Swing	ss2	他们是经理	我要出勤	海澜之家	滴蜡熊热舞	滴蜡熊爱跳舞	白铜寺骗百合咲出钱去海澜之家买衣服	荡秋千	谁问你了	迪拉熊跳舞	迪拉熊热舞	跳舞的线
+星空パーティーチューン	party tune	奶子很大	新海天	星空	星空party tune	星空叙爱曲
+チューリングの跡	🎷	🧯	100号拍肚皮	Credits2	jazz for your soul	jazz for your Soul	Jazz for your Soul	regulus吹萨克斯	Remnants of Turing	Trace of Turing	Traces of Turing	Turing	turing trace	Turing's Remnants	Turing's Trace	Turing's Traces	信用2	和白法院做	图灵	图灵之寄	图灵之迹	图灵轨迹	大奶子吹萨克斯	好jbの帅	好jbの帥	寄	日本字跡	灭火器	白法院吹灭火器	白法院吹萨克斯	萨克斯	迹
+Sage	奶妈	sabe	sega	世嘉	啥歌	圣人	萨格	贤者	陕西神医魏莹玲	雅迪电动车	鼠尾草	圣徒	升
+OTOGEMA	10周年	otto	ottogame	ottogema	otto个妈	OTTO个妈	otto给妈	otto给马	十周年	哦偷个妈	我偷个妈	狗打碟	电棍	电棍个妈	电棍送母	音游人	音游玩家	oto	wmc	舞萌吃	野生迪拉熊
+WiPE OUT MEMORIES	舞萌吃走马灯	10周年	maimai机台	wipe	wipeout	wom	WOM	十周年	吴丽芳	抹去记忆	洗衣机	消逝的回忆	缝合怪	舞立方	超级缝合怪	外炮	wmc走马灯
+Metamorphosism	蜕变	meta	削除发病	削除拉矢	削除鬼叫	变形	变态	变态主义	变质	哇袄	少爷发癫	消除鬼叫	质变	削除硅胶	我奶做梦	177013
+白花の天使	东雪莲2	冬雪の莲莲	白花	白花天使	白花的天使
+World's end loneliness	049	wel	世孤	世末孤独	世終孤独	世终	世终孤独	世翠孤独	噩梦	奥尔菲斯	孤独终老	寡	寡王	我饿了	林尼	世末孤终	世终1
+Jouez Avec Moi?	jam	moi	和我拼机吗	和我玩	来玩	跟我玩	问号	陪我玩	一起玩？
+テリトリーバトル	地雷男拿刀捅女友	👿👿	0419	mtf	territory battle	Territory Battle	二次元鼓动	伪娘	可爱男娘加我	团长我徒弟呢	坎二四	小伪娘	小圣诞	小男娘	把我妈妈还给我	把我的家人还给我	木桶饭	猫抓板	男娘	超威蓝猫	返せ!返せ!👿👿	领土战争	领土战役	奈伊
+Good bye, Merry-Go-Round.	Good bye, Mother-No-Found.	🐎	🐴	🔁🌲🐴	Good bye, Mother-Not-Found.	Goodbye,mother-not-found	merry go round	mygo	再见，旋转木马	再见，死妈玩意	再见你妈转个圈	再见找不到妈	再见找不到妈妈	再见旋转木马	再见没找到你妈	妈妈去哪了	我没意见	旋转mua	旋转你妈	旋转古神	旋转墓妈	旋转木妈	旋转木琴	旋转木马	日向千夏	杩	狗比美国人	白人掐腰	给你妈塞墓地里疯狂旋转	阿尼亚	阿尼娅	龙图	千夏叉腰
+ツクヨミステップ	Tsukuyomi Step	嗒嗒啦嗒啦嗒嗒	女人拿水枪	戴帽女人滋水枪	月读	月读舞步	水枪	水枪姐	水陈	假日威龙陈
+folern	买了否冷	佛冷	北冰洋	大鸣大放	我要抓走你的妈妈	服了	水陈	给我玩中二节奏	迪希雅
+コスモポップファンクラブ	Cosmo Pop Fan Club	cosmo pop funclub	cpfc	吧啦吧吧吧	宇宙流行乐俱乐部	小魔仙	巴啦啦	巴啦啦小魔仙	巴拉巴巴巴
+撩乱乙女†無双劇	TRiEDGE	女同3p	撩乱	撩乱乙女	撩乱乙女无双剧	无双剧	缭乱乙女	乙女无双
+See The Light	stl	喜之郎	屎都濑	看光	看见光	金坷垃
+エータ・ベータ・イータ	三个日本字点三个日本字点三个日本字	ebe	EBE	Eta Beta Eater	Eta Beta Eta	eta beta ita	Eta Beta Ita	hbh	hera2	η·β·ι	二次元hera	儿也号纵连居士	夕夕夕	工一夕	工一夕·八一夕·人一夕	工一夕八一夕人一夕	工一夕点八一夕点人一夕	椿椿的键纵	纵连女	纵连居士	蓝原椿	蓝原椿骂人	赫拉2	赫拉二	咱家那超级大串	ἥβη
+愛のシュプリーム！	Ai no Supreme	Love Supreme
+くらべられっ子	地雷男拿刀捅女友	😭	ABCDEFG	Compared Child	Kuraberarekko	我	日本字子	林涅	比较子	比较孩	被比较的孩子	比较的孩子	日服第一男刀
+あの世行きのバスに乗ってさらば。	Anoyo-iki no Bus ni Notte Saraba.	鹭城巴士	😵🙏	760	bus	I'm getting on the bus to the other world, see ya!	世行	世行乘	乘上前往彼世的巴士以告别	公交车创死我	坐上前往彼世的巴士	坐上前往彼岸的巴士永别了	巴士	巴士酱	开放姐	彼世公交	彼世公交车	彼世巴士	彼岸巴士	晓美焰	曉美焰	地雷女
+うまぴょい伝説	赛马娘	Uma musume	Umapyoi	Umapyoi Densetsu	马儿跳
+ヴァンパイア	nichan	Vamiper voca	vampire	Vampire	Vampire DECO27	Vampire vocaloid	做核酸	吸血鬼	核酸检测	棒棒鸭	玩牌儿	玩牌呀
+エンヴィーベイビー	envy	envy baby	Envy Baby	envybaby	剔牙	嫉妒宝贝	打牌	拼多多
+初音天地開闢神話	Hatsune Creation Myth	Hatsune Tenchikaibyaku Shinwa	初音天地开辟神话	初音开天辟地	初音未来开天辟地	初音未来开辟神话	初音未来日天日地	初音未来毁天灭地	初音毁天灭地神话	天地开辟	开天辟地	开辟	开辟天地	毁天灭地	消失2	盘古	盘古开天辟地	神话	开辟神话
+Armageddon	⑥	arma	世界末日	太阳信仰	妈了个蛋	灵乌路空	灵知的太阳信仰	阿妈个蛋	阿妈咯噔	阿空
+Dreadnought	🔦	大喷菇	巧脆卷	手电筒	无畏号	无畏号战舰	无畏舰	望远镜	死亡手电筒
+enchanted love	🐸	别急17	小青蛙	迷人的爱	醉心之爱	附魔爱	附魔的爱	青蛙	青蛙王子
+Caterpillar Song	一个绝赞	🐛	便秘一笔画	别急15	女菩萨念经	毛毛虫	毛毛虫之歌	肯德基
+Photon Melodies	pm	光子旋律
+吾輩よ猫であれ	吾辈	吾辈是猫	吾辈猫	我是猫	萨卡班甲鱼	我们是猫
+　	U+3000	游戏人生	kisaragi	きさらぎ	きさらぎえき	きさらぎ駅	kisaragi eki	adadad	‎‎	/ / // / /	\0	null	ㅤ	六个绝赞全落	六斜杠	口口	如月清秋	如月车站	如有	无名歌	无题	没名字	没名字的歌	没有名字	白音	空格	空白	金条	黑暗剑22	如月	棍母	滚木	请输入文本
+BLUE ZONE	蓝区	蓝界	蓝的区	蓝的盆	蓝的车	蓝粽	蓝车
+Estahv	Arcahv精神续作	六戒	白戒	真寻	谢丝塔	诶司他韦
+First Dance	1！5！	15	fd	一！舞！	一曲成名	一舞	出生之舞	初舞	第一舞	首舞
+Mjölnir	🎹💨	mjo	mjolnir	mjr	冒烟钢琴	喵喵槌	喵喵锤	打火机	摸你鸡儿	摸脚尼尔	激光雨	炸琴	砸钢琴	管子海	翠楼屋拉屎	翠楼屋撸管	翠楼屋撸管冒烟	翠楼屋炸钢琴	翠楼屋的管	翠翠薯条	脆脆薯条	薯条	钢琴	钢琴冒烟	钢琴抽大烟	钢管舞	雷神之锤	麻将	钢琴冒火
+Define	malloc	🤚😭啊 😭👍太难了 😭👆这得有13 😭🤲惹啊	定义	吓哭小孩	小孩被吓哭	这得有13
+BANG!	bang	棒	邦	钢管
+Love's Theme of BADASS ～バッド・アス 愛のテーマ～	badass	Badass	BADASS	不良尻尾	八大蒜	右肩の爹	右肩之爹	右肩毁灭者	右肩的爹	右臂康复训练	右臂毁灭者	哥布林骑摩托	坏尻	坏屁股	坏腚	恶尻	扒大蒜	打篮球	拔大葱	拔大蒜	烂尻	烂屁股	烂皮炎	爱的主题坏屁股	马达加斯加	麒麟臂	干打雷	小绿人
+オントロジー	ontology	本体论	存在论
+剣を抜け！GCCX MAX	gccx	GCCX	剑拔	剑拔弩张	拔剑
+Princess♂	👸	mtf	Princess	公主	公猪	别急16	男公主	男娘2	男娘
+ヒトガタ	himehina	hitogata	两个女人跳舞	人型	人形	匕卜力夕	女人跳舞男人打	管人跳舞	人偶
+Spring of Dreams	娜兹玲	小老鼠	春梦	莉莉白
+大輪の魂 (feat. AO, 司芭扶)	大海底谭	大轮	大轮之魂	大轮的魂	大轮魂
+紅に染まる恋の花	染红的恋之花	秋姐妹	红染恋花	红染
+三妖精SAY YA!!!	sanyousei	三妖精	三小只	三月精	三笨蛋	三铸币	三铸币 KAI DA!!!	我们三	三亚
+Reach For The Stars (Re-Colors)	dx追星	彩追星	新追星	索尼克缤纷色彩终极版	追星2	追星Remix
+ジャンキーナイトタウンオーケストラ	🤫	junky night town orchestra	Junky Night Town Orchestra	玛奇玛	瘾者之夜	瘾者之夜城镇乐队	隐者之夜
+終焉逃避行	提桶跑路	终焉	终焉逃避行
+8-EM	8em	8EM	atm	ATM	EIGHT-EM	大大大	很酷，不说话	涩图	国服没奈子
+若い力	sbga	SBGA	sbga社歌	sega	sega大楼	SEGA社歌	世嘉	世嘉社歌	傻逼世嘉	年轻的力量	本社	社歌	若之力	若以力	若力	本社爆破
+遺伝子レベル∞スパイラル	星球大战	遗伝子	遗传	遗传基因 Level ♾️ Spiral	遗传子
+otorii INNOVATED -[i]3-	⚡🐻	i3	otorii	otorii innovated	前列腺	大鸟居	天地人间完全放电	杨永信	永江衣玖	熊二	电你前列腺	电你牛子	电刑	电所有人前列腺	电熊	红色电音极地大冲击	紫色滴蜡熊	闪电熊	雷熊	雷电将军	耳机漏电
+エゴロック	ego rock	egorock	自我摇滚	自由摇滚
+ただ選択があった	jubeat	仅仅做出选择而已	只是在不断选择	打地鼠	答题卡	选择	海鲜市场
+パズルリボン	puzzle ribbon	Puzzle Ribbon	东云彰人	拼图丝带	游乐王子	红发男
+YONA YONA DANCE	yona	yyd	不跳舞就亏了	晚上晚上跳舞
+Transcend Lights	源石	传神的奶子	114514	bright主题曲	tl	九月的雨	别急19	加速同调	压力马斯内	好啊，来吧	封面全是老婆	急急急	我知道你很急但你先别急	正在拆弹	美瞳广告	超越光	音击妹妹	音击的武士	音击的雨	超越之光
+ホシシズク	fes主题曲	三小只2	三小只过节	星雨	繁星点点
+Rainbow Rush Story	rrs	彩虹冲刺故事	彩虹冲故事	彩虹急急故事	彩彩奔
+Tricolor⁂circuS	Tricolor circuS	三个出生	三只福瑞过节	三色马戏团	福瑞三小只	福瑞过节
+[X]	传奇耐削王	infinity	&#91;X&#93;	∞	X	叉	推特	无穷大	无限	艾克斯	高斯函数	x	twitter	13.7 :loam:
+分解収束テイル	分解收束
+mystique as iris	iris	mai	像鸢尾花一样神秘	坐椅子	如虹膜般神秘	虹膜	鸢尾花	秘幻如鸢
+Rising on the horizon	方向盘	kop4预选曲	kop4th预选曲	roth	地平线	玛丽萨默斯	飞上地平线	于地平线上冉冉升起
+You Mean the World to Me	我喜欢你	你意味世界对我	你是我的世嘉	你是我的世界	你是我的全世界	凯尔希2	我的世界	你是我的全部
+Neon Kingdom	nk	炒菜	霓虹国度	霓虹城	霓虹王国
+#狂った民族２ PRAVARGYAZOOQA	250个绝赞	最炫民族风	最狂民族风	汉堡	汉堡包	狂什么民族	狂民族	狂民族2	疯狂的民族2	红谱250绝赞	99.5189
+VSpook!	🐖	🐷	debi	VSpook	vspork	大战猪肉	对决猪肉	对战熟猪排	对战猪肉	打扑克	猪	猪肉	脸书	黑姬3	花火
+RIFFRAIN	轮符雨	青春エリア	达令达令
+Falling	青春エリア	跳楼	下落
+ピリオドサイン	period	青春エリア	period sign	ps	休止符	周期符号	终点2	枫原万叶
+群青シグナル	青春エリア	体育生2	群青	群青2	群青信号	群青讯号	体育生丢篮球	gunjo signal	gunjou signal	ultramarine signal
+Beat Opera op.1	甘雨鬼叫	歌剧1	op1
+星見草	hoshimisou	星见草
+"411Ψ892"	211985	宵人最果之国	411892	114♂514	985211	411ψ892	211屮985
+康莊大道	main avenue	kang zhuang da dao	kangzhuang	康庄大道	羊角	羊	康庄	太太乐
+蜘蛛の糸	🕸️	spider's thread	spider’s thread	Spider's Web	Spiderweb	滴嘟丝	蜘蛛丝	蜘蛛的丝	蜘蛛系	不来方永爱	蜘蛛之丝
+Don't Fight The Music	宵崎奏	dftm	donfai	knd	不要打歌	你不许玩了	别打歌	别打音游	刹那	憋打歌	刹那赢冰箱	是我在制作这些视频	赢取冰箱	不好导弹来袭	不要战斗这音乐	不准打歌	Don't Fight
+Catch Me If You Can	你抓不住我	你抓不住我，我是绝赞	兔女郎	就你还想来抓我嗷	抓我	抓我如果你可以	早乙女彩华	有种就抓我	有种抓住我	来抓我呀	来抓我呀小熊熊	猫鼠游戏	露娜	山里灵活的狗	如果你能抓到我	山吹沙绫
+MAGNETAR GIRL	mg	柚子	磁星女孩	磁铁女孩
+SUPER AMBULANCE	千夏赢冰箱	🚑	俺不能死	千夏开大	我创死你	救护车	日向千夏	禁止单刷纪念日	超级小千夏	超级救护车	超级梅西哥
+Ghost Dance	gd	幽灵跳舞	贵物	鬼舞	魂5
+電光石火	哲学主	🤨	Denko Sekka	Quick Attack	俄洛伊	大电老师	妖艳魔男2	电光火石	电光石火	穿着很少布的大只佬	傑哥
+Hainuwele	发现一个小哥哥，拍打机玩的真6~可是你就不能回头看看我吗?好吧，好吧，那我走啦！👉推文链接	huawei	华为	华为完了	孩奴	海奴韦莱	海牛	海牛喂了	nova11se
+アニマル	animal	Animal	动物	杀杀杀	猫葱
+ジレンマ	dilemma	异瞳	异色瞳	白葱	赤瞳	进退两难	邦邦邦
+踊	ko	odo	哦哇哇哦哇哦	桶	红眼果蝇	耶耶耶耶耶耶	起舞	跳舞	长舌妇
+残響散歌	残响	残响散歌
+フォニイ	7才二亻	phony	Phony	伪物	凤梨	噗泥	扶你	7才二人	狐狸面具
+ヴィラン	villain	villan	反派	反派角色	恶者	碧浪	糜烂
+EYE	👀	眼睛
+スカーレット警察のゲットーパトロール24時	👮	24时	24时警察	funky	Funky	Ghetto Patrol	Scarlet Police	Scarlet Police on Ghetto Patrol	东方警察	东方警察24时	宝宝巴士	斯卡蕾特	斯卡蕾特警察	斯卡雷特警察	琪露诺跳舞	警察	警察24时	蕾米琪露诺斗舞	尾杀大b圈	斯卡蕾特警察巡逻贫民区24小时	红警
+田中	tanaka	Tanaka
+Random	随机
+Luminaria	没有bga的亚军曲	流明	海晶灯	露米娅
+群青讃歌	Gunjo Sanka	群青赞歌
+セカイ	Sekai	sekai	世界	也力亻	也力人
+ワーワーワールド	哇哇世界	wawaworld	世世世界
+銀のめぐり	古明地觉	银	银的循环	银的轮回
+Destiny Runner	dr	命运奔跑者	命运跑者	蕾米莉亚
+アマカミサマ	Amakamisama	天神	天神大人	阿妈卡密萨马
+モンダイナイトリッパー！	🧭	Mondainai Tripper	Tripper	モンダイナイトリッパー	名取纱那	没问题	没问题Tripper	萌呆奶	没问题tripper
+マーシャル・マキシマイザー	Marshall Maximizer	maximizer	mm	最大化	最大化者	凯南开大化	可不戴耳机	马修麦泽	马歇尔	马歇尔最大化器	马歇尔最大化
+秋の未確認生物	未确认生物	生物	秋的未确认生物	秋之未确认生物
+エナドリおいしいソング	drink with me	斐济杯	易拉罐	能量饮料	能量饮料歌	能量饮料真好喝	功能饮料	脉动	魔爪
+Baddest	最坏	十六圈	十六块钱	带恶人	德龙	德龙鬼叫	樋口枫	樋口枫大旋风	樋口枫的大逼圈	疯狗转圈	大b圈	那很坏了	一巴掌13个miss	樋口枫鬼叫
+ばかみたい【Taxi Driver Edition】	桐生一马	🐶	🥃	baka mitai	bakamitai	damedane	oceancat	一个touch	像个傻瓜	像笨蛋一样	八嘎米袋	出租车驾驶者	别急20	如龙5	如龙的雨	我	打mai打mai	打咩打捏	打没打mai	打没打捏	海猫	海猫络合物	玛恩纳	笨蛋	铃木太一
+れっつ！みらくる☆はーどこあっ！	hardcore2	laur撒狗粮	let's miracle☆hardcore	wifecore	老二和他的老婆	雌小鬼	老二老婆	let's miracle hardcore	laur老婆唱歌
+アイム・マイヒーロー	I am my hero	我是自己的英雄	马云
+NightTheater	Night Theater	nt	夜剧场	夜剧院
+キュートなカノジョ	Cute na Kanojo	可爱女友
+きゅうくらりん	Kyu-kurarin	阿哲	三价铬离子	Kyuukurarin	心跳不已	心跳不止	心梗不已	心梗不止	蓝衣哭泣少女	纱世里	kyu-kurarin	心动不止	室颤
+回る空うさぎ	月兔回旋于空中
+Lost Desire	失欲	失去感觉了
+Aegleseeker	藏光追	宴光追	光追	拉格兰	间奏8秒	追光者	翠楼屋发病	Aegle	贝果寻找者
+最強STRONGER	最强	Saikyo STRONGER	血魔王	saikyo stronger	？！强强！？	最强霸者
+ボッカデラベリタ	Bocca Della Verita	真理之口
+『んっあっあっ。』	姐就是女王	嗯啊啊
+独りんぼエンヴィー	Hitorinbo Envy	孜然驴火	孑然妒火	虾	房间已解散
+ロータスイーター	lotus eater	吃藕
+ViRTUS	kop4	op	yoskip	噔噔噔噔噔噔	抽水马桶2	本草纲目	水神2	水神二	辣妹子	辣妹子辣	紫菜蛋花汤
+Alice's Suitcase	爱丽丝的手提箱	爱丽丝
+ピュグマリオンの咒文	Hex of Pygmalion	pygmalion	Pygmalion's Spell	咒文	小魔女咒文	皮格马利翁的咒文	皱纹	大黑塔
+トノサマビーム	大人光束
+enchanted wanderer	魔法流浪者	蓝青蛙	ew	蓝猫	哈基米王子	猫王子	青蛙王子2	附魔流浪者	罗小黑战记	迷人的流浪者
+Comet Panto Men!	面包人	特大跳舞	天线宝宝	米包面
+ツムギボシ	纺星	你能掉.9啊	Tsumugiboshi	崩坏星穹铁道
+VeRForTe αRtE:VEiN	钟楼	翠翠快乐扫	Verforte	钟塔	钟楼100.7很吊吗	100.7	100.7什么垃圾	飞能不鸟	哈利路大旋风	翠翠扫	翠翠猫抓板
+ヱデン	伊甸
+にゃーにゃー冒険譚	喵喵冒险谭	卡老师	冒险谭	找猫	Nyaa nyaa boukentan	Meow Meow Adventures
+The Great Banquet	大宴会	国宴	宴会	盛宴
+Redemption	门十字	赎回	救赎	黑十字星
+Ether Second	es2	以太瞬间	以太第二
+Straight into the lights	东雪莲	赏你吃的白菜怎么少几斤嘞	ow2	dxow	东雪莲3	赏你吃的白菜怎么少几斤的	线性代数	arc原创曲	中出光	直入光	我要当对立	吃麦当劳	小acid	我的麦当劳	小阿希德	Nikke
+アンバークロニクル	ac	青春エリア	Amber Chronicles	琥珀编年史
+リフヴェイン	REFVALN	青春エリア	refvain
+Kairos	青春エリア	开罗斯
+宵の鳥	宵之鸟	In The Twilight	青春エリア	宵鸟	小纸鸟
+ここからはじまるプロローグ。 (Kanon Remix)	福瑞135	福瑞圣剑remix	像素福瑞remix	小动物封焰	福瑞小英雄	The Prologue Beings Here. (Kanon Remix)
+モ°ルモ°ル (MZK Skippin' Remix)	毛儿毛儿remix	morumoru	モルモル
+VERTeX (rintaro soma deconstructed remix)	水神1.5	水神remix	激流
+隠密あんみつDX	隐密陷密DX	隐密DX	隐密	隐密dx
+地球	立秋鬼叫	🌍	chikyuu	屌你	奶龙	💩	79bpm
+Churros Parlor	cp
+超熊猫的周遊記（ワンダーパンダートラベラー）	接丫丫回家	Wonder Panda Traveler	超雄猫	power in your soul	超熊猫	超熊猫的周游记	超雄	wonder panda	wonder panda traveler	wonder panda traveller	我们是幻想麒麟
+Trrricksters!!	t3r	kop4国际服决赛曲	kop4th海外决赛曲	Trickster	Tricksters	Trricksters	Trrrricksters	trrr	trr	羊角人
+FLUFFY FLASH	Fluffy	ff	福利闪光	结成莉玖	结城莉玖	绒闪
+STARRED HEART	星心
+Y.Y.Y.計画!!!!	Y.Y.Y.Keikaku!!!!	3y	YYY	羡慕小孩哥	yyy计划	世界计划	yyy
+Last Kingdom	最后的王国	lk	失落王国	小lk	拔小蒜	终末帝
+LAMIA	Alan walker	阿米娅	拉米亚	拉面
+ヒバリ	姬雏鸟	七八刂	Hibari	七八刀	羽毛球	云雀	两个羽毛球	羽毛球跳舞	匕八刀
+Hello, Hologram	你好，全息像	全息图	harohoro	ハロホロ	hologram
+不機嫌なスリーカード	不机嫌	三卡
+神っぽいな	God-ish	像神一样	像神一样呐	像神	神呐
+魔法少女とチョコレゐト	粉色初音	粉色大葱	Magical Girl and Chocolate	mahou shoujo to chocolate	魔法少女	魔法少女与巧克力
+阿修羅ちゃん	小阿修罗	Ashura-chan	阿修罗	阿修罗酱
+おとせサンダー	落下雷霆	Otose Thunder	Thunder Shoot
+ロウワー	Lower	lower	堕落眼界
+キャットラビング	Cat Rubbing	爱猫tv	搓猫	爱猫	坠入爱河的猫	cat loving
+リスペク風神	风神	东方风神	岚神	风神respect	respect风神
+Let you DIVE!	lyd	wacca	让你死	让你潜	让你潜水	让你落	遗体捐赠	伊丽莎白	华卡主题曲
+Knight Rider	kr	山奥金曲	骑士骑士	骑骑	骑骑士士	疯狂星期四
+I’m Here (feat. Merry Kirk-Holmes)	我在这儿
+INTERNET OVERDOSE	daisuke	io	kotoko	od	overdose	主播女孩	主播女孩重度依赖	升天	叉烧老婆	地雷女	地雷妹	小天使请安	当代互联网小天使	我有快乐症	我有抑郁症	我有神经病	朝天椒	浴霸	玉玉症	网络过量	超天酱
+魂のルフラン	魂之轮回
+Shooting Shower～DANCE TIME(シンディ)～	柏青哥	disc up
+Lights of Muse	lom	你醒啦，快起来打交	喵斯之光	喵斯光	布若	暮色的光
+tape/stop/night	天津滨海国际机场	tape stop night	tsn	中国弱虫	中国强虫	中国虫	中文歌	君の中國语本当上手	国产弱虫	强虫	暮色电台	磁带暂停夜晚	磁带机	磁带机黑胶	秘密星期五	被踩:夹子歌	强虫蒙布朗	fate/stay/night
+Final Step!	fs	FS	最后一步
+The 90's Decision	90s	90秒
+僕の和風本当上手	japanese style	my japanese style is very good	bokuno和风本当上手	上手	僕の唢呐把人送走	僕の日本语本当上手	君日本语本当上手	和风	和风本当上手	唢呐	我的和风非常厉害	本当上手	现在开始打交	我的和风真的熟练	jouzu
+Cthugha	phigros原创曲	🎃	克图格亚	南瓜头	古神	大火球	清华	火烧兔头	火球	火神2	炎头	赛图格亚
+はんぶんこ	各分一半
+PUPA	蝴蝶	🦋	蛹	larva2	噗啪	公交车	扑爬	蓝蝴蝶	隐形的翅膀
+解けないように	黑灵梦
+インターネットサバイバー	Internet Survivor	互联网幸存者	internet survivor	芙兰朵露
+コンティニュー！ feat. 藍月なくる	继续	蓝月奈久留	贪玩蓝月	continue	阿诺捏
+Sunday Night feat Kanata.N	周日晚上	周日晚	小登
+PERSONA feat. PANXI	偏铝酸钠
+Halfway(>∀<)	颜文字	半条路	半场开香槟	半路
+Complex Mind	复杂心智	复杂头脑
+DROPS feat. Such	落
+あつすぎの歌	夏热之歌	你敢和她对视10秒吗	atsugi	atsusugi no uta	karameru	热死了	啊紫一	热死了之歌	棍母	等老奶奶张嘴	神牌	夏热歌	老奶奶
+ULTRA SYNERGY MATRIX	USM	我来出勤了	usm	usm跑	兄弟拼机吗	esm加大版	100.6208
+花となれ	Hana to Nare	幻化成花	可不花
+私のドッペルゲンガー	我的分身	私
+BULK UP (GAME EXCLUSIVE EDIT)	Bulk Up
+ノンブレス・オブリージュ	无呼吸义务	Non-breath oblige	NBO	萃萃薯条	息无呼吸义务	Nonbreath	Nonbreath oblige	我喘不上气我喘不上气	呼吸困难
+テオ	Teo	将手	亍才
+まにまに	Manimani	🏹	随之任之	射箭	manimani
+感情ディシーブ	Kanjou Deceive	感情欺诈
+ド屑	dokuzu	大人渣	卜屑
+絶対敵対メチャキライヤー	绝对敌对超级讨厌	绝对敌对	Absolute Hostility, I Hate You So Much!	Unfriendly Hater	Zettai Tekitai Mecha Kirai yaa
+つるぺったん	醋溜便当	Tsuru Pettan	平胸之歌
+『ウソテイ』 ～一回戦せりなvsしろなvsなずな～	一回战	兔子帝2	中二兔子跑
+Bad Apple!! feat.nomico ～五十嵐 撫子 Ver.～	中二坏苹果	坏苹果	烂苹果
+Snow Colored Score	雪色记录	Snow Halation
+MAGENTA POTION	品红药水	魔法药水	洋红药水	品红	别喝奇怪的品红色药水
+NOIZY BOUNCE	bud主题曲	乙姬	拉兹	音浪激荡	噪音弹跳
+サンバディ！	两老头跳舞	i still love somebody	somebody	Somebody	I still love somebody
+Horoscope Express	horoscope	像素三小只	星座快递	快递
+Party☆People☆Princess	ppp	牛奶3	3p	党和人民和公主	PPP	党人民公主
+Latent Kingdom	lk	Latent	大棍奏音 v.s. 牢若	蕾米大战ysk	Laur vs 大国奏音	Laur和大国奏音摧毁城市	撸	大lk	东北商战	白魔爪vs黑魔爪	我售卖东北玉米	别样的小提琴大赛	两个男人拉小提琴	我售卖东北竹笋	东北菜市场	我售卖东北蔬菜
+Mystic Parade	神秘游行
+Cry Cry Cry	3cry	哭哭哭
+ぽわわん劇場	powawan	剧场
+my flow	我的流	我的节奏
+POWER OF UNITY	团结力量大	团结的力量	团结力量
+Energizing Flame	ef	充能火	活力火焰	特蕾西娅	激励火焰	激发火焰	能量火焰	Kick The Fire
+KHYMΞXΛ	kop5预选	阿米诺斯	种植园纠纷扩大化	奇美拉	khy
+フェイクフェイス・フェイルセイフ	fakeface	fakefacefailsafe	青春エリア	虚假面孔·失效安全	fake face fail safe	虚假面孔失效安全
+ふらふらふら、	furafurafura	3fura	美术生2	呼啦呼啦呼啦	青春エリア	摇摆不定
+シックスプラン	sixplan	六计划	青春エリア	第六计划	six plan
+フタタビ	futatabi	再度	青春エリア	再次	二度
+SQUAD-Phvntom-	幻影小队	索罗莫尼亚	丝瓜饭桶	战术小队
+GEOMETRIC DANCE	几何舞	几何冲刺
+インパアフェクシオン・ホワイトガアル	yeet	文学少女	白色女人	不完美的白之少女	雪之下雪乃	霸道总裁爱上我	Imperfection White Girl	女孩看书	把图片中的人物看成近江汐莉的我还有救吗？
+WE'RE BACK!!	我们回来了	我们是背	洛特十二	Lotto Twelve
+熱異常	热异常	夏热歌	Heat abnormal	足立零	Heat Abnormal	netsu ijou
+1000年生きてる	存活千年	超越光2	千年老登	1000nen ikiteru Living Millenium	Living for a millenium	超越窗
+IMAWANOKIWA	弥留之际	临终之际
+OMAKENO Stroke	呐喊	os
+青春コンプレックス	结束乐队	孤独摇滚	seishun complex
+アンダーキッズ	地雷女	地雷男拿刀捅女友	国服还没上就删了	Under Kids
+さくゆいたいそう	skyi	sakuyui taisou	咲唯体操	我等心友	管人体操
+バグ	bug	故障	残机	八古	Bug	八股	咕噜咕噜	爸爸的雷达	八夕
+星界ちゃんと可不ちゃんのおつかい合騒曲	SEKAI-chan to KAFU-chan no otsukai gassoukyoku	猫抓板	催催催	Sekai chan	Sekai-Chan and Kafu-Chan's Otsukai Gassoukyoku	sekaseka	可不敢笑	星界可不合骚曲	马赛克	圆头耄耋模拟器
+Burn My Soul	红烧天堂	烧我的魂	燃烧吧我的中二魂
+with U	wacca	和你	千年虫
+Love Kills U	爱杀你	粉红少女啃西瓜	粉红少女抱西瓜
+DANGEROOOOUS JUNGLE	越共	危险丛林	开幕摸大腿	单脚拉屎	玉腿
+天使光輪	Angel Halo	天使光轮	天使破輪
+トンデモワンダーズ	不可思议的wonders	TONDEMO-WONDERS	TONDEMO-WONDERZ	不可思议的wonder	世界解体还有10秒
+神威	带土和琳	救救我的舅母砸砸砸砸砸砸	EZ2DJ 7TH TraX CODENAME:VIOLANT	KAMUI	kamui
+ozma	哦扎马	奥兹玛
+月面基地	Moon Base	面基	MOON BASE	GETSUMEN KICHI
+ずんだもんの朝食　〜目覚ましずんラップ〜	俊达萌	朝食	欧西给	起きて	起床	俊达萌的早餐	起床了	track skip	起床铃	毛豆叫床	大早上的你叫啥呀	朝食俊达萌
+あなたは世界の終わりにずんだを食べるのだ	Anata wa Sekai no Owari ni Zunda o Taberu no da	You will eat Zunda at the end of the world	俊达萌	食终孤独	俊达萌发电报	电报	俊达萌流口水	世界终
+HUMANBORG	赛博人	人类伯格	baddest2
+ULTRA POWER	阿卡贝拉	bbox
+ジェヘナ	地狱	gehenna	Gehenna
+ツギハギスタッカート	拼凑的断音	patchwork staccato	弓虫
+HANIPAGANDA	两排奶龙	埴轮宣扬	奶龙	奶龙军团
+Rush-Hour	冲一小时	抽畜	百事可乐
+QUEEN	女王	女皇	100.7	圈儿	皇后
+天使の翼。	天使之翼
+さよならプリンセス	再见了公主	再见公主	Goodbye Princess
+Apollo	阿波罗	登月	吴奇隆	我去，是吴奇隆	我去是吴奇隆	我去，是吴奇隆！	航天基地	我趣！事吴奇隆！
+raputa	热葡萄	aaaaaaaa	小女孩科目三	rpt	中国结	拉普大	拉谱大	楔形文字	サファ太 × 翠楼屋	啊啊啊啊啊啊啊啊	ラプタ	西直门桥	𐎼𐎠𐎱𐎹𐎢𐎫𐎠	啊	拉普塔	这首歌只有一个字 啊	葡萄闪电侠	阳光玫瑰
+系ぎて	Tsunagite	推荐乐曲排行榜	最水DX15	白白的系	我是别名	Tuna	6a	6A景区	byd回忆	kop5	kop5th决胜曲	ysk泡温泉	つなぎて	一线牵	俩舞神越级	手牵手	捆绑	携手	携手前进	携手向前	束缚	牵手手	牵绊	白丝	系	系小鬼	系日本字	连结	玉玉症好了	6a级景区	两个舞神六个尖	两舞神直播越级	打不到90会被赶出去	两舞神六个a	俩个舞神六个a	两舞神越级	系接头	挂俩越级的：	我的未来不是梦	tsunagite	次那gi忒	我治好了玉玉症	新手教程2	我没玉玉症	15级吃分推荐榜2	新手叫疼	新手教程 No	繋ぎて	我治好了抑郁症	推荐越曲排行榜
+アルカンシエル	彩虹	arc en ciel
+RAD DOGS	toya1	红狗	迷人的新口型
+アイディスマイル	IDS	IDSmile	idsmile	晓山瑞希
+にっこり^^調査隊のテーマ	调查队	微笑调查队	微笑^^调查队	汪大吼	大调查	wonderhoy	wonderhoi
+PinqPiq (xovevox Remix)	佩奇	乒乓球
+エスオーエス	bud+主题曲	SOS	二打一	sos
+のじゃロリック	花魁	花魁rollick	nojya rollick	nojarorikku	结婚	konkon结婚kon	你好结婚
+Edelweiss	雪绒花	熊出没	两猫拆机
+QuiQ	快客	qq	quq	7-2b,7/3b	RUSH Q	早八要迟到了	rush q	牛奶猫睡觉	上早八	qwq	早八	出勤迟到	咪露库睡大觉	牛奶快跑	猫娘睡觉	就睡五分钟	说好和朋友去堵门的你	哈雅库
+IF:U	骰子	🎲	妈宝蓝2	Marbleblue 2	ifu	如果你	I服了you	如果：你	風になりたい	衣服油
+Cider P@rty	Cider Party	cider	苹果酒派对	黑楼十夜子
+勦滅	剿灭	exterminate	soumetsu	1800合成玉	trg溜大冰	原型黑姬	1600合成玉
+Lunatic Vibes	lunatic	LV	疯狂共鸣	黑楼哉辉
+Bloody Trail	血迹	血腥之路	血路	贝利亚
+DEVOTION	挚爱	专注轻机枪	忠诚
+Geranium	天竺葵
+The Cursed Doll	诅咒玩偶
+RondeauX of RagnaroQ	诸神黄昏	诸神黄昏的回旋曲	诸神黄昏交响曲	ror
+ℝ∈Χ LUNATiCA	rex	黑天使	黑天鹅	实数集属于X	rexlunatica	实数属于x	路西法
+Λzure Vixen	av	日本小电影	kof5th国际侧	泸溪河的牛子和批	kop5国际服决赛曲	kop5th海外决赛曲	双开门冰箱	霸道总裁	凯南	azure vixen	有格调	蓝的狐	小黑人
+MarbleBlue.	妈宝蓝	万宝路	大理石蓝	小千夏	写数学作业
+まっすぐ→→→ストリーム！	右右右	日向千夏	小朋友齐打交	千夏冲击！
+最っ高のエンタメだ!!	最棒的娱乐
+Ai C	aipc	哎西吧	aic
+INTERNET YAMERO	快远离互联网	超天酱2	牙沒肉	地雷女2	地雷女不戴套	200个绝赞	朝天椒2	地雷女不要啊	互联网毁了我	yamero
+過去を喰らう	花谱	吞噬过去	花譜	花谱摇	吃过去	kako wo kurau	kako o kurau
+強風オールバック	强风大背头	Kyoufuu All Back	歌爱雪切菜
+寝起きヤシの木	早起冲天炮	早起的椰树头	Neoki Yashinoki	Waking Yashinoki	早起椰树头
+アイドル	偶像	idol	爱豆	推子	我推的孩子
+ラビットホール	兔子洞	Rabbit Hole	初音未来下海	rabbit hole
+酔いどれ知らず	不知醉	Unaware drunkard
+新人類	新人类	New Human Race	Shinjinrui
+Freak Out Hr.	foh	freaky	popy	梦结	小画家	邦高祖	好强的压
+さよならヒストリー	再见了历史	再见历史	慧音老师
+New York Back Raise	纽约背部平举	纽约赌场	德州扑克	努力哥输给天赋比	四条输给皇家同花顺	皇家同花顺	纽约回升	nybr	新约克回来赌
+VOLT	伏特
+tiny tales continue	小传说继续	ttc	小故事继续
+ouroboros -twin stroke of the end-	衔尾蛇	ouroboros
+カーニバルハッピー	快乐狂欢
+サイバーサンダーサイダー	Cyber Thunder Cider	火柴人	cyber thunder cider	粉笔人
+おくすり飲んで寝よう	吃药药就睡觉吧	蕾米怪叫	Okusuri nonde neyo	吃完药就睡觉吧	吃完药药睡觉觉	吃了药就去睡吧	吃完药躺板板	吃药睡觉	药娘
+バラバラ〜仮初レインボーローズ〜	巴拉巴拉
+QUATTUORUX	300绝赞	打群架	代理人战争	lk	lk2	聚众斗殴	300英雄	猫猫一打二	quat	quattro	完	100.2672	终
+匿名M	Anonymous M tokumei m	初音采访
+ライアーダンサー	Liar dancer	谎言舞者	哦多列	Liar Dancer	liar dancer	铁托摇	蓝牙	欧都累
+バカ通信	八嘎通信	100.5	八力通信	baka tsushin	idiotic transaction	馬鹿通信	笨蛋通信	9通信	⑨通信
+LOSTPHANTASIA	灵梦眼睛套长条	灵梦戴眼镜	失落幻想
+Bad Apple!! feat.nomico (Tetsuya Komuro Remix)	马挖路坏苹果	星星坏苹果	坏苹果
+Re:Unknown X	不知名X	未知X	endtime2	et2	100	未知x	东方那个14+
+INFiNiTE ENERZY -Overdoze-	ieo	比纺星难	坟头自拍	infinite energy	infinite enerzy
+Make Up Your World feat. キョンシーのCiちゃん & らっぷびと	你的世界
+BOOM! BOOM!! BOOM!!!	嘭嘭嘭	爆爆爆
+ミラクルポップ☆アドベンチャー!!!!!	芙宁娜高潮	泸溪河表白DJ GENKI	miracle pop adventure	大奶子芙宁娜	彩色芙宁娜	炫彩芙宁娜	1
+Trust	信任	信任2	光吉猛修唱歌	我相信
+ラヴィ	lavi e	lavie	拉薇	lavi
+スティールユー	steal you	钢铁的你	黑化谱尼	暗黑谱尼
+オシオキGIMMICK!!	Oshioki GIMMICK!!
+偉大なる悪魔は実は大天使パトラちゃん様なのだ！	munyu munyu	恶魔大天使	大恶魔大天使	伟大恶魔大天使	伟大恶魔实则天使	伟大恶魔	母牛母牛
+シュガーホリック	sugar holick	sugar horlick	重度甜食控
+MUSIC PЯAYER	shitty splashy slider	MUSIC PRAYER	音乐播放器
+壱雫空	mygo	五把伞	土下空	女同	邦	Hitoshizuku	卖沟	它下空	某某空	咕咕嘎嘎	一休尼	木柜子	一拿空	又有一集开始了	主唱高松灯	雨伞
+ザムザ	zamuza	samsa	奏三箱	knd3	萨姆沙	砸木砸	zamza
+プリズム△▽リズム	PRiSM主题曲	相信彩虹2	棱镜旋律	PrismRhythm	两个三角	prism主题歌	prism rhythm	棱镜节奏
+パラドクスイヴ	ParadoxEve	悖论前夕	青春エリア
+YKWTD	You Know What To Do	青春エリア	汝知所欲为	一块玩土豆	你知道做什么	盈亏问题点	懂得都懂
+184億回のマルチトニック	184亿	184	青春エリア	184亿次的多音阶	18.4 billion multitonics	184亿回	184亿次的multi-tonic	100+28*3億回啊3億回	w42一血完走
+果ての空、僕らが見た光。	果空	终末天空	果空仆见光	Brand new sky	青之门门曲	青门	果空僕见光	Hate no sora, bokura ga mita hikari.
+Cryptarithm	密码算术	cryp	削除不鬼叫	加密算法	密码算数	削除鬼叫2	密码学	变态主义2	鬼叫2	Lraong Iraong faarihndh
+天蓋	天盖	小白法院	把你天灵盖拧下来
+Deicide	ttf2	弑神	decide
+氷滅の135小節	水135	冰灭的135小节	冰灭	白之门门曲	冰135	135	百合咲大战黑天鹅	hyoumetsu no 135 shousetsu	135小节	白门	99.0731	冰灭135
+Divide et impera!	击剑2	分而治之	kop6预选曲	白人打架	猫娘打架	推进之王大战迷迭香	黑人打架2	老婆吃醋	老婆	纱露朵大战米露库	迷迭香大战推进之王	咪露库大战纱露朵
+地獄	地狱	jigoku
+シスターシスター	Sister sistee	Sister Sister	Shinjite Shinjite
+有明/Ariake	有明	紫之门门曲	啊里啊可
+Flashback	闪回	蓝色机娘	老婆	0	1
+Colorfull:Encounter	色彩相遇	绿姬
+雨露霜雪	URS	Urosetsu	Kop6th Int	雨雨雨雨	雨露均沾	四个的雨	龙b 绝赞没套	红铺绝赞没套	露露	urosousetsu	雨*(1+路+相+雪)	四字的雨	雨露
+宙天	chuten	Kop6th	難	14.7中位	周天	黑之门门曲	就癲	肘天	chuuten
+Elemental Ethnic	加特林	Boy 崩比給樓 孔怪給拉 動管誰啦 芭比boy	元素民族	狗叫机关枪
+美夜月鏡	美心月餅	美夜月镜
+いちげき！のテーマ	江江比耶	一击	Hi
+Radiance	江江比✌️	江江比耶2
+R'N'R Monsta	rnr
+勇者	辛逝纪芙音战士	如果是欣梅爾的話 他一定不會人權勇者的	你们这里谁最喜欢听勇者	The Brave	yuusha  hero	6
+病み垢ステロイド	窜天猴	病郁账号类固醇	yamiaka steroid	病垢	玩偶熊女孩	嗑药
+ダーリンダンス	地雷女	达令	Darling Dance	darling dance	达令跳舞	地雷妹
+唱	疯马秀	show
+愛包ダンスホール	爱派Dancehall	himehina	爱包	爱派	heart pie dancehall aipai dancehall	爱包舞厅	爱派dancehall
+マツケンサンバⅡ	松健森巴	matsuken samba	matsuken samba ii
+デビルじゃないもん	才不是恶魔呢	德匹婚曲	堕	devil jya naimon	not a devil
+ずんだパーリナイ	俊达派对之夜	zunda party night	mochi mochi zunda	俊达萌派对之夜
+Ultimate taste	终极品味	芙兰教你认曲风
+Chronomia	chaonima	天文钟	FC
+人マニア	人狂热者	Hito mania	hitomania	人狂热症	人狂
+転生林檎	转生苹果	reincarnation apple	tensei ringo	🍎
+ゆけむり魂温泉 II	yukemuri tamaonsen II	魂温泉	魂温泉2
+人間が大好きなこわれた妖怪の唄	人间大好妖怪呗
+シリウスの輝きのように	Siri	就像天狼星的光芒	天狼星	Sirius no Kagayaki no you ni
+プラネタリウム・レヴュー	wds	Planetarium Revue
+演劇	演剧	mfy4
+無間嫉妬劇場『666』	无间	666
+夢現妄想世界	梦限大	むげんマイワールド	梦现妄想世界	Mugen My World	啥是梦限大？
+snooze	绝赞双压无套x6	小憩	腿画崩了
+イガク	医学	ユ!	ユ	medicine	我有ユユ症	igaku
+てらてら	熠熠闪光	忒拉忒拉	TeraTera
+Empire of Winter	冬帝国
+迷える音色は恋の唄	恋歌	群愿	A Wandering Melody of Love	新年快乐！
+Löschen	韵律源点op	loschen	螺丝陈	八月新番韵律源点op
+Abstruse Dilemma	AD	2112112	ad	深奥的困境	2112	干什么！	干什么
+HYP3RTRIBE	hypertribe
+On your mark (104期 Ver.)	on your mark
+はげしこの夜 -Psylent Crazy Night-	圣诞歌	电棍	电棍过圣诞
+オーバーライド	Override	重新覆写	99.7587	override
+右に曲ガール	好像是12.8？
+ウルトラトレーラー	超预告篇	ultra trailer
+バベル	巴别塔	Babel
+お願い！コンコンお稲荷さま	狐仙大人	拜托了狐仙大人	东方福瑞	Y	3dan技
+いっぱい食べる君が好きだよ	I love you eat a lot!	ILYEAL	喜欢吃很多的你	喜欢你	喜欢ななひら
+ピポピポ -People People- feat. ななひら	人人从从众众	pipopipo	ならなら
+ワールドワイドワンダー	worldwide wander
+How To Make 音ゲ～曲！	如何制作音游曲	音游曲	音游曲教程	otoge
+リアライズ	Realize	实现	khn4	realise	realize
+Fraq	Prism+主题曲	fa♂q	faq	花Q	泸溪河能不能别惦记你那穿心了	fkU
+ウタヒメナイトストーム	歌姬之夜风暴
+Feel The Luv	五押	4
+Åntinomiε	antinomie	黄之门门曲	二律背反	antinomic	门熊	迪拉熊
+ATLAS RUSH	阿特拉斯冲刺	ar	Deliver The Fire	Rise
+概して過誤	近乎全错	Mostly Wrong
+Unfinished Epic	未完成的史诗
+忙シー日	忙了一天	忙一日	地球2	busY daY	busy day	Busy	忙的一B
+FLΛME/FRΦST	烈焰/冰霜	红之门门曲	flame/frost	森林冰火人	Oh Baby!
+Amereistr	美国佬	100円	两个14守13+	-100	https://100円.是什么歌.com	谱面-100円	美国人	rN
+World's end BLACKBOX	世终黑盒	小黑盒	世终2	棱镜塔门曲	web	webb	黑盒
+AFTER PANDORA	后潘	潘2	白盒	潘多拉之后
+Xaleid◆scopiX	XX	白花钱	-100円	乱码	别笑，你也过不了第二关	起床战争	Clansty VS Y	射雕英雄传	管理内斗	王权争霸	ysk泡温泉2	天地人间完全放电	设计蚂蚁	100日元	抽奖の24秒	新手教程	拆机了	AyangTelevision	神曲神谱情感调动太棒了	萬花筒	一百块钱	쌀레이도	最水长15	kaleidoscopic	温泉2	新手教程No.3	开抽	X10X
+Ref:rain (for 7th Heaven)	咏人不知2	安慰奖	refrain	refrain for 7th heaven
+Zitronectar	mignon	炫压抑	24分45交互	Ops:Limone 3	关闭BGA	摸逼	老婆	两老婆	沙发太性压抑	典中点之sbwmc炫压抑怪谱师	柠檬蜜
+サウンドプレイヤー	Sound Player	Sound Prayer
+crazy (about you)	因你而狂	为你疯狂	为了你我变成狼人模样
+きゅびずむ	立体主义	超天酱3	cubism	kyubizumu	CUBISM
+きゅびびびびずむ	立体体体体主义	超天酱3.5	cubibibibisim	kyubibibibizumu	cubibibibism	Cubibibibism	Kyubibibibizumu
+ゆりかご	yurikago	Cradle	cradle
+月光	好似一缕月光	Hard	Moonlight	这不是月の光，这里是舞萌，别走错了！	gekkou	moonlight
+はいよろこんで	乐意效劳	Hai yorokonde	hai yorokonde	给力给力当
+ビビデバ	匕匕亏八	星彗闪耀	bbdb	bibideba	bibbidiba	bibidiba
+シカ色デイズ	白香水	鹿乃子	不停的鹿🦌	Shikairo Days	这倒是提醒我了
+メズマライザー	催眠术	催眠师	mesmerizer	FOCUS
+ももいろの鍵	桃键	桃色钥匙	Momoiro no Kagi	The Peachy Key
+のだ	noda
+Synthesis.	感性合成法	生成
+もういいよ	已经够了	Mouiiyo	mou ii yo	我他妈受够了
+モエチャッカファイア	鲨鱼妹	绝区零	ZZZ	moechakkafire	moechakka fire	狗修金	萌萌点火Fire	moe chaka fire	MoeChakkaFire
+マヌルネコのうた	兔狲之歌	耄耋
+スナネコのうた	沙丘猫之歌	Sand cat	suna neko no uta	耄耋之歌	耄耋	老吴之歌	哈基米	哈气
+M@GICAL☆CURE! LOVE ♥ SHOT!	MIKU MIKU BEAM	magicalcureloveshot
+Overjoy ★ OVERDOSE!!	信用2	红信用加强版
+DATAERR0R	D0	数据错误	日期错误
+あいたい星人	想见你星人	Aitai Seijin	Aitai-lians
+ハオ	好	八才	女子	はお	hao	中
+好きな惣菜発表ドラゴン	发表喜欢吃的菜的龙	Favorite-Daily-Dish-Announcing Dragon	Suki na Souzai Happyou Doragon	喜歡的配菜發表龍
+Help me, ERINNNNNN!!	Help Me ERIN	erin	救救	121827	永琳呢救一下啊	永琳呢永琳呢救一下啊
+超最終鬼畜妹フランドール・S	鬼畜妹	超最終鬼畜妹	Chou saishuu kichiku imouto Flandre S	超鬼S
+お呪い	咒语
+ありきたりな恋の歌	拔中蒜
+MYTH Re：LEASE	音游游戏王	300绝赞2
+∀	倒A	对于所有	全称量词	倒a	t	A	Rev a
+㋰責任集合体	无责
+三日月ステップ 2023	新月乱步 2023
+少女レイ	shoujo rei shoujo ray	Hi	少女ray
+少女A	young girl A	shojo A	shoujo A
+帝国少女	Imperial Girl
+うぇいびー	Wavy	wavy
+BlackFlagBreaker!!	黑旗
+クーネル・エンゲイザー	进食睡眠凝视者
+ゼロトーキング	zero talking
+抜錨	weighanchor	weigh anchor	Anchor
+NO ONE YES MAN	沒一個是人	没一个是人	没有人类了
+Retribution ～ Cycle of Redemption ～	报应
+Luminescence	冷光	放烟花
+Pixel Galaxy	像素星系	谷歌和三星
+Xaleid◆scopiX (2)	乱码
+CiRCLE CAMPAiGN	CiRCLE主题曲
+殿ッ！？ご乱心！？	circle
+Customized Justice	口爸就是正义
+False Amber (from the Black Bazaar, Or by A Kervan Trader from the Lands Afar, Or Buried Beneath the Shifting Sands That Lead Everywhere but Nowhere)	贾宝玉	假宝玉	假琥珀	False Amber	(来自黑市，或来自远方土地的商队商人，或埋藏在通往四面八方却又无处可寻的流沙之下)	赝珀	賈寶玉	etc.	以下略	Etc.	名字太长	false amber（以下略）	FA
+Get U ♭ack	得到你的背
+鬼女紅妖	鬼女红叶	鬼女红妖
+華天月兎	西天月八	씨발兔	씨天月발	씨발	操操操！！！	西八兔	哦牛皮这也能操。！
+7 Wonders	ysk梦碎kop7	7W
+イーヴィルガール	evil girl
+ラストピースに祝福と栄光を	Last Piece	祝福荣光	Finding Blessing and Glory in the Last Piece	Last piece ni shukufuku to eikou wo	希望泪2
+Unwelcome School	碧蓝档案	银行不妙曲	68便利屋	不欢迎学校	蔚蓝档案	阿露吃瘪曲	銀行不妙曲
+彩りキャンバス	Irodori Canvas
+死ぬな！	别死啊
+どんぐりGAME	橡子游戏
+Overdose	od	谢谢你叫我小姑娘	pr80 32t
+モニタリング	视奸	监视	monitoring	Monitoring	让我看看
+テトリス	俄罗斯方块	tetoris	TETORIS	teto	tetr.io	jstris	techmino	tetris99	Tetoris
+み　む　かｩ　わ　ナ　イ　ス　ト　ラ　イ	uno	mimukauwa nice try	nice try	miku打牌	进来看雌小鬼miku打uno	Q	Mimukauwa nice try	Mimukauwa Nice Try	屎
+有頂天ドリーマーズ	uchouten dreamers
+ニルヴの心臓	Nirv的心脏	心脏塔	the Tower of NIRV	nirv	the tower of nirv	tower of nirv
+Hurtling Boys	Hako	鸽子
+おべんきょうたいむ	学习时间	学习时间到	Obenky	Obenkyou Time	obenkyo time
+るろうらんる	rurouranru	wandering rag	这倒是提醒我了	撸	🦌
+はじまりの未来	初始的未来	hajimari no mirai
+化けの花	bake no hana	bakenohana	Bake no hana	怪物之花	mzk5箱	男的来了	Bake no Hana
+ヒアソビ	Hiasobi	Play With Fire	玩火
+電光刹歌	DENKOH SEKKA
+ジェットブラック	Jet Black
+トレジャーガーデン	TREASURE GARDEN
+最愛人生ランナー	SAI LOVE JINSEI RUNNER
+Let's ミクササイズ！！	add
+うい麦畑でつかまえて	Ui mugibatake de tsukamaete	麦田守望者	羽衣麦田的守望者
+ヤミナベ!!!!	yaminabe	黑暗火锅	暗锅
+Restricted Access	限制访问
+胡蝶乃舞	蝴蝶乃舞
+零號車輛	零号车辆	零号列车	零车	灵车漂移	灵车	大运	0车	小灵车	托马斯小灵车	Vehicle Zero	九号
+サイエンス	科学	science	12	123	INDUSTRY
+RONDØ	rondo
+Aegisfortia	新15
+TECHNOPOLIS 2085	啊啊五一五一
+Galaxy Blaster	三星Galaxy爆炸	三星
+愛♡スクリ～ム！	露比酱
+テレパシ	心灵感应
+オペラ！スペースオペラ！	太空歌剧
+お返事まだカナ？おじさん構文！	大叔式小作文	大叔小作文
+3rd Avenue	第三大道
+ちっちゃな私	小小的我
+無彩色のディストピア	无彩色
+Inverted World	倒转世界	iw
+光線歌	光线歌
+電脳眠眠猫	电脑眠眠猫
+Dear Player 2	DP2
+ごはん食べヨ	领域展开	野原广志
+愛言葉V	爱言叶5
+ループザルーム	循环之室	Looping The Rooms	后室	循环室
+さっきゅんライト（2025）	受着

@@ -1,12 +1,11 @@
 # 第三方数据说明 / Third-party notices
 
-## 曲目别名库 aliases.txt
+## 曲目别名库 `aliases.txt`
 
-本项目内置的曲目别名（社区昵称）数据，整理自 **clansty 的 SongSearch mod**：
+- **数据来源**：MuNET 公共 API 的 `/v1/mai2/music` 接口（https://api.mumur.net），字段 `aliases`
+- **原始社区别名**由 [clansty](https://github.com/clansty) 的 SongSearch 项目整理与贡献 —— 感谢作者与社区贡献者
+- **本项目所做处理**：仅提取 `id / name / aliases` 字段，转换为制表符分隔的纯文本（`曲名 <Tab> 别名 <Tab> 别名 ...`），并按曲名对应到游戏内曲目
+- **版权**：数据归原作者与贡献者所有，本项目不再对其进行再许可
+- **更新方式**：`tools/update-aliases.ps1`（需要一个 MuNET API Key，请自行申请；**不要提交进仓库**）
 
-- 项目地址: https://github.com/clansty
-- 内容: 该 mod 内置曲库中每首歌的别名列表（中文昵称 / 罗马音 / 英文缩写等）
-- 本项目所做处理: 仅提取别名字段，转换为制表符分隔的纯文本格式（`曲名 <Tab> 别名 <Tab> 别名 ...`），并按曲名与游戏内曲目对应
-- 数据由社区用户维护，版权归原作者与贡献者所有；本项目不再对其进行再许可
-
-如需移除或替换：直接编辑 `aliases.txt`（格式见 README）或删除该文件，mod 在没有别名库时会正常工作，只是不能按别名搜索。
+如需移除或替换：直接编辑 `aliases.txt`（格式见 README），或删除该文件 —— mod 在没有别名库时仍可正常工作，只是不能按别名搜索。
