@@ -11,7 +11,7 @@
 
 ## 致谢 / Credits
 
-- **曲目别名数据来自社区维护的曲目数据库**（经授权整理），原始社区别名由 **[clansty](https://github.com/clansty) 的 SongSearch 项目**整理与贡献 —— **感谢作者与社区贡献者**。本项目仅做字段提取与格式转换，详见 [NOTICE](NOTICE)。别名库可用 `tools/update-aliases.ps1`（需自备数据源与凭据）自行更新。
+- **曲目别名数据来自 MuNET 别名数据库**，原始社区别名由 **[clansty](https://github.com/clansty) 的 SongSearch 项目**整理与贡献 —— **感谢作者与社区贡献者**。本项目仅做字段提取与格式转换，详见 [NOTICE](NOTICE)。别名库可用 `tools/update-aliases.ps1`（需自备数据源与凭据）自行更新。
 - [MelonLoader](https://melonwiki.xyz/) —— mod 加载器
 - [Harmony](https://github.com/pardeike/Harmony) —— 运行时补丁
 

@@ -1,4 +1,4 @@
-# 更新曲目别名库 src/aliases.txt（数据来自社区曲目数据库）
+# 更新曲目别名库 src/aliases.txt（数据来自 MuNET 别名数据库）
 # 用法:  pwsh -File tools/update-aliases.ps1 -BaseUrl <数据源地址> -ApiKey <你的Key> [-Proxy http://127.0.0.1:7890]
 # 说明:  key 只在本机使用, 不要提交进仓库。
 param(
@@ -13,7 +13,7 @@ $r = Invoke-WebRequest "$BaseUrl/v1/mai2/music" -Headers @{ 'X-API-Key' = $ApiKe
 $list = ($r.Content | ConvertFrom-Json).musicData
 $sb = New-Object Text.StringBuilder
 [void]$sb.AppendLine("# 曲目别名库 —— 制表符分隔: 曲名 <Tab> 别名 <Tab> 别名 ...")
-[void]$sb.AppendLine("# 数据来源: 社区维护的曲目数据库（经授权整理）")
+[void]$sb.AppendLine("# 数据来源: MuNET 别名数据库")
 [void]$sb.AppendLine("# 原始社区别名由 clansty 的 SongSearch 项目维护, 感谢作者与贡献者")
 [void]$sb.AppendLine("# 可以直接编辑本文件, 保存后刷新网页即生效。 # 开头是注释")
 $songs = 0; $ali = 0
