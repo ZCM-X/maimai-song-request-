@@ -21,10 +21,6 @@
 **将 dll 放置在游戏的 mods 文件夹，游戏加载完成后浏览器打开本地 IP 加 8790 端口即可点歌，例 `127.0.0.1:8790`。**
 
 - 需要 [MelonLoader](https://melonwiki.xyz/) 0.6.x（Mono 版本）
-- 只要一个文件：页面 / 浮层 / 别名库都内嵌在 dll 里，首次启动自动生成 `SongRequestMod.toml`（端口等配置）
-- **手机同网**：把 `127.0.0.1` 换成启动日志里「手机(同网)」那个地址
-- **手机连不上**：多半是 Windows 防火墙挡入站，管理员 CMD 执行一次
-  `netsh advfirewall firewall add rule name="SongRequest" dir=in action=allow protocol=TCP localport=8790`
 - 构建：`dotnet build src/SongRequestMod.csproj -c Release -p:GameDir="<游戏Package目录>"`
 
 更多：接口 [`docs/API.md`](docs/API.md) · 开发笔记 [`docs/DEVELOPMENT.md`](docs/DEVELOPMENT.md) · 使用说明 [`docs/使用说明.md`](docs/使用说明.md) · 数据来源 [NOTICE](NOTICE) · 许可 [MIT](LICENSE)
