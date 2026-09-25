@@ -4,7 +4,7 @@ using MelonLoader;
 using HarmonyLib;
 using UnityEngine;
 
-[assembly: MelonInfo(typeof(SongRequestMod.Mod), "SongRequest", "1.0.0", "")]
+[assembly: MelonInfo(typeof(SongRequestMod.Mod), "SongRequest", "1.0.1", "")]
 [assembly: MelonGame("sega-interactive", "Sinmai")]
 [assembly: AssemblyVersion("1.0.0.0")]
 [assembly: AssemblyFileVersion("1.0.0.0")]
@@ -207,6 +207,31 @@ namespace SongRequestMod
             {
                 MelonLogger.Error("[SongRequest] 读配置失败: " + e.Message);
             }
+            EnsureAllKeys();
+        }
+
+        /// <summary>老配置文件缺了新版本加的键 -> 自动补上并重写(保留用户已改的值)</summary>
+        private static void EnsureAllKeys()
+        {
+            try
+            {
+                string[] need = { "启用", "网页", "网页端口", "局域网访问", "跳转后进难度画面", "封面服务", "详细日志" };
+                if (!System.IO.File.Exists(PathFile)) { Save(); return; }
+                string txt = System.IO.File.ReadAllText(PathFile);
+                for (int i = 0; i < need.Length; i++)
+                {
+                    if (txt.IndexOf(need[i] + "=", StringComparison.Ordinal) < 0)
+                    {
+                        MelonLogger.Msg("[SongRequest] 配置缺 " + need[i] + " -> 自动补全并重写 " + PathFile);
+                        Save();
+                        return;
+                    }
+                }
+            }
+            catch (Exception e)
+            {
+                MelonLogger.Warning("[SongRequest] 补全配置失败: " + e.Message);
+            }
         }
 
         public static void Save()
@@ -215,7 +240,7 @@ namespace SongRequestMod
             {
                 System.IO.File.WriteAllText(PathFile,
                     "## ===== SongRequestMod 点歌台 =====\r\n"
-                    + "## 浏览器打开 http://127.0.0.1:8790/ 搜索点歌, /ui 不需要\r\n"
+                    + "## 浏览器打开 http://127.0.0.1:8790/ 搜索点歌; 端口可在下面「网页端口」改\r\n"
                     + "\r\n"
                     + "## 总开关\r\n"
                     + "启用=true\r\n"
