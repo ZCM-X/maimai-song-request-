@@ -1055,6 +1055,29 @@ input[type=number]{width:60px}
 /* ============================================================================
    10. Toast
    ========================================================================== */
+/* 远程分享面板: 固定在 header 右下, 只有本机/局域网能看到 */
+.share-panel{
+  position:fixed;top:64px;right:var(--sp-5);z-index:110;
+  width:min(420px,calc(100vw - 32px));
+  background:var(--c-surface-3);color:var(--c-text);
+  border:1px solid var(--c-line-strong);border-radius:var(--r-lg);
+  padding:var(--sp-4);box-shadow:0 12px 32px rgba(0,0,0,0.35);
+  font-family:var(--font-cn);font-size:var(--fs-md);line-height:var(--lh-body);
+}
+.share-panel[hidden]{display:none}
+.share-panel h3{margin:0 0 var(--sp-2);font-size:var(--fs-lg);font-weight:var(--fw-bold)}
+.share-panel .share-msg{color:var(--c-text-secondary);margin:0 0 var(--sp-3);word-break:break-all}
+.share-panel .share-url{
+  width:100%;box-sizing:border-box;margin:0 0 var(--sp-3);
+  padding:var(--sp-2) var(--sp-3);border:1px solid var(--c-line-strong);border-radius:var(--r-base);
+  background:var(--c-surface);color:var(--c-text);font-family:var(--font-mono);font-size:var(--fs-sm);
+}
+.share-panel .share-url[hidden]{display:none}
+.share-panel .share-row{display:flex;gap:var(--sp-2);flex-wrap:wrap}
+.share-panel .share-row .btn[hidden]{display:none}
+.share-panel .share-note{margin:var(--sp-3) 0 0;color:var(--c-text-tertiary);font-size:var(--fs-sm)}
+#shareBtn[hidden]{display:none}
+@media (max-width:640px){ .share-panel{top:auto;bottom:var(--sp-4);right:var(--sp-4)} }
 #toasts{
   position:fixed;right:var(--sp-6);bottom:var(--sp-6);z-index:120;
   display:flex;flex-direction:column-reverse;gap:var(--sp-2);
@@ -1642,6 +1665,14 @@ input[type=number]{width:60px}
   </div>
 
   <div class="header-actions">
+    <button class="btn btn-sm" id="shareBtn" type="button" hidden title="生成公网链接, 贴给别人就能远程点歌">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+           stroke-linecap="round" stroke-linejoin="round">
+        <path d="M10 14a5 5 0 0 0 7.1 0l3-3a5 5 0 0 0-7.1-7.1l-1 1"></path>
+        <path d="M14 10a5 5 0 0 0-7.1 0l-3 3a5 5 0 0 0 7.1 7.1l1-1"></path>
+      </svg>
+      分享链接
+    </button>
     <button class="btn btn-sm" id="refresh" type="button" title="强制从游戏重新拉取曲库（rev 变化时会自动刷新）">
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
            stroke-linecap="round" stroke-linejoin="round">
@@ -1905,6 +1936,19 @@ input[type=number]{width:60px}
     <div class="l1">maimai DX <strong>点歌台</strong> · 本地单文件控制台</div>
     <div class="l2">SONG REQUEST CONSOLE · INDUSTRIAL EDITORIAL EDITION · 127.0.0.1:8790</div>
   </footer>
+</div>
+
+<div class="share-panel" id="sharePanel" hidden role="dialog" aria-label="远程分享">
+  <h3>远程分享</h3>
+  <p class="share-msg" id="shareMsg">未开启</p>
+  <input class="share-url" id="shareUrl" type="text" readonly hidden>
+  <div class="share-row">
+    <button class="btn btn-sm" id="shareStart" type="button">开启分享</button>
+    <button class="btn btn-sm" id="shareCopy" type="button" hidden>复制链接</button>
+    <button class="btn btn-sm" id="shareStop" type="button" hidden>关闭分享</button>
+    <button class="btn btn-sm" id="shareClose" type="button">收起</button>
+  </div>
+  <p class="share-note">拿到链接的人都能点歌。每次开启都会换新链接，关闭后旧链接立即失效；退出游戏也会自动关闭。</p>
 </div>
 
 <div id="toasts" aria-live="polite"></div>
@@ -2340,7 +2384,7 @@ function render(){
   state.rendered = 0;
   if (!state.songsLoaded){
     elList.innerHTML = emptyStateHTML('正在读取曲库',
-      '正在从本机 mod 服务（127.0.0.1:8790）读取曲目数据。<br>读取完成后，用 <strong>/</strong> 聚焦搜索框即可检索。');
+      '正在从 mod 服务（' + escHtml(location.host) + '）读取曲目数据。<br>读取完成后，用 <strong>/</strong> 聚焦搜索框即可检索。');
     elFoot.style.display = 'none';
     elCount.textContent = '曲库加载中…';
     return;
@@ -2606,6 +2650,7 @@ function bindFilters(){
   $('errdismiss').addEventListener('click', hideErr);
   $('errretry').addEventListener('click', function(){ hideErr(); loadSongs(true); });
   elRefresh.addEventListener('click', function(){ refreshSongs({ manual:true }); });
+  bindShare();
   elQ.addEventListener('input', debounce(function(){
     state.q = normQuery(elQ.value);
     render();
@@ -3035,6 +3080,67 @@ function paintBadge(n, st, v){
   elStState.textContent = (STATE_CN[st] || st);
   elStStateSub.textContent = String(st).toUpperCase();
 }
+/* 远程分享: 开关 cloudflared 隧道, 拿到带密钥的公网链接 */
+var SHARE_TEXT = {
+  off:'未开启。点「开启分享」生成一个公网链接。',
+  downloading:'首次使用，正在下载 cloudflared（约 50MB）…',
+  starting:'正在建立隧道，通常 5–15 秒…',
+  running:'已开启。把下面的链接发给对方即可远程点歌：',
+  error:'开启失败'
+};
+var shareTimer = null;
+function paintShare(j){
+  var st = (j && j.state) || 'off';
+  var msg = SHARE_TEXT[st] || st;
+  if (j && j.msg && st !== 'running') msg = (st === 'error' ? '开启失败：' : '') + j.msg;
+  $('shareMsg').textContent = msg;
+  var url = (j && j.url) || '';
+  var elUrl = $('shareUrl');
+  elUrl.hidden = !url;
+  if (elUrl.value !== url) elUrl.value = url;
+  var busy = st === 'downloading' || st === 'starting';
+  $('shareStart').hidden = st === 'running' || busy;
+  $('shareStart').textContent = st === 'error' ? '重试' : '开启分享';
+  $('shareCopy').hidden = !url;
+  $('shareStop').hidden = st === 'off' || st === 'error';
+  $('shareBtn').classList.toggle('is-busy', busy);
+  clearTimeout(shareTimer);
+  if (busy || !$('sharePanel').hidden) shareTimer = setTimeout(pollShare, busy ? 1000 : 5000);
+}
+function pollShare(){
+  api('/api/remote').then(paintShare).catch(function(e){
+    $('shareMsg').textContent = '读取分享状态失败：' + e.message;
+  });
+}
+function bindShare(){
+  $('shareBtn').addEventListener('click', function(){
+    var p = $('sharePanel');
+    p.hidden = !p.hidden;
+    if (!p.hidden) pollShare();
+  });
+  $('shareClose').addEventListener('click', function(){ $('sharePanel').hidden = true; });
+  $('shareStart').addEventListener('click', function(){
+    postForm('/api/remote/start', {}).then(paintShare).catch(function(e){
+      toast('bad', '开启分享失败', e.message);
+    });
+  });
+  $('shareStop').addEventListener('click', function(){
+    postForm('/api/remote/stop', {}).then(function(j){
+      paintShare(j);
+      toast('ok', '已关闭分享', '旧链接已失效');
+    }).catch(function(e){ toast('bad', '关闭分享失败', e.message); });
+  });
+  $('shareCopy').addEventListener('click', function(){
+    var elUrl = $('shareUrl'), url = elUrl.value;
+    function done(){ toast('ok', '已复制分享链接', url); }
+    /* 非 https 的局域网页面没有 navigator.clipboard, 退回 execCommand */
+    if (navigator.clipboard && window.isSecureContext){
+      navigator.clipboard.writeText(url).then(done, function(){ elUrl.select(); document.execCommand('copy'); done(); });
+    } else {
+      elUrl.select(); document.execCommand('copy'); done();
+    }
+  });
+}
 function pollStatus(){
   api(API.status).then(function(j){
     if (j && j.ok === false){
@@ -3046,6 +3152,16 @@ function pollStatus(){
     var st = (j && j.state) ? String(j.state) : 'idle';
     var v = (j && j.version) ? String(j.version) : '';
     state.version = v;
+    if (j && j.viewer === 'local' && $('shareBtn').hidden){
+      /* 本机第一次连上: 分享已自动开启的话直接把链接面板弹出来 */
+      $('shareBtn').hidden = false;
+      api('/api/remote').then(function(r){
+        if (r && (r.state === 'running' || r.state === 'starting' || r.state === 'downloading')){
+          $('sharePanel').hidden = false;
+        }
+        paintShare(r);
+      }).catch(function(){});
+    }
     state.aliasEntries = (j && typeof j.aliases === 'number' && isFinite(j.aliases)) ? j.aliases : null;
     state.aliasSongs   = (j && typeof j.aliasSongs === 'number' && isFinite(j.aliasSongs)) ? j.aliasSongs : null;
     var rev = (j && (typeof j.rev === 'number' || typeof j.rev === 'string')) ? j.rev : null;
@@ -3067,12 +3183,12 @@ function pollStatus(){
     paintBadge(n, st, v);
   }).catch(function(e){
     elBadge.className = 'chip-info';
-    elBadge.textContent = '未连接 127.0.0.1:8790';
+    elBadge.textContent = '未连接 ' + location.host;
     elStState.textContent = '未连接';
     elStStateSub.textContent = 'OFFLINE';
     if (!state.loadErrShown){
       state.loadErrShown = true;
-      showErr('无法访问 mod 本地服务（127.0.0.1:8790）：' + e.message);
+      showErr('无法访问 mod 服务（' + location.host + '）：' + e.message);
     }
   });
 }
@@ -3111,7 +3227,7 @@ function loadSongs(retry){
     state.rows = []; state.view = [];
     elList.innerHTML = emptyStateHTML('曲库读取未完成',
       '无法从本机 mod 服务读取曲目数据：<br>' + escHtml(e.message) + '<br><br>' +
-      '请确认游戏已启动、mod 本地服务在 127.0.0.1:8790 上监听，然后点上方错误条里的' +
+      '请确认游戏已启动、mod 服务在 ' + escHtml(location.host) + ' 上监听，然后点上方错误条里的' +
       '<strong>重试加载曲库</strong>。') +
       '<div style="text-align:center;padding-bottom:var(--sp-8)">' +
       '<button class="btn" id="reload" type="button">重新加载曲库</button></div>';
@@ -3173,7 +3289,7 @@ function refreshSongs(opts){
    15. 入场编排 (§6.4 三乐章)
    ========================================================================== */
 var introDone = false;
-var INTRO_TYPE_TEXT = '正在连接本机点歌服务 127.0.0.1:8790';
+var INTRO_TYPE_TEXT = '正在连接点歌服务 ' + location.host;
 function bootIntro(){
   var intro = $('intro'), typeEl = $('introType'), pctEl = $('introPct'), skip = $('introSkip');
   var STAGE_START = 820, STAGE_DUR = 680;   /* 进度条与打字机同步窗口 (乐章一) */

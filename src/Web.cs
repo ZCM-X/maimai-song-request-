@@ -10,7 +10,7 @@ using UnityEngine;
 namespace SongRequestMod
 {
     /// <summary>
-    /// 本机点歌台网页(只监听 127.0.0.1)。
+    /// 本机点歌台网页(监听 127.0.0.1 + 可选局域网 IP; 远程分享走 cloudflared 隧道, 见 Tunnel)。
     ///   /                 点歌台页面(磁盘上的 page.html, 改完刷新页面就生效, 不用重编 mod)
     ///   /api/songs        游戏全部曲目 + 难度 JSON
     ///   /api/nowplaying   当前游玩状态(曲名/难度/Combo/分数/判定)
@@ -18,6 +18,7 @@ namespace SongRequestMod
     ///   POST /api/play    id=&diff=  点歌
     ///   POST /api/random  diff=      随机点歌
     ///   /jacket?id=&s=    曲绘 PNG
+    ///   /api/remote       远程分享状态(仅本机/局域网); POST /api/remote/start|stop 开关
     /// </summary>
     internal static class Web
     {
@@ -132,6 +133,28 @@ namespace SongRequestMod
             string path = ctx.Request.Url.AbsolutePath;
             string method = ctx.Request.HttpMethod;
 
+            // 远程(经隧道进来的)请求: 必须带本次分享的密钥, 且不能碰诊断/隧道开关接口
+            bool remote = IsRemote(ctx.Request);
+            if (remote)
+            {
+                string qk = Query(ctx.Request.Url.Query, "k");
+                if (Tunnel.KeyMatches(qk))
+                {
+                    ctx.Response.AppendHeader("Set-Cookie",
+                        "srk=" + qk + "; Path=/; Max-Age=86400; HttpOnly; Secure; SameSite=Lax");
+                }
+                else if (!Tunnel.KeyMatches(Cookie(ctx.Request, "srk")))
+                {
+                    ReplyText(ctx, Forbidden(), "text/html; charset=utf-8", 403);
+                    return;
+                }
+                if (path == "/api/selftest" || path == "/api/selfcheck" || path.StartsWith("/api/remote"))
+                {
+                    ReplyJson(ctx, "{\"ok\":false,\"msg\":\"远程访问不能使用此接口\"}", 403);
+                    return;
+                }
+            }
+
             if (path == "/api/songs")
             {
                 // ?refresh=1 强制重读游戏曲目表(连数据源快照也丢掉重探); 平时走缓存(曲目数/类型变了会自动重建)
@@ -150,7 +173,25 @@ namespace SongRequestMod
                     + "\",\"songs\":" + SongTable.Count + ",\"rev\":" + SongTable.Rev
                     + ",\"aliases\":" + Aliases.Count + ",\"aliasSongs\":" + Aliases.SongCount
                     + ",\"state\":\"" + LiveState.State
-                    + "\",\"inSelect\":" + (SelectDriver.InSelect ? "true" : "false") + "}");
+                    + "\",\"inSelect\":" + (SelectDriver.InSelect ? "true" : "false")
+                    + ",\"viewer\":\"" + (remote ? "remote" : "local") + "\"}");
+                return;
+            }
+            if (path == "/api/remote")
+            {
+                ReplyJson(ctx, Tunnel.Json());
+                return;
+            }
+            if (path == "/api/remote/start" && method == "POST")
+            {
+                Tunnel.Start();
+                ReplyJson(ctx, Tunnel.Json());
+                return;
+            }
+            if (path == "/api/remote/stop" && method == "POST")
+            {
+                Tunnel.Stop();
+                ReplyJson(ctx, Tunnel.Json());
                 return;
             }
             if (path == "/api/npstream")
@@ -333,6 +374,44 @@ namespace SongRequestMod
                 return embedded;
             }
             return Fallback(name);
+        }
+
+        /// <summary>
+        /// 经 cloudflared 隧道进来的请求: TCP 上看是 127.0.0.1, 但 Cloudflare 一定会带上这些头。
+        /// (本机/局域网的人自己伪造这些头只会把自己降级成"远程", 不会多拿权限)
+        /// </summary>
+        private static bool IsRemote(HttpListenerRequest r)
+        {
+            return !string.IsNullOrEmpty(r.Headers["Cf-Ray"])
+                || !string.IsNullOrEmpty(r.Headers["Cf-Connecting-Ip"])
+                || !string.IsNullOrEmpty(r.Headers["X-Forwarded-For"]);
+        }
+
+        private static string Cookie(HttpListenerRequest r, string name)
+        {
+            string raw = r.Headers["Cookie"];
+            if (string.IsNullOrEmpty(raw))
+            {
+                return null;
+            }
+            foreach (string part in raw.Split(';'))
+            {
+                int eq = part.IndexOf('=');
+                if (eq > 0 && part.Substring(0, eq).Trim() == name)
+                {
+                    return part.Substring(eq + 1).Trim();
+                }
+            }
+            return null;
+        }
+
+        private static string Forbidden()
+        {
+            return "<!doctype html><meta charset=\"utf-8\"><meta name=\"viewport\" content=\"width=device-width,initial-scale=1\">"
+                + "<title>SongRequestMod</title>"
+                + "<body style=\"background:#0e1120;color:#e6e9f2;font:14px/1.6 system-ui,sans-serif;padding:24px\">"
+                + "<h2>分享链接无效或已过期</h2>"
+                + "<p>请向主播索取最新的点歌链接(每次重新开启分享都会换新链接)。</p></body>";
         }
 
         private static string Fallback(string name)

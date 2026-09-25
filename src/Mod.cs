@@ -4,10 +4,10 @@ using MelonLoader;
 using HarmonyLib;
 using UnityEngine;
 
-[assembly: MelonInfo(typeof(SongRequestMod.Mod), "SongRequest", "1.0.2", "")]
+[assembly: MelonInfo(typeof(SongRequestMod.Mod), "SongRequest", "1.1.0", "")]
 [assembly: MelonGame("sega-interactive", "Sinmai")]
-[assembly: AssemblyVersion("1.0.2.0")]
-[assembly: AssemblyFileVersion("1.0.2.0")]
+[assembly: AssemblyVersion("1.1.0.0")]
+[assembly: AssemblyFileVersion("1.1.0.0")]
 
 namespace SongRequestMod
 {
@@ -59,7 +59,17 @@ namespace SongRequestMod
                 {
                     MelonLogger.Warning("[SongRequest] 别名库预载失败: " + e.Message);
                 }
+                if (Config.RemoteAutoStart)
+                {
+                    Tunnel.Start();
+                }
             }
+        }
+
+        /// <summary>退出游戏时把 cloudflared 隧道一起关掉, 不留后台进程</summary>
+        public override void OnApplicationQuit()
+        {
+            Tunnel.Stop();
         }
         public override void OnUpdate()
         {
@@ -134,6 +144,8 @@ namespace SongRequestMod
         public static bool JumpToDifficultyScreen = true;
         /// <summary>网页曲绘封面服务(需要把游戏里的曲绘编码成 PNG, 会有一点开销)</summary>
         public static bool JacketService = true;
+        /// <summary>游戏启动后自动开启远程分享(关掉就只能在网页上点「分享链接」手动开)</summary>
+        public static bool RemoteAutoStart = true;
 
         private static string PathFile
         {
@@ -210,6 +222,10 @@ namespace SongRequestMod
                     {
                         if (bool.TryParse(val, out b)) JacketService = b;
                     }
+                    else if (key == "远程分享自动开启" || key.Equals("RemoteAutoStart", StringComparison.OrdinalIgnoreCase))
+                    {
+                        if (bool.TryParse(val, out b)) RemoteAutoStart = b;
+                    }
                 }
             }
             catch (Exception e)
@@ -224,7 +240,7 @@ namespace SongRequestMod
         {
             try
             {
-                string[] need = { "启用", "网页", "网页端口", "局域网访问", "跳转后进难度画面", "封面服务", "详细日志" };
+                string[] need = { "启用", "网页", "网页端口", "局域网访问", "跳转后进难度画面", "封面服务", "远程分享自动开启", "详细日志" };
                 if (!System.IO.File.Exists(PathFile)) { Save(); return; }
                 string txt = System.IO.File.ReadAllText(PathFile);
                 for (int i = 0; i < need.Length; i++)
@@ -243,34 +259,46 @@ namespace SongRequestMod
             }
         }
 
+        private static string B(bool v)
+        {
+            return v ? "true" : "false";
+        }
+
+        /// <summary>写配置: 用当前值(补全缺项时不能把用户改过的值冲回默认)</summary>
         public static void Save()
         {
             try
             {
                 System.IO.File.WriteAllText(PathFile,
                     "## ===== SongRequestMod 点歌台 =====\r\n"
-                    + "## 浏览器打开 http://127.0.0.1:8790/ 搜索点歌; 端口可在下面「网页端口」改\r\n"
+                    + "## 浏览器打开 http://127.0.0.1:" + Port + "/ 搜索点歌; 端口可在下面「网页端口」改\r\n"
                     + "\r\n"
                     + "## 总开关\r\n"
-                    + "启用=true\r\n"
+                    + "启用=" + B(Enable) + "\r\n"
                     + "\r\n"
                     + "## 网页\r\n"
-                    + "网页=true\r\n"
-                    + "网页端口=8790\r\n"
+                    + "网页=" + B(WebEnable) + "\r\n"
+                    + "网页端口=" + Port + "\r\n"
                     + "## 局域网访问: 手机/平板同网也能打开(会绑本机局域网 IP)\r\n"
                     + "## 关掉就只有本机能连。首次用手机连如果连不上, 多半是 Windows 防火墙挡了入站:\r\n"
-                    + "##   管理员 CMD 执行一次: netsh advfirewall firewall add rule name=\"SongRequestMod\" dir=in action=allow protocol=TCP localport=8790\r\n"
-                    + "局域网访问=true\r\n"
+                    + "##   管理员 CMD 执行一次: netsh advfirewall firewall add rule name=\"SongRequestMod\" dir=in action=allow protocol=TCP localport=" + Port + "\r\n"
+                    + "局域网访问=" + B(LanAccess) + "\r\n"
                     + "\r\n"
                     + "## 点歌后是否自动切到「难度选择」画面(关掉只移动光标不换画面)\r\n"
-                    + "跳转后进难度画面=true\r\n"
+                    + "跳转后进难度画面=" + B(JumpToDifficultyScreen) + "\r\n"
                     + "\r\n"
                     + "## 网页显示曲绘封面(把游戏内曲绘编码成 PNG, 首次访问某首会有一点开销)\r\n"
-                    + "封面服务=true\r\n"
+                    + "封面服务=" + B(JacketService) + "\r\n"
+                    + "\r\n"
+                    + "## ===== 远程分享 =====\r\n"
+                    + "## 在网页上点「分享链接」会生成一个公网链接(Cloudflare 免费隧道), 贴给别人就能远程点歌\r\n"
+                    + "## 首次使用会自动下载 cloudflared.exe 到 Mods\\SongRequestMod\\; 每次开启都换新链接, 关掉后旧链接立即失效\r\n"
+                    + "## true(默认): 游戏一启动就自动开启分享, 链接打印在日志里、也显示在本机网页上; false: 只在网页上手动开\r\n"
+                    + "远程分享自动开启=" + B(RemoteAutoStart) + "\r\n"
                     + "\r\n"
                     + "## ===== 日志 =====\r\n"
                     + "## false(默认): 只留点歌台地址和报错; true: 过程日志全开\r\n"
-                    + "详细日志=false\r\n",
+                    + "详细日志=" + B(VerboseLog) + "\r\n",
                     new System.Text.UTF8Encoding(true));
             }
             catch (Exception e)
