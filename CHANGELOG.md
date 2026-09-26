@@ -1,5 +1,14 @@
 # Changelog
 
+## v1.0.4
+
+- **`崩溃保护` 改为默认关闭**：上一版默认开启的 finalizer 补丁会**吞掉游戏自身的异常**，可能让游戏"带病继续"（实测反馈：出现选曲列表为空等异常表现）。防崩不该替游戏吞异常，改为需要时手动在 toml 里开 `崩溃保护=true`
+- 就绪门控保留（见 v1.0.3）
+
+## v1.0.3
+
+- **就绪门控**：`DataManager.IsLoaded()` 之前不再触碰任何游戏对象、也不做重活（不再每 50ms 读 `GamePlayManager.GetGameScore` / `GameManager.SelectMusicID`）。此前本 mod 从游戏第一帧就频繁访问游戏对象并叠加首帧重活（全字段反射探测 + 解析别名库 + 绑定 HTTP），会搅乱游戏自身启动阶段的多线程初始化，导致 `Process.PlInformationProcess.RestoreGhost` 空引用闪退（实测：把本 mod 移出即不崩）
+- 新增可选 `崩溃保护`（给 `RestoreGhost` / `CategoryTabGenre` / `CategoryTabSort` 加 finalizer，`GetUdemaeBoss` / `GetMusicGenre` 加兜底）
 ## v1.0.2
 
 - 修复：某些版本/数据下曲库显示 0 首。原因是 `DataManager` 的内部曲目表在加载完成前是**非 null 的空占位表**（`CreateDummyTable<T>()`），旧逻辑只在字段为 null 时才回退公开 API，救命路径从未被尝试；且游戏自己的 `LoadData` 会在装载阶段用 `IsDisable()` 把条目先剔掉，被剔干净后表就永远是空的。现在改为**多路探测**（选曲列表主路 + 公开 API + 反射全部候选字段 + 形状自适应抽取 + 逐条 try/catch），取条目最多的那一路；离开选曲界面后 `CombineMusicDataList` 会被游戏释放，改用最后一次成功的快照兜住，曲库不会因此掉回 0 首

@@ -4,7 +4,7 @@ using MelonLoader;
 using HarmonyLib;
 using UnityEngine;
 
-[assembly: MelonInfo(typeof(SongRequestMod.Mod), "SongRequest", "1.0.2", "")]
+[assembly: MelonInfo(typeof(SongRequestMod.Mod), "SongRequest", "1.0.4", "")]
 [assembly: MelonGame("sega-interactive", "Sinmai")]
 [assembly: AssemblyVersion("1.0.2.0")]
 [assembly: AssemblyFileVersion("1.0.2.0")]
@@ -31,6 +31,10 @@ namespace SongRequestMod
             {
                 HarmonyInstance.PatchAll(typeof(Patch_SelectOnStart));
                 HarmonyInstance.PatchAll(typeof(Patch_SelectOnRelease));
+                if (Config.CrashGuardEnabled)
+                {
+                    CrashGuard.Install();   // 兜住游戏自身的 RestoreGhost/CategoryTab* 空引用闪退(默认关)
+                }
                 ModLog.Info("[SongRequest] Harmony 已挂: MusicSelectProcess.OnStart / OnRelease");
             }
             catch (Exception e)
@@ -82,8 +86,48 @@ namespace SongRequestMod
         private static int _urlRelog;
         private float _liveTimer;
 
+        private static bool _ready;
+        private static bool _readyLogged;
+
+        /// <summary>
+        /// 游戏数据就绪门控: 启动阶段(玩家数据还在下载)碰游戏对象会搅乱游戏自己的多线程初始化,
+        /// 实测会导致 Process.PlInformationProcess.RestoreGhost 空引用闪退(把本 mod 移出就不崩)。
+        /// 所以 IsLoaded() 之前一律不干活。
+        /// </summary>
+        private static bool GameReady()
+        {
+            if (_ready)
+            {
+                return true;
+            }
+            try
+            {
+                var dm = MAI2.Util.Singleton<Manager.DataManager>.Instance;
+                if (dm == null || !dm.IsLoaded())
+                {
+                    return false;
+                }
+                _ready = true;
+                if (!_readyLogged)
+                {
+                    _readyLogged = true;
+                    ModLog.Always("[SongRequest] 游戏数据就绪, 开始工作");
+                }
+                return true;
+            }
+            catch
+            {
+                return false;
+            }
+        }
+
         private void Tick()
         {
+            // 0) 就绪门控(最重要): 就绪前不碰游戏对象、不做重活
+            if (!GameReady())
+            {
+                return;
+            }
             // 1) 网页点歌请求: 统一在主线程执行(HTTP 线程直接动 Unity/游戏对象会偶发崩)
             SelectDriver.RunPending();
 
@@ -127,6 +171,8 @@ namespace SongRequestMod
         public static bool Enable = true;
         public static bool WebEnable = true;
         public static int Port = 8790;
+        /// <summary>游戏崩溃兜底补丁(默认关: 它会吞掉游戏的异常, 可能让游戏带病继续, 反而出现异常表现)</summary>
+        public static bool CrashGuardEnabled = false;
         /// <summary>是否同时监听局域网 IP(手机同网访问); 关掉就只有本机能连</summary>
         public static bool LanAccess = true;
         public static bool VerboseLog = false;
@@ -198,6 +244,10 @@ namespace SongRequestMod
                     {
                         if (bool.TryParse(val, out b)) LanAccess = b;
                     }
+                    else if (key == "崩溃保护" || key.Equals("CrashGuard", StringComparison.OrdinalIgnoreCase))
+                    {
+                        if (bool.TryParse(val, out b)) CrashGuardEnabled = b;
+                    }
                     else if (key == "详细日志" || key.Equals("VerboseLog", StringComparison.OrdinalIgnoreCase))
                     {
                         if (bool.TryParse(val, out b)) VerboseLog = b;
@@ -267,6 +317,11 @@ namespace SongRequestMod
                     + "\r\n"
                     + "## 网页显示曲绘封面(把游戏内曲绘编码成 PNG, 首次访问某首会有一点开销)\r\n"
                     + "封面服务=true\r\n"
+                    + "\r\n"
+                    + "## ===== 崩溃保护 =====\r\n"
+                    + "## true: 给游戏自身的 RestoreGhost/CategoryTab* 打 finalizer 兜住闪退; \r\n"
+                    + "##       注意它会吞掉游戏异常, 如果出现\"歌全没了\"等异常表现请改回 false\r\n"
+                    + "崩溃保护=false\r\n"
                     + "\r\n"
                     + "## ===== 日志 =====\r\n"
                     + "## false(默认): 只留点歌台地址和报错; true: 过程日志全开\r\n"
