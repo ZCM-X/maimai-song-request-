@@ -92,12 +92,19 @@ namespace SongRequestMod
         internal static void Pump()
         {
             _frame++;
+            // 点歌跳转期间(含切难度画面的动画)一张都不编: RenderTexture 回读要占主线程,
+            // 跟跳转撞在同一帧上就是那下"卡顿"。跳完下一帧继续, 最多晚一两帧出图。
+            if (SelectDriver.Busy)
+            {
+                return;
+            }
             bool playing = LiveState.State == "playing";
             if (playing && _frame % PlayingFrameInterval != 0)
             {
                 return;
             }
             Stopwatch sw = Stopwatch.StartNew();
+            bool did = false;
             while (true)
             {
                 Job job = null;
@@ -110,8 +117,13 @@ namespace SongRequestMod
                 }
                 if (job == null)
                 {
+                    if (did)
+                    {
+                        Perf.Hit("jacket.frame", sw.Elapsed.TotalMilliseconds);
+                    }
                     return;
                 }
+                did = true;
                 byte[] png = null;
                 if (unchecked(Environment.TickCount - job.EnqueuedAt) < StaleMs)
                 {
@@ -131,6 +143,7 @@ namespace SongRequestMod
                 // 游玩中一次只做一张; 平时做到这一帧的预算用完为止
                 if (playing || sw.Elapsed.TotalMilliseconds >= FrameBudgetMs)
                 {
+                    Perf.Hit("jacket.frame", sw.Elapsed.TotalMilliseconds);
                     return;
                 }
             }

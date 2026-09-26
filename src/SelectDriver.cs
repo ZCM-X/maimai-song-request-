@@ -91,6 +91,28 @@ namespace SongRequestMod
         /// <summary>切到难度画面的协程还没跑完(协程万一没跑, 3 秒后自动作废, 免得之后的点歌一直在等)</summary>
         private static bool _switchPending;
         private static int _switchPendingAt;
+        /// <summary>正在执行一次点歌跳转</summary>
+        private static bool _jumpInFlight;
+
+        /// <summary>
+        /// 点歌链路正忙(排队中 / 正在跳 / 等切画面)。
+        /// 主线程上的其它重活(整表重探重出、曲绘编码)看到它就往后让一让 ——
+        /// 叠在同一帧上就是玩家感觉到的"点歌时卡一下"。
+        /// </summary>
+        internal static bool Busy
+        {
+            get
+            {
+                if (_jumpInFlight || _switchPending)
+                {
+                    return true;
+                }
+                lock (_queueLock)
+                {
+                    return _queue.Count > 0 || _deferred != null;
+                }
+            }
+        }
 
         private static readonly List<Request> _queue = new List<Request>();
         private static readonly object _queueLock = new object();
@@ -820,6 +842,29 @@ namespace SongRequestMod
         /// <summary>跳到指定曲目/难度。scoreKind: -1 = 自动(按点的 id 判断, 优先 DX), 0 = STD, 1 = DX</summary>
         internal static string Jump(int musicId, int difficulty, int scoreKind)
         {
+            _jumpInFlight = true;
+            System.Diagnostics.Stopwatch swAll = System.Diagnostics.Stopwatch.StartNew();
+            try
+            {
+                return JumpInner(musicId, difficulty, scoreKind);
+            }
+            finally
+            {
+                _jumpInFlight = false;
+                Perf.Hit("jump", swAll.Elapsed.TotalMilliseconds);
+            }
+        }
+
+        /// <summary>取走这段耗时并重新计时(给分阶段计时用)</summary>
+        private static double Mark(System.Diagnostics.Stopwatch sw)
+        {
+            double ms = sw.Elapsed.TotalMilliseconds;
+            sw.Restart();
+            return ms;
+        }
+
+        private static string JumpInner(int musicId, int difficulty, int scoreKind)
+        {
             if (!InSelect)
             {
                 return "当前不在选曲界面(先回到选曲画面再点歌)";
@@ -833,6 +878,7 @@ namespace SongRequestMod
             int oldCat = _process.CurrentCategorySelect;
             int oldIdx = _process.CurrentMusicSelect;
             bool onlySpecial = false;
+            System.Diagnostics.Stopwatch sw = System.Diagnostics.Stopwatch.StartNew();
             for (int cat = 0; cat < list.Count; cat++)
             {
                 int idx = FindInCategory(list[cat], musicId);
@@ -873,8 +919,10 @@ namespace SongRequestMod
                 // 再设一次: 上面从难度画面退回选曲列表时, 游戏的 OnStartSequence 可能动过光标
                 _process.CurrentCategorySelect = cat;
                 _process.CurrentMusicSelect = idx;
+                Perf.Hit("jump.find", Mark(sw));
                 _process.ScoreType = (ConstParameter.ScoreKind)kind;
                 _process.ChangeBGM();
+                Perf.Hit("jump.bgm", Mark(sw));   // 换 BGM: 游戏自己要加载/解码预览音频
 
                 // 先让游戏按新曲目重算一遍监视器数据 —— CalcMonitorDifficulty 内部会按曲子默认值
                 // 覆写 DifficultySelectIndex, 所以必须放在"设难度"之前, 否则难度会被顶掉。
@@ -903,7 +951,9 @@ namespace SongRequestMod
                 _verifyTypeId = typeId;
                 _verifyRealId = realId;
                 _verifyAt = Environment.TickCount;
+                Perf.Hit("jump.calc", Mark(sw));   // CalcMonitorDifficulty: 重算监视器数据(可能顺带加载曲绘)
                 int applied = ApplyDifficulty(typeId, difficulty);
+                Perf.Hit("jump.diff", Mark(sw));   // 写难度 + 可玩性判定
 
                 if (Config.JumpToDifficultyScreen && _mSyncNext != null)
                 {
@@ -942,6 +992,7 @@ namespace SongRequestMod
                 string name = SongTable.NameOf(typeId);
                 string dname = SongTable.DifficultyName(applied);
                 string tname = kind == 1 ? "DX" : "STD";
+                Perf.Hit("jump.setup", Mark(sw));   // 收卡片/页签 + 锁输入 + 起协程
                 ModLog.Info("[SongRequest] 点歌: " + typeId + " " + name + " / " + tname + " " + dname
                     + " (卡 id " + realId + ", 分类 " + cat + " 第 " + idx + " 首)");
                 if (_lastClampedFrom >= 0)
@@ -1279,6 +1330,7 @@ namespace SongRequestMod
         private static IEnumerator NextFrame()
         {
             yield return null;
+            System.Diagnostics.Stopwatch swSwitch = System.Diagnostics.Stopwatch.StartNew();
             try
             {
                 if (_process != null && _process.CombineMusicDataList != null && BlockReason() == null)
@@ -1302,6 +1354,7 @@ namespace SongRequestMod
             finally
             {
                 _switchPending = false;
+                Perf.Hit("jump.switch", swSwitch.Elapsed.TotalMilliseconds);   // 切到难度画面(游戏要建难度界面)
             }
         }
     }

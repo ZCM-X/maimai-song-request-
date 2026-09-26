@@ -199,6 +199,16 @@ namespace SongRequestMod
                 AddSse(ctx);
                 return;   // 注意: 不 Close, 连接保持
             }
+            if (path == "/api/perf")
+            {
+                // 排查"主线程卡了一下"用: 各项耗时(次数/上次/最大/平均, 毫秒). ?reset=1 清零再读
+                if (Query(ctx.Request.Url.Query, "reset") == "1")
+                {
+                    Perf.Reset();
+                }
+                ReplyJson(ctx, "{\"ok\":true,\"perf\":" + Perf.Json() + "}");
+                return;
+            }
             if (path == "/api/selfcheck")
             {
                 ReplyJson(ctx, MainThread.Run(SelectDriver.Diagnostics, 3000,

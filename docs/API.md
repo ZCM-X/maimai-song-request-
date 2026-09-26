@@ -14,6 +14,7 @@
 | POST | `/api/play` | 表单 `id=` `diff=` `type=`（`diff` 省略=最高可用难度；`type=dx\|std` 指定谱面类型，省略=按 `id` 判断，DX 行 id ≥ 10000）。连点时只执行最新一个，前面的返回 `{"ok":false,"superseded":true}` |
 | POST | `/api/random` | 表单 `diff=`（可选） |
 | GET | `/jacket?id=&s=1` | 曲绘 PNG（`s=1` 小图） |
+| GET | `/api/perf` | 耗时诊断（`?reset=1` 清零）：`probe` 整表重探 / `build` 导出 JSON / `jump.*` 点歌跳转分段 / `job` 主线程任务 / `jacket.frame` 曲绘编码 |
 | GET | `/api/npstream` | **SSE**：`data: {nowplaying json}`，仅在内容变化时推送 |
 
 ## /api/songs 字段
