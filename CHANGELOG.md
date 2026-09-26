@@ -16,6 +16,7 @@
 - 修复：局域网 IP 绑定失败时整个点歌台起不来，现在退回只开本机
 - 修复：网页线程调用 Unity API（Application.dataPath / FindObjectOfType / Time）、页面缓存并发写
 - 网页：游戏数据加载中时自动重试；SSE 连着时轮询从 180ms 降到 2 秒一次，SSE 断了 5 秒后自动重连
+- 网页：修复「难度」筛选按钮在电脑上文字被截断成「B…」「M…」的问题（难度栏占两格，标签统一缩写为 BAS / ADV / EXP / MAS / Re:M）
 
 ## v1.0.2
 

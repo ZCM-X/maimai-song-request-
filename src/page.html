@@ -674,10 +674,14 @@ html.theme-transition *::after{
 
 /* 筛选行 */
 .filters{
-  display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));
+  /* 150px: 难度占两格后, 常见桌面宽度下「重置」按钮仍能留在第一行 */
+  display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));
   gap:var(--sp-3) var(--sp-4);align-items:end;
 }
 .field{display:flex;flex-direction:column;gap:var(--sp-2);min-width:0}
+/* 难度有 6 个按钮, 跟 3 个按钮的谱面类型挤同一格宽度时每个只剩 ~35px, 字全被截成 "B…" —— 占两格
+   (<=900px 时筛选区本来就是一行一个, 见下面 900px 档里的复位) */
+.field-wide{grid-column:span 2}
 .field>label{
   font-family:var(--font-body);font-size:var(--fs-sm);font-weight:var(--fw-semibold);
   color:var(--c-text-tertiary);letter-spacing:var(--ls-wider);
@@ -1409,6 +1413,7 @@ input[type=number]{width:60px}
   .search-wrap{flex:1 1 100%;min-width:0}
   #q{width:100%;min-width:0;min-height:var(--touch-h);font-size:var(--fs-xl)}
   .filters{grid-template-columns:minmax(0,1fr)}
+  .field-wide{grid-column:auto}
   .field-row{width:100%}
   /* 关键: 折叠包裹层与折叠动画在 900px 档就位, 501-900px 同样可用 (§9.3 时序) */
   .filters-box{display:grid;grid-template-rows:1fr;opacity:1;
@@ -1756,15 +1761,15 @@ input[type=number]{width:60px}
       <div class="filters-box" id="filtersBox">
       <div class="filters-inner">
       <div class="filters">
-        <div class="field">
+        <div class="field field-wide">
           <label for="diffSeg" title="难度筛选；同时决定单击曲名 / Enter 使用的点歌难度">难度</label>
           <div class="seg" id="diffSeg" style="--seg-n:6;--seg-i:0" role="group" aria-label="难度筛选">
             <span class="seg-ind" aria-hidden="true"></span>
             <button type="button" data-t="-1" class="on" title="不限难度">全部</button>
-            <button type="button" data-t="0" title="BASIC">BASIC</button>
+            <button type="button" data-t="0" title="BASIC">BAS</button>
             <button type="button" data-t="1" title="ADVANCED">ADV</button>
             <button type="button" data-t="2" title="EXPERT">EXP</button>
-            <button type="button" data-t="3" title="MASTER">MASTER</button>
+            <button type="button" data-t="3" title="MASTER">MAS</button>
             <button type="button" data-t="4" title="Re:MASTER">Re:M</button>
           </div>
         </div>
