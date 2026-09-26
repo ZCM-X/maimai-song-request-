@@ -181,6 +181,14 @@ namespace SongRequestMod
             }
         }
 
+        /// <summary>
+        /// 曲绘"代": 只有曲绘真的可能变了(曲目数变了 -> ClearCache)才 +1。
+        /// 网页把它当缓存 key —— 以前是网页自己每次重排列表就换 key, 于是每次点歌/重排
+        /// 浏览器都把可见的封面全重新拉一遍, 每张又要在主线程上重新编码(实测 18~42ms/张),
+        /// 那才是"点歌的时候游戏卡一下"的主要来源。
+        /// </summary>
+        internal static volatile int Gen;
+
         internal static void ClearCache()
         {
             lock (_lock)
@@ -188,6 +196,7 @@ namespace SongRequestMod
                 _cache.Clear();
                 _cacheOrder.Clear();
                 _cacheBytes = 0;
+                Gen++;
             }
         }
 

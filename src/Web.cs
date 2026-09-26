@@ -189,6 +189,7 @@ namespace SongRequestMod
                 ReplyJson(ctx, "{\"ok\":true,\"version\":\"" + typeof(Web).Assembly.GetName().Version
                     + "\",\"songs\":" + SongTable.Count + ",\"rev\":" + SongTable.Rev
                     + ",\"aliases\":" + Aliases.Count + ",\"aliasSongs\":" + Aliases.SongCount
+                    + ",\"jacketGen\":" + Jackets.Gen
                     + ",\"state\":\"" + LiveState.State
                     + "\",\"inSelect\":" + (SelectDriver.InSelectCached ? "true" : "false") + "}");
                 return;

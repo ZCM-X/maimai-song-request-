@@ -2005,7 +2005,7 @@ var state = {
   loadErrShown: false, lastRefreshAt: 0,
   rendered: 0,
   aliasEntries: null, aliasSongs: null,
-  jacketTick: 0, npJacketId: '', npJacketKey: '', npSig: '', npState: '',
+  jacketTick: 0, jacketGen: 0, npJacketId: '', npJacketKey: '', npSig: '', npState: '',
   /* 已渲染的 "曲目+状态+难度" 指纹: 相同 -> 走原地更新路径, 封面节点绝不被重建 */
   npKey: ''
 };
@@ -2203,12 +2203,14 @@ function buildRows(songs){
     var alias    = aliasList(s.alias);
     var aliasCmp = [];
     for (k=0;k<alias.length;k++) aliasCmp.push({ t: alias[k], n: normMatch(alias[k]) });
-    state.jacketTick++;
     out.push({
       raw: s, id: s.id, name: name, artist: artist, genre: genre,
       bpm: (typeof s.bpm === 'number' && isFinite(s.bpm)) ? s.bpm : null,
       maxLevel: songMax(s),
-      jkey: String(state.jacketTick) + '-' + s.id,
+      /* 封面的缓存 key 只跟"曲绘代"(mod 在曲目数变化时 +1)有关 —— 以前是每行一个自增号,
+         于是列表每次重排 key 全变, 浏览器把可见封面全部重拉, mod 又得在主线程一张张重新编码
+         (实测 18~42ms/张), 表现就是"点歌的时候游戏卡一下"。URL 里本来就有 id, 不冲突。 */
+      jkey: 'g' + state.jacketGen,
       hay: norm(name + ' ' + artist + ' ' + s.id),
       alias: alias, aliasCmp: aliasCmp,
       aliasHay: aliasCmp.length ? ' ' + aliasCmp.map(function(a){ return a.n; }).join(' ') + ' ' : '',
@@ -2925,9 +2927,9 @@ function renderNow(j){
   var jk;
   if (id !== null){
     var npId = 'np-' + id;
-    if (state.npJacketId !== npId){
-      state.jacketTick++;
-      state.npJacketKey = npId + '-k' + state.jacketTick;
+    var wantKey = npId + '-g' + state.jacketGen;
+    if (state.npJacketKey !== wantKey){
+      state.npJacketKey = wantKey;
       state.npJacketId = npId;
     }
     jk = npJacketHTML(id, name, state.npJacketKey);
@@ -3068,6 +3070,12 @@ function pollStatus(){
     state.aliasEntries = (j && typeof j.aliases === 'number' && isFinite(j.aliases)) ? j.aliases : null;
     state.aliasSongs   = (j && typeof j.aliasSongs === 'number' && isFinite(j.aliasSongs)) ? j.aliasSongs : null;
     var rev = (j && (typeof j.rev === 'number' || typeof j.rev === 'string')) ? j.rev : null;
+    // 曲绘代变了 = mod 那边曲绘缓存被清过(曲目数变了) -> 封面 key 跟着换, 那时才值得重拉
+    var jgen = (j && typeof j.jacketGen === 'number') ? j.jacketGen : null;
+    if (jgen !== null && jgen !== state.jacketGen){
+      state.jacketGen = jgen;
+      if (state.rows.length){ refreshSongs({}); }
+    }
     var changed = false;
     if (rev !== null && state.rev !== null && String(rev) !== String(state.rev)) changed = true;
     if (typeof j.songs === 'number' && state.songsLoaded && j.songs !== state.count) changed = true;
