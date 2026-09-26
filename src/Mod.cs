@@ -274,7 +274,7 @@ namespace SongRequestMod
         {
             try
             {
-                string[] need = { "启用", "网页", "网页端口", "局域网访问", "跳转后进难度画面", "封面服务", "详细日志" };
+                string[] need = { "启用", "网页", "网页端口", "局域网访问", "跳转后进难度画面", "封面服务", "崩溃保护", "详细日志" };
                 if (!System.IO.File.Exists(PathFile)) { Save(); return; }
                 string txt = System.IO.File.ReadAllText(PathFile);
                 for (int i = 0; i < need.Length; i++)
