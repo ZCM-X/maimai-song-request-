@@ -22,7 +22,6 @@ namespace SongRequestMod
     internal static class Web
     {
         private static HttpListener _listener;
-        private static Thread _thread;
         private static volatile bool _running;
         private static List<string> _lanUrls;
 
@@ -48,7 +47,7 @@ namespace SongRequestMod
                     }
                     // 某个局域网 IP 绑不上(网卡刚换 IP / 被别的程序占着)会让整个 Start 失败, 连本机都打不开 ->
                     // 退一步只开本机, 至少电脑上能用
-                    MelonLogger.Warning("局域网地址绑定失败, 只开本机访问: " + e1.Message);
+                    ModLog.WarnOnce("局域网地址绑定失败, 只开本机访问: " + e1.Message);
                     lans = new List<string>();
                     _listener = Listen(port, lans);
                 }
@@ -70,7 +69,7 @@ namespace SongRequestMod
                     }
                 }
                 ModLog.Always("v" + typeof(Web).Assembly.GetName().Version
-                    + "  本机: http://127.0.0.1:" + port + "/" + lanTxt);
+                    + " 点歌台: http://127.0.0.1:" + port + "/" + lanTxt);
                 return true;
             }
             catch (Exception e)
@@ -408,7 +407,7 @@ namespace SongRequestMod
             }
             catch (Exception e)
             {
-                MelonLogger.Warning("读页面失败: " + e.Message);
+                ModLog.WarnOnce("读页面失败: " + e.Message);
             }
             // 磁盘上没找到 -> 用内嵌在 dll 里的那份(这样只丢一个 dll 也能用)
             string embedded = ReadEmbedded("SongRequestMod." + name);
@@ -470,25 +469,12 @@ namespace SongRequestMod
             }
             catch (Exception e)
             {
-                MelonLogger.Warning("读内嵌资源失败 " + logicalName + ": " + e.Message);
+                ModLog.WarnOnce("读内嵌资源失败 " + logicalName + ": " + e.Message);
                 return null;
             }
         }
 
-        /// <summary>把点歌台地址再打一遍(日志被别的 mod 刷屏时用)</summary>
-        internal static void LogUrls()
-        {
-            int port = Config.Port;
-            string lanTxt = "";
-            if (_lanUrls != null && _lanUrls.Count > 0)
-            {
-                for (int i = 0; i < _lanUrls.Count; i++)
-                {
-                    lanTxt += (i == 0 ? "    手机(同网): http://" : " 或 http://") + _lanUrls[i] + ":" + port + "/";
-                }
-            }
-            ModLog.Always("点歌台: http://127.0.0.1:" + port + "/" + lanTxt);
-        }
+
 
         /// <summary>
         /// 一个 SSE 连接。以前是主线程直接往所有连接里 Write —— 只要有一个客户端不收数据
@@ -699,7 +685,7 @@ namespace SongRequestMod
             }
             catch (Exception e)
             {
-                MelonLogger.Warning("取本机 IP 失败: " + e.Message);
+                ModLog.WarnOnce("取本机 IP 失败: " + e.Message);
             }
             if (ips.Count == 0)
             {

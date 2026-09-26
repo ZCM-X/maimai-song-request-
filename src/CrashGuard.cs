@@ -81,12 +81,12 @@ namespace SongRequestMod
                 }
                 else
                 {
-                    MelonLogger.Warning("崩溃保护没找到目标方法, 跳过");
+                    ModLog.WarnOnce("崩溃保护没找到目标方法, 跳过");
                 }
             }
             catch (Exception e)
             {
-                MelonLogger.Warning("装崩溃保护失败: " + e.Message);
+                ModLog.WarnOnce("装崩溃保护失败: " + e.Message);
             }
         }
 
@@ -124,7 +124,7 @@ namespace SongRequestMod
                     if (!_loggedBoss)
                     {
                         _loggedBoss = true;
-                        MelonLogger.Warning("段位 BOSS id=" + id
+                        ModLog.WarnOnce("段位 BOSS id=" + id
                             + " 在客户端表里不存在, 已退到最近的 BOSS(游戏数据缺曲子/私服段位越界, 不是 mod 的锅)");
                     }
                 }
@@ -134,7 +134,7 @@ namespace SongRequestMod
                 if (!_loggedAny)
                 {
                     _loggedAny = true;
-                    MelonLogger.Warning("兜段位 BOSS 时出错: " + e.Message);
+                    ModLog.WarnOnce("兜段位 BOSS 时出错: " + e.Message);
                 }
             }
             finally
@@ -153,7 +153,7 @@ namespace SongRequestMod
             if (!_loggedGhost)
             {
                 _loggedGhost = true;
-                MelonLogger.Warning("吞掉游戏 RestoreGhost 的异常(防止闪退): "
+                ModLog.WarnOnce("吞掉游戏 RestoreGhost 的异常(防止闪退): "
                     + __exception.GetType().Name + ": " + __exception.Message);
             }
             return null;
@@ -212,7 +212,7 @@ namespace SongRequestMod
                 if (__result != null && !_loggedGenre)
                 {
                     _loggedGenre = true;
-                    MelonLogger.Warning("有曲子用了客户端不存在的分类 id=" + id
+                    ModLog.WarnOnce("有曲子用了客户端不存在的分类 id=" + id
                         + ", 已顶成 " + used + "(检查自制谱 Music.xml 里的 genreName, 合法值是 101~107)");
                 }
             }
@@ -240,7 +240,7 @@ namespace SongRequestMod
             }
             catch (Exception e)
             {
-                MelonLogger.Warning("给 " + t.Name + "." + name + " 挂保险失败: " + e.Message);
+                ModLog.WarnOnce("给 " + t.Name + "." + name + " 挂保险失败: " + e.Message);
                 return 0;
             }
         }
@@ -254,7 +254,7 @@ namespace SongRequestMod
             string key = (__originalMethod == null) ? "?" : __originalMethod.Name;
             if (_swallowed.Add(key))
             {
-                MelonLogger.Warning("吞掉 " + key + " 的异常(防止闪退): "
+                ModLog.WarnOnce("吞掉 " + key + " 的异常(防止闪退): "
                     + __exception.GetType().Name + ": " + __exception.Message);
             }
             return null;

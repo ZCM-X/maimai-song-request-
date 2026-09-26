@@ -111,7 +111,7 @@ namespace SongRequestMod
             }
             catch (Exception e)
             {
-                MelonLogger.Warning("读别名库失败: " + e.Message);
+                ModLog.WarnOnce("读别名库失败: " + e.Message);
             }
         }
 

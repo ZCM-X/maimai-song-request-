@@ -194,7 +194,7 @@ namespace SongRequestMod
             }
             catch (Exception e)
             {
-                MelonLogger.Warning("取子序列数组失败(不影响点歌, 只是不会自动跳难度画面): " + e.Message);
+                ModLog.WarnOnce("取子序列数组失败(不影响点歌, 只是不会自动跳难度画面): " + e.Message);
                 _subSeqArray = null;
             }
             if (!sameInstance)
@@ -268,7 +268,7 @@ namespace SongRequestMod
                 int now = (int)_process.ScoreType;
                 if (now != want)
                 {
-                    MelonLogger.Error("谱面类型没生效: 想要 "
+                    ModLog.ErrorOnce("谱面类型没生效: 想要 "
                         + (want == 1 ? "DX" : "STD") + ", 游戏里现在是 "
                         + (now == 1 ? "DX" : "STD") + " (曲目 id " + _verifyTypeId
                         + ", 卡片 id " + _verifyRealId + ") —— 点歌会落到另一种谱面上");
@@ -737,7 +737,7 @@ namespace SongRequestMod
             catch (Exception e)
             {
                 msg = "点歌失败: " + e.Message;
-                MelonLogger.Warning("点歌异常: " + e);
+                ModLog.WarnOnce("点歌异常: " + e);
             }
             Complete(r, msg);
         }
@@ -1360,7 +1360,7 @@ namespace SongRequestMod
             }
             catch (Exception e)
             {
-                MelonLogger.Warning("切难度画面失败: " + e.Message);
+                ModLog.WarnOnce("切难度画面失败: " + e.Message);
             }
             finally
             {

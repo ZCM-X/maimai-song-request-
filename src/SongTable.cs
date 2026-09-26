@@ -242,12 +242,12 @@ namespace SongRequestMod
                 new List<KeyValuePair<int, Manager.MaiStudio.MusicData>>();
         }
 
-        /// <summary>真正的错误走 MelonLogger.Warning, 但日志本身不能把探测流程带崩</summary>
+        /// <summary>诊断警告只打第一次(ModLog.WarnOnce), 但日志本身不能把探测流程带崩</summary>
         private static void Warn(string msg)
         {
             try
             {
-                MelonLogger.Warning(msg);
+                ModLog.WarnOnce(msg);
             }
             catch
             {
@@ -809,7 +809,7 @@ namespace SongRequestMod
             }
             catch (Exception e)
             {
-                MelonLogger.Warning("枚举 DataManager 字段失败: " + e.Message);
+                ModLog.WarnOnce("枚举 DataManager 字段失败: " + e.Message);
             }
             return hits;
         }
