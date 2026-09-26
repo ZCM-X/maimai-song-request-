@@ -6,8 +6,8 @@ using UnityEngine;
 
 [assembly: MelonInfo(typeof(SongRequestMod.Mod), "SongRequest", "1.0.4", "")]
 [assembly: MelonGame("sega-interactive", "Sinmai")]
-[assembly: AssemblyVersion("1.0.2.0")]
-[assembly: AssemblyFileVersion("1.0.2.0")]
+[assembly: AssemblyVersion("1.0.4.0")]
+[assembly: AssemblyFileVersion("1.0.4.0")]
 
 namespace SongRequestMod
 {
