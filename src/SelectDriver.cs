@@ -240,6 +240,11 @@ namespace SongRequestMod
                         + (now == 1 ? "DX" : "STD") + " (曲目 id " + _verifyTypeId
                         + ", 卡片 id " + _verifyRealId + ") —— 点歌会落到另一种谱面上");
                 }
+                else
+                {
+                    ModLog.Info("[SongRequest] 谱面类型确认: " + (now == 1 ? "DX" : "STD")
+                        + " (曲目 id " + _verifyTypeId + ", 卡片 id " + _verifyRealId + ")");
+                }
             }
             catch
             {
