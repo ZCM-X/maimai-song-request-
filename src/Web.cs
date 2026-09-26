@@ -10,7 +10,7 @@ using UnityEngine;
 namespace SongRequestMod
 {
     /// <summary>
-    /// 本机点歌台网页(只监听 127.0.0.1)。
+    /// 本机点歌台网页(监听 127.0.0.1 + 可选局域网 IP)。
     ///   /                 点歌台页面(磁盘上的 page.html, 改完刷新页面就生效, 不用重编 mod)
     ///   /api/songs        游戏全部曲目 + 难度 JSON
     ///   /api/nowplaying   当前游玩状态(曲名/难度/Combo/分数/判定)
@@ -28,27 +28,30 @@ namespace SongRequestMod
 
 
 
-        internal static void Start(int port)
+        /// <summary>启动点歌台; 失败(端口被占等)返回 false</summary>
+        internal static bool Start(int port)
         {
             try
             {
-                _listener = new HttpListener();
-                _listener.Prefixes.Add("http://127.0.0.1:" + port + "/");
                 // 局域网: 让同网手机也能打开。绑到具体网卡 IP(不需要管理员权限,
                 // 用 "+"/"*" 通配才需要 netsh 预先加 URL ACL)。
                 List<string> lans = Config.LanAccess ? LanIps() : new List<string>();
-                foreach (string ip in lans)
+                try
                 {
-                    try
-                    {
-                        _listener.Prefixes.Add("http://" + ip + ":" + port + "/");
-                    }
-                    catch (Exception e2)
-                    {
-                        MelonLogger.Warning("[SongRequest] 绑 " + ip + " 失败: " + e2.Message);
-                    }
+                    _listener = Listen(port, lans);
                 }
-                _listener.Start();
+                catch (Exception e1)
+                {
+                    if (lans.Count == 0)
+                    {
+                        throw;
+                    }
+                    // 某个局域网 IP 绑不上(网卡刚换 IP / 被别的程序占着)会让整个 Start 失败, 连本机都打不开 ->
+                    // 退一步只开本机, 至少电脑上能用
+                    MelonLogger.Warning("[SongRequest] 局域网地址绑定失败, 只开本机访问: " + e1.Message);
+                    lans = new List<string>();
+                    _listener = Listen(port, lans);
+                }
                 _lanUrls = lans;
                 _running = true;
                 // 4 个工作线程: 之前单线程时, 页面一次要几百张封面会把 /api/play 堵在后面
@@ -68,11 +71,40 @@ namespace SongRequestMod
                 }
                 ModLog.Always("[SongRequest] v" + typeof(Web).Assembly.GetName().Version
                     + "  本机: http://127.0.0.1:" + port + "/" + lanTxt);
+                return true;
             }
             catch (Exception e)
             {
-                MelonLogger.Error("[SongRequest] 启动点歌台失败(端口 " + port + " 可能被占用): " + e.Message);
+                MelonLogger.Error("[SongRequest] 启动点歌台失败(端口 " + port + " 可能被占用, 常见原因是上次游戏没关干净,"
+                    + " 在任务管理器结束残留的 Sinmai 后重开; 或改 SongRequestMod.toml 的「网页端口」): " + e.Message);
+                return false;
             }
+        }
+
+        private static HttpListener Listen(int port, List<string> lans)
+        {
+            HttpListener l = new HttpListener();
+            l.Prefixes.Add("http://127.0.0.1:" + port + "/");
+            foreach (string ip in lans)
+            {
+                l.Prefixes.Add("http://" + ip + ":" + port + "/");
+            }
+            try
+            {
+                l.Start();
+            }
+            catch
+            {
+                try
+                {
+                    l.Close();
+                }
+                catch
+                {
+                }
+                throw;
+            }
+            return l;
         }
 
         internal static void Stop()
@@ -132,11 +164,19 @@ namespace SongRequestMod
             string path = ctx.Request.Url.AbsolutePath;
             string method = ctx.Request.HttpMethod;
 
+            // 游戏数据还没加载完: 碰曲目表 / 曲绘 / 点歌的接口一律先不处理(同 Mod.GameReady 的原因)
+            if (!Mod.Ready && (path == "/api/songs" || path == "/jacket" || path == "/api/play"
+                || path == "/api/random" || path == "/api/selftest"))
+            {
+                ReplyJson(ctx, "{\"ok\":false,\"msg\":\"游戏数据加载中, 请稍候再试\"}", 503);
+                return;
+            }
             if (path == "/api/songs")
             {
-                // ?refresh=1 强制重读游戏曲目表(连数据源快照也丢掉重探); 平时走缓存(曲目数/类型变了会自动重建)
+                // 平时直接给主线程建好的缓存; ?refresh=1 = 让主线程重探一次曲目表(最多等 5 秒, 超时给旧的)
+                string cached = SongTable.CachedJson;
                 ReplyJson(ctx, Query(ctx.Request.Url.Query, "refresh") == "1"
-                    ? SongTable.JsonFresh() : SongTable.Json(false));
+                    ? MainThread.Run(SongTable.JsonFresh, 5000, cached) : cached);
                 return;
             }
             if (path == "/api/nowplaying")
@@ -150,38 +190,19 @@ namespace SongRequestMod
                     + "\",\"songs\":" + SongTable.Count + ",\"rev\":" + SongTable.Rev
                     + ",\"aliases\":" + Aliases.Count + ",\"aliasSongs\":" + Aliases.SongCount
                     + ",\"state\":\"" + LiveState.State
-                    + "\",\"inSelect\":" + (SelectDriver.InSelect ? "true" : "false") + "}");
+                    + "\",\"inSelect\":" + (SelectDriver.InSelectCached ? "true" : "false") + "}");
                 return;
             }
             if (path == "/api/npstream")
             {
-                // SSE 推送: 连接挂着不关, 主线程每帧把最新状态写进来(比轮询延迟低一个数量级)
-                try
-                {
-                    ctx.Response.StatusCode = 200;
-                    ctx.Response.ContentType = "text/event-stream; charset=utf-8";
-                    ctx.Response.Headers["Cache-Control"] = "no-cache";
-                    ctx.Response.Headers["X-Accel-Buffering"] = "no";
-                    ctx.Response.SendChunked = true;
-                    lock (_sseLock)
-                    {
-                        if (_sse.Count >= 8) { ctx.Response.Close(); return; }
-                        _sse.Add(ctx);
-                    }
-                    byte[] hello = Encoding.UTF8.GetBytes(": connected\n\n");
-                    ctx.Response.OutputStream.Write(hello, 0, hello.Length);
-                    ctx.Response.OutputStream.Flush();
-                    ModLog.Info("[SongRequest] SSE 客户端接入, 当前 " + _sse.Count + " 个");
-                }
-                catch (Exception e)
-                {
-                    ModLog.Info("[SongRequest] SSE 建立失败: " + e.Message);
-                }
+                // SSE 推送: 连接挂着不关, 每个客户端一条写线程(见 AddSse), 主线程只放最新状态不做网络 IO
+                AddSse(ctx);
                 return;   // 注意: 不 Close, 连接保持
             }
             if (path == "/api/selfcheck")
             {
-                ReplyJson(ctx, SelectDriver.Diagnostics());
+                ReplyJson(ctx, MainThread.Run(SelectDriver.Diagnostics, 3000,
+                    "{\"ok\":false,\"msg\":\"主线程忙或游戏数据还没就绪, 请稍后再试\"}"));
                 return;
             }
             if (path == "/api/selftest")
@@ -203,17 +224,13 @@ namespace SongRequestMod
                     ReplyJson(ctx, "{\"ok\":false,\"msg\":\"缺少 id\"}");
                     return;
                 }
-                string msg = SelectDriver.Enqueue(id, diff);
-                bool ok = msg != null && msg.StartsWith("已跳转");
-                ReplyJson(ctx, "{\"ok\":" + (ok ? "true" : "false") + ",\"msg\":" + Q(msg) + "}");
+                ReplyPlay(ctx, SelectDriver.Enqueue(id, diff));
                 return;
             }
             if (path == "/api/random" && method == "POST")
             {
                 var form = ReadForm(ctx);
-                string msg = SelectDriver.EnqueueRandom(Int(form, "diff", -1));
-                bool ok = msg != null && msg.StartsWith("已跳转");
-                ReplyJson(ctx, "{\"ok\":" + (ok ? "true" : "false") + ",\"msg\":" + Q(msg) + "}");
+                ReplyPlay(ctx, SelectDriver.EnqueueRandom(Int(form, "diff", -1)));
                 return;
             }
             if (path == "/jacket")
@@ -221,14 +238,17 @@ namespace SongRequestMod
                 string q = ctx.Request.Url.Query;
                 int id = Int(Query(q, "id"), -1);
                 bool small = Query(q, "s") == "1";
-                byte[] png = Jackets.Get(id, small, 6000);
-                if (png == null)
+                // 异步: 不占着网页工作线程等主线程编码(以前 4 个线程全在等封面时, 点歌请求只能排队)
+                Jackets.Request(id, small, delegate (byte[] png)
                 {
-                    ctx.Response.StatusCode = 404;
-                    ReplyBytes(ctx, new byte[0], "image/png");
-                    return;
-                }
-                ReplyBytes(ctx, png, "image/png");
+                    try
+                    {
+                        ReplyBytes(ctx, png, "image/png");
+                    }
+                    catch
+                    {
+                    }
+                });
                 return;
             }
             if (path == "/favicon.ico")
@@ -248,27 +268,48 @@ namespace SongRequestMod
                     return;
                 }
             }
-            ReplyJson(ctx, "{\"ok\":false,\"msg\":\"no route: " + path + "\"}", 404);
+            ReplyJson(ctx, "{\"ok\":false,\"msg\":" + Q("no route: " + path) + "}", 404);
+        }
+
+        /// <summary>点歌结果: "已跳转…" 算成功; 被后面的点歌取代的标 superseded(网页不当错误提示)</summary>
+        private static void ReplyPlay(HttpListenerContext ctx, string msg)
+        {
+            if (msg == null)
+            {
+                msg = "点歌超时: 游戏主线程没有响应";
+            }
+            bool superseded = msg.StartsWith(SelectDriver.SupersededPrefix, StringComparison.Ordinal);
+            if (superseded)
+            {
+                msg = msg.Substring(SelectDriver.SupersededPrefix.Length);
+            }
+            bool ok = msg.StartsWith("已跳转", StringComparison.Ordinal);
+            ReplyJson(ctx, "{\"ok\":" + (ok ? "true" : "false") + (superseded ? ",\"superseded\":true" : "")
+                + ",\"msg\":" + Q(msg) + "}");
         }
 
         // ── 页面文件 ───────────────────────────────────────────────
+        private static string _gameDir;
+
+        /// <summary>主线程(OnInitializeMelon)里调一次: Application.dataPath 是 Unity API, 网页/后台线程不能碰</summary>
+        internal static void InitGameDir()
+        {
+            try
+            {
+                string d = Path.GetDirectoryName(Application.dataPath);
+                if (!string.IsNullOrEmpty(d))
+                {
+                    _gameDir = d;
+                }
+            }
+            catch
+            {
+            }
+        }
+
         internal static string GameDir
         {
-            get
-            {
-                try
-                {
-                    string d = Path.GetDirectoryName(Application.dataPath);
-                    if (!string.IsNullOrEmpty(d))
-                    {
-                        return d;
-                    }
-                }
-                catch
-                {
-                }
-                return Environment.CurrentDirectory;
-            }
+            get { return _gameDir ?? Environment.CurrentDirectory; }
         }
 
         private sealed class PageCache
@@ -304,7 +345,12 @@ namespace SongRequestMod
                     }
                     DateTime t = File.GetLastWriteTimeUtc(p);
                     PageCache c;
-                    if (_pages.TryGetValue(name, out c) && c.Text != null
+                    bool hit;
+                    lock (_pages)
+                    {
+                        hit = _pages.TryGetValue(name, out c);
+                    }
+                    if (hit && c.Text != null
                         && t == c.Stamp && string.Equals(c.Path, p, StringComparison.OrdinalIgnoreCase))
                     {
                         return c.Text;
@@ -314,7 +360,10 @@ namespace SongRequestMod
                     nc.Text = txt;
                     nc.Stamp = t;
                     nc.Path = p;
-                    _pages[name] = nc;
+                    lock (_pages)
+                    {
+                        _pages[name] = nc;
+                    }
                     ModLog.Info("[SongRequest] 页面已加载: " + p + " (" + txt.Length + " 字符)");
                     return txt;
                 }
@@ -356,9 +405,12 @@ namespace SongRequestMod
         internal static string ReadEmbedded(string logicalName)
         {
             string cached;
-            if (_embedded.TryGetValue(logicalName, out cached))
+            lock (_embedded)
             {
-                return cached;
+                if (_embedded.TryGetValue(logicalName, out cached))
+                {
+                    return cached;
+                }
             }
             try
             {
@@ -372,7 +424,10 @@ namespace SongRequestMod
                     using (var r = new StreamReader(s, Encoding.UTF8))
                     {
                         string txt = r.ReadToEnd();
-                        _embedded[logicalName] = txt;
+                        lock (_embedded)
+                        {
+                            _embedded[logicalName] = txt;
+                        }
                         return txt;
                     }
                 }
@@ -399,49 +454,168 @@ namespace SongRequestMod
             ModLog.Always("[SongRequest] 点歌台: http://127.0.0.1:" + port + "/" + lanTxt);
         }
 
-        private static readonly List<HttpListenerContext> _sse = new List<HttpListenerContext>();
-        private static readonly object _sseLock = new object();
-
-        /// <summary>主线程调用: 把最新状态 JSON 推给所有 SSE 客户端(内容没变就不推)</summary>
-        internal static void PushNowPlaying(string json)
+        /// <summary>
+        /// 一个 SSE 连接。以前是主线程直接往所有连接里 Write —— 只要有一个客户端不收数据
+        /// (手机锁屏 / 切后台 / 网络卡住 / 隧道对端流控), TCP 发送缓冲写满后 Write 就会一直阻塞,
+        /// 游戏主线程跟着卡死("没有回应")。现在每个连接一条写线程, 主线程只把最新状态放进 Pending
+        /// (旧的没发出去就直接被新的覆盖), 写卡住超过 10 秒的连接直接掐掉。
+        /// </summary>
+        private sealed class SseClient
         {
-            if (json == null) return;
-            lock (_sseLock)
-            {
-                if (_sse.Count == 0 || json == _sseLast) { _sseLast = json; return; }
-                _sseLast = json;
-                if (_sse.Count == 0) return;
-            }
-            byte[] buf = Encoding.UTF8.GetBytes("data: " + json + "\n\n");
-            List<HttpListenerContext> dead = null;
-            lock (_sseLock)
-            {
-                for (int i = 0; i < _sse.Count; i++)
-                {
-                    try
-                    {
-                        _sse[i].Response.OutputStream.Write(buf, 0, buf.Length);
-                        _sse[i].Response.OutputStream.Flush();
-                    }
-                    catch
-                    {
-                        if (dead == null) dead = new List<HttpListenerContext>();
-                        dead.Add(_sse[i]);
-                    }
-                }
-                if (dead != null)
-                {
-                    foreach (HttpListenerContext d in dead)
-                    {
-                        _sse.Remove(d);
-                        try { d.Response.Close(); } catch { }
-                    }
-                }
-            }
-            if (dead != null) ModLog.Info("[SongRequest] SSE 断开清理, 剩 " + _sse.Count + " 个");
+            public HttpListenerContext Ctx;
+            public string Pending;
+            public bool Dead;
+            public int WriteStartedAt;   // 0 = 没在写
+            public readonly object Lock = new object();
         }
 
-        private static string _sseLast;
+        private const int SseMaxClients = 16;
+        private const int SseStuckMs = 10000;
+        private const int SsePingMs = 15000;
+        private static readonly List<SseClient> _sse = new List<SseClient>();
+        private static readonly object _sseLock = new object();
+
+        private static void AddSse(HttpListenerContext ctx)
+        {
+            try
+            {
+                ctx.Response.StatusCode = 200;
+                ctx.Response.ContentType = "text/event-stream; charset=utf-8";
+                ctx.Response.Headers["Cache-Control"] = "no-cache";
+                ctx.Response.Headers["X-Accel-Buffering"] = "no";
+                ctx.Response.SendChunked = true;
+                SseClient c = new SseClient();
+                c.Ctx = ctx;
+                c.Pending = _sseLast;   // 一连上就给当前状态, 不用等下一次变化
+                lock (_sseLock)
+                {
+                    if (_sse.Count >= SseMaxClients)
+                    {
+                        ctx.Response.Close();   // 满了: 网页会退回轮询
+                        return;
+                    }
+                    _sse.Add(c);
+                }
+                Thread th = new Thread(() => SseWriter(c));
+                th.IsBackground = true;
+                th.Start();
+                ModLog.Info("[SongRequest] SSE 客户端接入, 当前 " + _sse.Count + " 个");
+            }
+            catch (Exception e)
+            {
+                ModLog.Info("[SongRequest] SSE 建立失败: " + e.Message);
+            }
+        }
+
+        private static void SseWriter(SseClient c)
+        {
+            try
+            {
+                Stream os = c.Ctx.Response.OutputStream;
+                byte[] hello = Encoding.UTF8.GetBytes(": connected\n\n");
+                SseWrite(c, os, hello);
+                while (true)
+                {
+                    string msg;
+                    lock (c.Lock)
+                    {
+                        if (!c.Dead && c.Pending == null)
+                        {
+                            System.Threading.Monitor.Wait(c.Lock, SsePingMs);
+                        }
+                        if (c.Dead)
+                        {
+                            break;
+                        }
+                        msg = c.Pending;
+                        c.Pending = null;
+                    }
+                    // 没有新状态就发一行注释当心跳: 连接断了能尽快发现, 也免得代理/隧道把空闲连接掐掉
+                    SseWrite(c, os, Encoding.UTF8.GetBytes(msg != null ? "data: " + msg + "\n\n" : ": ping\n\n"));
+                }
+            }
+            catch
+            {
+            }
+            lock (_sseLock)
+            {
+                _sse.Remove(c);
+            }
+            try
+            {
+                c.Ctx.Response.Abort();
+            }
+            catch
+            {
+            }
+            ModLog.Info("[SongRequest] SSE 断开清理, 剩 " + _sse.Count + " 个");
+        }
+
+        /// <summary>
+        /// 带超时的写: 对端不收数据时同步 Write 会一直阻塞, 而且 Abort 连接也不一定能把它打断,
+        /// 所以用异步写 + 等 SseStuckMs, 超时就放弃这个连接(写线程随之退出, 不会一直挂着)。
+        /// </summary>
+        private static void SseWrite(SseClient c, Stream os, byte[] buf)
+        {
+            c.WriteStartedAt = Environment.TickCount | 1;   // |1: 保证不是 0
+            try
+            {
+                IAsyncResult ar = os.BeginWrite(buf, 0, buf.Length, null, null);
+                if (!ar.AsyncWaitHandle.WaitOne(SseStuckMs))
+                {
+                    throw new IOException("SSE 客户端 " + SseStuckMs + "ms 没收数据");
+                }
+                os.EndWrite(ar);
+                os.Flush();
+            }
+            finally
+            {
+                c.WriteStartedAt = 0;
+            }
+        }
+
+        /// <summary>主线程调用: 把最新状态交给各 SSE 写线程(内容没变就不推)。这里不做任何网络 IO</summary>
+        internal static void PushNowPlaying(string json)
+        {
+            if (json == null || json == _sseLast)
+            {
+                return;
+            }
+            _sseLast = json;
+            SseClient[] clients;
+            lock (_sseLock)
+            {
+                if (_sse.Count == 0)
+                {
+                    return;
+                }
+                clients = _sse.ToArray();
+            }
+            int now = Environment.TickCount;
+            foreach (SseClient c in clients)
+            {
+                int started = c.WriteStartedAt;
+                if (started != 0 && unchecked(now - started) > SseStuckMs && !c.Dead)
+                {
+                    // 写卡住太久(兜底; 正常情况下 SseWrite 自己的超时会先生效): 移出名单, 后台线程掐掉连接
+                    c.Dead = true;
+                    lock (_sseLock)
+                    {
+                        _sse.Remove(c);
+                    }
+                    HttpListenerContext ctx = c.Ctx;
+                    Background.Run(delegate { ctx.Response.Abort(); });
+                    continue;
+                }
+                lock (c.Lock)
+                {
+                    c.Pending = json;
+                    System.Threading.Monitor.Pulse(c.Lock);
+                }
+            }
+        }
+
+        private static volatile string _sseLast;
 
         /// <summary>本机所有可用的局域网 IPv4(给手机访问用)</summary>
         private static List<string> LanIps()

@@ -2509,6 +2509,9 @@ function requestPlay(id, diff){
     pending = false;
     markSending(row.id, d, false);
     var msg = (j && j.msg) ? String(j.msg) : (j && j.ok ? '已发送点歌请求' : '未收到服务端结果');
+    if (j && j.superseded){
+      return;   /* 连点时前面的请求被后面的取代, 不算失败 */
+    }
     if (j && j.ok){
       toast('ok', '已点歌', '#' + row.id + ' ' + row.name + (d >= 0 ? ' [' + DIFF_NAME[d] + ']' : ' [自动]'));
     } else {
@@ -2526,6 +2529,7 @@ function requestRandom(diff){
   var payload = {};
   if (diff >= 0) payload.diff = diff;
   postForm(API.random, payload).then(function(j){
+    if (j && j.superseded) return;
     var msg = (j && j.msg) ? String(j.msg) : (j && j.ok ? '已发送随机点歌请求' : '未收到服务端结果');
     toast(j && j.ok ? 'ok' : 'bad', '随机点歌', msg);
     if (!(j && j.ok)) showErr('随机点歌未生效：' + msg);
@@ -3100,6 +3104,12 @@ function afterLoad(retry){
 }
 function loadSongs(retry){
   api(API.songs).then(function(arr){
+    if (arr && arr.ok === false && !Array.isArray(arr)){
+      /* 游戏数据还在加载(mod 回 503 + 提示): 过 3 秒自动再试, 不用手动点 */
+      elList.innerHTML = emptyStateHTML('游戏数据加载中', escHtml(arr.msg || '请稍候') + '<br>页面会自动重试。');
+      setTimeout(function(){ loadSongs(true); }, 3000);
+      return;
+    }
     if (!Array.isArray(arr)) throw new Error('/api/songs 未返回数组');
     state.songs = arr;
     state.rows = buildRows(arr);
@@ -3131,7 +3141,9 @@ function refreshSongs(opts){
   if (currentIndex() >= 0) state.selAnchor = currentIndex();
   var prev = state.count;
   elRefresh.classList.add('is-busy');
-  api(API.songs + '?refresh=1').then(function(arr){
+  /* 只有手动点「刷新曲库」才让 mod 重新扫描; rev 变化的自动同步直接拿 mod 已经建好的新表 ——
+     以前自动同步也带 refresh=1, 每次都让 mod 重建一次并把 rev 再 +1, 开着两个以上页面时会互相触发 */
+  api(API.songs + (opts.manual ? '?refresh=1' : '')).then(function(arr){
     state.loadInFlight = false;
     elRefresh.classList.remove('is-busy');
     if (!Array.isArray(arr)) throw new Error('/api/songs 未返回数组');
@@ -3410,15 +3422,29 @@ function start(){
   bootIntro();
   loadSongs(false);
   pollStatus();  setInterval(pollStatus, POLL_STAT);
-  pollNow();     setInterval(pollNow, POLL_NOW);
-  /* SSE 实时推送: mod 每帧把最新状态推过来, 延迟只剩一次本地回环; 连不上就继续用上面的轮询 */
-  try {
-    var _es = new EventSource('/api/npstream');
-    _es.onmessage = function(ev){
-      try { renderNow(JSON.parse(ev.data)); } catch(e){}
-    };
-    _es.onerror = function(){ try { _es.close(); } catch(e){} };   /* 断开后不再重连, 退回轮询 */
-  } catch(e){}
+  /* SSE 实时推送: mod 有变化就推过来。SSE 连着时轮询降到 2 秒一次兜底(以前一直 180ms 一次,
+     每个页面每秒 5 个请求, 页面开多了会把 mod 的网页线程占满); 断了就回到 180ms 轮询, 5 秒后重连 */
+  var sseOpen = false, lastPollAt = 0;
+  pollNow();
+  setInterval(function(){
+    if (sseOpen && Date.now() - lastPollAt < 2000) return;
+    lastPollAt = Date.now();
+    pollNow();
+  }, POLL_NOW);
+  (function openSse(){
+    try {
+      var es = new EventSource('/api/npstream');
+      es.onopen = function(){ sseOpen = true; };
+      es.onmessage = function(ev){
+        try { renderNow(JSON.parse(ev.data)); } catch(e){}
+      };
+      es.onerror = function(){
+        sseOpen = false;
+        try { es.close(); } catch(e){}
+        setTimeout(openSse, 5000);
+      };
+    } catch(e){}
+  })();
   try { elQ.focus(); } catch(e){}
 }
 if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', start);

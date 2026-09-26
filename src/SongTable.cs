@@ -23,32 +23,49 @@ namespace SongRequestMod
         internal static readonly string[] DiffNames =
             { "BASIC", "ADVANCED", "EXPERT", "MASTER", "Re:MASTER" };
 
-        private static readonly Dictionary<int, Manager.MaiStudio.MusicData> _byId =
+        /// <summary>
+        /// id -> MusicData。只在主线程 Build 里整张新建再换引用, 从不原地修改 ——
+        /// 以前是 Clear() 再逐条塞, 主线程和网页线程同时重建时会把 Dictionary 写坏,
+        /// 之后的查询可能死循环, 游戏直接卡死。
+        /// </summary>
+        private static volatile Dictionary<int, Manager.MaiStudio.MusicData> _byId =
             new Dictionary<int, Manager.MaiStudio.MusicData>();
 
-        private static string _json;
+        private static volatile string _json;
         private static int _jsonCount = -1;
         /// <summary>上次 Build 时的"原始条目数"。判断曲目表有没有变要跟它比, 不能跟 _jsonCount 比 ——
         /// _jsonCount 已经滤掉游戏禁用曲目, 两者不相等时会导致每 2 秒白重建一次。</summary>
         private static int _builtSnapCount = -1;
-        /// <summary>曲目表版本号: 每重建一次 +1, 网页靠它知道要不要重新拉列表</summary>
-        internal static int Rev;
+        /// <summary>曲目表版本号: 导出的内容真的变了才 +1, 网页靠它知道要不要重新拉列表</summary>
+        internal static volatile int Rev;
         private static float _timer;
         private static bool _wasInSelect;
+        private const float TickInterval = 5f;
 
-        /// <summary>主线程每 5 秒看一眼游戏曲目表有没有变(热导入新歌后要重出)</summary>
+        /// <summary>网页线程用: 主线程最近一次建好的曲目表 JSON(还没建过就是空数组)</summary>
+        internal static string CachedJson
+        {
+            get { return _json ?? "[]"; }
+        }
+
+        /// <summary>主线程每 5 秒看一眼游戏曲目表有没有变(热导入新歌后要重出); 游玩中不看, 免得打歌掉帧</summary>
         internal static void Tick(float dt)
         {
             _timer += dt;
-            if (_timer < 2f)
+            if (_timer < TickInterval)
             {
                 return;
             }
             _timer = 0f;
+            if (_json != null && LiveState.State == "playing")
+            {
+                return;
+            }
             int n = RawCount();
             // 曲目数变了(热导入) 或 刚进选曲界面(这时才拿得到 STD/DX 真值) -> 重出
-            bool enteredSelect = SelectDriver.InSelect && !_wasInSelect;
-            _wasInSelect = SelectDriver.InSelect;
+            bool inSelect = SelectDriver.InSelect;
+            bool enteredSelect = inSelect && !_wasInSelect;
+            _wasInSelect = inSelect;
             // 别名文件被改过(改了 aliases.txt)也要重出, 不然别名要等曲库变化才生效
             bool aliasChanged = Aliases.StampChanged();
             if (_json == null || n != _builtSnapCount || enteredSelect || aliasChanged)
@@ -826,9 +843,10 @@ namespace SongRequestMod
             return Snapshot(false).Count;
         }
 
+        /// <summary>导出的曲目数(网页线程也会读, 所以只给缓存值, 不现场探测)</summary>
         internal static int Count
         {
-            get { return _jsonCount > 0 ? _jsonCount : RawCount(); }
+            get { return _jsonCount > 0 ? _jsonCount : 0; }
         }
 
         /// <summary>自检用: 曲目表数据源明细(/api/selfcheck 里的 songTable 段)</summary>
@@ -884,6 +902,10 @@ namespace SongRequestMod
         /// </summary>
         private static void EnsureTable()
         {
+            if (!MainThread.IsMain)
+            {
+                return;   // 重建只在主线程做
+            }
             if (_byId.Count > 0)
             {
                 _retryFails = 0;
@@ -921,12 +943,13 @@ namespace SongRequestMod
                 {
                     EnsureTable();
                 }
+                var byId = _byId;
                 Manager.MaiStudio.MusicData md;
-                if (_byId.TryGetValue(id, out md))
+                if (byId.TryGetValue(id, out md))
                 {
                     return md;
                 }
-                if (id >= 10000 && _byId.TryGetValue(id % 10000, out md))
+                if (id >= 10000 && byId.TryGetValue(id % 10000, out md))
                 {
                     return md;
                 }
@@ -1108,18 +1131,25 @@ namespace SongRequestMod
             return nt.level > 0 ? nt.level.ToString() : "-";
         }
 
-        /// <summary>曲目表 JSON(缓存; force=true 或曲目数变了才重建)</summary>
+        /// <summary>曲目表 JSON(缓存; force=true 才重建)。重建只允许在主线程, 别的线程只拿缓存</summary>
         internal static string Json(bool force)
         {
-            if (!force && _json != null)
+            if ((!force && _json != null) || !MainThread.IsMain)
             {
-                return _json;
+                return CachedJson;
             }
-            _json = Build();
+            string built = Build();
+            if (built != _json)
+            {
+                // 内容真的变了才换版本号: 以前每次重建都 +1, 两个以上网页互相看到 rev 变化就互相触发刷新,
+                // 变成每几秒整表重建 + 清空封面缓存
+                _json = built;
+                Rev++;
+            }
             return _json;
         }
 
-        /// <summary>丢掉数据源快照缓存后重出(网页 /api/songs?refresh=1 用)</summary>
+        /// <summary>丢掉数据源快照缓存后重出(网页 /api/songs?refresh=1 经 MainThread.Run 在主线程调用)</summary>
         internal static string JsonFresh()
         {
             lock (_snapLock)
@@ -1134,9 +1164,15 @@ namespace SongRequestMod
             StringBuilder sb = new StringBuilder(1 << 21);
             sb.Append('[');
             int n = 0;
+            int prevCount = _jsonCount;
+            // 别名文件整次导出只检查一次(以前每首歌都查一次文件时间, 1600 首就是 1600 次磁盘访问)
+            Aliases.Ensure();
+            // STD/DX 与"能不能玩"都按当前选曲列表重算(Rev 现在只在内容变了才 +1, 不能再靠它判断缓存过期)
+            _types = null;
+            SelectDriver.ResetPlayableCache();
             try
             {
-                _byId.Clear();
+                var byId = new Dictionary<int, Manager.MaiStudio.MusicData>();
                 var snap = Snapshot(false);
                 int raw = 0;
                 for (int i = 0; i < snap.Count; i++)
@@ -1147,8 +1183,9 @@ namespace SongRequestMod
                         continue;
                     }
                     raw++;
-                    _byId[md.GetID()] = md;
+                    byId[md.GetID()] = md;
                 }
+                _byId = byId;
                 n = AppendAll(sb, snap, !_disableFilterOff);
                 if (n == 0 && raw > 0 && !_disableFilterOff)
                 {
@@ -1173,12 +1210,14 @@ namespace SongRequestMod
             _jsonCount = n;
             // 记下这次用的原始条目数: Tick 靠它判断曲目表有没有变(不能跟 _jsonCount 比, 那个已滤掉禁用曲目)
             _builtSnapCount = _snapRaw;
-            Rev++;
-            // 曲库变了 -> 曲绘缓存也作废(热导入换过封面的曲子不会继续给旧图)
-            Jackets.ClearCache();
+            // 曲目数变了(热导入) -> 曲绘缓存也作废; 只是重进选曲界面就别清, 不然网页要把所有封面重编码一遍
+            if (n != prevCount)
+            {
+                Jackets.ClearCache();
+            }
             _types = null;
-            ModLog.Info("[SongRequest] 曲目表已导出: " + n + " 首 (rev " + Rev
-                + (_disableFilterOff ? ", disable 过滤已关闭" : "") + ")");
+            ModLog.Info("[SongRequest] 曲目表已导出: " + n + " 首"
+                + (_disableFilterOff ? " (disable 过滤已关闭)" : ""));
             return sb.ToString();
         }
 

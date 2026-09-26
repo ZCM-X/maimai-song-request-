@@ -43,8 +43,22 @@ namespace SongRequestMod
 
     internal static class SelectDriver
     {
-        /// <summary>难度选择子序列的下标(Music=0, Genre=1, SortSetting=2, Difficulty=3)</summary>
+        /// <summary>子序列下标(MusicSelectProcess.SubSequence): Music=0, Genre=1, SortSetting=2,
+        /// Difficulty=3, UtageDifficulty=4, Menu=5, Option=6, Character=7</summary>
+        private const int SubSeqMusic = 0;
         private const int SubSeqDifficulty = 3;
+        private const int SubSeqUtageDifficulty = 4;
+        private static readonly string[] SubSeqNames =
+            { "选曲列表", "分类选择", "排序设置", "难度选择", "宴会场难度选择", "菜单", "选项", "角色选择" };
+        /// <summary>MusicSelectProcess._mainSequence 里的 Update(=3): 只有这时才能点歌, 进场/退场动画中不能动</summary>
+        private const int MainSeqUpdate = 3;
+        /// <summary>跟游戏自己确认选曲时一样, 切画面期间锁输入这么久</summary>
+        private const float InputLockMs = 1200f;
+        /// <summary>游戏还在锁输入(切画面动画中)时, 点歌请求最多等这么久再执行</summary>
+        private const int DeferMaxMs = 3000;
+
+        /// <summary>被后面的点歌取代的请求, 结果以这个前缀开头(Web 转成 superseded, 网页不当错误)</summary>
+        internal const string SupersededPrefix = "SUPERSEDED:";
 
         private static MusicSelectProcess _process;
         private static Array _subSeqArray;    // SequenceBase[player][]
@@ -53,6 +67,10 @@ namespace SongRequestMod
         private static FieldInfo _fSubSeqArray;
         private static FieldInfo _fCurSeq;
         private static FieldInfo _fPrevSeq;
+        private static FieldInfo _fMainSeq;
+        private static MethodInfo _mSyncNext;
+        /// <summary>主线程每帧更新的"在不在选曲界面"(给网页线程读, 网页线程不能自己去查游戏对象)</summary>
+        private static volatile bool _inSelectCached;
 
         /// <summary>网页线程塞进来、主线程执行的请求</summary>
         private sealed class Request
@@ -63,8 +81,15 @@ namespace SongRequestMod
             public int RandomDiff = -1;
             public string Result;
             public bool Done;
+            public int QueuedAt = Environment.TickCount;
             public readonly object Lock = new object();
         }
+
+        /// <summary>正在等游戏解锁输入的那一个请求(只留最新的)</summary>
+        private static Request _deferred;
+        /// <summary>切到难度画面的协程还没跑完(协程万一没跑, 3 秒后自动作废, 免得之后的点歌一直在等)</summary>
+        private static bool _switchPending;
+        private static int _switchPendingAt;
 
         private static readonly List<Request> _queue = new List<Request>();
         private static readonly object _queueLock = new object();
@@ -124,6 +149,8 @@ namespace SongRequestMod
         internal static void Capture(MusicSelectProcess process)
         {
             _process = process;
+            _switchPending = false;
+            ResetPlayableCache();
             try
             {
                 if (_fSubSeqArray == null)
@@ -131,6 +158,9 @@ namespace SongRequestMod
                     _fSubSeqArray = AccessTools.Field(typeof(MusicSelectProcess), "_subSequenceArray");
                     _fCurSeq = AccessTools.Field(typeof(MusicSelectProcess), "_currentPlayerSubSequence");
                     _fPrevSeq = AccessTools.Field(typeof(MusicSelectProcess), "_beforePlayerSubSequence");
+                    _fMainSeq = AccessTools.Field(typeof(MusicSelectProcess), "_mainSequence");
+                    // 游戏自己切子画面用的 SyncNext(SubSequence): Reset 当前 -> 记 before -> 切过去 -> OnStartSequence, 所有玩家一起
+                    _mSyncNext = AccessTools.Method(typeof(MusicSelectProcess), "SyncNext");
                 }
                 _subSeqArray = _fSubSeqArray == null ? null : (Array)_fSubSeqArray.GetValue(process);
                 _curSeq = _fCurSeq == null ? null : (Array)_fCurSeq.GetValue(process);
@@ -152,9 +182,12 @@ namespace SongRequestMod
             _subSeqArray = null;
             _curSeq = null;
             _prevSeq = null;
+            _switchPending = false;
+            _inSelectCached = false;
             ModLog.Info("[SongRequest] MusicSelectProcess 已释放");
         }
 
+        /// <summary>只能在主线程用(会碰游戏对象); 网页线程用 InSelectCached</summary>
         internal static bool InSelect
         {
             get
@@ -165,6 +198,18 @@ namespace SongRequestMod
                 }
                 return _process != null && _process.CombineMusicDataList != null;
             }
+        }
+
+        /// <summary>网页线程可读: 主线程最近一次看到的"在不在选曲界面"</summary>
+        internal static bool InSelectCached
+        {
+            get { return _inSelectCached; }
+        }
+
+        /// <summary>主线程每帧调用, 刷新给网页线程看的缓存</summary>
+        internal static void UpdateCache()
+        {
+            _inSelectCached = InSelect;
         }
 
         private static float _findCooldown;
@@ -196,6 +241,10 @@ namespace SongRequestMod
         /// </summary>
         private static void TryFindProcess()
         {
+            if (!MainThread.IsMain)
+            {
+                return;   // FindObjectOfType / Time 都是 Unity API, 只能主线程调
+            }
             try
             {
                 if (Time.unscaledTime < _findCooldown)
@@ -453,24 +502,31 @@ namespace SongRequestMod
 
         private static FieldInfo _fExistsScore;
         private static Dictionary<int, bool[]> _playable;
-        private static int _playableRev = -1;
+
+        /// <summary>选曲列表变了(进选曲界面 / 重建曲目表)时丢掉"能不能玩"缓存, 下次用到再按当前列表重算</summary>
+        internal static void ResetPlayableCache()
+        {
+            _playable = null;
+        }
 
         /// <summary>该曲该难度游戏是否认为可玩(null=还不知道, 那就按 XML 的来)</summary>
         internal static bool? GamePlayable(int musicId, int diff)
         {
             try
             {
-                if (_playable == null || _playableRev != SongTable.Rev)
+                var playable = _playable;
+                if (playable == null)
                 {
-                    _playable = PlayableMap();
-                    _playableRev = SongTable.Rev;
+                    playable = PlayableMap();
+                    // 没在选曲界面时拿到的是空表, 不缓存, 等进了选曲界面再算
+                    _playable = playable.Count > 0 ? playable : null;
                 }
-                if (_playable == null || _playable.Count == 0)
+                if (playable.Count == 0)
                 {
                     return null;
                 }
                 bool[] arr;
-                if (!_playable.TryGetValue(musicId, out arr) || arr == null)
+                if (!playable.TryGetValue(musicId, out arr) || arr == null)
                 {
                     return null;
                 }
@@ -493,17 +549,10 @@ namespace SongRequestMod
             r.Difficulty = difficulty;
             lock (_queueLock)
             {
-                if (_queue.Count > 8)
-                {
-                    return "点歌请求太快了, 缓一下";
-                }
                 _queue.Add(r);
             }
-            if (!r.Done)
-            {
-                // 最多等 4 秒(主线程每帧都会来取)
-                WaitResult(r, 4000);
-            }
+            // 最多等 5 秒(主线程每帧都会来取; 游戏在切画面时最多再等 3 秒)
+            WaitResult(r, 5000);
             return r.Result;
         }
 
@@ -516,7 +565,7 @@ namespace SongRequestMod
             {
                 _queue.Add(r);
             }
-            WaitResult(r, 4000);
+            WaitResult(r, 5000);
             return r.Result;
         }
 
@@ -560,36 +609,155 @@ namespace SongRequestMod
                     _queue.Clear();
                 }
             }
-            if (batch == null)
+            // 连点只执行最新的一个: 以前同一帧里把排队的请求全执行一遍(每个都 ChangeBGM + 切画面),
+            // 连点几下就把选曲界面搅乱。前面的直接回"被取代"。
+            if (batch != null)
+            {
+                Request newest = batch[batch.Length - 1];
+                for (int i = 0; i < batch.Length - 1; i++)
+                {
+                    Complete(batch[i], SupersededPrefix + "已被后面的点歌取代");
+                }
+                if (_deferred != null && _deferred != newest)
+                {
+                    Complete(_deferred, SupersededPrefix + "已被后面的点歌取代");
+                }
+                _deferred = newest;
+            }
+            Request r = _deferred;
+            if (r == null)
             {
                 return;
             }
-            foreach (Request r in batch)
+            if (_switchPending && unchecked(Environment.TickCount - _switchPendingAt) > DeferMaxMs)
             {
-                string msg;
-                try
+                _switchPending = false;
+            }
+            // 游戏正在切画面(锁着输入)或上一次跳转还没切完: 先等, 别在动画中间改状态
+            if (_switchPending || AnyInputLocked())
+            {
+                if (unchecked(Environment.TickCount - r.QueuedAt) < DeferMaxMs)
                 {
-                    if (r.Random)
-                    {
-                        msg = JumpRandom(r.RandomDiff);
-                    }
-                    else
-                    {
-                        msg = Jump(r.MusicId, r.Difficulty);
-                    }
+                    return;
                 }
-                catch (Exception e)
+                _deferred = null;
+                Complete(r, "游戏正在切换画面, 请稍后再点");
+                return;
+            }
+            _deferred = null;
+            string msg;
+            try
+            {
+                msg = r.Random ? JumpRandom(r.RandomDiff) : Jump(r.MusicId, r.Difficulty);
+            }
+            catch (Exception e)
+            {
+                msg = "点歌失败: " + e.Message;
+                MelonLogger.Warning("[SongRequest] 点歌异常: " + e);
+            }
+            Complete(r, msg);
+        }
+
+        private static void Complete(Request r, string msg)
+        {
+            lock (r.Lock)
+            {
+                r.Result = msg;
+                r.Done = true;
+                System.Threading.Monitor.PulseAll(r.Lock);
+            }
+        }
+
+        /// <summary>有登录的玩家里, 有没有谁正被游戏锁着输入(切画面动画中)</summary>
+        private static bool AnyInputLocked()
+        {
+            try
+            {
+                if (_process == null)
                 {
-                    msg = "点歌失败: " + e.Message;
-                    MelonLogger.Warning("[SongRequest] 点歌异常: " + e);
+                    return false;
                 }
-                lock (r.Lock)
+                for (int p = 0; p < _process.MonitorArray.Length; p++)
                 {
-                    r.Result = msg;
-                    r.Done = true;
-                    System.Threading.Monitor.PulseAll(r.Lock);
+                    if (IsEntry(p) && _process.IsInputLocking(p))
+                    {
+                        return true;
+                    }
                 }
             }
+            catch
+            {
+            }
+            return false;
+        }
+
+        /// <summary>现在能不能点歌; 不能就返回原因</summary>
+        private static string BlockReason()
+        {
+            try
+            {
+                if (_fMainSeq != null && Convert.ToInt32(_fMainSeq.GetValue(_process)) != MainSeqUpdate)
+                {
+                    return "选曲界面还在进场/退场, 请稍后再点";
+                }
+                if (_curSeq != null)
+                {
+                    for (int p = 0; p < _curSeq.Length && p < _process.MonitorArray.Length; p++)
+                    {
+                        if (!IsEntry(p))
+                        {
+                            continue;
+                        }
+                        int cur = Convert.ToInt32(_curSeq.GetValue(p));
+                        if (cur != SubSeqMusic && cur != SubSeqDifficulty && cur != SubSeqUtageDifficulty)
+                        {
+                            string where = cur >= 0 && cur < SubSeqNames.Length ? SubSeqNames[cur] : ("画面 " + cur);
+                            return "游戏现在在「" + where + "」, 请先回到选曲列表再点歌";
+                        }
+                    }
+                }
+            }
+            catch (Exception e)
+            {
+                ModLog.Info("[SongRequest] 读选曲状态失败: " + e.Message);
+            }
+            return null;
+        }
+
+        /// <summary>有登录的玩家里, 有没有谁已经在(宴会场)难度画面</summary>
+        private static bool AnyInDifficulty()
+        {
+            try
+            {
+                if (_curSeq == null)
+                {
+                    return false;
+                }
+                for (int p = 0; p < _curSeq.Length && p < _process.MonitorArray.Length; p++)
+                {
+                    int cur = Convert.ToInt32(_curSeq.GetValue(p));
+                    if (IsEntry(p) && (cur == SubSeqDifficulty || cur == SubSeqUtageDifficulty))
+                    {
+                        return true;
+                    }
+                }
+            }
+            catch
+            {
+            }
+            return false;
+        }
+
+        /// <summary>调游戏自己的 SyncNext(子画面)</summary>
+        private static bool SyncNext(int subSeq)
+        {
+            if (_mSyncNext == null || _curSeq == null)
+            {
+                return false;
+            }
+            System.Type enumType = _curSeq.GetType().GetElementType();
+            _mSyncNext.Invoke(_process, new object[] { Enum.ToObject(enumType, subSeq) });
+            return true;
         }
 
         // ── 核心: 跳到某曲某难度 ──────────────────────────────────────
@@ -599,38 +767,46 @@ namespace SongRequestMod
             {
                 return "当前不在选曲界面(先回到选曲画面再点歌)";
             }
+            string blocked = BlockReason();
+            if (blocked != null)
+            {
+                return blocked;
+            }
             var list = _process.CombineMusicDataList;
+            int oldCat = _process.CurrentCategorySelect;
+            int oldIdx = _process.CurrentMusicSelect;
+            bool onlySpecial = false;
             for (int cat = 0; cat < list.Count; cat++)
             {
-                MusicSelectProcess.CombineMusicSelectData hit = null;
-                for (int i = 0; i < list[cat].Count; i++)
-                {
-                    if (list[cat][i].msDetailData.musicId == musicId)
-                    {
-                        hit = list[cat][i];
-                        break;
-                    }
-                }
-                if (hit == null && musicId >= 10000)
-                {
-                    int alt = musicId % 10000;
-                    for (int i = 0; i < list[cat].Count; i++)
-                    {
-                        if (list[cat][i].msDetailData.musicId == alt)
-                        {
-                            hit = list[cat][i];
-                            break;
-                        }
-                    }
-                }
-                if (hit == null)
+                int idx = FindInCategory(list[cat], musicId);
+                if (idx < 0)
                 {
                     continue;
                 }
-                var swJump = System.Diagnostics.Stopwatch.StartNew();
-                int idx = list[cat].IndexOf(hit);
+                // 同一首歌会出现在好几个分类里; 对战(ghost)/挑战/段位/联机/推荐 这类特殊资料夹会触发特殊玩法,
+                // 先临时选中看看是不是特殊资料夹, 是就换下一个分类(宴会场的歌只在宴会场资料夹里, 允许)
+                _process.CurrentCategorySelect = cat;
+                _process.CurrentMusicSelect = idx;
+                if (IsSpecialHere())
+                {
+                    onlySpecial = true;
+                    continue;
+                }
+                var hit = list[cat][idx];
                 int realId = hit.msDetailData.musicId;
 
+                // 已经在难度画面: 先按游戏自己"返回"的做法退回选曲列表, 再换曲子重新进难度画面。
+                // 以前直接在难度画面上再切一次难度画面, before 会被记成难度画面自己, 之后按返回就回不去了。
+                if (AnyInDifficulty())
+                {
+                    for (int p = 0; p < _process.DifficultySelectIndex.Length; p++)
+                    {
+                        _process.DifficultySelectIndex[p] = -1;
+                    }
+                    SyncNext(SubSeqMusic);
+                }
+
+                // 再设一次: 上面从难度画面退回选曲列表时, 游戏的 OnStartSequence 可能动过光标
                 _process.CurrentCategorySelect = cat;
                 _process.CurrentMusicSelect = idx;
                 _process.ScoreType = (ConstParameter.ScoreKind)(realId >= 10000 ? 1 : 0);
@@ -650,23 +826,40 @@ namespace SongRequestMod
                 // 再写难度(UI 每帧读 GetCurrentDifficulty -> 会把难度条刷到我们指定的那个)
                 int applied = ApplyDifficulty(realId, difficulty);
 
-                for (int p = 0; p < _process.MonitorArray.Length; p++)
+                if (Config.JumpToDifficultyScreen && _mSyncNext != null)
                 {
-                    Monitor.MusicSelectMonitor mon = _process.MonitorArray[p];
-                    if (mon == null || !IsEntry(p))
+                    // 跟游戏自己确认选曲时一样: 收起曲目卡/分类页签、换按钮图、锁输入, 下一帧切到难度画面
+                    Monitor.MusicSelectMonitor first = null;
+                    for (int p = 0; p < _process.MonitorArray.Length; p++)
                     {
-                        continue;
+                        Monitor.MusicSelectMonitor mon = _process.MonitorArray[p];
+                        if (mon == null || !IsEntry(p))
+                        {
+                            continue;
+                        }
+                        if (first == null)
+                        {
+                            first = mon;
+                        }
+                        try
+                        {
+                            mon.ChangeButtonImage(InputManager.ButtonSetting.Button04, 14);
+                        }
+                        catch
+                        {
+                        }
+                        mon.SetScrollMusicCard(false);
+                        mon.OutGenreTab();
+                        _process.SetInputLockInfo(p, InputLockMs);
                     }
-                    mon.SetScrollMusicCard(false);
-                    mon.SetScrollGenreCard(false);
-                    mon.OutGenreTab();
-                    if (Config.JumpToDifficultyScreen && _subSeqArray != null)
+                    if (first != null)
                     {
-                        mon.StartCoroutine(NextFrame(p));
+                        _switchPending = true;
+                        _switchPendingAt = Environment.TickCount;
+                        first.StartCoroutine(NextFrame());
                     }
                 }
 
-                swJump.Stop();
                 string name = SongTable.NameOf(realId);
                 string dname = SongTable.DifficultyName(applied);
                 ModLog.Info("[SongRequest] 点歌: " + realId + " " + name + " / " + dname
@@ -679,7 +872,61 @@ namespace SongRequestMod
                 }
                 return "已跳转: " + name + " [" + dname + "]";
             }
+            // 没点成: 光标放回原处
+            _process.CurrentCategorySelect = oldCat;
+            _process.CurrentMusicSelect = oldIdx;
+            if (onlySpecial)
+            {
+                return "这首歌只在特殊分类(对战/挑战/段位/联机等)里, 为免触发特殊玩法不自动跳转, 请在游戏里手动选";
+            }
             return "找不到这首歌: " + musicId + " —— 它可能刚热导入还没进选曲列表(回一次标题再进选曲界面即可), 或者被游戏过滤/未开放";
+        }
+
+        /// <summary>在一个分类里找这首歌(DX 找不到就试同曲的标准 id), 跳过空格子和"随机"格; 找不到返回 -1</summary>
+        private static int FindInCategory(ReadOnlyCollection<MusicSelectProcess.CombineMusicSelectData> page, int musicId)
+        {
+            if (page == null)
+            {
+                return -1;
+            }
+            int alt = musicId >= 10000 ? musicId % 10000 : -1;
+            int altIdx = -1;
+            for (int i = 0; i < page.Count; i++)
+            {
+                var c = page[i];
+                if (c == null || c.msDetailData == null || c.isRandomScore)
+                {
+                    continue;
+                }
+                int id = c.msDetailData.musicId;
+                if (id == musicId)
+                {
+                    return i;
+                }
+                if (id == alt && altIdx < 0)
+                {
+                    altIdx = i;
+                }
+            }
+            return altIdx;
+        }
+
+        /// <summary>当前选中的格子在不在特殊资料夹(只读分类名, 不改游戏状态)</summary>
+        private static bool IsSpecialHere()
+        {
+            try
+            {
+                if (_process.IsUtageMusicFolder())
+                {
+                    return false;
+                }
+                return _process.IsGhostFolder(0) || _process.IsConnectionFolder() || _process.IsChallengeFolder()
+                    || _process.IsTournamentFolder() || _process.IsExtraFolder(0);
+            }
+            catch
+            {
+                return false;
+            }
         }
 
         internal static string JumpRandom(int difficulty)
@@ -781,49 +1028,33 @@ namespace SongRequestMod
         }
 
         /// <summary>下一帧再切画面: 跟游戏自己换子序列的做法一致, 免得跟当帧的 Update 打架</summary>
-        private static IEnumerator NextFrame(int playerIndex)
+        private static IEnumerator NextFrame()
         {
             yield return null;
             try
             {
-                if (_subSeqArray == null || _curSeq == null || _prevSeq == null)
+                if (_process != null && _process.CombineMusicDataList != null && BlockReason() == null)
                 {
-                    yield break;
+                    bool utage = false;
+                    try
+                    {
+                        utage = _process.IsUtageMusicFolder();
+                    }
+                    catch
+                    {
+                    }
+                    SyncNext(utage ? SubSeqUtageDifficulty : SubSeqDifficulty);
+                    ModLog.Info("[SongRequest] 已切到" + (utage ? "宴会场" : "") + "难度选择画面");
                 }
-                Array inner = (Array)_subSeqArray.GetValue(playerIndex);
-                if (inner == null)
-                {
-                    yield break;
-                }
-                int cur = Convert.ToInt32(_curSeq.GetValue(playerIndex));
-                object curSeqObj = inner.GetValue(cur);
-                Invoke(curSeqObj, "Reset");
-                _prevSeq.SetValue(_curSeq.GetValue(playerIndex), playerIndex);
-                _curSeq.SetValue(Enum.ToObject(_curSeq.GetType().GetElementType(), SubSeqDifficulty), playerIndex);
-                object diffSeqObj = inner.GetValue(SubSeqDifficulty);
-                Invoke(diffSeqObj, "OnStartSequence");
-                ModLog.Info("[SongRequest] 已切到难度选择画面 (player " + playerIndex + ")");
             }
             catch (Exception e)
             {
                 MelonLogger.Warning("[SongRequest] 切难度画面失败: " + e.Message);
             }
-        }
-
-        private static void Invoke(object target, string method)
-        {
-            if (target == null)
+            finally
             {
-                return;
+                _switchPending = false;
             }
-            var m = target.GetType().GetMethod(method,
-                BindingFlags.Public | BindingFlags.NonPublic | BindingFlags.Instance);
-            if (m == null)
-            {
-                MelonLogger.Warning("[SongRequest] 找不到方法 " + target.GetType().Name + "." + method);
-                return;
-            }
-            m.Invoke(target, null);
         }
     }
 }
