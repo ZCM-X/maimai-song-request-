@@ -16,10 +16,10 @@ namespace SongRequestMod
     /// </summary>
     internal static class LiveState
     {
-        private static string _json = "{\"state\":\"idle\"}";
+        private static volatile string _json = "{\"state\":\"idle\"}";
 
         /// <summary>当前状态(给 /api/status 用)</summary>
-        internal static string State = "idle";
+        internal static volatile string State = "idle";
 
         internal static string Json()
         {
@@ -38,16 +38,30 @@ namespace SongRequestMod
             }
         }
 
+        private static bool _monitorFound;
+        private static float _monitorCheckAt = -1f;
+
+        /// <summary>
+        /// 场景里有没有游玩画面的 GameMonitor。FindObjectOfType 要扫全场景, 很贵 ——
+        /// 以前每 50ms(一秒 20 次)扫一遍, 一直在吃主线程; 现在一秒最多扫一次, 中间用上次的结果。
+        /// </summary>
         private static bool FindGameMonitor()
         {
+            float now = Time.unscaledTime;
+            if (_monitorCheckAt >= 0f && now - _monitorCheckAt < 1f)
+            {
+                return _monitorFound;
+            }
+            _monitorCheckAt = now;
             try
             {
-                return UnityEngine.Object.FindObjectOfType<Monitor.GameMonitor>() != null;
+                _monitorFound = UnityEngine.Object.FindObjectOfType<Monitor.GameMonitor>() != null;
             }
             catch
             {
-                return false;
+                _monitorFound = false;
             }
+            return _monitorFound;
         }
 
         /// <summary>游戏自己的"是否在游玩中"标志(ComboWeb 也是用这个), 场景里没有 GameMonitor 时兜一下</summary>

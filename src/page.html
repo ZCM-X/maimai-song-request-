@@ -674,10 +674,14 @@ html.theme-transition *::after{
 
 /* 筛选行 */
 .filters{
-  display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));
+  /* 150px: 难度占两格后, 常见桌面宽度下「重置」按钮仍能留在第一行 */
+  display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));
   gap:var(--sp-3) var(--sp-4);align-items:end;
 }
 .field{display:flex;flex-direction:column;gap:var(--sp-2);min-width:0}
+/* 难度有 6 个按钮, 跟 3 个按钮的谱面类型挤同一格宽度时每个只剩 ~35px, 字全被截成 "B…" —— 占两格
+   (<=900px 时筛选区本来就是一行一个, 见下面 900px 档里的复位) */
+.field-wide{grid-column:span 2}
 .field>label{
   font-family:var(--font-body);font-size:var(--fs-sm);font-weight:var(--fw-semibold);
   color:var(--c-text-tertiary);letter-spacing:var(--ls-wider);
@@ -1409,6 +1413,7 @@ input[type=number]{width:60px}
   .search-wrap{flex:1 1 100%;min-width:0}
   #q{width:100%;min-width:0;min-height:var(--touch-h);font-size:var(--fs-xl)}
   .filters{grid-template-columns:minmax(0,1fr)}
+  .field-wide{grid-column:auto}
   .field-row{width:100%}
   /* 关键: 折叠包裹层与折叠动画在 900px 档就位, 501-900px 同样可用 (§9.3 时序) */
   .filters-box{display:grid;grid-template-rows:1fr;opacity:1;
@@ -1756,15 +1761,15 @@ input[type=number]{width:60px}
       <div class="filters-box" id="filtersBox">
       <div class="filters-inner">
       <div class="filters">
-        <div class="field">
+        <div class="field field-wide">
           <label for="diffSeg" title="难度筛选；同时决定单击曲名 / Enter 使用的点歌难度">难度</label>
           <div class="seg" id="diffSeg" style="--seg-n:6;--seg-i:0" role="group" aria-label="难度筛选">
             <span class="seg-ind" aria-hidden="true"></span>
             <button type="button" data-t="-1" class="on" title="不限难度">全部</button>
-            <button type="button" data-t="0" title="BASIC">BASIC</button>
+            <button type="button" data-t="0" title="BASIC">BAS</button>
             <button type="button" data-t="1" title="ADVANCED">ADV</button>
             <button type="button" data-t="2" title="EXPERT">EXP</button>
-            <button type="button" data-t="3" title="MASTER">MASTER</button>
+            <button type="button" data-t="3" title="MASTER">MAS</button>
             <button type="button" data-t="4" title="Re:MASTER">Re:M</button>
           </div>
         </div>
@@ -2509,6 +2514,9 @@ function requestPlay(id, diff){
     pending = false;
     markSending(row.id, d, false);
     var msg = (j && j.msg) ? String(j.msg) : (j && j.ok ? '已发送点歌请求' : '未收到服务端结果');
+    if (j && j.superseded){
+      return;   /* 连点时前面的请求被后面的取代, 不算失败 */
+    }
     if (j && j.ok){
       toast('ok', '已点歌', '#' + row.id + ' ' + row.name + (d >= 0 ? ' [' + DIFF_NAME[d] + ']' : ' [自动]'));
     } else {
@@ -2526,6 +2534,7 @@ function requestRandom(diff){
   var payload = {};
   if (diff >= 0) payload.diff = diff;
   postForm(API.random, payload).then(function(j){
+    if (j && j.superseded) return;
     var msg = (j && j.msg) ? String(j.msg) : (j && j.ok ? '已发送随机点歌请求' : '未收到服务端结果');
     toast(j && j.ok ? 'ok' : 'bad', '随机点歌', msg);
     if (!(j && j.ok)) showErr('随机点歌未生效：' + msg);
@@ -3100,6 +3109,12 @@ function afterLoad(retry){
 }
 function loadSongs(retry){
   api(API.songs).then(function(arr){
+    if (arr && arr.ok === false && !Array.isArray(arr)){
+      /* 游戏数据还在加载(mod 回 503 + 提示): 过 3 秒自动再试, 不用手动点 */
+      elList.innerHTML = emptyStateHTML('游戏数据加载中', escHtml(arr.msg || '请稍候') + '<br>页面会自动重试。');
+      setTimeout(function(){ loadSongs(true); }, 3000);
+      return;
+    }
     if (!Array.isArray(arr)) throw new Error('/api/songs 未返回数组');
     state.songs = arr;
     state.rows = buildRows(arr);
@@ -3131,7 +3146,9 @@ function refreshSongs(opts){
   if (currentIndex() >= 0) state.selAnchor = currentIndex();
   var prev = state.count;
   elRefresh.classList.add('is-busy');
-  api(API.songs + '?refresh=1').then(function(arr){
+  /* 只有手动点「刷新曲库」才让 mod 重新扫描; rev 变化的自动同步直接拿 mod 已经建好的新表 ——
+     以前自动同步也带 refresh=1, 每次都让 mod 重建一次并把 rev 再 +1, 开着两个以上页面时会互相触发 */
+  api(API.songs + (opts.manual ? '?refresh=1' : '')).then(function(arr){
     state.loadInFlight = false;
     elRefresh.classList.remove('is-busy');
     if (!Array.isArray(arr)) throw new Error('/api/songs 未返回数组');
@@ -3410,15 +3427,29 @@ function start(){
   bootIntro();
   loadSongs(false);
   pollStatus();  setInterval(pollStatus, POLL_STAT);
-  pollNow();     setInterval(pollNow, POLL_NOW);
-  /* SSE 实时推送: mod 每帧把最新状态推过来, 延迟只剩一次本地回环; 连不上就继续用上面的轮询 */
-  try {
-    var _es = new EventSource('/api/npstream');
-    _es.onmessage = function(ev){
-      try { renderNow(JSON.parse(ev.data)); } catch(e){}
-    };
-    _es.onerror = function(){ try { _es.close(); } catch(e){} };   /* 断开后不再重连, 退回轮询 */
-  } catch(e){}
+  /* SSE 实时推送: mod 有变化就推过来。SSE 连着时轮询降到 2 秒一次兜底(以前一直 180ms 一次,
+     每个页面每秒 5 个请求, 页面开多了会把 mod 的网页线程占满); 断了就回到 180ms 轮询, 5 秒后重连 */
+  var sseOpen = false, lastPollAt = 0;
+  pollNow();
+  setInterval(function(){
+    if (sseOpen && Date.now() - lastPollAt < 2000) return;
+    lastPollAt = Date.now();
+    pollNow();
+  }, POLL_NOW);
+  (function openSse(){
+    try {
+      var es = new EventSource('/api/npstream');
+      es.onopen = function(){ sseOpen = true; };
+      es.onmessage = function(ev){
+        try { renderNow(JSON.parse(ev.data)); } catch(e){}
+      };
+      es.onerror = function(){
+        sseOpen = false;
+        try { es.close(); } catch(e){}
+        setTimeout(openSse, 5000);
+      };
+    } catch(e){}
+  })();
   try { elQ.focus(); } catch(e){}
 }
 if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', start);

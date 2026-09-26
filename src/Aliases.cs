@@ -20,9 +20,10 @@ namespace SongRequestMod
     /// </summary>
     internal static class Aliases
     {
-        private static readonly Dictionary<string, List<string>> _byTitle =
+        // 解析时整张新建再换引用, 从不原地改: 网页线程读计数、主线程导出曲目表时读别名, 不能读到写了一半的表
+        private static volatile Dictionary<string, List<string>> _byTitle =
             new Dictionary<string, List<string>>();
-        private static readonly Dictionary<int, List<string>> _byId =
+        private static volatile Dictionary<int, List<string>> _byId =
             new Dictionary<int, List<string>>();
         private static DateTime _stamp;
         private static string _loadedPath;
@@ -58,17 +59,16 @@ namespace SongRequestMod
             }
         }
 
-        /// <summary>别名条数。首次读取会无条件解析一次 —— 计数跟曲库没有任何关系
-        /// (曲库为空时 Build() 根本不会调 For(), 老代码因此永远显示 0 条)</summary>
+        /// <summary>别名条数(启动时 Preload 已解析; 网页线程也会读, 所以这里只给缓存值不现场解析)</summary>
         internal static int Count
         {
-            get { Ensure(); return _aliasCount; }
+            get { return _aliasCount; }
         }
 
         /// <summary>有别名可用的曲目数(按 id 索引的 + 按曲名索引的)</summary>
         internal static int SongCount
         {
-            get { Ensure(); return _songCount; }
+            get { return _songCount; }
         }
 
         /// <summary>启动后主动解析一次(Mod.OnLateInitializeMelon 里调), 让 /api/status 一开始就有真数字</summary>
@@ -117,10 +117,9 @@ namespace SongRequestMod
 
         private static void Parse(string[] lines)
         {
-            _byTitle.Clear();
-            _byId.Clear();
-            _aliasCount = 0;
-            _songCount = 0;
+            var byTitle = new Dictionary<string, List<string>>();
+            var byId = new Dictionary<int, List<string>>();
+            int aliasCount = 0;
             int songs = 0;
             foreach (string raw in lines)
             {
@@ -159,16 +158,19 @@ namespace SongRequestMod
                 int id;
                 if (int.TryParse(key, out id) && id > 0)
                 {
-                    _byId[id] = list;
+                    byId[id] = list;
                 }
                 else
                 {
-                    _byTitle[Norm(key)] = list;
+                    byTitle[Norm(key)] = list;
                 }
-                _aliasCount += list.Count;
+                aliasCount += list.Count;
                 songs++;
             }
-            _songCount = _byTitle.Count + _byId.Count;
+            _byTitle = byTitle;
+            _byId = byId;
+            _aliasCount = aliasCount;
+            _songCount = byTitle.Count + byId.Count;
             _parsed = true;
             ModLog.Info("[SongRequest] 别名库已解析: " + songs + " 首 / " + _aliasCount + " 条");
         }
@@ -191,14 +193,15 @@ namespace SongRequestMod
             }
         }
 
-        /// <summary>取该曲的别名(按 id 和曲名两路都查, 合起来去重)</summary>
+        /// <summary>取该曲的别名(按 id 和曲名两路都查, 合起来去重)。文件有没有改过由调用方(SongTable.Build)整次检查一次</summary>
         internal static List<string> For(int id, string title)
         {
-            Ensure();
             List<string> result = new List<string>();
+            var byIdMap = _byId;
+            var byTitleMap = _byTitle;
             HashSet<string> seen = new HashSet<string>(StringComparer.OrdinalIgnoreCase);
             List<string> byId;
-            if (_byId.TryGetValue(id, out byId))
+            if (byIdMap.TryGetValue(id, out byId))
             {
                 foreach (string a in byId)
                 {
@@ -211,7 +214,7 @@ namespace SongRequestMod
             if (!string.IsNullOrEmpty(title))
             {
                 List<string> byTitle;
-                if (_byTitle.TryGetValue(Norm(title), out byTitle))
+                if (byTitleMap.TryGetValue(Norm(title), out byTitle))
                 {
                     foreach (string a in byTitle)
                     {
