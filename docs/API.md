@@ -11,7 +11,7 @@
 | GET | `/api/status` | 轻量状态（`rev` 变化=曲库变化，网页据此自动刷新） |
 | GET | `/api/selfcheck` | 自检：补丁/进程/子序列/分类/光标/布防 |
 | GET | `/api/selftest?id=&diff=` | 布防：下次进选曲界面自动点这首歌这个难度 |
-| POST | `/api/play` | 表单 `id=` `diff=`（省略=最高可用难度）。连点时只执行最新一个，前面的返回 `{"ok":false,"superseded":true}` |
+| POST | `/api/play` | 表单 `id=` `diff=` `type=`（`diff` 省略=最高可用难度；`type=dx\|std` 指定谱面类型，省略=按 `id` 判断，DX 行 id ≥ 10000）。连点时只执行最新一个，前面的返回 `{"ok":false,"superseded":true}` |
 | POST | `/api/random` | 表单 `diff=`（可选） |
 | GET | `/jacket?id=&s=1` | 曲绘 PNG（`s=1` 小图） |
 | GET | `/api/npstream` | **SSE**：`data: {nowplaying json}`，仅在内容变化时推送 |

@@ -2506,10 +2506,20 @@ function requestPlay(id, diff){
   var d = (diff === 0 || diff) ? diff : defaultDiff(row.raw);
   var payload = { id: row.id };
   if (d >= 0) payload.diff = d;
+  /* 谱面类型必须一起传: 游戏里 DX 谱和标准谱是"同一张卡", 靠 ScoreType 切换。
+     不传的话服务端只能猜, 一首歌同时有 DX+标准 时就会停在标准谱(= 观众说的"点不了 DX")。
+     规则: 这首歌只有一种就传那一种; 两种都有 -> 跟随「全部 / DX / 标准」筛选, 没筛选默认 DX。 */
+  var onlyDX = (hasDX(row.raw) === 1 && hasSTD(row.raw) === 0);
+  var onlySTD = (hasSTD(row.raw) === 1 && hasDX(row.raw) === 0);
+  if (onlyDX){ payload.type = 'dx'; }
+  else if (onlySTD){ payload.type = 'std'; }
+  else if (state.typeFilter === 'dx' || state.typeFilter === 'std'){ payload.type = state.typeFilter; }
+  else { payload.type = 'dx'; }
+  var tLabel = (payload.type === 'std') ? 'STD' : 'DX';
   pending = true;
   /* 第一帧就反馈: 难度块脉冲 + 立即提示"跳转中", 不等 HTTP 往返 */
   markSending(row.id, d, true);
-  toast('info', '跳转中…', '#' + row.id + ' ' + row.name + (d >= 0 ? ' [' + DIFF_NAME[d] + ']' : ' [自动]'));
+  toast('info', '跳转中…', '#' + row.id + ' ' + row.name + (d >= 0 ? ' [' + DIFF_NAME[d] + ']' : ' [自动]') + ' [' + tLabel + ']');
   postForm(API.play, payload).then(function(j){
     pending = false;
     markSending(row.id, d, false);
@@ -2518,7 +2528,7 @@ function requestPlay(id, diff){
       return;   /* 连点时前面的请求被后面的取代, 不算失败 */
     }
     if (j && j.ok){
-      toast('ok', '已点歌', '#' + row.id + ' ' + row.name + (d >= 0 ? ' [' + DIFF_NAME[d] + ']' : ' [自动]'));
+      toast('ok', '已点歌', msg);
     } else {
       toast('bad', '点歌未生效', msg);
       showErr('点歌未生效：' + msg);

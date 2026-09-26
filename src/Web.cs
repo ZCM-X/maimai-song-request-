@@ -224,7 +224,32 @@ namespace SongRequestMod
                     ReplyJson(ctx, "{\"ok\":false,\"msg\":\"缺少 id\"}");
                     return;
                 }
-                ReplyPlay(ctx, SelectDriver.Enqueue(id, diff));
+                // 谱面类型: type=dx|std (也认 dx=1/0); 不传 = 自动(按点的 id 判断, 优先 DX)。
+                // 一首歌的 DX 与标准谱在游戏里是同一张卡、靠 ScoreType 切换, 不传就只能猜,
+                // 同时有 DX+标准 的歌会停在标准谱 —— 就是"点不了 DX 谱"。
+                int scoreKind = -1;
+                string ty = "";
+                if (form.TryGetValue("type", out ty) && ty != null)
+                {
+                    ty = ty.Trim().ToLowerInvariant();
+                }
+                else
+                {
+                    ty = "";
+                }
+                if (ty == "dx" || ty == "deluxe" || ty == "1")
+                {
+                    scoreKind = 1;
+                }
+                else if (ty == "std" || ty == "standard" || ty == "0")
+                {
+                    scoreKind = 0;
+                }
+                else if (form.ContainsKey("dx"))
+                {
+                    scoreKind = Int(form, "dx", 1) != 0 ? 1 : 0;
+                }
+                ReplyPlay(ctx, SelectDriver.Enqueue(id, diff, scoreKind));
                 return;
             }
             if (path == "/api/random" && method == "POST")
