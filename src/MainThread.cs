@@ -167,7 +167,7 @@ namespace SongRequestMod
                 }
                 catch (Exception e)
                 {
-                    ModLog.Info("[SongRequest] 主线程任务异常: " + e.Message);
+                    ModLog.Info("主线程任务异常: " + e.Message);
                 }
                 Perf.Hit("job", sw.Elapsed.TotalMilliseconds);
                 lock (job)

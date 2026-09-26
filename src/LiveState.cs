@@ -34,7 +34,7 @@ namespace SongRequestMod
             }
             catch (Exception e)
             {
-                ModLog.Info("[SongRequest] 状态快照失败: " + e.Message);
+                ModLog.Info("状态快照失败: " + e.Message);
             }
         }
 

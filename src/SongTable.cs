@@ -299,7 +299,7 @@ namespace SongRequestMod
             }
             catch (Exception e)
             {
-                Warn("[SongRequest] 取 DataManager 实例失败: " + e.Message);
+                Warn("取 DataManager 实例失败: " + e.Message);
             }
             if (dm == null)
             {
@@ -372,7 +372,7 @@ namespace SongRequestMod
                     && !probes[0].Skipped && !_fallbackWarned)
                 {
                     _fallbackWarned = true;
-                    Warn("[SongRequest] 主数据源 " + probes[0].Name + " 读到 0 条"
+                    Warn("主数据源 " + probes[0].Name + " 读到 0 条"
                         + (probes[0].Error.Length > 0 ? " (" + probes[0].Error + ")" : "")
                         + ", 已自动改用 " + best.Name + "(" + best.Count + " 条)。明细: /api/selfcheck");
                 }
@@ -380,13 +380,13 @@ namespace SongRequestMod
             else if (!_zeroWarned)
             {
                 _zeroWarned = true;
-                Warn("[SongRequest] 所有曲目数据源都读到 0 条 —— 点歌台会显示 0 首。"
+                Warn("所有曲目数据源都读到 0 条 —— 点歌台会显示 0 首。"
                     + "各数据源明细见 /api/selfcheck 的 songTable.tried");
             }
             if (_lastLoggedSource != _snapSource)
             {
                 _lastLoggedSource = _snapSource;
-                ModLog.Info("[SongRequest] 曲目表来源: " + _snapSource + " / " + _snapRaw + " 条");
+                ModLog.Info("曲目表来源: " + _snapSource + " / " + _snapRaw + " 条");
             }
         }
 
@@ -809,7 +809,7 @@ namespace SongRequestMod
             }
             catch (Exception e)
             {
-                MelonLogger.Warning("[SongRequest] 枚举 DataManager 字段失败: " + e.Message);
+                MelonLogger.Warning("枚举 DataManager 字段失败: " + e.Message);
             }
             return hits;
         }
@@ -1000,11 +1000,11 @@ namespace SongRequestMod
             if (_byId.Count > 0)
             {
                 _retryFails = 0;
-                ModLog.Info("[SongRequest] 曲目表重建成功: " + _byId.Count + " 首 (来源 " + _snapSource + ")");
+                ModLog.Info("曲目表重建成功: " + _byId.Count + " 首 (来源 " + _snapSource + ")");
                 return;
             }
             _retryFails++;
-            Warn("[SongRequest] 曲目表重建后仍是 0 首(第 " + _retryFails + "/"
+            Warn("曲目表重建后仍是 0 首(第 " + _retryFails + "/"
                 + RetryMaxFails + " 次, 数据源: " + _snapSource + ")"
                 + (_retryFails >= RetryMaxFails ? " —— 停止自动重试, 明细见 /api/selfcheck" : ""));
         }
@@ -1270,7 +1270,7 @@ namespace SongRequestMod
                     if (!_disableFilterWarned)
                     {
                         _disableFilterWarned = true;
-                        Warn("[SongRequest] 检测到整库被 disable 过滤清空(" + raw
+                        Warn("检测到整库被 disable 过滤清空(" + raw
                             + " 首全部被判为禁用), 已自动关闭 disable 过滤 —— 这几首会照常显示");
                     }
                     sb = new StringBuilder(1 << 21);
@@ -1280,7 +1280,7 @@ namespace SongRequestMod
             }
             catch (Exception e)
             {
-                MelonLogger.Error("[SongRequest] 导出曲目表失败: " + e.Message);
+                MelonLogger.Error("导出曲目表失败: " + e.Message);
             }
             sb.Append(']');
             _jsonCount = n;
@@ -1296,7 +1296,7 @@ namespace SongRequestMod
             }
             _types = null;
             _lastBuildMs = _swBuild.Elapsed.TotalMilliseconds;
-            ModLog.Info("[SongRequest] 曲目表已导出: " + n + " 首"
+            ModLog.Info("曲目表已导出: " + n + " 首"
                 + (_disableFilterOff ? " (disable 过滤已关闭)" : "")
                 + " 用时 " + _lastBuildMs.ToString("0.#") + "ms");
             return sb.ToString();
@@ -1391,7 +1391,7 @@ namespace SongRequestMod
                             _fDisableProp = pv;
                         }
                     }
-                    ModLog.Info("[SongRequest] disable 判定: "
+                    ModLog.Info("disable 判定: "
                         + (_fDisable != null ? ("字段 " + _fDisable.Name)
                             : (_fDisableProp != null ? "属性 disable" : "读不到, 只看 IsDisable()")));
                 }

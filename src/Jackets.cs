@@ -135,7 +135,7 @@ namespace SongRequestMod
                     {
                         if (_failed++ < 5)
                         {
-                            ModLog.Info("[SongRequest] 取曲绘失败 id=" + job.Id + ": " + e.Message);
+                            ModLog.Info("取曲绘失败 id=" + job.Id + ": " + e.Message);
                         }
                     }
                 }
@@ -205,7 +205,7 @@ namespace SongRequestMod
             AssetManager am = AssetManager.Instance();
             if (am == null)
             {
-                ModLog.Info("[SongRequest] 曲绘: AssetManager 还没起来");
+                ModLog.Info("曲绘: AssetManager 还没起来");
                 return null;
             }
             // 优先用游戏数据里的真实资源名(jacketFile / thumbnailName):
@@ -220,7 +220,7 @@ namespace SongRequestMod
             }
             catch (Exception e)
             {
-                ModLog.Info("[SongRequest] 曲绘(" + name + ")取图异常: " + e.Message);
+                ModLog.Info("曲绘(" + name + ")取图异常: " + e.Message);
             }
             if (tex == null)
             {
@@ -245,7 +245,7 @@ namespace SongRequestMod
             }
             if (tex == null)
             {
-                ModLog.Info("[SongRequest] 曲绘没找到: id=" + id + " small=" + small + " name=" + name);
+                ModLog.Info("曲绘没找到: id=" + id + " small=" + small + " name=" + name);
                 return null;
             }
             Texture2D readable = ToReadable(tex, small ? SmallPx : MaxPx);
@@ -260,7 +260,7 @@ namespace SongRequestMod
             }
             catch (Exception e)
             {
-                ModLog.Info("[SongRequest] 曲绘编码失败 " + name + ": " + e.Message);
+                ModLog.Info("曲绘编码失败 " + name + ": " + e.Message);
                 png = null;
             }
             if (readable != tex)
@@ -269,7 +269,7 @@ namespace SongRequestMod
             }
             if (png == null)
             {
-                ModLog.Info("[SongRequest] 曲绘编码返回空: " + name);
+                ModLog.Info("曲绘编码返回空: " + name);
             }
             return png;
         }

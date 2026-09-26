@@ -37,15 +37,15 @@ namespace SongRequestMod
                 {
                     CrashGuard.Install();   // 兜住游戏自身的 RestoreGhost/CategoryTab* 空引用闪退(默认关)
                 }
-                ModLog.Info("[SongRequest] Harmony 已挂: MusicSelectProcess.OnStart / OnRelease");
+                ModLog.Info("Harmony 已挂: MusicSelectProcess.OnStart / OnRelease");
             }
             catch (Exception e)
             {
-                MelonLogger.Error("[SongRequest] 挂 Harmony 失败: " + e.Message);
+                MelonLogger.Error("挂 Harmony 失败: " + e.Message);
             }
             if (!Config.WebEnable)
             {
-                ModLog.Always("[SongRequest] 网页已关闭(配置 网页=true 打开)");
+                ModLog.Always("网页已关闭(配置 网页=true 打开)");
             }
         }
 
@@ -63,7 +63,7 @@ namespace SongRequestMod
                 }
                 catch (Exception e)
                 {
-                    MelonLogger.Warning("[SongRequest] 别名库预载失败: " + e.Message);
+                    MelonLogger.Warning("别名库预载失败: " + e.Message);
                 }
             }
         }
@@ -79,7 +79,7 @@ namespace SongRequestMod
                 if (!_updateErrorLogged)
                 {
                     _updateErrorLogged = true;
-                    MelonLogger.Error("[SongRequest] OnUpdate 异常(后续不再重复报): " + e.Message);
+                    MelonLogger.Error("OnUpdate 异常(后续不再重复报): " + e.Message);
                 }
             }
         }
@@ -120,7 +120,7 @@ namespace SongRequestMod
                 return false;
             }
             _ready = true;
-            ModLog.Always("[SongRequest] 游戏数据就绪, 开始工作");
+            ModLog.Always("游戏数据就绪, 开始工作");
             return true;
         }
 
@@ -216,7 +216,7 @@ namespace SongRequestMod
                 if (!System.IO.File.Exists(PathFile))
                 {
                     Save();
-                    MelonLogger.Msg("[SongRequest] 已生成配置: " + PathFile);
+                    MelonLogger.Msg("已生成配置: " + PathFile);
                     return;
                 }
                 foreach (string raw in System.IO.File.ReadAllLines(PathFile, System.Text.Encoding.UTF8))
@@ -271,7 +271,7 @@ namespace SongRequestMod
             }
             catch (Exception e)
             {
-                MelonLogger.Error("[SongRequest] 读配置失败: " + e.Message);
+                MelonLogger.Error("读配置失败: " + e.Message);
             }
             EnsureAllKeys();
         }
@@ -288,7 +288,7 @@ namespace SongRequestMod
                 {
                     if (txt.IndexOf(need[i] + "=", StringComparison.Ordinal) < 0)
                     {
-                        MelonLogger.Msg("[SongRequest] 配置缺 " + need[i] + " -> 自动补全并重写 " + PathFile);
+                        MelonLogger.Msg("配置缺 " + need[i] + " -> 自动补全并重写 " + PathFile);
                         Save();
                         return;
                     }
@@ -296,7 +296,7 @@ namespace SongRequestMod
             }
             catch (Exception e)
             {
-                MelonLogger.Warning("[SongRequest] 补全配置失败: " + e.Message);
+                MelonLogger.Warning("补全配置失败: " + e.Message);
             }
         }
 
@@ -343,7 +343,7 @@ namespace SongRequestMod
             }
             catch (Exception e)
             {
-                MelonLogger.Error("[SongRequest] 写配置失败: " + e.Message);
+                MelonLogger.Error("写配置失败: " + e.Message);
             }
         }
     }

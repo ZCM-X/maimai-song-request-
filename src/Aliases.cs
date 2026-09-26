@@ -94,7 +94,7 @@ namespace SongRequestMod
                             _usedEmbedded = true;
                             Parse(emb.Split(new char[] { '\n' }));
                             _loadedPath = "(内嵌)";
-                            ModLog.Info("[SongRequest] 别名库用内嵌版本");
+                            ModLog.Info("别名库用内嵌版本");
                         }
                     }
                     return;
@@ -107,11 +107,11 @@ namespace SongRequestMod
                 Parse(File.ReadAllLines(p, Encoding.UTF8));
                 _loadedPath = p;
                 _stamp = t;
-                ModLog.Info("[SongRequest] 别名库已载入: " + _aliasCount + " 条 (" + p + ")");
+                ModLog.Info("别名库已载入: " + _aliasCount + " 条 (" + p + ")");
             }
             catch (Exception e)
             {
-                MelonLogger.Warning("[SongRequest] 读别名库失败: " + e.Message);
+                MelonLogger.Warning("读别名库失败: " + e.Message);
             }
         }
 
@@ -172,7 +172,7 @@ namespace SongRequestMod
             _aliasCount = aliasCount;
             _songCount = byTitle.Count + byId.Count;
             _parsed = true;
-            ModLog.Info("[SongRequest] 别名库已解析: " + songs + " 首 / " + _aliasCount + " 条");
+            ModLog.Info("别名库已解析: " + songs + " 首 / " + _aliasCount + " 条");
         }
 
         /// <summary>aliases.txt 的 mtime 变过没(曲目表要不要因此重出)</summary>

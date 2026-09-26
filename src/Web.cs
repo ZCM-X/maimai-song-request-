@@ -48,7 +48,7 @@ namespace SongRequestMod
                     }
                     // 某个局域网 IP 绑不上(网卡刚换 IP / 被别的程序占着)会让整个 Start 失败, 连本机都打不开 ->
                     // 退一步只开本机, 至少电脑上能用
-                    MelonLogger.Warning("[SongRequest] 局域网地址绑定失败, 只开本机访问: " + e1.Message);
+                    MelonLogger.Warning("局域网地址绑定失败, 只开本机访问: " + e1.Message);
                     lans = new List<string>();
                     _listener = Listen(port, lans);
                 }
@@ -69,13 +69,13 @@ namespace SongRequestMod
                         lanTxt += (i == 0 ? "    手机(同网): http://" : " 或 http://") + _lanUrls[i] + ":" + port + "/";
                     }
                 }
-                ModLog.Always("[SongRequest] v" + typeof(Web).Assembly.GetName().Version
+                ModLog.Always("v" + typeof(Web).Assembly.GetName().Version
                     + "  本机: http://127.0.0.1:" + port + "/" + lanTxt);
                 return true;
             }
             catch (Exception e)
             {
-                MelonLogger.Error("[SongRequest] 启动点歌台失败(端口 " + port + " 可能被占用, 常见原因是上次游戏没关干净,"
+                MelonLogger.Error("启动点歌台失败(端口 " + port + " 可能被占用, 常见原因是上次游戏没关干净,"
                     + " 在任务管理器结束残留的 Sinmai 后重开; 或改 SongRequestMod.toml 的「网页端口」): " + e.Message);
                 return false;
             }
@@ -400,21 +400,21 @@ namespace SongRequestMod
                     {
                         _pages[name] = nc;
                     }
-                    ModLog.Info("[SongRequest] 页面已加载: " + p + " (" + txt.Length + " 字符)");
+                    ModLog.Info("页面已加载: " + p + " (" + txt.Length + " 字符)");
                     return txt;
                 }
-                ModLog.Info("[SongRequest] 页面文件没找到: " + name + " (找过 "
+                ModLog.Info("页面文件没找到: " + name + " (找过 "
                     + Path.Combine(GameDir, "Mods", "SongRequestMod", name) + " 等 4 个位置)");
             }
             catch (Exception e)
             {
-                MelonLogger.Warning("[SongRequest] 读页面失败: " + e.Message);
+                MelonLogger.Warning("读页面失败: " + e.Message);
             }
             // 磁盘上没找到 -> 用内嵌在 dll 里的那份(这样只丢一个 dll 也能用)
             string embedded = ReadEmbedded("SongRequestMod." + name);
             if (embedded != null)
             {
-                ModLog.Info("[SongRequest] 页面用内嵌版本: " + name + " (" + embedded.Length + " 字符)");
+                ModLog.Info("页面用内嵌版本: " + name + " (" + embedded.Length + " 字符)");
                 return embedded;
             }
             return Fallback(name);
@@ -470,7 +470,7 @@ namespace SongRequestMod
             }
             catch (Exception e)
             {
-                MelonLogger.Warning("[SongRequest] 读内嵌资源失败 " + logicalName + ": " + e.Message);
+                MelonLogger.Warning("读内嵌资源失败 " + logicalName + ": " + e.Message);
                 return null;
             }
         }
@@ -487,7 +487,7 @@ namespace SongRequestMod
                     lanTxt += (i == 0 ? "    手机(同网): http://" : " 或 http://") + _lanUrls[i] + ":" + port + "/";
                 }
             }
-            ModLog.Always("[SongRequest] 点歌台: http://127.0.0.1:" + port + "/" + lanTxt);
+            ModLog.Always("点歌台: http://127.0.0.1:" + port + "/" + lanTxt);
         }
 
         /// <summary>
@@ -535,11 +535,11 @@ namespace SongRequestMod
                 Thread th = new Thread(() => SseWriter(c));
                 th.IsBackground = true;
                 th.Start();
-                ModLog.Info("[SongRequest] SSE 客户端接入, 当前 " + _sse.Count + " 个");
+                ModLog.Info("SSE 客户端接入, 当前 " + _sse.Count + " 个");
             }
             catch (Exception e)
             {
-                ModLog.Info("[SongRequest] SSE 建立失败: " + e.Message);
+                ModLog.Info("SSE 建立失败: " + e.Message);
             }
         }
 
@@ -584,7 +584,7 @@ namespace SongRequestMod
             catch
             {
             }
-            ModLog.Info("[SongRequest] SSE 断开清理, 剩 " + _sse.Count + " 个");
+            ModLog.Info("SSE 断开清理, 剩 " + _sse.Count + " 个");
         }
 
         /// <summary>
@@ -699,7 +699,7 @@ namespace SongRequestMod
             }
             catch (Exception e)
             {
-                MelonLogger.Warning("[SongRequest] 取本机 IP 失败: " + e.Message);
+                MelonLogger.Warning("取本机 IP 失败: " + e.Message);
             }
             if (ips.Count == 0)
             {

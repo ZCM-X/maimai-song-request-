@@ -171,6 +171,9 @@ namespace SongRequestMod
 
         internal static void Capture(MusicSelectProcess process)
         {
+            // 游戏进选曲界面时 OnStart 会按玩家人数各触发一次(1P/2P), 同一个实例会来两次;
+            // 只在"真的换了实例"时打日志, 免得一进选曲界面就刷两行重复的
+            bool sameInstance = ReferenceEquals(_process, process);
             _process = process;
             _switchPending = false;
             ResetPlayableCache();
@@ -191,23 +194,31 @@ namespace SongRequestMod
             }
             catch (Exception e)
             {
-                MelonLogger.Warning("[SongRequest] 取子序列数组失败(不影响点歌, 只是不会自动跳难度画面): " + e.Message);
+                MelonLogger.Warning("取子序列数组失败(不影响点歌, 只是不会自动跳难度画面): " + e.Message);
                 _subSeqArray = null;
             }
-            ModLog.Info("[SongRequest] MusicSelectProcess 已捕获, 曲目分类 "
-                + (process.CombineMusicDataList == null ? -1 : process.CombineMusicDataList.Count) + " 组, 子序列="
-                + (_subSeqArray != null));
+            if (!sameInstance)
+            {
+                ModLog.Info("MusicSelectProcess 已捕获, 曲目分类 "
+                    + (process.CombineMusicDataList == null ? -1 : process.CombineMusicDataList.Count) + " 组, 子序列="
+                    + (_subSeqArray != null));
+            }
         }
 
         internal static void Release()
         {
+            // 同 Capture: OnRelease 也会按玩家人数各来一次, 只在真的释放时打一行
+            if (_process == null)
+            {
+                return;
+            }
             _process = null;
             _subSeqArray = null;
             _curSeq = null;
             _prevSeq = null;
             _switchPending = false;
             _inSelectCached = false;
-            ModLog.Info("[SongRequest] MusicSelectProcess 已释放");
+            ModLog.Info("MusicSelectProcess 已释放");
         }
 
         /// <summary>只能在主线程用(会碰游戏对象); 网页线程用 InSelectCached</summary>
@@ -257,14 +268,14 @@ namespace SongRequestMod
                 int now = (int)_process.ScoreType;
                 if (now != want)
                 {
-                    MelonLogger.Error("[SongRequest] 谱面类型没生效: 想要 "
+                    MelonLogger.Error("谱面类型没生效: 想要 "
                         + (want == 1 ? "DX" : "STD") + ", 游戏里现在是 "
                         + (now == 1 ? "DX" : "STD") + " (曲目 id " + _verifyTypeId
                         + ", 卡片 id " + _verifyRealId + ") —— 点歌会落到另一种谱面上");
                 }
                 else
                 {
-                    ModLog.Info("[SongRequest] 谱面类型确认: " + (now == 1 ? "DX" : "STD")
+                    ModLog.Info("谱面类型确认: " + (now == 1 ? "DX" : "STD")
                         + " (曲目 id " + _verifyTypeId + ", 卡片 id " + _verifyRealId + ")");
                 }
             }
@@ -335,7 +346,7 @@ namespace SongRequestMod
                         proc = f.GetValue(mon);
                         if (proc != null)
                         {
-                            ModLog.Info("[SongRequest] 兜底找到选曲进程, 字段 " + f.Name);
+                            ModLog.Info("兜底找到选曲进程, 字段 " + f.Name);
                             break;
                         }
                     }
@@ -347,7 +358,7 @@ namespace SongRequestMod
             }
             catch (Exception e)
             {
-                ModLog.Info("[SongRequest] 兜底找进程失败: " + e.Message);
+                ModLog.Info("兜底找进程失败: " + e.Message);
             }
         }
 
@@ -444,7 +455,7 @@ namespace SongRequestMod
             }
             catch (Exception e)
             {
-                ModLog.Info("[SongRequest] 读 STD/DX 类型失败: " + e.Message);
+                ModLog.Info("读 STD/DX 类型失败: " + e.Message);
             }
             return map;
         }
@@ -515,7 +526,7 @@ namespace SongRequestMod
             }
             catch (Exception e)
             {
-                ModLog.Info("[SongRequest] 读可玩谱面表失败: " + e.Message);
+                ModLog.Info("读可玩谱面表失败: " + e.Message);
             }
             return map;
         }
@@ -670,7 +681,7 @@ namespace SongRequestMod
                     LastJumpResult = "自动验证异常: " + e.Message;
                 }
                 LastJumpAt = DateTime.Now.ToString("HH:mm:ss");
-                ModLog.Info("[SongRequest] 自动点歌验证: " + LastJumpResult);
+                ModLog.Info("自动点歌验证: " + LastJumpResult);
             }
 
             Request[] batch = null;
@@ -726,7 +737,7 @@ namespace SongRequestMod
             catch (Exception e)
             {
                 msg = "点歌失败: " + e.Message;
-                MelonLogger.Warning("[SongRequest] 点歌异常: " + e);
+                MelonLogger.Warning("点歌异常: " + e);
             }
             Complete(r, msg);
         }
@@ -792,7 +803,7 @@ namespace SongRequestMod
             }
             catch (Exception e)
             {
-                ModLog.Info("[SongRequest] 读选曲状态失败: " + e.Message);
+                ModLog.Info("读选曲状态失败: " + e.Message);
             }
             return null;
         }
@@ -932,7 +943,7 @@ namespace SongRequestMod
                 }
                 catch (Exception e)
                 {
-                    ModLog.Info("[SongRequest] CalcMonitorDifficulty 失败(不影响跳转): " + e.Message);
+                    ModLog.Info("CalcMonitorDifficulty 失败(不影响跳转): " + e.Message);
                 }
 
                 // 再写难度(UI 每帧读 GetCurrentDifficulty -> 会把难度条刷到我们指定的那个)。
@@ -993,7 +1004,7 @@ namespace SongRequestMod
                 string dname = SongTable.DifficultyName(applied);
                 string tname = kind == 1 ? "DX" : "STD";
                 Perf.Hit("jump.setup", Mark(sw));   // 收卡片/页签 + 锁输入 + 起协程
-                ModLog.Info("[SongRequest] 点歌: " + typeId + " " + name + " / " + tname + " " + dname
+                ModLog.Info("点歌: " + typeId + " " + name + " / " + tname + " " + dname
                     + " (卡 id " + realId + ", 分类 " + cat + " 第 " + idx + " 首)");
                 if (_lastClampedFrom >= 0)
                 {
@@ -1344,12 +1355,12 @@ namespace SongRequestMod
                     {
                     }
                     SyncNext(utage ? SubSeqUtageDifficulty : SubSeqDifficulty);
-                    ModLog.Info("[SongRequest] 已切到" + (utage ? "宴会场" : "") + "难度选择画面");
+                    ModLog.Info("已切到" + (utage ? "宴会场" : "") + "难度选择画面");
                 }
             }
             catch (Exception e)
             {
-                MelonLogger.Warning("[SongRequest] 切难度画面失败: " + e.Message);
+                MelonLogger.Warning("切难度画面失败: " + e.Message);
             }
             finally
             {
