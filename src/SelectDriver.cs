@@ -1339,6 +1339,35 @@ namespace SongRequestMod
             {
                 ModLog.Info("写难度页 difficultyIndex 失败(不影响点歌): " + e.Message);
             }
+            // 「按等级」分页(IsLevelTab)下, 游戏不读 CurrentDifficulty, 而是读歌曲数据里的
+            // musicSelectData[ScoreType].Difficulty —— 这里一并改写, 否则跳过去永远是最低档
+            try
+            {
+                var list = _process.CombineMusicDataList;
+                int cat = _process.CurrentCategorySelect;
+                int idx = _process.CurrentMusicSelect;
+                if (list != null && cat >= 0 && cat < list.Count && idx >= 0 && idx < list[cat].Count)
+                {
+                    var entry = list[cat][idx];
+                    int kind = (int)_process.ScoreType;
+                    if (entry != null && entry.musicSelectData != null
+                        && kind >= 0 && kind < entry.musicSelectData.Count)
+                    {
+                        var data = entry.musicSelectData[kind];
+                        var field = AccessTools.Field(typeof(MusicSelectProcess.MusicSelectData), "Difficulty");
+                        if (data != null && field != null)
+                        {
+                            field.SetValue(data, field.FieldType.IsEnum
+                                ? System.Enum.ToObject(field.FieldType, d)
+                                : (object)d);
+                        }
+                    }
+                }
+            }
+            catch (Exception e)
+            {
+                ModLog.Info("写歌曲默认难度失败(不影响点歌): " + e.Message);
+            }
             return d;
         }
 
