@@ -1,5 +1,13 @@
 # Changelog
 
+## v1.0.8
+
+- 修复**点歌后难度不对**：跳到某档（例如 MASTER）后，界面显示是正确的，但进谱时游戏底层还是按旧档（最低档）算。
+  原因：难度页子序列自己缓存了一份 `difficultyIndex`，在难度页按确认时是用这份缓存写回
+  `DifficultySelectIndex` 的；点歌只写了 `CurrentDifficulty` / `DifficultySelectIndex`，那份缓存没写。
+  现在三处一起写（`CurrentDifficulty` / `DifficultySelectIndex` / 难度页子序列的 `difficultyIndex`），
+  并且同时刷新 `GameManager.SelectDifficultyID`。
+
 ## v1.0.7
 
 针对「点歌 / 跳转时游戏卡一下」的优化。先说结论（都是本机实测，毫秒）：

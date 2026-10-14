@@ -1312,10 +1312,38 @@ namespace SongRequestMod
             {
                 GameManager.SelectDifficultyID[1] = d;
             }
+            // 关键补充: 难度页子序列自己缓存的 difficultyIndex 也要写。
+            // 游戏在难度页按确认时是用它写回 DifficultySelectIndex 的 —— 不写它,
+            // 就会出现"UI 显示 14, 底层还是旧档(最低档)"的现象。
+            try
+            {
+                if (_mDifficultyIndex == null)
+                {
+                    _mDifficultyIndex = AccessTools.Field(
+                        typeof(MusicSelectProcess).Assembly.GetType("Process.SubSequence.DifficultySelectSequence"),
+                        "difficultyIndex");
+                }
+                if (_subSeqArray != null && _mDifficultyIndex != null)
+                {
+                    for (int p = 0; p < _subSeqArray.Length; p++)
+                    {
+                        var seqArray = _subSeqArray.GetValue(p) as Array;
+                        if (seqArray == null) continue;
+                        object seq = seqArray.GetValue((int)MusicSelectProcess.SubSequence.Difficulty);
+                        if (seq == null) continue;
+                        _mDifficultyIndex.SetValue(seq, (MusicDifficultyID)d);
+                    }
+                }
+            }
+            catch (Exception e)
+            {
+                ModLog.Info("写难度页 difficultyIndex 失败(不影响点歌): " + e.Message);
+            }
             return d;
         }
 
         private static int _lastClampedFrom = -1;
+        private static FieldInfo _mDifficultyIndex;
 
         /// <summary>这档谱能不能玩: 游戏说不能就是不能, 游戏还不知道才看 XML 的声明</summary>
         private static bool Playable(int musicId, int diff)
