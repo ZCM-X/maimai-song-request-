@@ -1377,34 +1377,33 @@ namespace SongRequestMod
             {
                 ModLog.Info("写难度页 difficultyIndex 失败(不影响点歌): " + e.Message);
             }
-            // 「按等级」分页(IsLevelTab)下, 游戏不读 CurrentDifficulty, 而是读歌曲数据里的
-            // musicSelectData[ScoreType].Difficulty —— 这里一并改写, 否则跳过去永远是最低档
+            // 「按等级」分页(IsLevelTab)下, 同一首歌每个难度在列表里是**一个格子**(LV3 一个、LV14 一个…),
+            // 游戏自己(在列表里用 1/8 键改难度)的做法是 GetLevelToListPositoin 找到那个格子、把光标移过去,
+            // 而不是改曲目数据 —— 改数据会让 LV3 分区里的卡片显示成 MASTER 14(玩家看到的"跑到别的区域")。
             try
             {
-                var list = _process.CombineMusicDataList;
-                int cat = _process.CurrentCategorySelect;
-                int idx = _process.CurrentMusicSelect;
-                if (list != null && cat >= 0 && cat < list.Count && idx >= 0 && idx < list[cat].Count)
+                if (_process.IsLevelTab(0))
                 {
-                    var entry = list[cat][idx];
-                    int kind = (int)_process.ScoreType;
-                    if (entry != null && entry.musicSelectData != null
-                        && kind >= 0 && kind < entry.musicSelectData.Count)
+                    int id = 0;
+                    var combo = _process.GetCombineMusic(0);
+                    if (combo != null)
                     {
-                        var data = entry.musicSelectData[kind];
-                        var field = AccessTools.Field(typeof(MusicSelectProcess.MusicSelectData), "Difficulty");
-                        if (data != null && field != null)
+                        id = combo.GetID(_process.ScoreType);
+                    }
+                    if (id > 0)
+                    {
+                        var position = _process.GetLevelToListPositoin(id, d);
+                        if (position != null)
                         {
-                            field.SetValue(data, field.FieldType.IsEnum
-                                ? System.Enum.ToObject(field.FieldType, d)
-                                : (object)d);
+                            _process.CurrentCategorySelect = position.Category;
+                            _process.CurrentMusicSelect = position.Index;
                         }
                     }
                 }
             }
             catch (Exception e)
             {
-                ModLog.Info("写歌曲默认难度失败(不影响点歌): " + e.Message);
+                ModLog.Info("定位难度格子失败(不影响点歌): " + e.Message);
             }
             return d;
         }
