@@ -373,6 +373,9 @@ namespace SongRequestMod
                     {
                         return -1;
                     }
+                    // 只读属性: 绝不在这里改游戏画面状态。
+                    // 以前这里会调 EnsureInMusicList() 把画面切回歌曲列表, 而网页/其它模块是每帧轮询这个值的,
+                    // 结果玩家一停在其他画面(比如 START 页、演出结束后的页面)就被硬拉回列表 —— 和别的 mod 的演出撞上就是死循环。
                     var list = _process.CombineMusicDataList;
                     int c = _process.CurrentCategorySelect;
                     int m = _process.CurrentMusicSelect;
@@ -793,7 +796,9 @@ namespace SongRequestMod
                             continue;
                         }
                         int cur = Convert.ToInt32(_curSeq.GetValue(p));
-                        if (cur != SubSeqMusic && cur != SubSeqDifficulty && cur != SubSeqUtageDifficulty)
+                        // 分类/等级分类页(1=Genre, 2=SortSetting)也允许点歌: 跳转里会先帮你切回列表
+                        bool inCategory = cur == 1 || cur == 2;
+                        if (!inCategory && cur != SubSeqMusic && cur != SubSeqDifficulty && cur != SubSeqUtageDifficulty)
                         {
                             string where = cur >= 0 && cur < SubSeqNames.Length ? SubSeqNames[cur] : ("画面 " + cur);
                             return "游戏现在在「" + where + "」, 请先回到选曲列表再点歌";
@@ -806,6 +811,36 @@ namespace SongRequestMod
                 ModLog.Info("读选曲状态失败: " + e.Message);
             }
             return null;
+        }
+
+
+        /// <summary>点歌时如果还在"歌曲分类/等级分类"页, 先按游戏自己的确认流程切进歌曲列表。</summary>
+        private static void EnsureInMusicList()
+        {
+            try
+            {
+                if (_curSeq == null || _mSyncNext == null)
+                {
+                    return;
+                }
+                for (int p = 0; p < _curSeq.Length; p++)
+                {
+                    if (!IsEntry(p))
+                    {
+                        continue;
+                    }
+                    int cur = Convert.ToInt32(_curSeq.GetValue(p));
+                    if (cur != SubSeqMusic && cur != SubSeqDifficulty && cur != SubSeqUtageDifficulty)
+                    {
+                        SyncNext(SubSeqMusic);
+                        return;
+                    }
+                }
+            }
+            catch (Exception e)
+            {
+                ModLog.Info("切回选曲列表失败(不影响点歌): " + e.Message);
+            }
         }
 
         /// <summary>有登录的玩家里, 有没有谁已经在(宴会场)难度画面</summary>
@@ -880,6 +915,9 @@ namespace SongRequestMod
             {
                 return "当前不在选曲界面(先回到选曲画面再点歌)";
             }
+            // 点歌时如果还停在"歌曲分类/等级分类"页, 先按游戏自己的确认流程切进歌曲列表。
+            // (以前这句挂在 CursorMusicId 只读属性上, 网页每帧轮询就会把玩家从别的画面硬拉回列表, 已移除)
+            EnsureInMusicList();
             string blocked = BlockReason();
             if (blocked != null)
             {
